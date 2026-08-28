@@ -1244,4 +1244,92 @@ export const ossos: Osso[] = [
       { tema: "Nomenclatura oficial (Cartilago costalis)", fonte: "Terminologia Anatomica (FIPAT)" },
     ],
   },
+  {
+    slug: "clavicula",
+    meshNames: ["Clavicle_L", "Clavicle_R"],
+    nomeOficial: "Clavicula",
+    nomeComum: "Clavícula",
+    regiao: "cintura-escapular-braco",
+    par: true,
+    tipoOsso: "Osso longo",
+    resumo: "Único osso longo de orientação horizontal, conecta o membro superior ao esqueleto axial.",
+    descricaoAnatomica:
+      "Tem formato de S itálico quando vista de cima: convexa anteriormente em seus dois terços mediais, côncava anteriormente no terço lateral. Articula-se medialmente com o manúbrio do esterno (articulação esternoclavicular) e lateralmente com o acrômio da escápula (articulação acromioclavicular).",
+    relacoesAnatomicas: [
+      "Articulação esternoclavicular (medial, com o manúbrio) — única articulação óssea entre o membro superior e o esqueleto axial",
+      "Articulação acromioclavicular (lateral, com o acrômio da escápula)",
+      "Atua como uma escora (strut) que mantém o membro superior afastado do tronco",
+    ],
+    marcosAnatomicos: ["Curvatura em S itálico", "Extremidades esternal e acromial"],
+    correlacaoClinica:
+      "A clavícula é o osso mais frequentemente fraturado do corpo, tipicamente no terço médio (ponto de transição das duas curvaturas, mais fino e sem reforço muscular ou ligamentar direto), geralmente por queda sobre o ombro ou sobre a mão espalmada. Em recém-nascidos, pode fraturar durante um parto vaginal difícil — muitas vezes assintomática ao nascer e identificada dias depois por um calo ósseo palpável.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O terço médio é o local mais comum de fratura de clavícula, por ser o ponto de transição entre suas duas curvaturas e por não ter reforço ligamentar direto (diferente dos terços medial e lateral).",
+      "Fratura de clavícula em recém-nascido é geralmente assintomática ao nascimento e é um achado incidental comum ao exame do neonato após parto vaginal.",
+    ],
+    fontes: [
+      { tema: "Osteologia da clavícula e epidemiologia das fraturas claviculares", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Clavicula)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "escapula",
+    meshNames: ["Scapula_L", "Scapula_R"],
+    nomeOficial: "Scapula",
+    nomeComum: "Escápula",
+    regiao: "cintura-escapular-braco",
+    par: true,
+    tipoOsso: "Osso chato",
+    resumo: "Osso triangular chato que \"flutua\" sobre a face posterior da caixa torácica, estabilizado apenas por músculos.",
+    descricaoAnatomica:
+      "Não possui articulação óssea direta com o tórax — é mantida em posição inteiramente por músculos (trapézio, romboides, serrátil anterior, entre outros), permitindo grande mobilidade. Apresenta a cavidade glenoide (articulação com a cabeça do úmero), o acrômio e o processo coracoide (projeções superiores), e a espinha da escápula, que separa as fossas supraespinhal e infraespinhal na face posterior.",
+    relacoesAnatomicas: [
+      "Cavidade glenoide: articulação glenoumeral (do ombro) com a cabeça do úmero",
+      "Acrômio: articulação acromioclavicular (com a clavícula)",
+      "Espinha da escápula: separa as fossas supra e infraespinhal, origem dos músculos supra e infraespinhal (manguito rotador)",
+    ],
+    marcosAnatomicos: ["Cavidade glenoide", "Acrômio e processo coracoide", "Espinha da escápula"],
+    correlacaoClinica:
+      "Por estar bem protegida por músculos e ter grande mobilidade, a fratura de escápula é relativamente rara e, quando ocorre, geralmente indica trauma de alta energia — funciona como um marcador de possíveis lesões torácicas ou pulmonares graves associadas (contusão pulmonar, fratura de costelas, pneumotórax). A cavidade glenoide, rasa, contribui para a grande mobilidade da articulação do ombro, mas às custas de menor estabilidade.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Fratura de escápula é incomum e, quando presente, é um sinal de alerta para trauma torácico de alta energia com possíveis lesões associadas mais graves.",
+      "A rasa cavidade glenoide, comparada ao acetábulo do quadril, explica por que a articulação do ombro tem a maior amplitude de movimento do corpo, mas também a maior taxa de luxação entre as grandes articulações.",
+    ],
+    fontes: [
+      { tema: "Osteologia da escápula e fratura de escápula como marcador de trauma grave", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Scapula)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "umero",
+    meshNames: ["Humerus_L", "Humerus_R"],
+    nomeOficial: "Humerus",
+    nomeComum: "Úmero",
+    regiao: "cintura-escapular-braco",
+    par: true,
+    tipoOsso: "Osso longo",
+    resumo: "Osso longo do braço; sua cabeça articula-se com a escápula na articulação mais móvel do corpo.",
+    descricaoAnatomica:
+      "A cabeça do úmero, arredondada, articula-se com a cavidade glenoide da escápula. O colo cirúrgico (logo abaixo dos tubérculos maior e menor) é o local mais comum de fratura proximal. Na diáfise, o sulco do nervo radial cruza obliquamente a face posterior. Distalmente, o úmero se alarga formando o côndilo, com a tróclea e o capítulo, que se articulam com a ulna e o rádio, respectivamente.",
+    relacoesAnatomicas: [
+      "Cabeça: articulação glenoumeral (do ombro) com a cavidade glenoide da escápula",
+      "Sulco do nervo radial: o nervo radial percorre esse sulco na face posterior da diáfise",
+      "Extremidade distal (tróclea e capítulo): articulação do cotovelo, com a ulna e o rádio",
+    ],
+    marcosAnatomicos: ["Colo cirúrgico", "Sulco do nervo radial", "Tróclea e capítulo (extremidade distal)"],
+    correlacaoClinica:
+      "O colo cirúrgico é o local mais comum de fratura proximal do úmero, especialmente em idosos após queda sobre a mão espalmada (associada a osteoporose). Fraturas da diáfise umeral média podem lesar o nervo radial, que corre diretamente sobre o osso nesse ponto, causando queda do punho (\"wrist drop\") por paralisia dos extensores do punho e dedos. A rasa cavidade glenoide favorece a luxação do ombro, mais comumente na direção anteroinferior.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Fratura do colo cirúrgico do úmero é a fratura proximal mais comum, tipicamente em idosos com osteoporose após queda sobre a mão espalmada.",
+      "Fratura da diáfise umeral média é a causa clássica de lesão do nervo radial, resultando em \"mão caída\" (incapacidade de estender o punho e os dedos).",
+      "A luxação glenoumeral é mais comumente anteroinferior, pela combinação de cavidade glenoide rasa e reforço capsular mais fraco nessa região.",
+    ],
+    fontes: [
+      { tema: "Osteologia do úmero, fratura de colo cirúrgico e lesão do nervo radial", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Humerus)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
 ];
