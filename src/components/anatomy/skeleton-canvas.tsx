@@ -26,6 +26,21 @@ function SkeletonModel({ modelUrl, visibleMeshNames, selectedMeshNames, onSelect
   const camera = useThree((state) => state.camera);
   const invalidate = useThree((state) => state.invalidate);
 
+  // GLTFLoader wraps a multi-primitive glTF mesh (e.g. a muscle with two
+  // materials) in a Group carrying the node's real name, with child Meshes
+  // named after the mesh resource + primitive index instead — so our
+  // data's mesh names (which are node names) never match those children.
+  // Propagating each named Group's name down to its Mesh children once per
+  // scene load makes every primitive addressable by its real structure name.
+  useEffect(() => {
+    scene.traverse((obj) => {
+      if (!(obj instanceof THREE.Group) || !obj.name) return;
+      obj.children.forEach((child) => {
+        if (child instanceof THREE.Mesh) child.name = obj.name;
+      });
+    });
+  }, [scene]);
+
   useEffect(() => {
     scene.traverse((obj) => {
       if (!(obj instanceof THREE.Mesh)) return;

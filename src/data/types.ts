@@ -206,6 +206,32 @@ export interface NervoCraniano {
   fontes: FonteTema[];
 }
 
+export const REGIOES_MUSCULARES = [
+  "Cabeça e pescoço",
+  "Tronco",
+  "Membro superior",
+  "Membro inferior",
+] as const;
+
+export type RegiaoMuscular = (typeof REGIOES_MUSCULARES)[number];
+
+export interface Musculo {
+  slug: string;
+  meshNames: string[];
+  regiao: RegiaoMuscular;
+  nomeOficial: string;
+  nomeComum: string;
+  resumo: string;
+  origem: string;
+  insercao: string;
+  inervacao: string;
+  acoes: string[];
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;

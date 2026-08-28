@@ -12,7 +12,7 @@ export default function ArticulacoesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="max-w-2xl">
-        <div className="flex items-center gap-2 text-sm text-foreground-subtle">
+        <div className="flex flex-wrap items-center gap-2 text-sm text-foreground-subtle">
           <Link href="/anatomia/esqueleto" className="hover:text-foreground">
             Sistema Esquelético
           </Link>
@@ -21,6 +21,10 @@ export default function ArticulacoesPage() {
           <span>·</span>
           <Link href="/anatomia/sistema-nervoso" className="hover:text-foreground">
             Sistema Nervoso
+          </Link>
+          <span>·</span>
+          <Link href="/anatomia/sistema-muscular" className="hover:text-foreground">
+            Sistema Muscular
           </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Articular</h1>
