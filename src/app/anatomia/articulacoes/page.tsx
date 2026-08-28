@@ -18,6 +18,10 @@ export default function ArticulacoesPage() {
           </Link>
           <span>·</span>
           <span className="text-foreground">Sistema Articular</span>
+          <span>·</span>
+          <Link href="/anatomia/sistema-nervoso" className="hover:text-foreground">
+            Sistema Nervoso
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Articular</h1>
         <p className="mt-2 text-foreground-muted">

@@ -14,14 +14,15 @@ const HIGHLIGHT_COLOR = new THREE.Color("#2bb3a1");
 const DIMMED_OPACITY = 0.12;
 
 interface SkeletonModelProps {
+  modelUrl: string;
   visibleMeshNames: Set<string> | null;
   selectedMeshNames: Set<string> | null;
   onSelect: (meshName: string) => void;
   controlsRef: React.RefObject<OrbitControlsImpl | null>;
 }
 
-function SkeletonModel({ visibleMeshNames, selectedMeshNames, onSelect, controlsRef }: SkeletonModelProps) {
-  const { scene } = useGLTF(SKELETON_MODEL_URL);
+function SkeletonModel({ modelUrl, visibleMeshNames, selectedMeshNames, onSelect, controlsRef }: SkeletonModelProps) {
+  const { scene } = useGLTF(modelUrl);
   const camera = useThree((state) => state.camera);
   const invalidate = useThree((state) => state.invalidate);
 
@@ -106,12 +107,18 @@ function Loading() {
 }
 
 interface SkeletonCanvasProps {
+  modelUrl?: string;
   visibleMeshNames: Set<string> | null;
   selectedMeshNames: Set<string> | null;
   onSelect: (meshName: string) => void;
 }
 
-export function SkeletonCanvas({ visibleMeshNames, selectedMeshNames, onSelect }: SkeletonCanvasProps) {
+export function SkeletonCanvas({
+  modelUrl = SKELETON_MODEL_URL,
+  visibleMeshNames,
+  selectedMeshNames,
+  onSelect,
+}: SkeletonCanvasProps) {
   const controlsRef = useRef<OrbitControlsImpl | null>(null);
 
   return (
@@ -126,6 +133,7 @@ export function SkeletonCanvas({ visibleMeshNames, selectedMeshNames, onSelect }
       <directionalLight position={[-2, -1, -2]} intensity={0.4} />
       <Suspense fallback={<Loading />}>
         <SkeletonModel
+          modelUrl={modelUrl}
           visibleMeshNames={visibleMeshNames}
           selectedMeshNames={selectedMeshNames}
           onSelect={onSelect}

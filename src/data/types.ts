@@ -177,6 +177,35 @@ export interface Articulacao {
   fontes: FonteTema[];
 }
 
+export const TIPOS_FUNCIONAIS_NERVO = [
+  "Motor (somático)",
+  "Sensitivo (especial)",
+  "Sensitivo (geral)",
+  "Misto (motor e sensitivo)",
+  "Misto (motor e parassimpático)",
+  "Misto (motor, sensitivo e parassimpático)",
+] as const;
+
+export type TipoFuncionalNervo = (typeof TIPOS_FUNCIONAIS_NERVO)[number];
+
+export interface NervoCraniano {
+  slug: string;
+  numero: number;
+  meshNames: string[];
+  nomeOficial: string;
+  nomeComum: string;
+  tipo: TipoFuncionalNervo;
+  origemAparente: string;
+  resumo: string;
+  trajeto: string;
+  funcoes: string[];
+  testeClinico: string[];
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;
