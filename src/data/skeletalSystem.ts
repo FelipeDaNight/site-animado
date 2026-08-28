@@ -1904,4 +1904,132 @@ export const ossos: Osso[] = [
       { tema: "Nomenclatura oficial (Ossa sesamoidea pedis)", fonte: "Terminologia Anatomica (FIPAT)" },
     ],
   },
+  {
+    slug: "incisivos",
+    meshNames: [
+      "Upper_medial_incisor_L",
+      "Upper_medial_incisor_R",
+      "Upper_lateral_incisor_L",
+      "Upper_lateral_incisor_R",
+      "Lower_medial_incisor_L",
+      "Lower_medial_incisor_R",
+      "Lower_lateral_incisor_L",
+      "Lower_lateral_incisor_R",
+    ],
+    nomeOficial: "Dentes incisivi",
+    nomeComum: "Incisivos",
+    regiao: "denticao",
+    par: true,
+    tipoOsso: "Osso irregular",
+    resumo: "Quatro dentes por arcada, com borda cortante fina, posicionados na linha média anterior.",
+    descricaoAnatomica:
+      "Cada arcada tem dois incisivos mediais (centrais) e dois laterais, com coroa em forma de pá e borda incisal fina, adaptados para cortar o alimento. São os dentes mais anteriores e mais visíveis do sorriso.",
+    relacoesAnatomicas: ["Alojados nos processos alveolares da maxila (arcada superior) e da mandíbula (arcada inferior)"],
+    marcosAnatomicos: ["Borda incisal", "Coroa em forma de pá"],
+    correlacaoClinica:
+      "Por sua posição anterior exposta, os incisivos são os dentes mais frequentemente avulsionados (arrancados por completo) em traumas faciais. A avulsão dentária é uma emergência tempo-dependente: o reimplante idealmente dentro de 15-30 minutos (no máximo até 60 minutos) tem o melhor prognóstico de sobrevida do dente, e ele deve ser transportado em leite, saliva ou solução salina — nunca seco.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Dente avulsionado: reimplantar o quanto antes (idealmente em 15-30 min) e nunca deixar secar — leite é o meio de transporte mais acessível e eficaz.",
+      "Nunca segurar ou limpar agressivamente a raiz de um dente avulsionado — isso danifica o ligamento periodontal remanescente, essencial para o sucesso do reimplante.",
+    ],
+    fontes: [
+      { tema: "Odontologia dos incisivos e manejo da avulsão dentária", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Dentes incisivi)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "caninos",
+    meshNames: ["Upper_canine_L", "Upper_canine_R", "Lower_canine_L", "Lower_canine_R"],
+    nomeOficial: "Dentes canini",
+    nomeComum: "Caninos",
+    regiao: "denticao",
+    par: true,
+    tipoOsso: "Osso irregular",
+    resumo: "Um dente por quadrante, com a raiz mais longa de toda a dentição, posicionado no \"canto\" da arcada.",
+    descricaoAnatomica:
+      "Apresenta coroa com uma única cúspide pontiaguda e a raiz mais longa e robusta entre todos os dentes, ancorando-o firmemente no osso alveolar. Situa-se entre o incisivo lateral e o primeiro pré-molar.",
+    relacoesAnatomicas: ["Raiz longa alojada profundamente no processo alveolar, próxima à eminência canina do osso"],
+    marcosAnatomicos: ["Cúspide única", "Raiz longa (a mais longa da dentição)"],
+    correlacaoClinica:
+      "Por terem a raiz mais longa e mais estável de toda a arcada, os caninos costumam resistir mais à doença periodontal avançada e são frequentemente os últimos dentes naturais perdidos, funcionando como pilares importantes para próteses parciais quando outros dentes já foram perdidos.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A raiz do canino é a mais longa de toda a dentição humana — por isso ele costuma ser preservado por mais tempo mesmo em doença periodontal avançada.",
+    ],
+    fontes: [
+      { tema: "Odontologia dos caninos e sua importância como pilar protético", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Dentes canini)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "pre-molares",
+    meshNames: [
+      "Upper_first_premolar_L",
+      "Upper_first_premolar_R",
+      "Upper_second_premolar_L",
+      "Upper_second_premolar_R",
+      "Lower_first_premolar_L",
+      "Lower_first_premolar_R",
+      "Lower_second_premolar_L",
+      "Lower_second_premolar_R",
+    ],
+    nomeOficial: "Dentes premolares",
+    nomeComum: "Pré-molares",
+    regiao: "denticao",
+    par: true,
+    tipoOsso: "Osso irregular",
+    resumo: "Dois dentes por quadrante, exclusivos da dentição permanente (não existem na decídua), geralmente com duas cúspides.",
+    descricaoAnatomica:
+      "Situados entre os caninos e os molares, geralmente apresentam duas cúspides (uma vestibular e uma palatina/lingual), fazendo a transição funcional entre o corte dos dentes anteriores e a trituração dos molares. Não têm equivalente na dentição decídua (de leite).",
+    relacoesAnatomicas: ["Entre o canino e o primeiro molar, em cada quadrante"],
+    marcosAnatomicos: ["Duas cúspides (vestibular e palatina/lingual)"],
+    correlacaoClinica:
+      "Os pré-molares substituem os molares decíduos durante a dentição mista — por isso, ao contrário dos demais dentes permanentes, não têm um \"antecessor\" do mesmo nome na dentição de leite. Assim como os demais dentes posteriores, estão sujeitos a cárie nas superfícies oclusais e podem necessitar tratamento endodôntico (canal) quando a cárie atinge a polpa.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Os pré-molares substituem os molares decíduos (de leite) — não existe \"pré-molar decíduo\", uma pegadinha comum sobre a cronologia da dentição.",
+    ],
+    fontes: [
+      { tema: "Odontologia dos pré-molares e cronologia da dentição mista", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Dentes premolares)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "molares",
+    meshNames: [
+      "Upper_first_molar_tooth_L",
+      "Upper_first_molar_tooth_R",
+      "Upper_second_molar_tooth_L",
+      "Upper_second_molar_tooth_R",
+      "Lower_first_molar_tooth_L",
+      "Lower_first_molar_tooth_R",
+      "Lower_second_molar_tooth_L",
+      "Lower_second_molar_tooth_R",
+    ],
+    nomeOficial: "Dentes molares",
+    nomeComum: "Molares",
+    regiao: "denticao",
+    par: true,
+    tipoOsso: "Osso irregular",
+    resumo: "Os maiores dentes, com múltiplas cúspides e raízes, principais responsáveis pela trituração do alimento.",
+    descricaoAnatomica:
+      "Apresentam coroa larga com múltiplas cúspides (geralmente quatro ou cinco) e várias raízes (tipicamente duas nos inferiores, três nos superiores), proporcionando ampla superfície e ancoragem robusta para a mastigação. Este modelo representa apenas o 1º e o 2º molares permanentes — os terceiros molares (\"dentes do siso\") não estão incluídos.",
+    relacoesAnatomicas: [
+      "Múltiplas raízes ancoradas profundamente no processo alveolar da maxila (molares superiores) e da mandíbula (molares inferiores)",
+      "Molares inferiores: proximidade com o assoalho da boca e o espaço submandibular",
+    ],
+    marcosAnatomicos: ["Múltiplas cúspides (superfície oclusal ampla)", "Múltiplas raízes"],
+    correlacaoClinica:
+      "Infecções odontogênicas originadas em molares inferiores (abscesso periapical não tratado) podem se disseminar para o assoalho da boca e o espaço submandibular, causando angina de Ludwig — uma celulite cervical profunda de progressão rápida com risco de obstrução de via aérea, uma emergência médica verdadeira. Procedimentos dentários que manipulam a gengiva ou a região periapical (como extração de molares) causam bacteremia transitória e são um gatilho reconhecido de endocardite infecciosa em pacientes de risco (valvopatia estrutural, próteses valvares), justificando profilaxia antibiótica nesses casos.",
+    doencasRelacionadas: [{ slug: "endocardite-infecciosa", nome: "Endocardite infecciosa" }],
+    pontosDeProva: [
+      "Angina de Ludwig é classicamente originada de infecção odontogênica de molares inferiores disseminando-se para o espaço submandibular — pense nela diante de edema cervical bilateral rapidamente progressivo com elevação da língua.",
+      "Extração dentária e outros procedimentos que manipulam a região periapical exigem profilaxia antibiótica em pacientes com certas cardiopatias de alto risco, pela bacteremia transitória que provocam.",
+    ],
+    fontes: [
+      { tema: "Odontologia dos molares, angina de Ludwig e profilaxia de endocardite em procedimentos dentários", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Dentes molares)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
 ];
