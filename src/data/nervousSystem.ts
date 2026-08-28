@@ -3,7 +3,8 @@ import type { NervoCraniano } from "./types";
 // Modelo 3D: coleção "Nervous system & Sense organs" do atlas aberto
 // Z-Anatomy (z-anatomy.com, CC BY-SA 4.0, sobre base BodyParts3D), exportada,
 // simplificada (meshoptimizer) e comprimida (Draco) para uso na web.
-export const NERVOUS_MODEL_URL = "/models/nervous.glb";
+// Servido via jsDelivr — ver nota em skeletalSystem.ts.
+export const NERVOUS_MODEL_URL = "https://cdn.jsdelivr.net/gh/FelipeDaNight/medic-app@main/models-cdn/nervous.glb";
 
 export const nervosCranianos: NervoCraniano[] = [
   {

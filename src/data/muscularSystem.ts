@@ -3,7 +3,8 @@ import type { Musculo } from "./types";
 // Modelo 3D: coleção "Muscular system" do atlas aberto Z-Anatomy
 // (z-anatomy.com, CC BY-SA 4.0, sobre base BodyParts3D), exportada,
 // deduplicada e comprimida (Draco) para uso na web.
-export const MUSCULAR_MODEL_URL = "/models/muscular.glb";
+// Servido via jsDelivr — ver nota em skeletalSystem.ts.
+export const MUSCULAR_MODEL_URL = "https://cdn.jsdelivr.net/gh/FelipeDaNight/medic-app@main/models-cdn/muscular.glb";
 
 export const musculos: Musculo[] = [
   {

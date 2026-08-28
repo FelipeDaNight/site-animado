@@ -5,7 +5,8 @@ import type { Articulacao } from "./types";
 // vêm de um segundo modelo (public/models/joints.glb), extraído da coleção
 // "Joints" do atlas aberto Z-Anatomy (CC BY-SA 4.0, baseado em BodyParts3D),
 // convertido e comprimido com o mesmo pipeline usado no esqueleto.
-export const JOINTS_MODEL_URL = "/models/joints.glb";
+// Servido via jsDelivr — ver nota em skeletalSystem.ts.
+export const JOINTS_MODEL_URL = "https://cdn.jsdelivr.net/gh/FelipeDaNight/medic-app@main/models-cdn/joints.glb";
 
 // Mirrors the node-name sanitization baked into joints.glb at build time
 // (spaces/parentheses stripped, "_L"/"_R" suffix) — see the processing

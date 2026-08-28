@@ -1,6 +1,9 @@
 import type { Osso, RegiaoEsqueleto } from "./types";
 
-export const SKELETON_MODEL_URL = "/models/skeleton.glb";
+// Servido via jsDelivr (CDN sobre o repositório GitHub público), não pela
+// pasta public/ do Next.js — evita que o binário (poucos MB) infle o
+// Deployment Storage do Vercel a cada novo deploy.
+export const SKELETON_MODEL_URL = "https://cdn.jsdelivr.net/gh/FelipeDaNight/medic-app@main/models-cdn/skeleton.glb";
 
 export interface RegiaoEsqueletoMeta {
   id: RegiaoEsqueleto;
