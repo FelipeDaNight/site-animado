@@ -8,8 +8,8 @@ import { articulacoes } from "@/data/articulations";
 import { DetailSection, BulletList } from "@/components/ui/detail-section";
 import { Callout } from "@/components/ui/callout";
 
-const SkeletonCanvas = dynamic(
-  () => import("@/components/anatomy/skeleton-canvas").then((mod) => mod.SkeletonCanvas),
+const JointCanvas = dynamic(
+  () => import("@/components/anatomy/joint-canvas").then((mod) => mod.JointCanvas),
   {
     ssr: false,
     loading: () => (
@@ -28,15 +28,19 @@ export function JointExplorer() {
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   const selected = articulacoes.find((a) => a.slug === selectedSlug) ?? null;
 
-  const selectedMeshNames = useMemo(
+  const boneMeshNames = useMemo(
     () => (selected ? new Set(selected.meshNames) : null),
     [selected]
   );
-  // Spotlight effect: dim the rest of the skeleton once a joint is picked.
-  const visibleMeshNames = selectedMeshNames;
+  const ligamentMeshNames = useMemo(
+    () => (selected ? new Set(selected.ligamentMeshNames) : null),
+    [selected]
+  );
 
   function handleCanvasSelect(meshName: string) {
-    const entry = articulacoes.find((a) => a.meshNames.includes(meshName));
+    const entry = articulacoes.find(
+      (a) => a.meshNames.includes(meshName) || a.ligamentMeshNames.includes(meshName)
+    );
     if (entry) setSelectedSlug(entry.slug);
   }
 
@@ -61,9 +65,9 @@ export function JointExplorer() {
       </div>
 
       <div className="mt-5 h-[60vh] overflow-hidden rounded-2xl border border-border bg-background-raised lg:h-[68vh]">
-        <SkeletonCanvas
-          visibleMeshNames={visibleMeshNames}
-          selectedMeshNames={selectedMeshNames}
+        <JointCanvas
+          boneMeshNames={boneMeshNames}
+          ligamentMeshNames={ligamentMeshNames}
           onSelect={handleCanvasSelect}
         />
       </div>

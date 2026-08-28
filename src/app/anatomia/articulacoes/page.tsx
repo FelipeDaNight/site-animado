@@ -30,9 +30,11 @@ export default function ArticulacoesPage() {
         <JointExplorer />
       </div>
       <p className="mt-6 text-xs text-foreground-subtle">
-        Modelo 3D: Open3Dmodel — Skeleton (anatomytool.org), CC BY-SA. Autoria original: George J.R. Maat, Eungyeol
-        Lee (LUMC) et al., consórcio Open3Dmodel, sobre base BodyParts3D (DBCLS, Japão). Adaptado (espelhamento
-        bilateral e simplificação de materiais) para este site.
+        Ossos: Open3Dmodel — Skeleton (anatomytool.org), CC BY-SA. Autoria original: George J.R. Maat, Eungyeol Lee
+        (LUMC) et al., consórcio Open3Dmodel, sobre base BodyParts3D (DBCLS, Japão). Ligamentos, cápsulas
+        articulares e meniscos: Z-Anatomy (z-anatomy.com), CC BY-SA 4.0, autoria Gauthier Kervyn e colaboradores,
+        também sobre base BodyParts3D. Ambos adaptados (extração por estrutura, simplificação de materiais e
+        compressão) para este site.
       </p>
     </div>
   );

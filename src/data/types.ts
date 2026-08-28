@@ -162,6 +162,7 @@ export type TipoArticulacao = (typeof TIPOS_ARTICULACAO)[number];
 export interface Articulacao {
   slug: string;
   meshNames: string[];
+  ligamentMeshNames: string[];
   ossosEnvolvidos: RelatedLink[];
   nomeOficial: string;
   nomeComum: string;

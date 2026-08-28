@@ -1,13 +1,37 @@
 import type { Articulacao } from "./types";
 
-// Articulações do sistema esquelético. Reaproveitam o mesmo modelo 3D do
-// esqueleto (public/models/skeleton.glb) — uma articulação é simplesmente o
-// conjunto de ossos que a formam, já modelados individualmente; nenhum
-// asset novo foi necessário para este módulo.
+// Articulações do sistema esquelético. Os ossos reaproveitam o modelo do
+// esqueleto (public/models/skeleton.glb). Os ligamentos/cápsulas/meniscos
+// vêm de um segundo modelo (public/models/joints.glb), extraído da coleção
+// "Joints" do atlas aberto Z-Anatomy (CC BY-SA 4.0, baseado em BodyParts3D),
+// convertido e comprimido com o mesmo pipeline usado no esqueleto.
+export const JOINTS_MODEL_URL = "/models/joints.glb";
+
+// Mirrors the node-name sanitization baked into joints.glb at build time
+// (spaces/parentheses stripped, "_L"/"_R" suffix) — see the processing
+// notes for why: Three.js's GLTFLoader mangles raw names with spaces/dots.
+function sides(names: string[]): string[] {
+  return names.flatMap((n) => {
+    const clean = n.replace(/[()]/g, "").trim().replace(/\s+/g, "_");
+    return [`${clean}_L`, `${clean}_R`];
+  });
+}
+
 export const articulacoes: Articulacao[] = [
   {
     slug: "ombro",
     meshNames: ["Scapula_L", "Scapula_R", "Humerus_L", "Humerus_R"],
+    ligamentMeshNames: sides([
+      "Articular capsule of glenohumeral joint",
+      "Coracohumeral ligament",
+      "Glenoid labrum",
+      "Inferior glenohumeral ligament",
+      "Middle glenohumeral ligament",
+      "Superior glenohumeral ligament",
+      "Acromioclavicular ligament",
+      "Articular capsule of acromioclavicular joint",
+      "Articular disc of acromioclavicular joint",
+    ]),
     ossosEnvolvidos: [
       { slug: "escapula", nome: "Escápula" },
       { slug: "umero", nome: "Úmero" },
@@ -44,6 +68,12 @@ export const articulacoes: Articulacao[] = [
   {
     slug: "cotovelo",
     meshNames: ["Humerus_L", "Humerus_R", "Ulna_L", "Ulna_R", "Radius_L", "Radius_R"],
+    ligamentMeshNames: sides([
+      "Annular ligament of radius",
+      "Articular capsule of elbow joint",
+      "Radial collateral ligament",
+      "Ulnar collateral ligament",
+    ]),
     ossosEnvolvidos: [
       { slug: "umero", nome: "Úmero" },
       { slug: "ulna", nome: "Ulna" },
@@ -79,6 +109,13 @@ export const articulacoes: Articulacao[] = [
   {
     slug: "punho",
     meshNames: ["Radius_L", "Radius_R", "Scaphoid_L", "Scaphoid_R", "Lunate_bone_L", "Lunate_bone_R"],
+    ligamentMeshNames: sides([
+      "Dorsal ulnocarpal ligament",
+      "Articular capsule of radiocarpal joint",
+      "Dorsal radiocarpal ligament",
+      "Radial collateral ligament of wrist joint",
+      "Ulnar collateral ligament of wrist joint",
+    ]),
     ossosEnvolvidos: [
       { slug: "radio", nome: "Rádio" },
       { slug: "carpo-fileira-proximal", nome: "Ossos do carpo — fileira proximal" },
@@ -109,6 +146,16 @@ export const articulacoes: Articulacao[] = [
   {
     slug: "quadril",
     meshNames: ["Hip_bone_L", "Hip_bone_R", "Femur_L", "Femur_R"],
+    ligamentMeshNames: sides([
+      "Acetabular labrum",
+      "Articular capsule of hip joint",
+      "Descending part of iliofemoral ligament",
+      "Transverse part of iliofemoral ligament",
+      "Ischiofemoral ligament",
+      "Ligament of head of femur",
+      "Pubofemoral ligament",
+      "Transverse acetabular ligament",
+    ]),
     ossosEnvolvidos: [
       { slug: "osso-quadril", nome: "Osso do quadril" },
       { slug: "femur", nome: "Fêmur" },
@@ -149,6 +196,23 @@ export const articulacoes: Articulacao[] = [
   {
     slug: "joelho",
     meshNames: ["Femur_L", "Femur_R", "Tibia_L", "Tibia_R", "Patella_L", "Patella_R"],
+    ligamentMeshNames: sides([
+      "Anterior cruciate ligament",
+      "Posterior cruciate ligament",
+      "Articular capsule of knee joint",
+      "Lateral meniscus",
+      "Medial meniscus",
+      "Anterior meniscotibial ligament (Lateral meniscus)",
+      "Anterior meniscotibial ligament (Medial meniscus)",
+      "Posterior meniscotibial ligament (Lateral meniscus)",
+      "Posterior meniscotibial ligament (Medial meniscus)",
+      "Meniscopatellar ligament",
+      "Transverse ligament of knee",
+      "Deep part of tibial collateral ligament",
+      "Superficial part of tibial collateral ligament",
+      "Fibular collateral ligament",
+      "Infrapatellar fat pad",
+    ]),
     ossosEnvolvidos: [
       { slug: "femur", nome: "Fêmur" },
       { slug: "tibia", nome: "Tíbia" },
@@ -185,6 +249,19 @@ export const articulacoes: Articulacao[] = [
   {
     slug: "tornozelo",
     meshNames: ["Tibia_L", "Tibia_R", "Fibula_L", "Fibula_R", "Talus_L", "Talus_R"],
+    ligamentMeshNames: sides([
+      "Anterior talofibular ligament",
+      "Posterior talofibular ligament",
+      "Calcaneofibular ligament",
+      "Posterior tibiotalar ligament",
+      "Tibiocalcaneal ligament",
+      "Tibionavicular ligament",
+      "Anterior tibiofibular ligament",
+      "Posterior tibiofibular ligament",
+      "Transverse tibiofibular ligament",
+      "Articular capsule of superior tibiofibular joint",
+      "Interosseous membrane of leg",
+    ]),
     ossosEnvolvidos: [
       { slug: "tibia", nome: "Tíbia" },
       { slug: "fibula", nome: "Fíbula" },
