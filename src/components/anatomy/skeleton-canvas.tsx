@@ -17,11 +17,19 @@ interface SkeletonModelProps {
   modelUrl: string;
   visibleMeshNames: Set<string> | null;
   selectedMeshNames: Set<string> | null;
+  highlightSelection: boolean;
   onSelect: (meshName: string) => void;
   controlsRef: React.RefObject<OrbitControlsImpl | null>;
 }
 
-function SkeletonModel({ modelUrl, visibleMeshNames, selectedMeshNames, onSelect, controlsRef }: SkeletonModelProps) {
+function SkeletonModel({
+  modelUrl,
+  visibleMeshNames,
+  selectedMeshNames,
+  highlightSelection,
+  onSelect,
+  controlsRef,
+}: SkeletonModelProps) {
   const { scene } = useGLTF(modelUrl);
   const camera = useThree((state) => state.camera);
   const invalidate = useThree((state) => state.invalidate);
@@ -53,10 +61,11 @@ function SkeletonModel({ modelUrl, visibleMeshNames, selectedMeshNames, onSelect
       material.transparent = !isVisible;
       material.opacity = isVisible ? 1 : DIMMED_OPACITY;
       material.depthWrite = isVisible;
-      material.emissive.copy(selectedMeshNames?.has(obj.name) ? HIGHLIGHT_COLOR : new THREE.Color(0x000000));
+      const shouldHighlight = highlightSelection && (selectedMeshNames?.has(obj.name) ?? false);
+      material.emissive.copy(shouldHighlight ? HIGHLIGHT_COLOR : new THREE.Color(0x000000));
     });
     invalidate();
-  }, [scene, visibleMeshNames, selectedMeshNames, invalidate]);
+  }, [scene, visibleMeshNames, selectedMeshNames, highlightSelection, invalidate]);
 
   // Frame the camera on whatever is currently selected: the specific bone(s)
   // if one is picked (closer, tighter fit so a small carpal bone or a single
@@ -125,6 +134,7 @@ interface SkeletonCanvasProps {
   modelUrl?: string;
   visibleMeshNames: Set<string> | null;
   selectedMeshNames: Set<string> | null;
+  highlightSelection?: boolean;
   onSelect: (meshName: string) => void;
 }
 
@@ -132,6 +142,7 @@ export function SkeletonCanvas({
   modelUrl = SKELETON_MODEL_URL,
   visibleMeshNames,
   selectedMeshNames,
+  highlightSelection = true,
   onSelect,
 }: SkeletonCanvasProps) {
   const controlsRef = useRef<OrbitControlsImpl | null>(null);
@@ -151,6 +162,7 @@ export function SkeletonCanvas({
           modelUrl={modelUrl}
           visibleMeshNames={visibleMeshNames}
           selectedMeshNames={selectedMeshNames}
+          highlightSelection={highlightSelection}
           onSelect={onSelect}
           controlsRef={controlsRef}
         />

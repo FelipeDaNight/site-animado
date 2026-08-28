@@ -80,6 +80,7 @@ export function MuscularExplorer() {
             modelUrl={MUSCULAR_MODEL_URL}
             visibleMeshNames={visibleMeshNames}
             selectedMeshNames={selectedMeshNames}
+            highlightSelection={false}
             onSelect={handleCanvasSelect}
           />
         </div>
