@@ -42,19 +42,24 @@ function SkeletonModel({ visibleMeshNames, selectedMeshNames, onSelect, controls
     invalidate();
   }, [scene, visibleMeshNames, selectedMeshNames, invalidate]);
 
-  // Frame the camera on the region's own bounds whenever the region (not the
-  // selection) changes, so switching regions actually brings that body part
-  // into view instead of leaving a fixed whole-body camera. Three.js's
-  // camera is an imperative scene-graph object, not React state — mutating
-  // it in place (position, near/far, projection matrix) is the normal way
-  // to move it, which is what the disabled rule below is objecting to.
+  // Frame the camera on whatever is currently selected: the specific bone(s)
+  // if one is picked (closer, tighter fit so a small carpal bone or a single
+  // vertebra isn't left tiny in a whole-region shot), otherwise the whole
+  // region's bounds (so switching regions brings that body part into view
+  // instead of leaving a fixed whole-body camera). Three.js's camera is an
+  // imperative scene-graph object, not React state — mutating it in place
+  // (position, near/far, projection matrix) is the normal way to move it,
+  // which is what the disabled rule below is objecting to.
   /* eslint-disable react-hooks/immutability */
   useEffect(() => {
+    const focusNames = selectedMeshNames ?? visibleMeshNames;
+    const padding = selectedMeshNames ? 2.4 : 1.7;
+
     const box = new THREE.Box3();
     let found = false;
     scene.traverse((obj) => {
       if (!(obj instanceof THREE.Mesh)) return;
-      if (visibleMeshNames && !visibleMeshNames.has(obj.name)) return;
+      if (focusNames && !focusNames.has(obj.name)) return;
       box.expandByObject(obj);
       found = true;
     });
@@ -63,7 +68,7 @@ function SkeletonModel({ visibleMeshNames, selectedMeshNames, onSelect, controls
     const size = box.getSize(new THREE.Vector3());
     const center = box.getCenter(new THREE.Vector3());
     const maxDim = Math.max(size.x, size.y, size.z) || 1;
-    const distance = maxDim * 1.7;
+    const distance = maxDim * padding;
 
     camera.position.set(center.x, center.y, center.z + distance);
     if (camera instanceof THREE.PerspectiveCamera) {
@@ -78,7 +83,7 @@ function SkeletonModel({ visibleMeshNames, selectedMeshNames, onSelect, controls
       controls.update();
     }
     invalidate();
-  }, [scene, visibleMeshNames, camera, controlsRef, invalidate]);
+  }, [scene, visibleMeshNames, selectedMeshNames, camera, controlsRef, invalidate]);
   /* eslint-enable react-hooks/immutability */
 
   function handleClick(event: ThreeEvent<MouseEvent>) {
