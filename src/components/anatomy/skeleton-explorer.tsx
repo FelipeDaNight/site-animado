@@ -33,7 +33,10 @@ export function SkeletonExplorer() {
   const boneEntries = useMemo(() => boneEntriesForRegion(regiao), [regiao]);
   const visibleMeshNames = useMemo(() => regionMeshNames(regiao), [regiao]);
   const selectedEntry = boneEntries.find((e) => e.key === selectedKey) ?? null;
-  const selectedMeshName = selectedEntry?.meshNames[0] ?? null;
+  const selectedMeshNames = useMemo(
+    () => (selectedEntry ? new Set(selectedEntry.meshNames) : null),
+    [selectedEntry]
+  );
 
   function handleSelectRegion(next: RegiaoEsqueleto) {
     setRegiao(next);
@@ -76,7 +79,7 @@ export function SkeletonExplorer() {
         <div className="h-[60vh] overflow-hidden rounded-2xl border border-border bg-background-raised lg:h-[68vh]">
           <SkeletonCanvas
             visibleMeshNames={visibleMeshNames}
-            selectedMeshName={selectedMeshName}
+            selectedMeshNames={selectedMeshNames}
             onSelect={handleCanvasSelect}
           />
         </div>

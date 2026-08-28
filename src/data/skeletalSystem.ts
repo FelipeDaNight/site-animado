@@ -1569,4 +1569,96 @@ export const ossos: Osso[] = [
       { tema: "Nomenclatura oficial (Ossa sesamoidea manus)", fonte: "Terminologia Anatomica (FIPAT)" },
     ],
   },
+  {
+    slug: "osso-quadril",
+    meshNames: ["Hip_bone_L", "Hip_bone_R"],
+    nomeOficial: "Os coxae",
+    nomeComum: "Osso do quadril",
+    regiao: "cintura-pelvica-coxa",
+    par: true,
+    tipoOsso: "Osso irregular",
+    resumo: "Formado pela fusão de três ossos (ílio, ísquio e púbis), une o membro inferior à coluna vertebral.",
+    descricaoAnatomica:
+      "O ílio, o ísquio e o púbis se fundem no acetábulo, a cavidade profunda que recebe a cabeça do fêmur. Articula-se posteriormente com o sacro (articulação sacroilíaca) e anteriormente com o osso do quadril contralateral (sínfise púbica), formando juntos a cintura pélvica.",
+    relacoesAnatomicas: [
+      "Acetábulo: articulação do quadril, com a cabeça do fêmur",
+      "Articulação sacroilíaca (posterior, com o sacro)",
+      "Sínfise púbica (anterior, com o osso do quadril contralateral)",
+    ],
+    marcosAnatomicos: ["Acetábulo", "Crista ilíaca e espinha ilíaca anterossuperior (EIAS)", "Forame obturado"],
+    correlacaoClinica:
+      "A displasia do desenvolvimento do quadril envolve tipicamente a formação anormal (rasa) do acetábulo, permitindo que a cabeça do fêmur se desloque parcial ou totalmente para fora dele — por isso o rastreio neonatal do quadril busca instabilidade dessa articulação. Na vida adulta, o acetábulo e a cabeça femoral são um dos sítios mais comuns de osteoartrose (coxartrose), causando dor inguinal e limitação de rotação interna do quadril.",
+    doencasRelacionadas: [
+      { slug: "displasia-desenvolvimento-quadril", nome: "Displasia do desenvolvimento do quadril" },
+      { slug: "osteoartrose", nome: "Osteoartrose" },
+    ],
+    pontosDeProva: [
+      "A EIAS (espinha ilíaca anterossuperior) é um marco de superfície facilmente palpável, usado como referência para diversas manobras e pontos de biópsia de crista ilíaca.",
+      "Coxartrose (osteoartrose de quadril) classicamente causa dor referida na virilha, e não lateralmente no quadril — dor lateral costuma ter outra origem (ex.: bursite trocantérica).",
+    ],
+    fontes: [
+      { tema: "Osteologia do osso do quadril e displasia do desenvolvimento do quadril", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Os coxae)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "femur",
+    meshNames: ["Femur_L", "Femur_R"],
+    nomeOficial: "Femur",
+    nomeComum: "Fêmur",
+    regiao: "cintura-pelvica-coxa",
+    par: true,
+    tipoOsso: "Osso longo",
+    resumo: "O osso mais longo, mais forte e mais pesado do corpo humano.",
+    descricaoAnatomica:
+      "A cabeça, arredondada, articula-se com o acetábulo do osso do quadril. O colo femoral liga a cabeça à diáfise, formando um ângulo (colodiafisário) que transmite o peso corporal à diáfise. Os trocânteres maior e menor servem de inserção a músculos da coxa e do quadril. Distalmente, os côndilos medial e lateral articulam-se com a tíbia, e a face patelar (sulco troclear) articula-se com a patela.",
+    relacoesAnatomicas: [
+      "Cabeça: articulação do quadril, com o acetábulo",
+      "Colo femoral: irrigado parcialmente por vasos retinaculares retrógrados, ramos das artérias circunflexas femorais",
+      "Côndilos distais: articulação do joelho, com a tíbia e a patela",
+    ],
+    marcosAnatomicos: ["Cabeça e colo femoral", "Trocânteres maior e menor", "Côndilos medial e lateral"],
+    correlacaoClinica:
+      "A fratura do colo do fêmur (\"fratura de quadril\") é uma das lesões mais comuns e mais graves em idosos com osteoporose, associada a alta morbimortalidade. O suprimento sanguíneo da cabeça femoral no adulto depende principalmente de vasos retinaculares que correm ao longo do colo — uma fratura do colo pode interromper esse suprimento, causando necrose avascular da cabeça femoral, mesmo após fixação cirúrgica adequada.",
+    doencasRelacionadas: [
+      { slug: "osteoartrose", nome: "Osteoartrose" },
+      { slug: "displasia-desenvolvimento-quadril", nome: "Displasia do desenvolvimento do quadril" },
+    ],
+    pontosDeProva: [
+      "Fratura do colo do fêmur em idoso é uma emergência ortopédica funcional: quanto maior o atraso cirúrgico, maior o risco de necrose avascular da cabeça femoral e de complicações sistêmicas do acamamento prolongado.",
+      "O suprimento sanguíneo retrógrado da cabeça femoral (via vasos retinaculares do colo) é a razão anatômica pela qual fraturas do colo femoral, ao contrário de fraturas mais distais (intertrocantéricas), têm alto risco de necrose avascular.",
+    ],
+    fontes: [
+      { tema: "Osteologia do fêmur, fratura de colo femoral e suprimento sanguíneo da cabeça femoral", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Femur)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "patela",
+    meshNames: ["Patella_L", "Patella_R"],
+    nomeOficial: "Patella",
+    nomeComum: "Patela",
+    regiao: "cintura-pelvica-coxa",
+    par: true,
+    tipoOsso: "Osso sesamoide",
+    resumo: "O maior osso sesamoide do corpo, embutido no tendão do músculo quadríceps femoral.",
+    descricaoAnatomica:
+      "Situa-se anteriormente ao joelho, dentro do tendão do quadríceps femoral (a porção distal a ela é chamada ligamento patelar, que se insere na tuberosidade da tíbia). Sua face posterior articula-se com o sulco troclear (face patelar) do fêmur, deslizando nele durante a flexão e extensão do joelho.",
+    relacoesAnatomicas: [
+      "Embutida no tendão do quadríceps femoral, continuando-se distalmente como o ligamento patelar",
+      "Face posterior: articulação femoropatelar, com o sulco troclear do fêmur",
+    ],
+    marcosAnatomicos: ["Base (superior) e ápice (inferior) da patela", "Face articular posterior (femoropatelar)"],
+    correlacaoClinica:
+      "Ao aumentar o braço de alavanca do tendão do quadríceps sobre o joelho, a patela amplia a eficiência da extensão do joelho — funciona como uma polia mecânica. A luxação patelar (geralmente lateral) é mais comum em mulheres jovens com fatores predisponentes anatômicos (sulco troclear raso, joelho valgo, frouxidão ligamentar). Fratura de patela costuma ocorrer por trauma direto (ex.: impacto contra o painel do carro) ou por contração súbita e violenta do quadríceps.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A patela é o maior osso sesamoide do corpo humano e funciona mecanicamente como uma polia, aumentando a eficiência da extensão do joelho pelo quadríceps.",
+      "Luxação patelar lateral recorrente é mais comum em mulheres jovens, associada a sulco troclear raso e joelho valgo.",
+    ],
+    fontes: [
+      { tema: "Osteologia da patela, função biomecânica e luxação patelar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Patella)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
 ];

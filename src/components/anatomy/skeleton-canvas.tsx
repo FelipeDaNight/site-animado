@@ -15,12 +15,12 @@ const DIMMED_OPACITY = 0.12;
 
 interface SkeletonModelProps {
   visibleMeshNames: Set<string> | null;
-  selectedMeshName: string | null;
+  selectedMeshNames: Set<string> | null;
   onSelect: (meshName: string) => void;
   controlsRef: React.RefObject<OrbitControlsImpl | null>;
 }
 
-function SkeletonModel({ visibleMeshNames, selectedMeshName, onSelect, controlsRef }: SkeletonModelProps) {
+function SkeletonModel({ visibleMeshNames, selectedMeshNames, onSelect, controlsRef }: SkeletonModelProps) {
   const { scene } = useGLTF(SKELETON_MODEL_URL);
   const camera = useThree((state) => state.camera);
   const invalidate = useThree((state) => state.invalidate);
@@ -37,10 +37,10 @@ function SkeletonModel({ visibleMeshNames, selectedMeshName, onSelect, controlsR
       material.transparent = !isVisible;
       material.opacity = isVisible ? 1 : DIMMED_OPACITY;
       material.depthWrite = isVisible;
-      material.emissive.copy(obj.name === selectedMeshName ? HIGHLIGHT_COLOR : new THREE.Color(0x000000));
+      material.emissive.copy(selectedMeshNames?.has(obj.name) ? HIGHLIGHT_COLOR : new THREE.Color(0x000000));
     });
     invalidate();
-  }, [scene, visibleMeshNames, selectedMeshName, invalidate]);
+  }, [scene, visibleMeshNames, selectedMeshNames, invalidate]);
 
   // Frame the camera on the region's own bounds whenever the region (not the
   // selection) changes, so switching regions actually brings that body part
@@ -102,11 +102,11 @@ function Loading() {
 
 interface SkeletonCanvasProps {
   visibleMeshNames: Set<string> | null;
-  selectedMeshName: string | null;
+  selectedMeshNames: Set<string> | null;
   onSelect: (meshName: string) => void;
 }
 
-export function SkeletonCanvas({ visibleMeshNames, selectedMeshName, onSelect }: SkeletonCanvasProps) {
+export function SkeletonCanvas({ visibleMeshNames, selectedMeshNames, onSelect }: SkeletonCanvasProps) {
   const controlsRef = useRef<OrbitControlsImpl | null>(null);
 
   return (
@@ -122,7 +122,7 @@ export function SkeletonCanvas({ visibleMeshNames, selectedMeshName, onSelect }:
       <Suspense fallback={<Loading />}>
         <SkeletonModel
           visibleMeshNames={visibleMeshNames}
-          selectedMeshName={selectedMeshName}
+          selectedMeshNames={selectedMeshNames}
           onSelect={onSelect}
           controlsRef={controlsRef}
         />
