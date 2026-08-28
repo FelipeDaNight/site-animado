@@ -25,11 +25,17 @@ function cx(...classes: (string | false | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+const CORPO_TODO = "Corpo todo" as const;
+type RegiaoOuTodos = RegiaoMuscular | typeof CORPO_TODO;
+
 export function MuscularExplorer() {
-  const [regiao, setRegiao] = useState<RegiaoMuscular>("Cabeça e pescoço");
+  const [regiao, setRegiao] = useState<RegiaoOuTodos>(CORPO_TODO);
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
 
-  const musculosDaRegiao = useMemo(() => musculos.filter((m) => m.regiao === regiao), [regiao]);
+  const musculosDaRegiao = useMemo(
+    () => (regiao === CORPO_TODO ? musculos : musculos.filter((m) => m.regiao === regiao)),
+    [regiao]
+  );
   const regionMeshNames = useMemo(
     () => new Set(musculosDaRegiao.flatMap((m) => m.meshNames)),
     [musculosDaRegiao]
@@ -41,7 +47,7 @@ export function MuscularExplorer() {
   );
   const visibleMeshNames = selectedMeshNames ?? regionMeshNames;
 
-  function handleSelectRegion(next: RegiaoMuscular) {
+  function handleSelectRegion(next: RegiaoOuTodos) {
     setRegiao(next);
     setSelectedSlug(null);
   }
@@ -49,7 +55,7 @@ export function MuscularExplorer() {
   function handleCanvasSelect(meshName: string) {
     const entry = musculos.find((m) => m.meshNames.includes(meshName));
     if (entry) {
-      setRegiao(entry.regiao);
+      if (regiao !== CORPO_TODO) setRegiao(entry.regiao);
       setSelectedSlug(entry.slug);
     }
   }
@@ -57,7 +63,7 @@ export function MuscularExplorer() {
   return (
     <div>
       <div className="flex flex-wrap gap-1.5">
-        {REGIOES_MUSCULARES.map((r) => (
+        {([CORPO_TODO, ...REGIOES_MUSCULARES] as const).map((r) => (
           <button
             key={r}
             type="button"
@@ -89,7 +95,7 @@ export function MuscularExplorer() {
           <div className="border-b border-border px-4 py-3">
             <h2 className="flex items-center gap-2 text-sm font-semibold text-foreground">
               <Dumbbell className="h-4 w-4 text-brand" />
-              Músculos desta região
+              {regiao === CORPO_TODO ? "Todos os músculos" : "Músculos desta região"}
             </h2>
             <p className="mt-0.5 text-xs text-foreground-subtle">{musculosDaRegiao.length} músculos</p>
           </div>
