@@ -24,6 +24,13 @@ function cx(...classes: (string | false | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+// The 3D model also carries the full-body peripheral nervous system (all
+// spinal nerves, plexuses, etc.) since it's exported from one shared
+// collection — but this page only covers the 12 cranial nerves so far, so
+// the idle view is scoped to just those + the brainstem instead of dumping
+// the whole sprawling body-wide nerve web on the screen.
+const OVERVIEW_MESH_NAMES = new Set(nervosCranianos.flatMap((n) => n.meshNames));
+
 export function CranialNervesExplorer() {
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   const selected = nervosCranianos.find((n) => n.slug === selectedSlug) ?? null;
@@ -32,6 +39,7 @@ export function CranialNervesExplorer() {
     () => (selected ? new Set(selected.meshNames) : null),
     [selected]
   );
+  const visibleMeshNames = selectedMeshNames ?? OVERVIEW_MESH_NAMES;
 
   function handleCanvasSelect(meshName: string) {
     const entry = nervosCranianos.find((n) => n.meshNames.includes(meshName));
@@ -61,7 +69,7 @@ export function CranialNervesExplorer() {
       <div className="mt-5 h-[60vh] overflow-hidden rounded-2xl border border-border bg-background-raised lg:h-[68vh]">
         <SkeletonCanvas
           modelUrl={NERVOUS_MODEL_URL}
-          visibleMeshNames={selectedMeshNames}
+          visibleMeshNames={visibleMeshNames}
           selectedMeshNames={selectedMeshNames}
           onSelect={handleCanvasSelect}
         />
