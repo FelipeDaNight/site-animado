@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SkeletonExplorer } from "@/components/anatomy/skeleton-explorer";
 
 export const metadata: Metadata = {
@@ -11,7 +12,14 @@ export default function EsqueletoPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="max-w-2xl">
-        <h1 className="text-3xl font-semibold tracking-tight text-foreground">Sistema Esquelético</h1>
+        <div className="flex items-center gap-2 text-sm text-foreground-subtle">
+          <span className="text-foreground">Sistema Esquelético</span>
+          <span>·</span>
+          <Link href="/anatomia/articulacoes" className="hover:text-foreground">
+            Sistema Articular
+          </Link>
+        </div>
+        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Esquelético</h1>
         <p className="mt-2 text-foreground-muted">
           Modelo 3D interativo do esqueleto humano completo. Escolha uma região, clique em um osso no modelo ou na
           lista para abrir sua ficha de estudo.

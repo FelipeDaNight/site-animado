@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { href: "/atualizacoes", label: "Atualizações" },
   { href: "/medicamentos", label: "Medicamentos" },
   { href: "/doencas", label: "Doenças" },
-  { href: "/anatomia/esqueleto", label: "Anatomia 3D" },
+  { href: "/anatomia/esqueleto", label: "Anatomia 3D", activePrefix: "/anatomia" },
 ];
 
 function cx(...classes: (string | false | undefined)[]) {
@@ -44,7 +44,7 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((link) => {
-            const active = pathname?.startsWith(link.href);
+            const active = pathname?.startsWith(link.activePrefix ?? link.href);
             return (
               <Link
                 key={link.href}
@@ -103,7 +103,7 @@ export function SiteHeader() {
           </div>
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => {
-              const active = pathname?.startsWith(link.href);
+              const active = pathname?.startsWith(link.activePrefix ?? link.href);
               return (
                 <Link
                   key={link.href}

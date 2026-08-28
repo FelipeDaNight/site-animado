@@ -144,6 +144,38 @@ export interface Osso {
   fontes: FonteTema[];
 }
 
+export const TIPOS_ARTICULACAO = [
+  "Sinovial esferóidea",
+  "Sinovial elipsóidea (condilar)",
+  "Sinovial selar",
+  "Sinovial trocóide (pivô)",
+  "Sinovial gínglimo (dobradiça)",
+  "Sinovial plana",
+  "Cartilaginosa (sínfise)",
+  "Cartilaginosa (sincondrose)",
+  "Fibrosa (sutura)",
+  "Fibrosa (sindesmose)",
+] as const;
+
+export type TipoArticulacao = (typeof TIPOS_ARTICULACAO)[number];
+
+export interface Articulacao {
+  slug: string;
+  meshNames: string[];
+  ossosEnvolvidos: RelatedLink[];
+  nomeOficial: string;
+  nomeComum: string;
+  tipo: TipoArticulacao;
+  resumo: string;
+  descricaoAnatomica: string;
+  movimentos: string[];
+  estabilizadores: string[];
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;
