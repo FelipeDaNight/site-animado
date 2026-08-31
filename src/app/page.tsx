@@ -73,26 +73,37 @@ export default function Home() {
 
   return (
     <div>
-      <section className="border-b border-border bg-gradient-to-b from-brand-soft/60 to-transparent">
+      <section className="border-b border-border bg-background-raised">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center rounded-full border border-brand/25 bg-brand-soft px-3 py-1 text-xs font-medium text-brand-strong">
+            <span className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-brand">
               Feito para a rotina da graduação
             </span>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            <h1 className="mt-3 text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
               Sua biblioteca clínica de bolso
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-foreground-muted">
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-foreground-muted">
               Medicamentos, doenças e atualizações clínicas organizados em um só lugar, com busca
               instantânea e conteúdo estruturado do jeito que você precisa para estudar e revisar.
             </p>
             <div className="mt-8">
               <HomeHeroSearch />
             </div>
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground-subtle">
-              <span>{totalMedIndex} nomes de medicamentos no índice</span>
-              <span>{totalCid10} categorias da CID-10 no índice de doenças</span>
-              <span>{updates.length} atualizações clínicas</span>
+          </div>
+        </div>
+        <div className="border-t border-border">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <div className="px-4 py-5 sm:px-6">
+              <p className="tabular font-mono text-2xl font-semibold text-brand-strong">{totalMedIndex}</p>
+              <p className="mt-1 text-xs text-foreground-subtle">nomes de medicamentos no índice</p>
+            </div>
+            <div className="px-4 py-5 sm:px-6">
+              <p className="tabular font-mono text-2xl font-semibold text-brand-strong">{totalCid10}</p>
+              <p className="mt-1 text-xs text-foreground-subtle">categorias da CID-10 no índice de doenças</p>
+            </div>
+            <div className="px-4 py-5 sm:px-6">
+              <p className="tabular font-mono text-2xl font-semibold text-brand-strong">{updates.length}</p>
+              <p className="mt-1 text-xs text-foreground-subtle">atualizações clínicas</p>
             </div>
           </div>
         </div>
@@ -104,7 +115,7 @@ export default function Home() {
             <Link
               key={pillar.href}
               href={pillar.href}
-              className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-border-strong hover:shadow-md"
+              className="group flex flex-col rounded-lg border border-border bg-card p-6 transition-colors hover:border-brand/50 hover:bg-brand-soft/30"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand-strong">
                 <pillar.icon className="h-5 w-5" />
@@ -141,8 +152,8 @@ export default function Home() {
           </p>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {STEPS.map((step, index) => (
-              <div key={step.title} className="relative rounded-2xl border border-border bg-card p-6">
-                <span className="text-xs font-semibold text-foreground-subtle">
+              <div key={step.title} className="relative rounded-lg border border-border bg-card p-6">
+                <span className="font-mono text-xs font-semibold text-brand">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="mt-3 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-soft text-brand-strong">

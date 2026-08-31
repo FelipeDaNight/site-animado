@@ -7,7 +7,7 @@ import { formatDateShort, readingTime } from "@/lib/text";
 
 export function UpdateCard({ update }: { update: ClinicalUpdate }) {
   return (
-    <div className="group relative rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-border-strong hover:shadow-md">
+    <div className="group relative rounded-lg border border-border bg-card p-5 transition-colors hover:border-brand/50 hover:bg-brand-soft/30">
       <div className="absolute right-4 top-4">
         <FavoriteButton type="atualizacao" slug={update.slug} label={update.titulo} size="sm" />
       </div>

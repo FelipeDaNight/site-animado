@@ -6,7 +6,7 @@ import { FavoriteButton } from "@/components/favorite-button";
 
 export function DiseaseCard({ disease }: { disease: Disease }) {
   return (
-    <div className="group relative rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-border-strong hover:shadow-md">
+    <div className="group relative rounded-lg border border-border bg-card p-5 transition-colors hover:border-brand/50 hover:bg-brand-soft/30">
       <div className="absolute right-4 top-4">
         <FavoriteButton type="doenca" slug={disease.slug} label={disease.nome} size="sm" />
       </div>
