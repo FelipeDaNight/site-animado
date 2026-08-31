@@ -40,9 +40,12 @@ function SkeletonModel({
   // data's mesh names (which are node names) never match those children.
   // Propagating each named Group's name down to its Mesh children once per
   // scene load makes every primitive addressable by its real structure name.
+  // The scene root itself is also a named Group ("Scene") — it must be
+  // excluded, otherwise this clobbers the name of every Mesh that is a
+  // direct child of the root with the literal string "Scene".
   useEffect(() => {
     scene.traverse((obj) => {
-      if (!(obj instanceof THREE.Group) || !obj.name) return;
+      if (obj === scene || !(obj instanceof THREE.Group) || !obj.name) return;
       obj.children.forEach((child) => {
         if (child instanceof THREE.Mesh) child.name = obj.name;
       });
