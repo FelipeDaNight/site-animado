@@ -6,14 +6,21 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import * as THREE from "three";
 import { SKELETON_MODEL_URL } from "@/data/skeletalSystem";
-import { JOINTS_MODEL_URL } from "@/data/articulations";
+import { NERVOUS_MODEL_URL } from "@/data/nervousSystem";
 
 useGLTF.setDecoderPath("/draco/");
 useGLTF.preload(SKELETON_MODEL_URL);
+useGLTF.preload(NERVOUS_MODEL_URL);
 
 const HIGHLIGHT_COLOR = new THREE.Color("#2bb3a1");
 const NO_EMISSIVE = new THREE.Color(0x000000);
 const DIMMED_OPACITY = 0.12;
+
+// Forces every mesh in a layer to render at DIMMED_OPACITY — used for the
+// skeleton, which here is pure spatial context (never selectable, never
+// fully opaque), so the student can tell which body region a nerve is
+// running through instead of seeing it float in empty space.
+const NONE_VISIBLE = new Set<string>();
 
 function applyMeshVisibility(
   scene: THREE.Object3D,
@@ -35,28 +42,36 @@ function applyMeshVisibility(
   });
 }
 
-function expandBoxByFocus(scene: THREE.Object3D, focusNames: Set<string> | null, box: THREE.Box3) {
-  let found = false;
+// GLTFLoader wraps a multi-primitive glTF mesh in a Group carrying the
+// node's real name, with child Meshes named after the mesh resource
+// instead — propagate the Group's name down so structure names still
+// match. The scene root is itself a named Group ("Scene") and must be
+// excluded, or every top-level mesh gets renamed to "Scene".
+function propagateGroupNames(scene: THREE.Object3D) {
   scene.traverse((obj) => {
-    if (!(obj instanceof THREE.Mesh)) return;
-    if (focusNames && !focusNames.has(obj.name)) return;
-    box.expandByObject(obj);
-    found = true;
+    if (obj === scene || !(obj instanceof THREE.Group) || !obj.name) return;
+    obj.children.forEach((child) => {
+      if (child instanceof THREE.Mesh) child.name = obj.name;
+    });
   });
-  return found;
 }
 
 interface ModelProps {
   url: string;
   visibleMeshNames: Set<string> | null;
   selectedMeshNames: Set<string> | null;
+  clickable: boolean;
   onSelect: (meshName: string) => void;
   onLoaded: (scene: THREE.Group) => void;
 }
 
-function Model({ url, visibleMeshNames, selectedMeshNames, onSelect, onLoaded }: ModelProps) {
+function Model({ url, visibleMeshNames, selectedMeshNames, clickable, onSelect, onLoaded }: ModelProps) {
   const { scene } = useGLTF(url);
   const invalidate = useThree((state) => state.invalidate);
+
+  useEffect(() => {
+    propagateGroupNames(scene);
+  }, [scene]);
 
   useEffect(() => {
     onLoaded(scene);
@@ -69,10 +84,12 @@ function Model({ url, visibleMeshNames, selectedMeshNames, onSelect, onLoaded }:
 
   // Don't stop propagation until we know this hit actually matters: the
   // nearest intersected mesh under the cursor is often a dimmed one that
-  // doesn't belong to visibleMeshNames (e.g. an occluding bone), and the
+  // doesn't belong to visibleMeshNames (e.g. an occluding brain-surface
+  // mesh in front of a nerve, or the skeleton context layer), and the
   // click should fall through to whatever's behind it instead of being
   // silently swallowed here.
   function handleClick(event: ThreeEvent<MouseEvent>) {
+    if (!clickable) return;
     const mesh = event.object;
     if (!(mesh instanceof THREE.Mesh)) return;
     if (visibleMeshNames && !visibleMeshNames.has(mesh.name)) return;
@@ -83,32 +100,42 @@ function Model({ url, visibleMeshNames, selectedMeshNames, onSelect, onLoaded }:
   return <primitive object={scene} onClick={handleClick} />;
 }
 
+function expandBoxByFocus(scene: THREE.Object3D, focusNames: Set<string> | null, box: THREE.Box3) {
+  let found = false;
+  scene.traverse((obj) => {
+    if (!(obj instanceof THREE.Mesh)) return;
+    if (focusNames && !focusNames.has(obj.name)) return;
+    box.expandByObject(obj);
+    found = true;
+  });
+  return found;
+}
+
 interface FrameCameraProps {
-  boneScene: THREE.Group | null;
-  ligamentScene: THREE.Group | null;
-  boneFocusNames: Set<string> | null;
-  ligamentFocusNames: Set<string> | null;
+  nerveScene: THREE.Group | null;
+  focusNames: Set<string> | null;
+  padding: number;
   controlsRef: React.RefObject<OrbitControlsImpl | null>;
 }
 
-// Frames the camera on whichever bones/ligaments are currently relevant,
-// combining both loaded models into a single bounding box. Three.js's
-// camera is an imperative scene-graph object, not React state — mutating
-// it in place (position, near/far, projection matrix) is the normal way
-// to move it, which is what the disabled rule below is objecting to.
+// Frames the camera on the nerve model alone — the skeleton is only ever a
+// dimmed backdrop and shouldn't influence the zoom, or a selected nerve
+// with a short trajectory (e.g. abducente) would always be framed as if it
+// spanned the whole body. Three.js's camera is an imperative scene-graph
+// object, not React state — mutating it in place (position, near/far,
+// projection matrix) is the normal way to move it, which is what the
+// disabled rule below is objecting to.
 /* eslint-disable react-hooks/immutability */
-function FrameCamera({ boneScene, ligamentScene, boneFocusNames, ligamentFocusNames, controlsRef }: FrameCameraProps) {
+function FrameCamera({ nerveScene, focusNames, padding, controlsRef }: FrameCameraProps) {
   const camera = useThree((state) => state.camera);
   const invalidate = useThree((state) => state.invalidate);
 
   useEffect(() => {
+    if (!nerveScene) return;
     const box = new THREE.Box3();
-    let found = false;
-    if (boneScene) found = expandBoxByFocus(boneScene, boneFocusNames, box) || found;
-    if (ligamentScene) found = expandBoxByFocus(ligamentScene, ligamentFocusNames, box) || found;
+    const found = expandBoxByFocus(nerveScene, focusNames, box);
     if (!found) return;
 
-    const padding = ligamentScene ? 2.6 : 1.7;
     const size = box.getSize(new THREE.Vector3());
     const center = box.getCenter(new THREE.Vector3());
     const maxDim = Math.max(size.x, size.y, size.z) || 1;
@@ -127,7 +154,7 @@ function FrameCamera({ boneScene, ligamentScene, boneFocusNames, ligamentFocusNa
       controls.update();
     }
     invalidate();
-  }, [boneScene, ligamentScene, boneFocusNames, ligamentFocusNames, camera, controlsRef, invalidate]);
+  }, [nerveScene, focusNames, padding, camera, controlsRef, invalidate]);
 
   return null;
 }
@@ -141,22 +168,24 @@ function Loading() {
   );
 }
 
-interface JointCanvasProps {
-  boneMeshNames: Set<string> | null;
-  ligamentMeshNames: Set<string> | null;
+interface NerveCanvasProps {
+  visibleMeshNames: Set<string> | null;
+  selectedMeshNames: Set<string> | null;
   onSelect: (meshName: string) => void;
 }
 
-export function JointCanvas({ boneMeshNames, ligamentMeshNames, onSelect }: JointCanvasProps) {
+export function NerveCanvas({ visibleMeshNames, selectedMeshNames, onSelect }: NerveCanvasProps) {
   const controlsRef = useRef<OrbitControlsImpl | null>(null);
-  const [boneScene, setBoneScene] = useState<THREE.Group | null>(null);
-  const [ligamentScene, setLigamentScene] = useState<THREE.Group | null>(null);
+  const [nerveScene, setNerveScene] = useState<THREE.Group | null>(null);
+
+  const focusNames = selectedMeshNames ?? visibleMeshNames;
+  const padding = selectedMeshNames ? 2.4 : 2.0;
 
   return (
     <Canvas
       camera={{ position: [0, 0.2, 2.6], fov: 40, near: 0.01, far: 50 }}
       dpr={[1, 2]}
-      gl={{ alpha: true, preserveDrawingBuffer: true }}
+      gl={{ alpha: true }}
       frameloop="demand"
     >
       <hemisphereLight args={["#ffffff", "#7a8494", 1]} />
@@ -165,30 +194,24 @@ export function JointCanvas({ boneMeshNames, ligamentMeshNames, onSelect }: Join
       <Suspense fallback={<Loading />}>
         <Model
           url={SKELETON_MODEL_URL}
-          visibleMeshNames={boneMeshNames}
+          visibleMeshNames={NONE_VISIBLE}
           selectedMeshNames={null}
+          clickable={false}
           onSelect={onSelect}
-          onLoaded={setBoneScene}
+          onLoaded={() => {}}
         />
       </Suspense>
-      {ligamentMeshNames && (
-        <Suspense fallback={null}>
-          <Model
-            url={JOINTS_MODEL_URL}
-            visibleMeshNames={ligamentMeshNames}
-            selectedMeshNames={ligamentMeshNames}
-            onSelect={onSelect}
-            onLoaded={setLigamentScene}
-          />
-        </Suspense>
-      )}
-      <FrameCamera
-        boneScene={boneScene}
-        ligamentScene={ligamentMeshNames ? ligamentScene : null}
-        boneFocusNames={boneMeshNames}
-        ligamentFocusNames={ligamentMeshNames}
-        controlsRef={controlsRef}
-      />
+      <Suspense fallback={<Loading />}>
+        <Model
+          url={NERVOUS_MODEL_URL}
+          visibleMeshNames={visibleMeshNames}
+          selectedMeshNames={selectedMeshNames}
+          clickable
+          onSelect={onSelect}
+          onLoaded={setNerveScene}
+        />
+      </Suspense>
+      <FrameCamera nerveScene={nerveScene} focusNames={focusNames} padding={padding} controlsRef={controlsRef} />
       <OrbitControls ref={controlsRef} makeDefault minDistance={0.05} maxDistance={8} enableDamping />
     </Canvas>
   );

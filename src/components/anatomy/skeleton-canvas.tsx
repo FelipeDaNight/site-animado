@@ -114,11 +114,16 @@ function SkeletonModel({
   }, [scene, visibleMeshNames, selectedMeshNames, camera, controlsRef, invalidate]);
   /* eslint-enable react-hooks/immutability */
 
+  // Don't stop propagation until we know this hit actually matters: the
+  // nearest intersected mesh under the cursor is often a dimmed one that
+  // doesn't belong to visibleMeshNames (e.g. an occluding bone), and the
+  // click should fall through to whatever's behind it instead of being
+  // silently swallowed here.
   function handleClick(event: ThreeEvent<MouseEvent>) {
-    event.stopPropagation();
     const mesh = event.object;
     if (!(mesh instanceof THREE.Mesh)) return;
     if (visibleMeshNames && !visibleMeshNames.has(mesh.name)) return;
+    event.stopPropagation();
     onSelect(mesh.name);
   }
 

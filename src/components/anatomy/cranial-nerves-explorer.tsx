@@ -4,12 +4,12 @@ import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import { Activity, BookMarked, Info, Link2, MapPin, Stethoscope } from "lucide-react";
 import Link from "next/link";
-import { nervosCranianos, NERVOUS_MODEL_URL } from "@/data/nervousSystem";
+import { nervosCranianos } from "@/data/nervousSystem";
 import { DetailSection, BulletList } from "@/components/ui/detail-section";
 import { Callout } from "@/components/ui/callout";
 
-const SkeletonCanvas = dynamic(
-  () => import("@/components/anatomy/skeleton-canvas").then((mod) => mod.SkeletonCanvas),
+const NerveCanvas = dynamic(
+  () => import("@/components/anatomy/nerve-canvas").then((mod) => mod.NerveCanvas),
   {
     ssr: false,
     loading: () => (
@@ -67,8 +67,7 @@ export function CranialNervesExplorer() {
       </div>
 
       <div className="mt-5 h-[60vh] overflow-hidden rounded-2xl border border-border bg-background-raised lg:h-[68vh]">
-        <SkeletonCanvas
-          modelUrl={NERVOUS_MODEL_URL}
+        <NerveCanvas
           visibleMeshNames={visibleMeshNames}
           selectedMeshNames={selectedMeshNames}
           onSelect={handleCanvasSelect}
