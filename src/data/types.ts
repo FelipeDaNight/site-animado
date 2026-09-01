@@ -283,6 +283,34 @@ export interface EstruturaCirculatoria {
   fontes: FonteTema[];
 }
 
+export const REGIOES_DIGESTORIO = [
+  "Cavidade oral",
+  "Faringe e esôfago",
+  "Estômago",
+  "Intestino delgado",
+  "Intestino grosso",
+  "Fígado e vias biliares",
+  "Pâncreas",
+] as const;
+
+export type RegiaoDigestorio = (typeof REGIOES_DIGESTORIO)[number];
+
+export interface OrgaoDigestivo {
+  slug: string;
+  meshNames: string[];
+  regiao: RegiaoDigestorio;
+  nomeOficial: string;
+  nomeComum: string;
+  resumo: string;
+  descricaoAnatomica: string;
+  funcao: string[];
+  relacoesAnatomicas: string;
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;

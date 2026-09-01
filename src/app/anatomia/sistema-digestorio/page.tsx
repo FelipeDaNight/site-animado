@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CirculatoryExplorer } from "@/components/anatomy/circulatory-explorer";
+import { DigestiveExplorer } from "@/components/anatomy/digestive-explorer";
 
 export const metadata: Metadata = {
-  title: "Sistema Circulatório 3D",
+  title: "Sistema Digestório 3D",
   description:
-    "Modelo 3D interativo do coração, grandes vasos, círculo arterial cerebral e vasos de membros: trajeto, ramos e correlação clínica.",
+    "Modelo 3D interativo da cavidade oral, faringe, esôfago, estômago, intestinos, fígado, vias biliares e pâncreas: anatomia, função e correlação clínica.",
 };
 
-export default function SistemaCirculatorioPage() {
+export default function SistemaDigestorioPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="max-w-2xl">
@@ -29,23 +29,22 @@ export default function SistemaCirculatorioPage() {
             Sistema Muscular
           </Link>
           <span>·</span>
-          <span className="text-foreground">Sistema Circulatório</span>
-          <span>·</span>
-          <Link href="/anatomia/sistema-digestorio" className="hover:text-foreground">
-            Sistema Digestório
+          <Link href="/anatomia/sistema-circulatorio" className="hover:text-foreground">
+            Sistema Circulatório
           </Link>
+          <span>·</span>
+          <span className="text-foreground">Sistema Digestório</span>
         </div>
-        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Circulatório</h1>
+        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Digestório</h1>
         <p className="mt-2 text-foreground-muted">
-          Modelo 3D interativo com 46 estruturas cardiovasculares de alto rendimento em prova — câmaras e valvas
-          do coração, grandes vasos, círculo arterial cerebral, circulação abdominal/pélvica e vasos de membros.
-          Escolha uma estrutura para ver trajeto, ramos e correlação clínica. Este é um recorte selecionado — o
-          modelo completo tem mais de 700 vasos nomeados individualmente, mas a cobertura de fichas segue
-          crescendo.
+          Modelo 3D interativo com 28 estruturas do trato digestório de alto rendimento em prova — cavidade oral
+          e dentição, faringe e esôfago, estômago, intestino delgado e grosso, fígado (com a segmentação de
+          Couinaud completa), vias biliares e pâncreas. Escolha uma estrutura para ver descrição anatômica,
+          função, relações e correlação clínica.
         </p>
       </div>
       <div className="mt-8">
-        <CirculatoryExplorer />
+        <DigestiveExplorer />
       </div>
       <p className="mt-6 text-xs text-foreground-subtle">
         Modelo 3D: Z-Anatomy (z-anatomy.com), CC BY-SA 4.0, autoria Gauthier Kervyn e colaboradores, sobre base

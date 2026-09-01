@@ -30,6 +30,10 @@ export default function ArticulacoesPage() {
           <Link href="/anatomia/sistema-circulatorio" className="hover:text-foreground">
             Sistema Circulatório
           </Link>
+          <span>·</span>
+          <Link href="/anatomia/sistema-digestorio" className="hover:text-foreground">
+            Sistema Digestório
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Articular</h1>
         <p className="mt-2 text-foreground-muted">
