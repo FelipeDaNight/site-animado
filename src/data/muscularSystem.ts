@@ -1496,4 +1496,627 @@ export const musculos: Musculo[] = [
       { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
     ],
   },
+  {
+    slug: "levantador-da-escapula",
+    meshNames: ["Levator_scapulae_L", "Levator_scapulae_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus levator scapulae",
+    nomeComum: "Levantador da escápula",
+    resumo:
+      "Músculo toracoapendicular posterior profundo que eleva a escápula, com o terço superior profundo ao esternocleidomastóideo e o terço inferior profundo ao trapézio.",
+    origem: "Processos transversos de C1 a C4",
+    insercao: "Ângulo superior da escápula",
+    inervacao: "Nervo dorsal da escápula (C5), com contribuição direta de C3-C4",
+    acoes: ["Elevação da escápula", "Retração da escápula (sinergista)", "Rotação para baixo da escápula (sinergista)"],
+    correlacaoClinica:
+      "É um dos músculos mais frequentemente envolvidos em dor cervical mecânica e tensão postural ('carregar peso nos ombros'), especialmente por má postura sentada prolongada ou uso de telefone entre ombro e orelha — quadro popularmente chamado de síndrome do levantador da escápula, com dor irradiada do ângulo superior da escápula ao pescoço.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O terço superior do levantador da escápula está profundo ao esternocleidomastóideo, e o terço inferior está profundo ao trapézio — relação anatômica clássica de prova.",
+      "É um dos músculos mais associados à dor cervical mecânica por tensão postural, popularmente descrita como 'travamento' do pescoço.",
+    ],
+    fontes: [
+      { tema: "Anatomia do levantador da escápula", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus levator scapulae)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "romboide-menor",
+    meshNames: ["Rhomboid_minor_muscle_L", "Rhomboid_minor_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus rhomboideus minor",
+    nomeComum: "Romboide menor",
+    resumo:
+      "Músculo toracoapendicular posterior profundo, situado acima do romboide maior, que retrai e roda a escápula para baixo, ajudando o serrátil anterior a mantê-la firme contra a parede torácica.",
+    origem: "Processos espinhosos de C7-T1",
+    insercao: "Margem medial da escápula (acima da espinha da escápula)",
+    inervacao: "Nervo dorsal da escápula (C4-C5)",
+    acoes: ["Retração da escápula", "Elevação da escápula (sinergista)", "Rotação para baixo da escápula"],
+    correlacaoClinica:
+      "Junto ao romboide maior, forma faixas paralelas profundas ao trapézio que seguem em direção inferolateral — sua fraqueza contribui para uma postura de ombros protraídos ('arredondados'), comum em quem passa longos períodos com os braços à frente do corpo (uso de computador/celular).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Romboide menor e maior situam-se profundamente ao trapézio, formando faixas paralelas oblíquas que auxiliam o serrátil anterior a manter a escápula contra a parede torácica.",
+      "Compõe, com o levantador da escápula, os toracoapendiculares posteriores profundos — em oposição ao trapézio e grande dorsal (superficiais).",
+    ],
+    fontes: [
+      { tema: "Anatomia dos romboides e postura escapular", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus rhomboideus minor)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "romboide-maior",
+    meshNames: ["Rhomboid_major_muscle_L", "Rhomboid_major_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus rhomboideus major",
+    nomeComum: "Romboide maior",
+    resumo:
+      "Maior dos dois romboides, situado abaixo do romboide menor, retrai a escápula e é um dos principais antagonistas do serrátil anterior no controle da posição escapular.",
+    origem: "Processos espinhosos de T2-T5",
+    insercao: "Margem medial da escápula (abaixo da espinha da escápula, até o ângulo inferior)",
+    inervacao: "Nervo dorsal da escápula (C4-C5)",
+    acoes: ["Retração da escápula", "Elevação da escápula (sinergista)", "Rotação para baixo da escápula"],
+    correlacaoClinica:
+      "Lesões isoladas do nervo dorsal da escápula (compressão dentro do músculo escaleno médio, ou iatrogênica em cirurgias cervicais) enfraquecem ambos os romboides, causando discreta escápula alada medial e dificuldade sutil de retração escapular — quadro muito menos evidente que a escápula alada clássica da lesão do nervo torácico longo (serrátil anterior).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Romboide maior e menor compartilham a mesma inervação (nervo dorsal da escápula, C4-C5) — sua lesão combinada causa uma escápula alada discreta, bem menos evidente que a lesão do nervo torácico longo.",
+      "O romboide maior insere-se na margem medial da escápula do nível da espinha escapular até o ângulo inferior, contínuo distalmente ao romboide menor.",
+    ],
+    fontes: [
+      { tema: "Nervo dorsal da escápula e escápula alada discreta", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus rhomboideus major)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "serratil-posterior-superior",
+    meshNames: ["Serratus_posterior_superior_muscle_L", "Serratus_posterior_superior_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus serratus posterior superior",
+    nomeComum: "Serrátil posterior superior",
+    resumo:
+      "Fino músculo intermédio do dorso, situado profundamente aos romboides, que eleva as costelas superiores como músculo acessório da inspiração.",
+    origem: "Processos espinhosos de C6-T2",
+    insercao: "2ª à 5ª costelas",
+    inervacao: "Ramos anteriores dos nervos espinais de C6-T2 (nervos intercostais superiores)",
+    acoes: ["Rotação/elevação das costelas superiores (músculo acessório da inspiração)"],
+    correlacaoClinica:
+      "Como músculo acessório da respiração, seu papel funcional é discreto em respiração tranquila, tornando-se mais relevante em esforço respiratório aumentado (exercício intenso, doença pulmonar obstrutiva). É didaticamente destacado por sua inervação direta pelos próprios nervos intercostais superiores, diferente da maioria dos músculos do dorso.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O serrátil posterior superior é inervado diretamente pelos nervos intercostais (ramos anteriores dos nervos espinais), ao contrário da maioria dos músculos do dorso, inervados por ramos posteriores.",
+      "Compõe, com o serrátil posterior inferior, o grupo intermédio do dorso, ambos finos músculos acessórios da respiração.",
+    ],
+    fontes: [
+      { tema: "Anatomia dos serráteis posteriores", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus serratus posterior superior)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "serratil-posterior-inferior",
+    meshNames: ["Serratus_posterior_inferior_muscle_L", "Serratus_posterior_inferior_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus serratus posterior inferior",
+    nomeComum: "Serrátil posterior inferior",
+    resumo:
+      "Fino músculo intermédio do dorso que estabiliza as costelas inferiores contra a tração do diafragma durante a inspiração.",
+    origem: "Processos espinhosos de T11-L2",
+    insercao: "9ª à 12ª costelas",
+    inervacao: "Ramos anteriores dos nervos espinais de T9-T12 (nervos intercostais inferiores)",
+    acoes: ["Estabilização do tórax inferior durante a inspiração (fixa as costelas inferiores contra a tração descendente do diafragma)"],
+    correlacaoClinica:
+      "Atua em sinergia funcional com o diafragma: ao fixar as costelas inferiores, evita que a contração diafragmática as tracione medialmente, otimizando a expansão da caixa torácica na inspiração profunda.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O serrátil posterior inferior estabiliza as costelas inferiores contra a tração do diafragma durante a inspiração, atuando em sinergia funcional com ele.",
+      "É inervado diretamente pelos nervos intercostais inferiores (T9-T12), assim como o serrátil posterior superior é inervado pelos superiores.",
+    ],
+    fontes: [
+      { tema: "Sinergia entre serrátil posterior inferior e diafragma", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus serratus posterior inferior)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "esplenio-da-cabeca",
+    meshNames: ["Splenius_capitis_muscle_L", "Splenius_capitis_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus splenius capitis",
+    nomeComum: "Esplênio da cabeça",
+    resumo:
+      "Músculo da camada superficial intrínseca do dorso que, agindo bilateralmente, estende a cabeça e o pescoço, e unilateralmente gira a cabeça para o mesmo lado.",
+    origem: "Ligamento nucal e processos espinhosos de C7-T3",
+    insercao: "Processo mastoide e terço lateral da linha nucal superior do occipital",
+    inervacao: "Ramos posteriores dos nervos espinais cervicais médios",
+    acoes: ["Bilateralmente: extensão da cabeça e do pescoço", "Unilateralmente: flexão lateral e rotação da cabeça para o mesmo lado"],
+    correlacaoClinica:
+      "Junto ao esplênio do pescoço, é um dos músculos mais implicados na cefaleia cervicogênica e no torcicolo por espasmo muscular — dor referida da região cervical superior para a região occipital/temporal, agravada pela rotação ou extensão do pescoço.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O esplênio da cabeça, ao contrário-se unilateralmente, gira a cabeça para o MESMO lado da contração — importante para não confundir com o esternocleidomastóideo, que gira para o lado OPOSTO.",
+      "É um dos principais músculos implicados na cefaleia cervicogênica, por dor referida da musculatura cervical superior para a região occipital.",
+    ],
+    fontes: [
+      { tema: "Anatomia do esplênio da cabeça e cefaleia cervicogênica", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus splenius capitis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "esplenio-do-pescoco",
+    meshNames: ["Splenius_colli_muscle_L", "Splenius_colli_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus splenius cervicis",
+    nomeComum: "Esplênio do pescoço",
+    resumo:
+      "Continuação inferior do esplênio da cabeça, insere-se nos processos transversos cervicais superiores em vez do crânio, com ação sinérgica de extensão e rotação do pescoço.",
+    origem: "Processos espinhosos de T3-T6",
+    insercao: "Tubérculos dos processos transversos de C1-C3",
+    inervacao: "Ramos posteriores dos nervos espinais cervicais inferiores",
+    acoes: ["Bilateralmente: extensão do pescoço", "Unilateralmente: flexão lateral e rotação do pescoço para o mesmo lado"],
+    correlacaoClinica:
+      "Junto ao esplênio da cabeça, participa do quadro de tensão cervical e torcicolo — a dor miofascial nesses músculos é uma causa comum, embora subdiagnosticada, de cefaleia occipital e dor cervical crônica em trabalhadores de escritório.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O esplênio do pescoço insere-se nos processos transversos de C1-C3, diferente do esplênio da cabeça, que se insere no crânio (processo mastoide e linha nucal) — distinção anatômica que justifica os nomes diferentes.",
+      "Ambos os esplênios giram a cabeça/pescoço para o MESMO lado da contração quando agem unilateralmente.",
+    ],
+    fontes: [
+      { tema: "Anatomia do esplênio do pescoço", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus splenius cervicis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "longuissimo",
+    meshNames: [
+      "Longissimus_capitis_muscle_L", "Longissimus_capitis_muscle_R",
+      "Longissimus_colli_muscle_L", "Longissimus_colli_muscle_R",
+      "Longissimus_thoracis_muscle_L", "Longissimus_thoracis_muscle_R",
+    ],
+    regiao: "Tronco",
+    nomeOficial: "Musculus longissimus",
+    nomeComum: "Longuíssimo",
+    resumo:
+      "Coluna intermediária e maior dos três músculos do grupo eretor da espinha, estendendo-se do sacro ao processo mastoide, com fibras que se dividem em porções torácica, cervical e capital.",
+    origem: "Face posterior da crista ilíaca, sacro e processos transversos vertebrais lombares/torácicos",
+    insercao: "Processos transversos das vértebras torácicas/cervicais e processo mastoide do temporal (porção capital)",
+    inervacao: "Ramos posteriores dos nervos espinais (segmentar, correspondente a cada nível)",
+    acoes: ["Extensão da coluna vertebral e da cabeça (bilateral)", "Flexão lateral da coluna e da cabeça (unilateral)"],
+    correlacaoClinica:
+      "Junto ao iliocostal e ao espinal, forma o grupo eretor da espinha (camada superficial/intermédia intrínseca do dorso), o principal responsável por manter a postura ereta contra a gravidade — sua fadiga ou espasmo é uma causa extremamente comum de lombalgia mecânica inespecífica, a queixa musculoesquelética mais prevalente na população adulta.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O longuíssimo é a coluna intermediária (em posição) e a maior em extensão do grupo eretor da espinha, situado entre o espinal (medial) e o iliocostal (lateral).",
+      "O espasmo do grupo eretor da espinha, incluindo o longuíssimo, é uma das causas mais comuns de lombalgia mecânica aguda inespecífica.",
+    ],
+    fontes: [
+      { tema: "Anatomia do eretor da espinha e lombalgia mecânica", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus longissimus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do eretor da espinha (camada superficial)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "iliocostal",
+    meshNames: [
+      "Iliocostalis_colli_muscle", "Iliocostalis_colli_muscle_R",
+      "Iliocostalis_thoracis_muscle_L", "Iliocostalis_thoracis_muscle_R",
+      "Iliocostalis_lumborum_muscle_L", "Iliocostalis_lumborum_muscle_R",
+    ],
+    regiao: "Tronco",
+    nomeOficial: "Musculus iliocostalis",
+    nomeComum: "Iliocostal",
+    resumo:
+      "Coluna mais lateral do grupo eretor da espinha, com fibras que seguem em direção superior até os processos transversos cervicais, atuando principalmente na extensão e flexão lateral da coluna.",
+    origem: "Face posterior da crista ilíaca, sacro e ligamento supraespinal (origem comum do eretor da espinha)",
+    insercao: "Ângulos das costelas e processos transversos das vértebras cervicais inferiores (porção cervical)",
+    inervacao: "Ramos posteriores dos nervos espinais (segmentar)",
+    acoes: ["Extensão da coluna vertebral (bilateral)", "Flexão lateral da coluna vertebral (unilateral)"],
+    correlacaoClinica:
+      "Sendo o componente mais lateral e superficial do eretor da espinha, é o mais facilmente palpável na região lombar em pessoas magras durante a contração isométrica (ex.: manter a postura ereta contra resistência), útil no exame físico para avaliar espasmo paravertebral.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O iliocostal é a coluna mais lateral do eretor da espinha (medial→lateral: espinal, longuíssimo, iliocostal) — mnemônico clássico 'I Love Spine' (Iliocostal, Longuíssimo, Espinal) de lateral para medial.",
+      "Todos os três componentes do eretor da espinha compartilham uma origem comum ampla na crista ilíaca, sacro e ligamento supraespinal.",
+    ],
+    fontes: [
+      { tema: "Organização do grupo eretor da espinha", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus iliocostalis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do eretor da espinha (camada superficial)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "espinal",
+    meshNames: [
+      "Spinalis_capitis_muscle_L", "Spinalis_capitis_muscle_R",
+      "Spinalis_colli_muscle_L", "Spinalis_colli_muscle_R",
+      "Spinalis_thoracis_muscle_L", "Spinalis_thoracis_muscle_R",
+    ],
+    regiao: "Tronco",
+    nomeOficial: "Musculus spinalis",
+    nomeComum: "Espinal",
+    resumo:
+      "Coluna mais medial e menos desenvolvida do grupo eretor da espinha, situada muito próxima à linha média, conectando processos espinhosos adjacentes.",
+    origem: "Processos espinhosos das vértebras torácicas superiores e cervicais inferiores (tendão largo comum na origem, junto aos demais componentes do eretor da espinha)",
+    insercao: "Processos espinhosos das vértebras torácicas superiores e occipital (porção capital)",
+    inervacao: "Ramos posteriores dos nervos espinais (segmentar)",
+    acoes: ["Extensão da coluna vertebral e da cabeça (bilateral)"],
+    correlacaoClinica:
+      "Por sua posição mais medial e seu pequeno volume relativo, sua contribuição isolada à força extensora é discreta comparada ao longuíssimo e iliocostal — clinicamente, o grupo eretor da espinha é sempre avaliado e tratado como uma unidade funcional, não isoladamente por componente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O espinal é a coluna mais medial do eretor da espinha, situada muito próxima aos processos espinhosos — mnemônico 'I Love Spine' de lateral para medial (Iliocostal, Longuíssimo, Espinal).",
+      "É o menos desenvolvido e mais variável dos três componentes do eretor da espinha, às vezes indistinto do longuíssimo adjacente.",
+    ],
+    fontes: [
+      { tema: "Organização do grupo eretor da espinha", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus spinalis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do eretor da espinha (camada superficial)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "semiespinais",
+    meshNames: ["Semispinalis_colli_muscle_L", "Semispinalis_colli_muscle_R", "Semispinalis_thoracis_muscle_L", "Semispinalis_thoracis_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus semispinalis",
+    nomeComum: "Semiespinais",
+    resumo:
+      "Membro mais superficial do grupo transversoespinal (camada profunda do dorso), com fibras longas que cruzam de 4 a 6 segmentos vertebrais entre origem e inserção.",
+    origem: "Processos transversos vertebrais (C4 a T12)",
+    insercao: "Processos espinhosos de vértebras superiores (região torácica e cervical) e occipital (porção capital)",
+    inervacao: "Ramos posteriores dos nervos espinais (segmentar)",
+    acoes: ["Extensão da cabeça e das regiões torácica e cervical da coluna", "Rotação da coluna para o lado oposto ao músculo contraído"],
+    correlacaoClinica:
+      "A porção mais desenvolvida (semiespinal da cabeça, também chamada de complexo maior em nomenclaturas antigas) é um dos principais extensores da cabeça, sendo relevante em lesões por hiperextensão/flexão do pescoço (síndrome do chicote, 'whiplash') em acidentes automobilísticos.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Os semiespinais são o componente mais superficial do grupo transversoespinal, com fibras que cruzam de 4 a 6 segmentos vertebrais — o mais longo trajeto entre os três componentes desse grupo (semiespinais > multífidos > rotadores).",
+      "Ao contrário do eretor da espinha (flexão lateral ipsilateral), os músculos transversoespinais giram a coluna para o lado OPOSTO ao da contração.",
+    ],
+    fontes: [
+      { tema: "Grupo transversoespinal e organização por profundidade", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus semispinalis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do grupo transversoespinal (camada profunda)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "multifidos",
+    meshNames: [
+      "Multifidus_colli_muscle_L", "Multifidus_colli_muscle_R",
+      "Multifidus_thoracis_muscle_L", "Multifidus_thoracis_muscle_R",
+      "Multifidus_lumborum_muscle_L", "Multifidus_lumborum_muscle_R",
+    ],
+    regiao: "Tronco",
+    nomeOficial: "Musculus multifidus",
+    nomeComum: "Multífidos",
+    resumo:
+      "Componente intermediário do grupo transversoespinal, mais desenvolvido na região lombar, com papel central e clinicamente muito estudado na estabilização segmentar da coluna vertebral.",
+    origem: "Face posterior do sacro, espinha ilíaca posterossuperior, processos mamilares lombares e processos transversos torácicos/cervicais",
+    insercao: "Processos espinhosos de vértebras localizadas de 2 a 4 segmentos acima da origem",
+    inervacao: "Ramos posteriores dos nervos espinais (segmentar)",
+    acoes: ["Estabiliza as vértebras durante movimentos da coluna vertebral", "Extensão e rotação segmentar da coluna"],
+    correlacaoClinica:
+      "É um dos músculos mais estudados na fisiopatologia da lombalgia crônica: a atrofia seletiva e a infiltração gordurosa dos multífidos lombares, documentadas por ressonância magnética, estão fortemente associadas a episódios de dor lombar (mesmo um único episódio agudo pode causar atrofia rápida e persistente), tornando-o alvo central de programas de estabilização segmentar (exercícios de core) na reabilitação.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A atrofia dos multífidos lombares é um achado consistente em pacientes com lombalgia crônica, mesmo após um único episódio agudo — base fisiopatológica dos exercícios de estabilização segmentar ('core') na reabilitação.",
+      "Os multífidos são o componente mais desenvolvido do grupo transversoespinal na região lombar, com fibras que cruzam 2 a 4 segmentos vertebrais.",
+    ],
+    fontes: [
+      { tema: "Atrofia dos multífidos e lombalgia crônica", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Musculus multifidus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do grupo transversoespinal (camada profunda)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "rotadores",
+    meshNames: ["Rotatores_L", "Rotatores_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculi rotatores",
+    nomeComum: "Rotadores",
+    resumo:
+      "Componente mais profundo e mais curto do grupo transversoespinal, mais desenvolvido na região torácica, com fibras que cruzam apenas 1 a 2 segmentos vertebrais.",
+    origem: "Processos transversos vertebrais (mais desenvolvidos na região torácica)",
+    insercao: "Junção da lâmina com o processo transverso ou espinhoso da vértebra, 1 a 2 segmentos acima da origem",
+    inervacao: "Ramos posteriores dos nervos espinais (segmentar)",
+    acoes: ["Estabilização das vértebras", "Auxiliam na extensão local e nos movimentos rotatórios da coluna"],
+    correlacaoClinica:
+      "Por seu curto trajeto segmentar e rica inervação proprioceptiva, os rotadores são considerados mais importantes como sensores de posição e estabilizadores finos intersegmentares do que como geradores de força — um papel análogo ao dos pequenos músculos rotadores/interespinais em outras articulações do corpo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Os rotadores são o componente mais profundo e mais curto do grupo transversoespinal, cruzando apenas 1 a 2 segmentos vertebrais — o oposto dos semiespinais (superficiais, 4 a 6 segmentos).",
+      "São mais desenvolvidos na região torácica e funcionam principalmente como sensores proprioceptivos e estabilizadores finos, mais do que como geradores de força de rotação.",
+    ],
+    fontes: [
+      { tema: "Grupo transversoespinal e função proprioceptiva dos rotadores", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi rotatores)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do grupo transversoespinal (camada profunda)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "interespinais",
+    meshNames: [
+      "Interspinales_colli_muscles_L", "Interspinales_colli_muscles_R",
+      "Interspinales_thoracis_muscles_L", "Interspinales_thoracis_muscles_R",
+      "Interspinales_lumborum_muscles_L", "Interspinales_lumborum_muscles_R",
+    ],
+    regiao: "Tronco",
+    nomeOficial: "Musculi interspinales",
+    nomeComum: "Interespinais",
+    resumo:
+      "Pequenos pares musculares que conectam processos espinhosos de vértebras adjacentes, mais desenvolvidos nas regiões cervical e lombar (mais móveis), auxiliando a extensão e a estabilização local fina.",
+    origem: "Processo espinhoso da vértebra inferior",
+    insercao: "Processo espinhoso da vértebra imediatamente superior",
+    inervacao: "Ramos posteriores e anteriores dos nervos espinais (variável por nível)",
+    acoes: ["Auxiliam na extensão da coluna", "Auxiliam na rotação segmentar fina da coluna"],
+    correlacaoClinica:
+      "São mais desenvolvidos nas regiões cervical e lombar — as porções mais móveis da coluna — e praticamente ausentes ou rudimentares na região torácica, onde a mobilidade intersegmentar é naturalmente restringida pela caixa torácica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Os interespinais são mais desenvolvidos nas regiões cervical e lombar, correlacionando-se com as regiões de maior mobilidade intersegmentar da coluna vertebral.",
+      "Conectam processos espinhosos adjacentes (um único segmento), sendo os menores e mais profundos estabilizadores segmentares junto aos intertransversários.",
+    ],
+    fontes: [
+      { tema: "Pequenos músculos profundos do dorso", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi interspinales)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do grupo transversoespinal (camada profunda)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "intertransversarios",
+    meshNames: [
+      "Dorsal_parts_of_lateral_intertransversarii_lumborum_muscles_L", "Dorsal_parts_of_lateral_intertransversarii_lumborum_muscles_R",
+      "Ventral_parts_of_lateral_intertransversarii_lumborum_muscles_L", "Ventral_parts_of_lateral_intertransversarii_lumborum_muscles_R",
+    ],
+    regiao: "Tronco",
+    nomeOficial: "Musculi intertransversarii",
+    nomeComum: "Intertransversários",
+    resumo:
+      "Pequenos pares musculares que conectam processos transversos de vértebras adjacentes, mais desenvolvidos na região lombar, auxiliando a flexão lateral e a estabilização segmentar fina.",
+    origem: "Processo transverso da vértebra inferior",
+    insercao: "Processo transverso da vértebra imediatamente superior",
+    inervacao: "Ramos posteriores e anteriores dos nervos espinais (variável por nível)",
+    acoes: ["Flexão lateral segmentar da coluna", "Estabilização fina intersegmentar"],
+    correlacaoClinica:
+      "Assim como os interespinais, funcionam principalmente como estabilizadores proprioceptivos finos entre vértebras adjacentes, mais do que como geradores relevantes de força — sua contribuição é individualmente pequena, mas coletivamente importante para a estabilidade segmentar da coluna lombar durante atividades assimétricas.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Os intertransversários são mais desenvolvidos na região lombar, conectando processos transversos de vértebras adjacentes — análogos, em função, aos interespinais (que conectam processos espinhosos).",
+      "Junto aos interespinais e rotadores, compõem os menores e mais profundos estabilizadores segmentares intrínsecos da coluna vertebral.",
+    ],
+    fontes: [
+      { tema: "Pequenos músculos profundos do dorso", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi intertransversarii)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela do grupo transversoespinal (camada profunda)", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "peitoral-menor",
+    meshNames: ["Pectoralis_minor_muscle_L", "Pectoralis_minor_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus pectoralis minor",
+    nomeComum: "Peitoral menor",
+    resumo:
+      "Pequeno músculo triangular profundo ao peitoral maior, que estabiliza a escápula e serve como importante ponto de referência cirúrgico para as estruturas neurovasculares da axila.",
+    origem: "3ª à 5ª costelas",
+    insercao: "Processo coracoide da escápula",
+    inervacao: "Nervos peitorais medial e lateral (C8-T1)",
+    acoes: ["Estabilização da escápula (traciona-a para baixo e para frente)", "Elevador acessório das costelas superiores (com a escápula fixa)"],
+    correlacaoClinica:
+      "Junto ao processo coracoide, forma uma 'ponte' sob a qual passam os vasos axilares e o plexo braquial — sua compressão nesse ponto (síndrome do peitoral menor, ou variante da síndrome do desfiladeiro torácico) pode causar dor, parestesia e fraqueza no membro superior, agravadas pela abdução do braço acima da cabeça (postura que tensiona o músculo contra o feixe neurovascular).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O peitoral menor, junto ao processo coracoide, forma uma 'ponte' anatômica sob a qual passam a artéria/veia axilares e o plexo braquial — ponto de referência cirúrgico na axila.",
+      "A síndrome do peitoral menor (compressão neurovascular sob esse músculo) é uma variante da síndrome do desfiladeiro torácico, tipicamente agravada pela elevação do braço acima da cabeça.",
+    ],
+    fontes: [
+      { tema: "Anatomia do peitoral menor e síndrome do desfiladeiro torácico", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus pectoralis minor)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "serratil-anterior",
+    meshNames: ["Serratus_anterior_muscle_L", "Serratus_anterior_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus serratus anterior",
+    nomeComum: "Serrátil anterior",
+    resumo:
+      "Grande músculo em forma de leque na parede lateral do tórax, conhecido como 'músculo do boxeador' por seu papel na protração da escápula durante o soco, e essencial para manter a escápula firmemente contra a caixa torácica.",
+    origem: "1ª à 9ª costelas superiores",
+    insercao: "Margem medial da escápula (face costal, passando entre a escápula e a parede torácica)",
+    inervacao: "Nervo torácico longo (C5-C7)",
+    acoes: ["Protração da escápula (impede a escápula alada)", "Rotação para cima da escápula (sinergista, essencial na elevação do braço acima da cabeça)"],
+    correlacaoClinica:
+      "A lesão do nervo torácico longo (por trauma, estiramento durante cirurgias axilares como mastectomia com esvaziamento axilar, ou compressão por carregar peso no ombro) paralisa o serrátil anterior, causando a escápula alada clássica — a margem medial da escápula se projeta posteriormente, mais evidente ao empurrar as mãos contra uma parede (teste da escápula alada).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A lesão do nervo torácico longo causa a escápula alada clássica (verdadeira), com a margem medial da escápula se projetando posteriormente — mais evidente ao empurrar as mãos contra uma parede.",
+      "O nervo torácico longo é classicamente vulnerável em cirurgias de mastectomia com esvaziamento axilar, por seu trajeto superficial na parede lateral do tórax.",
+    ],
+    fontes: [
+      { tema: "Escápula alada e lesão do nervo torácico longo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Lesão iatrogênica do nervo torácico longo", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "subclavio",
+    meshNames: ["Subclavius_muscle_L", "Subclavius_muscle_R"],
+    regiao: "Tronco",
+    nomeOficial: "Musculus subclavius",
+    nomeComum: "Subclávio",
+    resumo:
+      "Pequeno músculo situado entre a clavícula e a primeira costela, que estabiliza a articulação esternoclavicular e protege o feixe neurovascular subjacente.",
+    origem: "1ª costela (junção costocondral)",
+    insercao: "Face inferior da clavícula (terço médio)",
+    inervacao: "Nervo para o músculo subclávio (C5-C6)",
+    acoes: ["Estabilização da clavícula na articulação esternoclavicular", "Depressão discreta da clavícula"],
+    correlacaoClinica:
+      "Sua posição, imediatamente anterior aos vasos subclávios e ao tronco superior do plexo braquial, oferece proteção mecânica a essas estruturas em caso de fratura de clavícula — atuando como um coxim que reduz (mas não elimina) o risco de lesão neurovascular direta por fragmentos ósseos.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O subclávio protege os vasos subclávios e o tronco superior do plexo braquial em fraturas de clavícula, funcionando como um coxim muscular entre o osso fraturado e o feixe neurovascular.",
+      "É o menor músculo do cíngulo do membro superior relacionado às costelas, com ação predominantemente estabilizadora (não de força) sobre a articulação esternoclavicular.",
+    ],
+    fontes: [
+      { tema: "Anatomia do subclávio e proteção neurovascular", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus subclavius)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Fraturas de clavícula e proteção do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "supraespinal",
+    meshNames: ["Supraspinatus_muscle_L", "Supraspinatus_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus supraspinatus",
+    nomeComum: "Supraespinal",
+    resumo:
+      "Músculo do manguito rotador situado na fossa supraespinal da escápula, responsável por iniciar a abdução do ombro nos primeiros 15° e por estabilizar dinamicamente a cabeça do úmero contra a cavidade glenoidal.",
+    origem: "Fossa supraespinal da escápula",
+    insercao: "Tubérculo maior do úmero (faceta superior)",
+    inervacao: "Nervo supraescapular (C4-C6)",
+    acoes: ["Abdução do ombro (primeiros 15°, antes do deltoide assumir)", "Estabilização dinâmica da cabeça do úmero na cavidade glenoidal"],
+    correlacaoClinica:
+      "É o tendão do manguito rotador mais frequentemente lesado (tendinopatia, ruptura parcial ou completa), por passar sob o arco coracoacromial em um espaço subacromial estreito — a síndrome do impacto subacromial (compressão repetitiva desse tendão durante a elevação do braço) é uma das causas mais comuns de dor crônica no ombro, especialmente em atividades acima da cabeça (natação, arremesso, trabalhos com braço elevado).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O supraespinal é o tendão do manguito rotador mais frequentemente lesado, por seu trajeto sob o arco coracoacromial em um espaço subacromial estreito — a síndrome do impacto subacromial.",
+      "É responsável por iniciar a abdução do ombro nos primeiros 15°, antes que o deltoide assuma o restante do movimento (0-15° supraespinal, 15-90° deltoide com sinergia do supraespinal, >90° rotação da escápula).",
+    ],
+    fontes: [
+      { tema: "Manguito rotador e síndrome do impacto subacromial", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Tendinopatia do supraespinal", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "infraespinal",
+    meshNames: ["Infraspinatus_muscle_L", "Infraspinatus_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus infraspinatus",
+    nomeComum: "Infraespinal",
+    resumo:
+      "Músculo do manguito rotador na fossa infraespinal da escápula, principal responsável pela rotação lateral do ombro e parcialmente coberto pelo deltoide e trapézio.",
+    origem: "Fossa infraespinal da escápula",
+    insercao: "Tubérculo maior do úmero (faceta média)",
+    inervacao: "Nervo supraescapular (C5-C6)",
+    acoes: ["Rotação lateral do ombro (principal agonista)", "Estabilização dinâmica da cabeça do úmero na cavidade glenoidal"],
+    correlacaoClinica:
+      "Junto ao supraespinal, é frequentemente acometido em rupturas degenerativas do manguito rotador em pacientes de meia-idade e idosos, causando fraqueza de rotação lateral e dor no ombro, testada clinicamente pedindo ao paciente para rodar o braço lateralmente contra resistência com o cotovelo fletido junto ao corpo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O infraespinal é o principal rotador lateral do ombro, testado clinicamente com o cotovelo fletido a 90° junto ao corpo, pedindo rotação externa contra resistência.",
+      "É parcialmente coberto pelos músculos deltoide e trapézio, sendo por vezes mal delimitado do supraespinal e do redondo menor adjacentes.",
+    ],
+    fontes: [
+      { tema: "Manguito rotador e teste de rotação lateral", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus infraspinatus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "subescapular",
+    meshNames: ["Subscapularis_muscle_L", "Subscapularis_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus subscapularis",
+    nomeComum: "Subescapular",
+    resumo:
+      "Maior e mais forte músculo do manguito rotador, ocupa toda a fossa subescapular na face costal da escápula, formando parte da parede posterior da axila e sendo o principal rotador medial do ombro.",
+    origem: "Fossa subescapular da escápula",
+    insercao: "Tubérculo menor do úmero",
+    inervacao: "Nervo subescapular (C5-C7)",
+    acoes: ["Rotação medial do ombro (principal agonista)", "Estabilização dinâmica da cabeça do úmero na cavidade glenoidal (parte anterior do manguito)"],
+    correlacaoClinica:
+      "Sua integridade é testada pelo teste de Gerber (lift-off test): o paciente coloca o dorso da mão nas costas e tenta afastá-la do corpo contra resistência — incapacidade de fazê-lo sugere ruptura do subescapular, lesão menos comum que a do supraespinal, mas relevante em luxações anteriores recorrentes do ombro.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O teste de Gerber (lift-off test) avalia especificamente a integridade do subescapular — incapacidade de afastar a mão das costas contra resistência sugere sua ruptura.",
+      "É o único componente do manguito rotador situado na face ANTERIOR (costal) da escápula, formando parte da parede posterior da axila; os demais (supraespinal, infraespinal, redondo menor) estão na face posterior.",
+    ],
+    fontes: [
+      { tema: "Manguito rotador e teste de Gerber", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus subscapularis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "redondo-menor",
+    meshNames: ["Teres_minor_muscle_L", "Teres_minor_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus teres minor",
+    nomeComum: "Redondo menor",
+    resumo:
+      "Menor componente do manguito rotador, completamente oculto pelo deltoide, frequentemente mal delimitado do infraespinal adjacente, com quem compartilha a ação de rotação lateral.",
+    origem: "Margem lateral da escápula",
+    insercao: "Tubérculo maior do úmero (faceta inferior)",
+    inervacao: "Nervo axilar (C5-C6)",
+    acoes: ["Rotação lateral do ombro (sinergista do infraespinal)", "Estabilização dinâmica da cabeça do úmero na cavidade glenoidal"],
+    correlacaoClinica:
+      "É inervado pelo nervo axilar, o mesmo que inerva o deltoide — ambos são classicamente lesados juntos em luxações anteriores do ombro ou fraturas do colo cirúrgico do úmero, causando fraqueza combinada de abdução e rotação lateral, além de perda de sensibilidade na 'insígnia do regimento' (face lateral do ombro).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O redondo menor compartilha a inervação pelo nervo axilar com o deltoide — ambos são lesados juntos em luxações anteriores do ombro, com perda sensitiva associada na face lateral do ombro ('insígnia do regimento').",
+      "É completamente oculto pelo deltoide e frequentemente mal delimitado do infraespinal, com quem compartilha a ação de rotação lateral do ombro.",
+    ],
+    fontes: [
+      { tema: "Lesão do nervo axilar em luxação de ombro", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus teres minor)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "redondo-maior",
+    meshNames: ["Teres_major_muscle_L", "Teres_major_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus teres major",
+    nomeComum: "Redondo maior",
+    resumo:
+      "Apesar do nome semelhante ao redondo menor, NÃO faz parte do manguito rotador — é um músculo escapuloumeral independente, sinergista do grande dorsal na adução e rotação medial do ombro, por vezes apelidado de 'ajudante do grande dorsal'.",
+    origem: "Ângulo inferior da escápula",
+    insercao: "Tubérculo menor do úmero (crista, junto ao grande dorsal)",
+    inervacao: "Nervo subescapular inferior (C5-C6)",
+    acoes: ["Adução do ombro", "Rotação medial do ombro", "Extensão do ombro (a partir da posição fletida)"],
+    correlacaoClinica:
+      "Forma, junto ao grande dorsal, a margem inferior da parede posterior da axila. É clinicamente relevante como referência anatômica em dissecções e abordagens cirúrgicas posteriores do ombro, embora lesões isoladas sejam raras devido à redundância funcional com o grande dorsal, que realiza ação muito semelhante.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O redondo maior NÃO é um músculo do manguito rotador, apesar do nome semelhante ao redondo menor — é um músculo escapuloumeral independente, apelidado de 'ajudante do grande dorsal' por compartilhar sua ação e inserção próxima.",
+      "Forma, junto ao grande dorsal, a margem inferior da parede posterior da axila.",
+    ],
+    fontes: [
+      { tema: "Redondo maior como sinergista do grande dorsal", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus teres major)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "coracobraquial",
+    meshNames: ["Coracobrachialis_muscle_L", "Coracobrachialis_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus coracobrachialis",
+    nomeComum: "Coracobraquial",
+    resumo:
+      "Pequeno músculo do compartimento anterior do braço que auxilia a flexão e adução do ombro, notório por ser perfurado pelo nervo musculocutâneo em seu trajeto.",
+    origem: "Processo coracoide da escápula (tendão conjunto com a cabeça curta do bíceps braquial)",
+    insercao: "Face ântero-medial do corpo do úmero (terço médio)",
+    inervacao: "Nervo musculocutâneo (C5-C7)",
+    acoes: ["Flexão do ombro", "Adução do ombro"],
+    correlacaoClinica:
+      "O nervo musculocutâneo perfura o próprio ventre do coracobraquial antes de continuar entre o bíceps braquial e o braquial — trajeto clássico de prova, e ponto potencial de lesão nervosa em cirurgias ou traumas penetrantes dessa região do braço.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O nervo musculocutâneo perfura o ventre do coracobraquial antes de continuar seu trajeto entre o bíceps braquial e o braquial — um dos exemplos clássicos de nervo perfurando um músculo, cobrado em prova.",
+      "Compartilha origem tendínea (processo coracoide) com a cabeça curta do bíceps braquial, formando o 'tendão conjunto'.",
+    ],
+    fontes: [
+      { tema: "Trajeto do nervo musculocutâneo através do coracobraquial", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus coracobrachialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
 ];
