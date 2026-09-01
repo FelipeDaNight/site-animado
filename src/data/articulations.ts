@@ -732,4 +732,340 @@ export const articulacoes: Articulacao[] = [
       { tema: "Classificação morfológica e funcional das articulações do pé", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
     ],
   },
+  {
+    slug: "acromioclavicular",
+    meshNames: ["Clavicle_L", "Clavicle_R", "Scapula_L", "Scapula_R"],
+    ligamentMeshNames: sides([
+      "Acromioclavicular ligament",
+      "Articular capsule of acromioclavicular joint",
+      "Articular disc of acromioclavicular joint",
+      "Conoid ligament",
+      "Trapezoid ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "clavicula", nome: "Clavícula" },
+      { slug: "escapula", nome: "Escápula (acrômio)" },
+    ],
+    nomeOficial: "Articulatio acromioclavicularis",
+    nomeComum: "Articulação acromioclavicular",
+    tipo: "Sinovial plana",
+    resumo:
+      "Pequena articulação plana entre o acrômio da escápula e a extremidade acromial da clavícula, estabilizada principalmente pelo forte ligamento coracoclavicular à distância, não pela própria cápsula articular.",
+    descricaoAnatomica:
+      "Une a face articular do acrômio à extremidade acromial da clavícula, contendo um disco articular fibrocartilaginoso (frequentemente incompleto) que amortece as forças transmitidas do membro superior ao esqueleto axial. A cápsula articular, reforçada pelo ligamento acromioclavicular, é relativamente fraca — a verdadeira estabilidade da articulação depende do ligamento coracoclavicular (à distância, entre o processo coracoide e a face inferior da clavícula), composto pelas partes trapezoide e conoide.",
+    movimentos: [
+      "Deslizamento e rotação leve do acrômio sobre a clavícula, acompanhando os movimentos da escápula (elevação, depressão, protração, retração, rotação)",
+    ],
+    estabilizadores: [
+      "Ligamento acromioclavicular (reforça a cápsula, resiste a deslocamentos horizontais)",
+      "Ligamento coracoclavicular — partes trapezoide e conoide (principal estabilizador vertical, à distância da articulação)",
+      "Ligamento transverso superior da escápula (indiretamente, ao estabilizar o processo coracoide)",
+    ],
+    correlacaoClinica:
+      "É um dos locais mais comuns de lesão em quedas sobre o ombro (acromion) ou sobre a mão com o braço aduzido — a luxação acromioclavicular ('separação do ombro') é classificada conforme o grau de lesão dos ligamentos acromioclavicular e coracoclavicular (classificação de Rockwood), variando de entorse leve até luxação completa com deformidade visível ('sinal da tecla de piano', pela elevação da clavícula distal). É comum em ciclistas, motociclistas e atletas de esportes de contato.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A estabilidade vertical da articulação acromioclavicular depende principalmente do ligamento coracoclavicular (partes trapezoide e conoide), não da cápsula articular local — por isso sua ruptura causa a deformidade característica em 'tecla de piano'.",
+      "A luxação acromioclavicular é classicamente causada por queda direta sobre o acrômio (ombro aduzido) ou por queda sobre a mão espalmada com o braço aduzido.",
+    ],
+    fontes: [
+      { tema: "Anatomia da articulação acromioclavicular e classificação de Rockwood", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Articulatio acromioclavicularis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Articulação acromioclavicular", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "articulacoes-carpais",
+    meshNames: sides(["Scaphoid", "Lunate bone", "Triquetrum", "Pisiform", "Trapezium", "Trapezoid", "Capitate", "Hamate"]),
+    ligamentMeshNames: sides([
+      "Dorsal intercarpal ligaments",
+      "Scapholunate interosseous ligament",
+      "Lunotriquetral interosseous ligament",
+      "Dorsal scaphotriquetral ligament",
+      "Palmar scaphotriquetral ligament",
+      "Palmar lunotriquetral ligament",
+      "Scaphocapitate ligament",
+      "Triquetrocapitate ligament",
+      "Triquetrohamate ligament",
+      "Capitohamate interosseous ligament",
+      "Palmar capitohamate ligament",
+      "Trapeziotrapezoidal interosseous ligament",
+      "Trapezoideocapitate interosseous ligament",
+      "Palmar trapezoideocapitate ligament",
+      "Scaphotrapeziotrapezoidal ligament",
+      "Radiocapitate ligament",
+      "Radioscaphocapitate ligament",
+      "Ulnocapitate ligament",
+      "Pisohamate ligament",
+      "Pisometacarpal ligament",
+      "Radiate carpal ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "carpo-fileira-proximal", nome: "Escafoide, semilunar, piramidal, pisiforme" },
+      { slug: "carpo-fileira-distal", nome: "Trapézio, trapezoide, capitato, hamato" },
+    ],
+    nomeOficial: "Articulationes intercarpales et mediocarpalis",
+    nomeComum: "Articulações do carpo (intercarpais e mediocarpal)",
+    tipo: "Sinovial plana",
+    resumo:
+      "Rede densa de pequenas articulações planas entre os oito ossos do carpo, organizadas em duas fileiras (proximal e distal) unidas pela articulação mediocarpal, que juntas conferem ao punho sua notável mobilidade multidirecional.",
+    descricaoAnatomica:
+      "A fileira proximal (escafoide, semilunar, piramidal e pisiforme) articula-se entre si e com a fileira distal (trapézio, trapezoide, capitato e hamato) na articulação mediocarpal, uma linha em S que atravessa o carpo. Um denso emaranhado de ligamentos interósseos (escafolunar, lunopiramidal) e intercarpais dorsais/palmares mantém a coerência mecânica entre esses oito pequenos ossos, permitindo que se movam de forma coordenada durante os movimentos do punho. O escafoide, que cruza as duas fileiras, funciona como uma 'trava' mecânica que sincroniza seus movimentos.",
+    movimentos: [
+      "Deslizamentos multidirecionais entre os ossos do carpo, contribuindo para flexão, extensão, desvio radial e desvio ulnar do punho",
+      "Absorção e distribuição de carga entre o rádio e os metacarpos",
+    ],
+    estabilizadores: [
+      "Ligamento escafolunar (interósseo) — crítico para a estabilidade da fileira proximal",
+      "Ligamento lunopiramidal (interósseo)",
+      "Ligamentos intercarpais dorsais e palmares",
+      "Ligamento carpal radiado (estabilizador central da fileira distal)",
+    ],
+    correlacaoClinica:
+      "A ruptura do ligamento escafolunar (trauma por queda sobre a mão espalmada) causa instabilidade carpal — o escafoide e o semilunar se dissociam, alterando toda a cinemática do carpo (padrão DISI, dissociação escafolunar) e predispondo à artrose carpal progressiva (colapso avançado escafolunar, SLAC) se não tratada. O escafoide, o osso do carpo mais frequentemente fraturado, tem suprimento sanguíneo retrógrado (entra pelo polo distal) — fraturas do polo proximal têm alto risco de necrose avascular e não união.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O escafoide tem suprimento sanguíneo retrógrado (entra pelo polo distal) — fraturas do polo proximal têm alto risco de necrose avascular, o oposto do que a intuição sugeriria.",
+      "A ruptura do ligamento escafolunar causa instabilidade carpal (padrão DISI) e é a lesão ligamentar do punho mais associada à evolução para artrose carpal progressiva (SLAC) se não tratada precocemente.",
+    ],
+    fontes: [
+      { tema: "Anatomia dos ossos e ligamentos do carpo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Vascularização do escafoide e instabilidade carpal", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Ossos carpais", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "articulacoes-carpometacarpais",
+    meshNames: [
+      ...sides(["Trapezium", "Trapezoid", "Capitate", "Hamate"]),
+      ...sides(["1st metacarpal bone", "2nd metacarpal bone", "3rd metacarpal bone", "4th metacarpal bone", "5th metacarpal bone"]),
+    ],
+    ligamentMeshNames: sides(["Dorsal carpometacarpal ligaments", "Palmar carpometacarpal ligaments"]),
+    ossosEnvolvidos: [
+      { slug: "carpo-fileira-distal", nome: "Trapézio, trapezoide, capitato, hamato" },
+      { slug: "metacarpos", nome: "Ossos metacarpais (1º ao 5º)" },
+    ],
+    nomeOficial: "Articulationes carpometacarpales",
+    nomeComum: "Articulações carpometacarpais",
+    tipo: "Sinovial selar",
+    resumo:
+      "Articulações entre a fileira distal do carpo e as bases dos metacarpos — a do polegar (trapézio–1º metacarpo) é uma articulação selar altamente móvel, enquanto as do 2º ao 5º dedo são planas e relativamente rígidas.",
+    descricaoAnatomica:
+      "A articulação carpometacarpal do polegar, entre o trapézio e a base do 1º metacarpo, é do tipo selar (sinovial biaxial), permitindo o amplo repertório de movimentos do polegar, incluindo a oposição — o movimento que distingue a mão humana. As articulações carpometacarpais do 2º ao 5º dedo, entre a fileira distal do carpo e as bases dos metacarpos correspondentes, são planas e permitem apenas deslizamentos discretos, exceto a do 5º dedo (hamato–5º metacarpo), que tem mobilidade um pouco maior, contribuindo para o ahuecamento da palma durante a preensão.",
+    movimentos: [
+      "Polegar: flexão, extensão, abdução, adução, oposição e reposição (movimento circundutório amplo)",
+      "2º ao 5º dedos: deslizamentos discretos, com mobilidade crescente do 2º (quase fixo) ao 5º metacarpo (mais móvel)",
+    ],
+    estabilizadores: [
+      "Ligamentos carpometacarpais dorsais e palmares",
+      "Cápsula articular espessa na base do polegar (reforçada por ligamentos intrínsecos)",
+    ],
+    correlacaoClinica:
+      "A rizartrose (osteoartrite da articulação carpometacarpal do polegar) é uma das formas mais comuns e incapacitantes de artrose de mão, especialmente em mulheres na pós-menopausa, causando dor na base do polegar e perda de força de pinça. A fratura de Bennett (fratura-luxação da base do 1º metacarpo, com um fragmento permanecendo fixo ao trapézio via ligamento) é uma lesão instável que exige atenção ortopédica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A articulação carpometacarpal do polegar é do tipo selar (biaxial), a única entre os dedos a permitir oposição — movimento que distingue funcionalmente a mão humana.",
+      "A rizartrose (artrose da base do polegar) é uma das causas mais comuns de dor e perda de força de pinça na mão, predominando em mulheres após a menopausa.",
+    ],
+    fontes: [
+      { tema: "Anatomia funcional da articulação carpometacarpal do polegar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Rizartrose e fratura de Bennett", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Articulações carpometacarpais", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "articulacoes-metacarpofalangicas-mao",
+    meshNames: [
+      ...sides(["1st metacarpal bone", "2nd metacarpal bone", "3rd metacarpal bone", "4th metacarpal bone", "5th metacarpal bone"]),
+      ...sides([
+        "Proximal phalanx of 1st finger",
+        "Proximal phalanx of 2d finger",
+        "Proximal phalanx of 3rd finger",
+        "Proximal phalanx of 4th finger",
+        "Proximal phalanx of 5th finger",
+      ]),
+    ],
+    ligamentMeshNames: sides([
+      "Collateral metacarpophalangeal ligaments",
+      "Articular capsules of metacarpophalangeal joints",
+      "Palmar metacarpal ligaments",
+      "Deep transverse metacarpal ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "metacarpos", nome: "Ossos metacarpais" },
+      { slug: "falanges-proximais-mao", nome: "Falanges proximais dos dedos" },
+    ],
+    nomeOficial: "Articulationes metacarpophalangeae",
+    nomeComum: "Articulações metacarpofalângicas (mão)",
+    tipo: "Sinovial elipsóidea (condilar)",
+    resumo:
+      "Articulações entre as cabeças dos metacarpos e as bases das falanges proximais — elipsóideas (biaxiais) no 2º ao 5º dedo, mas funcionalmente gínglimo (uniaxial) na do polegar.",
+    descricaoAnatomica:
+      "A cabeça convexa de cada metacarpo articula-se com a base côncava da falange proximal correspondente. O ligamento transverso profundo do metacarpo conecta as placas palmares (fibrocartilaginosas) do 2º ao 5º dedo entre si, unificando mecanicamente a mão durante a preensão. Os ligamentos colaterais de cada articulação são mais tensos em flexão do que em extensão — por isso a mão deve ser imobilizada com as MCF fletidas ('posição segura' ou de Edinburgh) para não encurtar esses ligamentos.",
+    movimentos: [
+      "2º ao 5º dedos: flexão, extensão, abdução, adução (biaxial)",
+      "Polegar: predominantemente flexão e extensão, com abdução/adução limitadas",
+    ],
+    estabilizadores: [
+      "Ligamentos colaterais (radial e ulnar) de cada articulação",
+      "Placa palmar (fibrocartilagem palmar)",
+      "Ligamento transverso profundo do metacarpo (2º ao 5º dedo)",
+    ],
+    correlacaoClinica:
+      "As articulações MCF são classicamente as mais afetadas na artrite reumatoide, causando o desvio ulnar característico dos dedos (por frouxidão dos ligamentos radiais e das placas palmares, associada ao efeito de tração dos tendões flexores). A lesão do ligamento colateral ulnar da MCF do polegar ('polegar do esquiador' ou 'polegar do guarda-caça', gamekeeper's thumb) ocorre por hiperabdução forçada do polegar e compromete a força de pinça se não tratada.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "As articulações MCF devem ser imobilizadas em flexão (posição segura/de Edinburgh), nunca em extensão, porque os ligamentos colaterais são mais tensos em flexão — imobilizar em extensão causa contratura em encurtamento.",
+      "O desvio ulnar dos dedos na artrite reumatoide reflete o acometimento preferencial das articulações metacarpofalângicas, com frouxidão dos ligamentos radiais.",
+      "O 'polegar do esquiador' é a ruptura do ligamento colateral ulnar da MCF do polegar por hiperabdução forçada — compromete a força de pinça se não reparado.",
+    ],
+    fontes: [
+      { tema: "Biomecânica da articulação metacarpofalângica", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Artrite reumatoide e desvio ulnar dos dedos", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Articulações metacarpofalângicas", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "articulacoes-interfalangicas-mao",
+    meshNames: [
+      ...sides([
+        "Proximal phalanx of 1st finger",
+        "Proximal phalanx of 2d finger",
+        "Proximal phalanx of 3rd finger",
+        "Proximal phalanx of 4th finger",
+        "Proximal phalanx of 5th finger",
+      ]),
+      ...sides([
+        "Middle phalanx of 2d finger",
+        "Middle phalanx of 3rd finger",
+        "Middle phalanx of 4th finger",
+        "Middle phalanx of 5th finger",
+      ]),
+      ...sides([
+        "Distal phalanx of 1st finger",
+        "Distal phalanx of 2d finger",
+        "Distal phalanx of 3d finger",
+        "Distal phalanx of 4th finger",
+        "Distal phalanx of 5th finger",
+      ]),
+    ],
+    ligamentMeshNames: sides([
+      "Collateral interphalangeal ligaments of hand",
+      "Palmar interphalangeal ligaments",
+      "Articular capsules of proximal interphalangeal joints",
+      "Articular capsules of distal interphalangeal joints",
+    ]),
+    ossosEnvolvidos: [{ slug: "falanges-mao", nome: "Falanges proximal, média e distal dos dedos" }],
+    nomeOficial: "Articulationes interphalangeae manus",
+    nomeComum: "Articulações interfalângicas (mão)",
+    tipo: "Sinovial gínglimo (dobradiça)",
+    resumo:
+      "Articulações em dobradiça entre as falanges dos dedos — o polegar tem apenas uma (interfalângica), os demais dedos têm duas (proximal e distal), restritas ao movimento em um único plano.",
+    descricaoAnatomica:
+      "Cada dedo (exceto o polegar) tem uma articulação interfalângica proximal (entre falange proximal e média) e uma distal (entre falange média e distal); o polegar, com apenas duas falanges, tem uma única articulação interfalângica. São articulações uniaxiais simples, estabilizadas por ligamentos colaterais e por uma placa palmar fibrocartilaginosa em cada uma, que impede a hiperextensão.",
+    movimentos: ["Flexão", "Extensão"],
+    estabilizadores: [
+      "Ligamentos colaterais (radial e ulnar) de cada articulação",
+      "Placa palmar (impede a hiperextensão)",
+    ],
+    correlacaoClinica:
+      "As deformidades em pescoço de cisne (hiperextensão da IF proximal com flexão da IF distal) e em botoeira/boutonnière (flexão da IF proximal com hiperextensão da IF distal) são complicações clássicas da artrite reumatoide crônica, por ruptura ou frouxidão de diferentes componentes do mecanismo extensor. O 'dedo em martelo' (mallet finger), por avulsão do tendão extensor na base da falange distal, causa flexão fixa isolada da IF distal.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Deformidade em pescoço de cisne (hiperextensão da IF proximal + flexão da IF distal) e em botoeira (o padrão inverso) são complicações clássicas e distintas da artrite reumatoide de longa duração.",
+      "O 'dedo em martelo' (mallet finger) é a avulsão do tendão extensor na base da falange distal, causando flexão fixa isolada da articulação interfalângica distal — comum em traumas por impacto axial no dedo estendido (ex.: bola de vôlei).",
+    ],
+    fontes: [
+      { tema: "Deformidades da mão reumatoide", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Articulationes interphalangeae manus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Articulações interfalângicas", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "articulacoes-intervertebrais",
+    meshNames: [
+      "Atlas_C1", "Axis_C2", "Cervical_vertebrae_C3", "Cervical_vertebrae_C4", "Cervical_vertebrae_C5", "Cervical_vertebrae_C6", "Cervical_vertebrae_C7",
+      "Thoracic_vertebrae_T1", "Thoracic_vertebrae_T2", "Thoracic_vertebrae_T3", "Thoracic_vertebrae_T4", "Thoracic_vertebrae_T5", "Thoracic_vertebrae_T6",
+      "Thoracic_vertebrae_T7", "Thoracic_vertebrae_T8", "Thoracic_vertebrae_T9", "Thoracic_vertebrae_T10", "Thoracic_vertebrae_T11", "Thoracic_vertebrae_T12",
+      "Lumbar_vertebrae_L1", "Lumbar_vertebrae_L2", "Lumbar_vertebrae_L3", "Lumbar_vertebrae_L4", "Lumbar_vertebrae_L5", "Sacrum",
+    ],
+    ligamentMeshNames: [
+      "Anterior_longitudinal_ligament", "Posterior_longitudinal_ligament", "Interspinous_ligaments", "Supraspinous_ligament",
+      "Intervertebral_disc_C2-C3", "Intervertebral_disc_C3-C4", "Intervertebral_disc_C4-C5", "Intervertebral_disc_C5-C6", "Intervertebral_disc_C6-C7", "Intervertebral_disc_C7-T1",
+      "Intervertebral_disc_T1-T2", "Intervertebral_disc_T2-T3", "Intervertebral_disc_T3-T4", "Intervertebral_disc_T4-T5", "Intervertebral_disc_T5-T6", "Intervertebral_disc_T6-T7",
+      "Intervertebral_disc_T7-T8", "Intervertebral_disc_T8-T9", "Intervertebral_disc_T9-T10", "Intervertebral_disc_T10-T11", "Intervertebral_disc_T11-T12", "Intervertebral_disc_T12-L1",
+      "Intervertebral_disc_L1-L2", "Intervertebral_disc_L2-L3", "Intervertebral_disc_L3-L4", "Intervertebral_disc_L4-L5", "Intervertebral_disc_L5-S1",
+    ],
+    ossosEnvolvidos: [{ slug: "coluna-vertebral", nome: "Vértebras (C2 ao sacro)" }],
+    nomeOficial: "Juncturae columnae vertebralis",
+    nomeComum: "Articulações intervertebrais",
+    tipo: "Cartilaginosa (sínfise)",
+    resumo:
+      "Conjunto de articulações fibrosas e cartilaginosas entre corpos vertebrais adjacentes — os 23 discos intervertebrais (de C2-C3 a L5-S1) mais os ligamentos longitudinais e posteriores — que permitem mobilidade controlada à coluna e absorvem impacto axial.",
+    descricaoAnatomica:
+      "Cada disco intervertebral, uma sínfise fibrocartilaginosa, é formado por um núcleo pulposo central gelatinoso (remanescente da notocorda) envolto por um anel fibroso de lamelas concêntricas de colágeno. O ligamento longitudinal anterior percorre a face anterior de todos os corpos vertebrais, resistindo à hiperextensão; o posterior, mais estreito, percorre a face posterior dos corpos dentro do canal vertebral, resistindo à hiperflexão, mas oferece cobertura incompleta lateralmente — um ponto de fraqueza relevante para a herniação discal posterolateral. Os ligamentos interespinal e supraespinal conectam os processos espinhosos adjacentes, resistindo à flexão excessiva.",
+    movimentos: [
+      "Flexão, extensão, flexão lateral e rotação da coluna (a amplitude e o tipo predominante variam por região — cervical e lombar permitem mais movimento que a torácica)",
+      "Absorção de carga axial e amortecimento de impacto pelos discos intervertebrais",
+    ],
+    estabilizadores: [
+      "Ligamento longitudinal anterior (resiste à hiperextensão)",
+      "Ligamento longitudinal posterior (resiste à hiperflexão, cobertura incompleta lateralmente)",
+      "Ligamentos interespinais e supraespinal (resistem à flexão excessiva)",
+      "Anel fibroso do disco intervertebral",
+    ],
+    correlacaoClinica:
+      "A hérnia de disco (extrusão do núcleo pulposo através de uma fissura do anel fibroso) ocorre preferencialmente na direção posterolateral — exatamente onde a cobertura do ligamento longitudinal posterior é mais fraca — comprimindo a raiz nervosa correspondente; os níveis L4-L5 e L5-S1 são os mais acometidos, causando lombociatalgia. Com o envelhecimento, a desidratação progressiva do núcleo pulposo (degeneração discal) reduz a altura do disco e contribui para a espondilose e a estenose do canal vertebral.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A herniação discal ocorre preferencialmente na direção posterolateral, exatamente onde a cobertura do ligamento longitudinal posterior é incompleta — os níveis L4-L5 e L5-S1 são os mais acometidos.",
+      "O núcleo pulposo é um remanescente embrionário da notocorda, envolto pelo anel fibroso — sua degeneração e desidratação com a idade reduzem a altura discal e predispõem à estenose do canal.",
+    ],
+    fontes: [
+      { tema: "Anatomia do disco intervertebral e hérnia de disco", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Ligamentos longitudinais da coluna vertebral", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Articulações intervertebrais fibrosas, cartilaginosas e sinoviais", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "articulacoes-costovertebrais",
+    meshNames: [
+      "Thoracic_vertebrae_T1", "Thoracic_vertebrae_T2", "Thoracic_vertebrae_T3", "Thoracic_vertebrae_T4", "Thoracic_vertebrae_T5", "Thoracic_vertebrae_T6",
+      "Thoracic_vertebrae_T7", "Thoracic_vertebrae_T8", "Thoracic_vertebrae_T9", "Thoracic_vertebrae_T10", "Thoracic_vertebrae_T11", "Thoracic_vertebrae_T12",
+      ...sides(["Rib 1st", "Rib 2nd", "Rib 3rd", "Rib 4th", "Rib 5th", "Rib 6th", "Rib 7th", "Rib 8th", "Rib 9th", "Rib 10th", "Rib 11th", "Rib 12th"]),
+    ],
+    ligamentMeshNames: sides(["Costotransverse ligament", "Radiate ligament of head of rib"]),
+    ossosEnvolvidos: [
+      { slug: "coluna-vertebral-toracica", nome: "Vértebras torácicas (T1-T12)" },
+      { slug: "costelas", nome: "Costelas (1ª a 12ª)" },
+    ],
+    nomeOficial: "Articulationes costovertebrales",
+    nomeComum: "Articulações costovertebrais e costotransversárias",
+    tipo: "Sinovial plana",
+    resumo:
+      "Duplo ponto de articulação de cada costela típica com a coluna torácica — a cabeça da costela com os corpos vertebrais (costovertebral) e o tubérculo da costela com o processo transverso (costotransversária) — que juntos definem o eixo de rotação do movimento respiratório.",
+    descricaoAnatomica:
+      "Na articulação costovertebral, a cabeça de cada costela típica articula-se com as fóveas costais dos corpos de duas vértebras adjacentes (e o disco entre elas), estabilizada pelo ligamento radiado da cabeça da costela, que se irradia para os corpos vertebrais. Na articulação costotransversária, o tubérculo da costela articula-se com a fóvea costal do processo transverso da vértebra correspondente, estabilizada pelo ligamento costotransversário. O eixo que une essas duas articulações determina o tipo de movimento de cada costela durante a respiração: costelas superiores giram em eixo mais transverso (movimento em 'braço de bomba', elevando o esterno), enquanto as inferiores giram em eixo mais sagital (movimento em 'alça de balde', expandindo o diâmetro lateral do tórax).",
+    movimentos: [
+      "Rotação da costela em torno do eixo costovertebral-costotransversário durante a inspiração e expiração",
+      "Movimento em 'braço de bomba' (costelas superiores) e em 'alça de balde' (costelas inferiores)",
+    ],
+    estabilizadores: [
+      "Ligamento radiado da cabeça da costela",
+      "Ligamento costotransversário",
+      "Cápsulas articulares de ambas as articulações",
+    ],
+    correlacaoClinica:
+      "Fraturas de costela (trauma torácico direto, tosse intensa em idosos osteoporóticos) podem comprometer a mecânica dessas articulações e causar dor pleurítica que limita a expansibilidade torácica, predispondo a atelectasia e pneumonia — por isso o controle da dor é prioritário no manejo de fraturas de costela múltiplas (tórax instável). A costela cervical (variante anatômica, articulando-se anomalamente com C7) pode comprimir o plexo braquial ou a artéria subclávia, causando a síndrome do desfiladeiro torácico.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "As costelas superiores giram em eixo transverso (movimento em 'braço de bomba', elevando o esterno), enquanto as inferiores giram em eixo sagital (movimento em 'alça de balde', expandindo o diâmetro lateral do tórax) — diferença determinada pela orientação do eixo costovertebral-costotransversário.",
+      "O manejo da dor em fraturas de costela é prioritário porque a dor pleurítica limita a expansibilidade torácica e predispõe a atelectasia e pneumonia, especialmente em idosos.",
+    ],
+    fontes: [
+      { tema: "Biomecânica das articulações costovertebrais e movimento respiratório", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Fraturas de costela e complicações respiratórias", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Articulações das costelas com as vértebras torácicas", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
 ];
