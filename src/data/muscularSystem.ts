@@ -935,4 +935,565 @@ export const musculos: Musculo[] = [
       { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
     ],
   },
+  {
+    slug: "pectineo",
+    meshNames: ["Pectineus_muscle_L", "Pectineus_muscle_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus pectineus",
+    nomeComum: "Pectíneo",
+    resumo:
+      "Músculo quadrangular da raiz da coxa que atua tanto como flexor quanto como adutor do quadril, ocupando uma posição de transição entre os compartimentos anterior e medial.",
+    origem: "Linha pectínea do púbis",
+    insercao: "Linha pectínea do fêmur (entre o trocanter menor e a linha áspera)",
+    inervacao: "Nervo femoral (variavelmente com contribuição do nervo obturatório, refletindo sua posição limítrofe)",
+    acoes: ["Adução do quadril", "Flexão do quadril"],
+    correlacaoClinica:
+      "Compõe, junto ao iliopsoas, o assoalho do trígono femoral, sendo referência anatômica na dissecção da região inguinal e nas hérnias femorais. É também um dos músculos frequentemente acometidos na pubalgia atlética (dor inguinal crônica em atletas de futebol e corrida), quadro que envolve o complexo miotendíneo adutor-pectíneo-reto abdominal na sínfise púbica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O pectíneo é um músculo de transição entre os compartimentos anterior e medial da coxa, podendo receber dupla inervação (femoral e obturatório) — reflete essa posição limítrofe.",
+      "Compõe o assoalho do trígono femoral, junto ao iliopsoas, sendo referência na dissecção da região inguinal e nas hérnias femorais.",
+    ],
+    fontes: [
+      { tema: "Anatomia do pectíneo e trígono femoral", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus pectineus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "adutor-curto",
+    meshNames: ["Adductor_brevis_L", "Adductor_brevis_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus adductor brevis",
+    nomeComum: "Adutor curto",
+    resumo:
+      "Músculo triangular do compartimento medial da coxa, situado profundamente ao pectíneo e ao adutor longo, atravessado pela divisão do nervo obturatório em seus ramos anterior e posterior.",
+    origem: "Corpo do púbis",
+    insercao: "Linha áspera do fêmur",
+    inervacao: "Nervo obturatório",
+    acoes: ["Adução do quadril", "Flexão do quadril", "Rotação lateral do quadril"],
+    correlacaoClinica:
+      "É atravessado entre os ramos anterior e posterior do nervo obturatório, servindo de referência anatômica no bloqueio desse nervo (usado em anestesia para cirurgias do joelho e no manejo do espasmo adutor da paralisia cerebral). Compõe, junto a adutor longo, adutor magno, grácil e pectíneo, o grupo adutor do quadril, um dos sítios mais comuns de estiramento muscular em atletas ('groin strain').",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O adutor curto situa-se profundamente ao pectíneo e ao adutor longo, sendo atravessado entre os ramos anterior e posterior do nervo obturatório — referência anatômica no bloqueio desse nervo.",
+      "Compõe, com os demais adutores e o pectíneo, o grupo muscular mais frequentemente lesado em estiramentos de virilha ('groin strain') em atletas.",
+    ],
+    fontes: [
+      { tema: "Anatomia do adutor curto e bloqueio do nervo obturatório", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus adductor brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "gemeo-superior",
+    meshNames: ["Superior_gemellus_muscle_L", "Superior_gemellus_muscle_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus gemellus superior",
+    nomeComum: "Gêmeo superior",
+    resumo:
+      "Um dos seis rotadores laterais curtos do quadril, relaciona-se intimamente ao obturador interno, com quem compartilha a inserção conjunta no trocanter maior.",
+    origem: "Espinha isquiática",
+    insercao: "Trocanter maior (junto ao tendão do obturador interno)",
+    inervacao: "Nervo para o músculo obturador interno",
+    acoes: ["Rotação lateral do quadril"],
+    correlacaoClinica:
+      "Junto ao piriforme, obturador interno, gêmeo inferior, quadrado femoral e obturador externo, compõe o grupo dos rotadores laterais curtos do quadril, seccionados e posteriormente reparados na via de acesso posterior (Kocher-Langenbeck) à artroplastia de quadril — o reparo cuidadoso desses músculos reduz o risco de luxação posterior da prótese.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Gêmeo superior relaciona-se ao obturador interno (inserção conjunta no trocanter maior), enquanto o gêmeo inferior relaciona-se ao quadrado femoral — associação clássica de prova.",
+      "Junto aos demais rotadores laterais curtos do quadril, é seccionado e reparado na via de acesso posterior (Kocher-Langenbeck) à artroplastia de quadril.",
+    ],
+    fontes: [
+      { tema: "Anatomia dos rotadores laterais do quadril", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus gemellus superior)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "gemeo-inferior",
+    meshNames: ["Inferior_gemellus_muscle_L", "Inferior_gemellus_muscle_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus gemellus inferior",
+    nomeComum: "Gêmeo inferior",
+    resumo:
+      "Um dos seis rotadores laterais curtos do quadril, situado inferiormente ao obturador interno e relacionado ao quadrado femoral, com quem compartilha inervação.",
+    origem: "Túber isquiático",
+    insercao: "Trocanter maior (junto ao tendão do obturador interno/quadrado femoral)",
+    inervacao: "Nervo para o músculo quadrado femoral",
+    acoes: ["Rotação lateral do quadril"],
+    correlacaoClinica:
+      "Como os demais rotadores laterais curtos, situa-se profundamente ao glúteo máximo e é ponto de referência na via de acesso posterior ao quadril — sua proximidade ao nervo isquiático (que cruza superficialmente a esse grupo muscular) exige cuidado cirúrgico para evitar lesão iatrogênica do nervo durante a artroplastia.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O gêmeo inferior relaciona-se ao quadrado femoral (mesma inervação), enquanto o gêmeo superior relaciona-se ao obturador interno.",
+      "O nervo isquiático cruza superficialmente ao grupo dos rotadores laterais curtos do quadril (incluindo o gêmeo inferior), exigindo identificação cuidadosa na via de acesso posterior à artroplastia de quadril.",
+    ],
+    fontes: [
+      { tema: "Anatomia dos rotadores laterais do quadril e relação com o nervo isquiático", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus gemellus inferior)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "obturador-interno",
+    meshNames: ["Obturator_internus_L", "Obturator_internus_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus obturatorius internus",
+    nomeComum: "Obturador interno",
+    resumo:
+      "Rotador lateral do quadril que se origina na face interna da pelve e sai através do forame isquiático menor, fazendo uma angulação acentuada sobre a espinha isquiática antes de se inserir no trocanter maior.",
+    origem: "Face pélvica da membrana obturadora e osso adjacente",
+    insercao: "Trocanter maior",
+    inervacao: "Nervo para o músculo obturador interno",
+    acoes: ["Rotação lateral do quadril"],
+    correlacaoClinica:
+      "Seu tendão, ao sair da pelve pelo forame isquiático menor, faz uma polia sobre a espinha isquiática, mudando de direção em quase 90° — trajeto anatômico incomum e didaticamente relevante. O canal pudendo (de Alcock), pelo qual passam o nervo e os vasos pudendos internos, situa-se na face medial do obturador interno, na fossa isquioanal — relevante em bloqueio do nervo pudendo e na síndrome de aprisionamento desse nervo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O obturador interno faz uma angulação quase reta ao sair da pelve pelo forame isquiático menor (sobre a espinha isquiática) antes de se inserir no trocanter maior.",
+      "O canal pudendo (de Alcock), pelo qual passam o nervo e os vasos pudendos internos, situa-se na face medial do obturador interno, na fossa isquioanal.",
+    ],
+    fontes: [
+      { tema: "Anatomia do obturador interno e canal pudendo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus obturatorius internus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "quadrado-femoral",
+    meshNames: ["Quadratus_femoris_muscle_L", "Quadratus_femoris_muscle_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus quadratus femoris",
+    nomeComum: "Quadrado femoral",
+    resumo:
+      "O mais inferior e mais retangular dos rotadores laterais curtos do quadril, relacionado ao gêmeo inferior, com papel adicional crítico na vascularização da cabeça do fêmur.",
+    origem: "Túber isquiático",
+    insercao: "Trocanter maior (crista intertrocantérica)",
+    inervacao: "Nervo para o músculo quadrado femoral",
+    acoes: ["Rotação lateral do quadril"],
+    correlacaoClinica:
+      "O ramo profundo da artéria circunflexa femoral medial passa junto à margem superior do quadrado femoral a caminho da cabeça do fêmur, constituindo a principal via de suprimento sanguíneo retrógrado dessa região em adultos — fraturas do colo do fêmur (especialmente as intracapsulares e deslocadas) podem comprometer esse suprimento e causar necrose avascular da cabeça femoral.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O ramo profundo da artéria circunflexa femoral medial passa junto à margem superior do quadrado femoral a caminho da cabeça do fêmur — via crítica de suprimento retrógrado, comprometida em fraturas do colo femoral (risco de necrose avascular).",
+      "É o mais inferior dos rotadores laterais curtos do quadril, relacionando-se ao gêmeo inferior.",
+    ],
+    fontes: [
+      { tema: "Vascularização da cabeça do fêmur e quadrado femoral", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus quadratus femoris)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-longo-halux",
+    meshNames: ["Extensor_hallucis_longus_L", "Extensor_hallucis_longus_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus extensor hallucis longus",
+    nomeComum: "Extensor longo do hálux",
+    resumo:
+      "Músculo fino do compartimento anterior da perna, cujo tendão é facilmente palpável no dorso do pé, marcando o trajeto da artéria dorsal do pé em relação ao tendão do extensor longo dos dedos.",
+    origem: "Face anterior da fíbula (terço médio) e membrana interóssea",
+    insercao: "Falange distal do hálux",
+    inervacao: "Nervo fibular profundo",
+    acoes: ["Extensão do hálux", "Dorsiflexão do tornozelo (acessória)"],
+    correlacaoClinica:
+      "A força de extensão do hálux é o teste motor clássico da raiz L5 no exame neurológico — sua fraqueza sugere hérnia discal L4-L5 comprimindo essa raiz. A artéria dorsal do pé (pediosa) situa-se entre os tendões do extensor longo do hálux e do extensor longo dos dedos, sendo esse o ponto de palpação do pulso pedioso.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A força de extensão do hálux é o teste motor mais utilizado para avaliar a raiz L5 no exame neurológico — fraqueza sugere hérnia discal L4-L5.",
+      "O pulso da artéria dorsal do pé é palpado entre os tendões do extensor longo do hálux e do extensor longo dos dedos, no dorso do pé.",
+    ],
+    fontes: [
+      { tema: "Testes motores radiculares do membro inferior", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor hallucis longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-longo-dedos",
+    meshNames: ["Extensor_digitorum_longus_L", "Extensor_digitorum_longus_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus extensor digitorum longus",
+    nomeComum: "Extensor longo dos dedos",
+    resumo:
+      "Músculo do compartimento anterior da perna cujos tendões formam expansões extensoras sobre o 2º ao 5º dedos, análogas às da mão, complementando a dorsiflexão do tornozelo.",
+    origem: "Côndilo lateral da tíbia e face anterior da fíbula",
+    insercao: "Falanges distais do 2º ao 5º dedos (via expansões extensoras)",
+    inervacao: "Nervo fibular profundo",
+    acoes: ["Extensão do 2º ao 5º dedos", "Dorsiflexão do tornozelo"],
+    correlacaoClinica:
+      "Junto ao tibial anterior e ao extensor longo do hálux, é paralisado no 'pé caído' (foot drop) por lesão do nervo fibular comum — mais comumente por compressão na cabeça da fíbula (trauma, gesso apertado, posição de pernas cruzadas prolongada) — causando marcha escarvante (steppage gait) e perda da dorsiflexão/extensão dos dedos.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Paralisia do extensor longo dos dedos, junto ao tibial anterior, compõe o quadro de 'pé caído' na lesão do nervo fibular comum — causa marcha escarvante (steppage gait).",
+      "Compartilha inervação (nervo fibular profundo) e compartimento (anterior da perna) com o tibial anterior e o extensor longo do hálux.",
+    ],
+    fontes: [
+      { tema: "Lesão do nervo fibular comum e pé caído", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor digitorum longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-longo-dedos",
+    meshNames: ["Flexor_digitorum_longus_L", "Flexor_digitorum_longus_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus flexor digitorum longus",
+    nomeComum: "Flexor longo dos dedos",
+    resumo:
+      "Músculo do compartimento posterior profundo da perna cujo tendão cruza o do flexor longo do hálux na planta do pé, corrigindo a posição medial de seu ventre em relação à ação sobre os dedos laterais.",
+    origem: "Face posterior da tíbia",
+    insercao: "Falanges distais do 2º ao 5º dedos",
+    inervacao: "Nervo tibial",
+    acoes: ["Flexão do 2º ao 5º dedos", "Flexão plantar e inversão do tornozelo (acessórias)"],
+    correlacaoClinica:
+      "Passa posteriormente ao maléolo medial, dentro do túnel do tarso, junto ao tendão do tibial posterior, à artéria e veia tibiais posteriores e ao nervo tibial — relevante na síndrome do túnel do tarso (compressão do nervo tibial nesse trajeto). O músculo quadrado plantar se insere em seu tendão para corrigir o vetor de tração oblíquo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O tendão do flexor longo dos dedos cruza o do flexor longo do hálux na planta do pé (quiasma plantar/nó mestre de Henry) — correlação anatômica clássica de prova.",
+      "Passa pelo túnel do tarso, posteriormente ao maléolo medial, junto ao nervo tibial — relevante na síndrome do túnel do tarso.",
+    ],
+    fontes: [
+      { tema: "Anatomia do túnel do tarso e quiasma plantar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor digitorum longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "plantar-delgado",
+    meshNames: ["Plantaris_muscle_L", "Plantaris_muscle_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus plantaris",
+    nomeComum: "Plantar (delgado)",
+    resumo:
+      "Músculo vestigial com ventre curto e tendão extremamente longo e fino — o mais longo do corpo em proporção ao tamanho do ventre — ausente em parte da população sem repercussão funcional.",
+    origem: "Côndilo lateral do fêmur (acima da origem do gastrocnêmio lateral)",
+    insercao: "Face posterior do calcâneo (geralmente junto ao tendão do calcâneo)",
+    inervacao: "Nervo tibial",
+    acoes: ["Flexão plantar do tornozelo (fraca)", "Flexão do joelho (fraca)"],
+    correlacaoClinica:
+      "A ruptura do plantar delgado é clinicamente confundida com a ruptura do gastrocnêmio medial ('perna de tenista'), causando dor súbita na panturrilha durante esforço físico. Seu tendão longo e fino é historicamente utilizado como material de enxerto autólogo em reconstruções tendíneas (por exemplo, reparo de tendões flexores da mão), por sua disponibilidade e ausência de déficit funcional relevante ao ser retirado.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O tendão do músculo plantar é o mais longo e fino do corpo em relação ao tamanho do ventre muscular, sendo classicamente usado como enxerto autólogo em cirurgias de reconstrução tendínea.",
+      "É ausente uni ou bilateralmente em parte da população, sem repercussão funcional — variação anatômica clinicamente irrelevante, mas cobrada em prova.",
+    ],
+    fontes: [
+      { tema: "Anatomia do plantar delgado e uso como enxerto tendíneo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus plantaris)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "abdutor-halux",
+    meshNames: ["Abductor_hallucis_L", "Abductor_hallucis_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus abductor hallucis",
+    nomeComum: "Abdutor do hálux",
+    resumo:
+      "Músculo mais medial e superficial da primeira camada plantar, formando a margem medial visível do pé e contribuindo para o suporte do arco longitudinal medial.",
+    origem: "Tubérculo medial da tuberosidade do calcâneo (e retináculo flexor/aponeurose plantar)",
+    insercao: "Falange proximal do hálux (base medial)",
+    inervacao: "Nervo plantar medial",
+    acoes: ["Abdução do hálux", "Flexão do hálux (acessória)"],
+    correlacaoClinica:
+      "Contribui, junto ao adutor do hálux, para o equilíbrio de forças que mantém o alinhamento do hálux — o desequilíbrio entre esses músculos participa da fisiopatologia do hálux valgo (joanete), condição em que o hálux se desvia lateralmente e o 1º metatarso medialmente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O abdutor do hálux, junto ao adutor do hálux, participa do equilíbrio de forças que mantém o alinhamento do hálux — seu desequilíbrio contribui para a fisiopatologia do hálux valgo (joanete).",
+      "É o músculo mais medial da primeira camada plantar, contribuindo para o suporte do arco longitudinal medial do pé.",
+    ],
+    fontes: [
+      { tema: "Anatomia dos músculos plantares e hálux valgo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus abductor hallucis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-curto-halux",
+    meshNames: [
+      "Medial_head_of_flexor_hallucis_brevis_L",
+      "Medial_head_of_flexor_hallucis_brevis_R",
+      "Lateral_head_of_flexor_hallucis_brevis_L",
+      "Lateral_head_of_flexor_hallucis_brevis_R",
+    ],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus flexor hallucis brevis",
+    nomeComum: "Flexor curto do hálux",
+    resumo:
+      "Músculo com duas cabeças (medial e lateral) que abraçam o tendão do flexor longo do hálux, cada uma incorporando um dos ossos sesamoides do hálux em sua inserção.",
+    origem: "Cuboide e cuneiforme lateral",
+    insercao: "Falange proximal do hálux (cada cabeça inserindo-se junto a um osso sesamoide)",
+    inervacao: "Nervo plantar medial (cabeça medial) e nervo plantar lateral (cabeça lateral)",
+    acoes: ["Flexão do hálux"],
+    correlacaoClinica:
+      "Os ossos sesamoides embutidos nos tendões desse músculo, sob a cabeça do 1º metatarso, podem sofrer fraturas de estresse ou sesamoidite — causa comum de dor plantar no antepé em atletas, bailarinos e corredores, tipicamente agravada pela dorsiflexão do hálux (fase de propulsão da marcha).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "As duas cabeças do flexor curto do hálux incorporam, cada uma, um osso sesamoide sob a cabeça do 1º metatarso — local de fraturas de estresse e sesamoidite, causa de dor plantar no antepé.",
+      "Recebe dupla inervação plantar (medial na cabeça medial, lateral na cabeça lateral), refletindo sua posição de transição entre os territórios dos dois nervos plantares.",
+    ],
+    fontes: [
+      { tema: "Sesamoides do hálux e sesamoidite", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor hallucis brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "adutor-halux",
+    meshNames: [
+      "Oblique_head_of_adductor_hallucis_L",
+      "Oblique_head_of_adductor_hallucis_R",
+      "Transverse_head_of_adductor_hallucis_L",
+      "Transverse_head_of_adductor_hallucis_R",
+    ],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus adductor hallucis",
+    nomeComum: "Adutor do hálux",
+    resumo:
+      "Músculo com duas cabeças (oblíqua e transversa) na camada mais profunda da planta do pé, atuando como antagonista do abdutor do hálux e contribuindo para o arco transverso do pé.",
+    origem:
+      "Cabeça oblíqua: bases do 2º ao 4º metatarsos; cabeça transversa: ligamentos plantares das articulações metatarsofalângicas do 3º ao 5º dedos",
+    insercao: "Falange proximal do hálux (junto ao osso sesamoide lateral)",
+    inervacao: "Nervo plantar lateral",
+    acoes: ["Adução do hálux", "Contribui para a manutenção do arco transverso do pé"],
+    correlacaoClinica:
+      "A cabeça transversa, ao conectar as articulações metatarsofalângicas do 3º ao 5º dedos, contribui para a manutenção do arco transverso do pé. O desequilíbrio entre o adutor e o abdutor do hálux é um dos fatores biomecânicos implicados no hálux valgo, com o adutor tracionando o hálux lateralmente de forma relativamente predominante.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A cabeça transversa do adutor do hálux conecta as articulações metatarsofalângicas do 3º ao 5º dedos, contribuindo para a manutenção do arco transverso do pé.",
+      "É antagonista do abdutor do hálux — o desequilíbrio entre os dois participa da fisiopatologia do hálux valgo.",
+    ],
+    fontes: [
+      { tema: "Biomecânica do hálux valgo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus adductor hallucis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-curto-dedos",
+    meshNames: ["Flexor_digitorum_brevis_L", "Flexor_digitorum_brevis_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus flexor digitorum brevis",
+    nomeComum: "Flexor curto dos dedos",
+    resumo:
+      "Músculo da primeira camada plantar, situado imediatamente profundo à aponeurose plantar, homólogo funcional do flexor superficial dos dedos da mão — seu tendão também se bifurca para permitir a passagem do tendão do flexor longo dos dedos.",
+    origem: "Tubérculo medial da tuberosidade do calcâneo (e aponeurose plantar)",
+    insercao: "Falanges médias do 2º ao 5º dedos",
+    inervacao: "Nervo plantar medial",
+    acoes: ["Flexão do 2º ao 5º dedos"],
+    correlacaoClinica:
+      "Origina-se, junto à aponeurose plantar, no tubérculo medial do calcâneo — região classicamente dolorosa na fasciíte plantar, uma das causas mais comuns de dor no calcanhar, tipicamente pior nos primeiros passos pela manhã.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O tendão do flexor curto dos dedos se bifurca para permitir a passagem do tendão do flexor longo dos dedos — organização homóloga à do flexor superficial dos dedos na mão.",
+      "Origina-se, junto à aponeurose plantar, no tubérculo medial do calcâneo — região classicamente dolorosa na fasciíte plantar.",
+    ],
+    fontes: [
+      { tema: "Anatomia da aponeurose plantar e fasciíte plantar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor digitorum brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "quadrado-plantar",
+    meshNames: ["Quadratus_plantae_muscle_L", "Quadratus_plantae_muscle_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus quadratus plantae",
+    nomeComum: "Quadrado plantar",
+    resumo:
+      "Também chamado músculo flexor acessório, é exclusivo do pé (sem homólogo na mão), com a função de corrigir o vetor de tração oblíquo do tendão do flexor longo dos dedos.",
+    origem: "Face plantar do calcâneo (corpo, com duas cabeças)",
+    insercao: "Margem póstero-lateral do tendão do flexor longo dos dedos",
+    inervacao: "Nervo plantar lateral",
+    acoes: ["Auxilia e redireciona a tração do flexor longo dos dedos (flexão do 2º ao 5º dedos)"],
+    correlacaoClinica:
+      "É um exemplo clássico de correlação anatomofuncional cobrado em provas: por ter trajeto oblíquo na perna, o tendão do flexor longo dos dedos precisaria puxar os dedos obliquamente; o quadrado plantar corrige esse vetor, redirecionando a tração para o eixo longitudinal do pé — necessidade que a mão não tem, por isso a ausência de homólogo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O quadrado plantar (flexor acessório) não tem homólogo na mão — sua função exclusiva é corrigir o vetor de tração oblíquo do flexor longo dos dedos, redirecionando-o ao eixo longitudinal do pé.",
+      "É inervado pelo nervo plantar lateral, ao contrário do flexor curto dos dedos (nervo plantar medial) — diferença de inervação entre músculos da mesma camada plantar.",
+    ],
+    fontes: [
+      { tema: "Função do quadrado plantar como corretor de vetor", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus quadratus plantae)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "lumbricais-pe",
+    meshNames: ["Lumbrical_muscles_of_foot_L", "Lumbrical_muscles_of_foot_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculi lumbricales pedis",
+    nomeComum: "Lumbricais do pé",
+    resumo:
+      "Quatro pequenos músculos com origem tendínea (não óssea), que cruzam apenas a face medial da articulação metatarsofalângica de cada dedo, permitindo o movimento combinado de flexão metatarsofalângica com extensão interfalângica.",
+    origem: "Tendões do músculo flexor longo dos dedos",
+    insercao: "Face medial da expansão extensora sobre os quatro dedos laterais",
+    inervacao: "Nervo plantar medial (1º lumbrical) e nervo plantar lateral (2º ao 4º lumbricais)",
+    acoes: ["Flexão das falanges proximais do 2º ao 5º dedos", "Extensão das falanges média e distal do 2º ao 5º dedos"],
+    correlacaoClinica:
+      "O desequilíbrio entre lumbricais/interósseos e os extensores/flexores longos dos dedos é um mecanismo implicado nas deformidades em garra dos dedos do pé, comuns em pacientes diabéticos com neuropatia periférica — a atrofia dos pequenos músculos intrínsecos leva a predomínio relativo dos extensores longos, gerando hiperextensão metatarsofalângica com flexão interfalângica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Assim como na mão, os lumbricais do pé se originam de tendões flexores (não do osso) — organização que permite flexão da metatarsofalângica combinada com extensão das interfalângicas.",
+      "A atrofia dos lumbricais e interósseos na neuropatia diabética contribui para a deformidade em garra dos dedos do pé, pelo predomínio relativo dos extensores longos.",
+    ],
+    fontes: [
+      { tema: "Deformidades dos dedos do pé na neuropatia diabética", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi lumbricales pedis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "interosseos-plantares",
+    meshNames: ["Plantar_interossei_muscles_L", "Plantar_interossei_muscles_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculi interossei plantares",
+    nomeComum: "Interósseos plantares",
+    resumo:
+      "Três músculos unipenados da camada mais profunda da planta do pé, cuja ação de adução é referenciada ao eixo do 2º dedo — diferente da mão, cujo eixo é o 3º dedo.",
+    origem: "Bases e faces mediais dos metatarsos do 3º ao 5º dedos",
+    insercao: "Faces mediais das falanges proximais do 3º ao 5º dedos",
+    inervacao: "Nervo plantar lateral",
+    acoes: ["Adução do 3º ao 5º dedos (em direção ao eixo do 2º dedo)", "Flexão das articulações metatarsofalângicas"],
+    correlacaoClinica:
+      "Sua fraqueza (por lesão do nervo plantar lateral, ramo do nervo tibial) contribui para deformidades dos dedos em neuropatias periféricas distais, avaliável clinicamente pela perda de força de adução dos dedos contra resistência.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Mnemônico PAD (interósseos Plantares ADuzem) — o eixo de referência no pé é o 2º dedo, diferente da mão (eixo no 3º dedo).",
+      "Os interósseos plantares são inervados pelo nervo plantar lateral, ramo do nervo tibial — território comumente afetado em neuropatias periféricas distais.",
+    ],
+    fontes: [
+      { tema: "Mnemônico PAD/DAB e eixo de referência do pé", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi interossei plantares)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "abdutor-dedo-minimo-pe",
+    meshNames: ["Abductor_digiti_minimi_of_foot_L", "Abductor_digiti_minimi_of_foot_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus abductor digiti minimi (pedis)",
+    nomeComum: "Abdutor do dedo mínimo (do pé)",
+    resumo:
+      "Forma a margem lateral da planta do pé, homólogo funcional do abdutor do dedo mínimo da mão, contribuindo para o suporte do arco longitudinal lateral.",
+    origem: "Tubérculos medial e lateral da tuberosidade do calcâneo",
+    insercao: "Falange proximal do 5º dedo",
+    inervacao: "Nervo plantar lateral",
+    acoes: ["Abdução do 5º dedo", "Contribui para o suporte do arco longitudinal lateral do pé"],
+    correlacaoClinica:
+      "Seu ramo nervoso motor (ramo do nervo plantar lateral, conhecido como 'nervo de Baxter') é uma causa reconhecida — embora menos comum que a fasciíte plantar — de dor crônica no calcanhar por aprisionamento nervoso nessa região, sendo diagnóstico diferencial importante de dor plantar persistente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O ramo do abdutor do dedo mínimo (nervo de Baxter, ramo do nervo plantar lateral) é uma causa de dor crônica no calcanhar por aprisionamento nervoso — diagnóstico diferencial da fasciíte plantar.",
+      "Forma, junto ao flexor curto do dedo mínimo, a margem lateral da planta do pé.",
+    ],
+    fontes: [
+      { tema: "Nervo de Baxter e dor crônica no calcanhar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus abductor digiti minimi)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-curto-dedo-minimo-pe",
+    meshNames: ["Flexor_digiti_minimi_of_foot_L", "Flexor_digiti_minimi_of_foot_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus flexor digiti minimi brevis (pedis)",
+    nomeComum: "Flexor curto do dedo mínimo (do pé)",
+    resumo:
+      "Pequeno músculo da camada muscular mais profunda da planta lateral, situado profundamente ao abdutor do dedo mínimo.",
+    origem: "Base do 5º metatarso",
+    insercao: "Falange proximal do 5º dedo",
+    inervacao: "Nervo plantar lateral (ramo superficial)",
+    acoes: ["Flexão do 5º dedo"],
+    correlacaoClinica:
+      "Junto ao abdutor do dedo mínimo, participa da biomecânica do 'joanete de alfaiate' (bunionette) — inflamação e desvio da articulação metatarsofalângica do 5º dedo, deformidade análoga ao hálux valgo no lado lateral do pé, comumente associada a calçados apertados.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Compõe a camada muscular mais profunda da planta lateral, junto ao adutor do hálux e ao interósseo correspondente.",
+      "Participa, junto ao abdutor do dedo mínimo, da biomecânica do 'joanete de alfaiate' (bunionette), deformidade análoga ao hálux valgo no lado lateral do pé.",
+    ],
+    fontes: [
+      { tema: "Bunionette e deformidades do 5º dedo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor digiti minimi brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "interosseos-dorsais-pe",
+    meshNames: ["Dorsal_interossei_muscles_of_foot_L", "Dorsal_interossei_muscles_of_foot_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculi interossei dorsales (pedis)",
+    nomeComum: "Interósseos dorsais (do pé)",
+    resumo:
+      "Quatro músculos bipenados situados entre os metatarsos, mais volumosos que os interósseos plantares e visíveis no dorso do pé entre os tendões extensores.",
+    origem: "Faces adjacentes dos metatarsos",
+    insercao: "1º: face medial da falange proximal do 2º dedo; 2º ao 4º: faces laterais do 2º ao 4º dedos",
+    inervacao: "Nervo plantar lateral",
+    acoes: ["Abdução dos dedos (em relação ao eixo do 2º dedo)", "Flexão das articulações metatarsofalângicas"],
+    correlacaoClinica:
+      "Sua atrofia, visível como afundamento entre os metatarsos no dorso do pé, é sinal clínico precoce e sensível de neuropatia periférica ou de compressão do nervo plantar lateral — achado análogo à atrofia dos interósseos dorsais da mão na neuropatia ulnar.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Mnemônico DAB (interósseos Dorsais ABduzem), com eixo de referência no 2º dedo.",
+      "A atrofia dos interósseos dorsais, visível como afundamento entre os metatarsos no dorso do pé, é sinal clínico precoce de neuropatia periférica ou denervação do nervo plantar lateral.",
+    ],
+    fontes: [
+      { tema: "Atrofia intrínseca do pé como sinal de neuropatia", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi interossei dorsales pedis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-curto-halux",
+    meshNames: ["Extensor_hallucis_brevis_L", "Extensor_hallucis_brevis_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus extensor hallucis brevis",
+    nomeComum: "Extensor curto do hálux",
+    resumo:
+      "Porção mais medial do compartimento dorsal do pé, contígua ao extensor curto dos dedos, formando parte do relevo muscular visível no dorso do pé.",
+    origem: "Face súpero-lateral do calcâneo",
+    insercao: "Falange proximal do hálux (base dorsal)",
+    inervacao: "Nervo fibular profundo",
+    acoes: ["Extensão do hálux"],
+    correlacaoClinica:
+      "Sua massa muscular no dorso do pé é um marco de superfície visível/palpável mesmo com edema leve, sendo ocasionalmente confundida ao exame físico com uma tumoração de partes moles (gânglio, lipoma) em pacientes com essa variante anatômica proeminente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Compõe, com o extensor curto dos dedos, o compartimento dorsal do pé — o único grupo muscular intrínseco situado no dorso, e não na planta.",
+      "Sua proeminência normal no dorso do pé é ocasionalmente confundida clinicamente com massa de partes moles.",
+    ],
+    fontes: [
+      { tema: "Compartimento dorsal do pé", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor hallucis brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-curto-dedos",
+    meshNames: ["Extensor_digitorum_brevis_L", "Extensor_digitorum_brevis_R"],
+    regiao: "Membro inferior",
+    nomeOficial: "Musculus extensor digitorum brevis",
+    nomeComum: "Extensor curto dos dedos",
+    resumo:
+      "Junto ao extensor curto do hálux, forma o único grupo muscular intrínseco do dorso do pé, complementando de forma acessória a extensão dos dedos já realizada principalmente pelo extensor longo dos dedos.",
+    origem: "Face súpero-lateral do calcâneo",
+    insercao: "Falanges proximais do 2º ao 4º dedos (unindo-se aos tendões do extensor longo dos dedos)",
+    inervacao: "Nervo fibular profundo",
+    acoes: ["Extensão do 2º ao 4º dedos"],
+    correlacaoClinica:
+      "Por ser superficial e relativamente isolado no dorso do pé, anterolateral ao maléolo lateral, é referência anatômica em procedimentos de bloqueio do ramo terminal do nervo fibular profundo no tornozelo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É o único músculo extensor intrínseco do 2º ao 4º dedos, complementando de forma acessória o extensor longo dos dedos.",
+      "Situa-se no dorso do pé, anterolateral ao maléolo lateral — referência para bloqueio do ramo terminal do nervo fibular profundo.",
+    ],
+    fontes: [
+      { tema: "Bloqueio do nervo fibular profundo no tornozelo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor digitorum brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
 ];
