@@ -51,7 +51,7 @@ interface ModelProps {
   url: string;
   visibleMeshNames: Set<string> | null;
   selectedMeshNames: Set<string> | null;
-  onSelect: (meshName: string) => void;
+  onSelect: (meshName: string, point: THREE.Vector3) => void;
   onLoaded: (scene: THREE.Group) => void;
 }
 
@@ -78,10 +78,52 @@ function Model({ url, visibleMeshNames, selectedMeshNames, onSelect, onLoaded }:
     if (!(mesh instanceof THREE.Mesh)) return;
     if (visibleMeshNames && !visibleMeshNames.has(mesh.name)) return;
     event.stopPropagation();
-    onSelect(mesh.name);
+    onSelect(mesh.name, event.point);
   }
 
   return <primitive object={scene} onClick={handleClick} />;
+}
+
+// A bone or ligament mesh can belong to more than one joint (e.g. the femur
+// forms both the hip and the knee), so the clicked mesh name alone doesn't
+// always identify a single joint. When it doesn't, we disambiguate using the
+// 3D point where the click actually landed: for each candidate joint we
+// compute the bounding-box center of its own meshes in the currently loaded
+// scenes, and pick whichever joint's center is closest to the click.
+function resolveJointSlug(
+  meshName: string,
+  point: THREE.Vector3,
+  meshNameToJointSlugs: Record<string, string[]>,
+  jointMeshNamesBySlug: Record<string, string[]>,
+  scenes: (THREE.Group | null)[]
+): string | null {
+  const candidates = meshNameToJointSlugs[meshName];
+  if (!candidates || candidates.length === 0) return null;
+  if (candidates.length === 1) return candidates[0];
+
+  let bestSlug: string | null = null;
+  let bestDist = Infinity;
+  for (const slug of candidates) {
+    const names = new Set(jointMeshNamesBySlug[slug] ?? []);
+    const box = new THREE.Box3();
+    let found = false;
+    for (const scene of scenes) {
+      if (!scene) continue;
+      scene.traverse((obj) => {
+        if (obj instanceof THREE.Mesh && names.has(obj.name)) {
+          box.expandByObject(obj);
+          found = true;
+        }
+      });
+    }
+    if (!found) continue;
+    const dist = box.getCenter(new THREE.Vector3()).distanceTo(point);
+    if (dist < bestDist) {
+      bestDist = dist;
+      bestSlug = slug;
+    }
+  }
+  return bestSlug ?? candidates[0];
 }
 
 interface FrameCameraProps {
@@ -144,14 +186,30 @@ function Loading() {
 
 interface JointCanvasProps {
   boneMeshNames: Set<string> | null;
-  ligamentMeshNames: Set<string> | null;
-  onSelect: (meshName: string) => void;
+  ligamentMeshNames: Set<string>;
+  meshNameToJointSlugs: Record<string, string[]>;
+  jointMeshNamesBySlug: Record<string, string[]>;
+  onSelect: (slug: string) => void;
 }
 
-export function JointCanvas({ boneMeshNames, ligamentMeshNames, onSelect }: JointCanvasProps) {
+export function JointCanvas({
+  boneMeshNames,
+  ligamentMeshNames,
+  meshNameToJointSlugs,
+  jointMeshNamesBySlug,
+  onSelect,
+}: JointCanvasProps) {
   const controlsRef = useRef<OrbitControlsImpl | null>(null);
   const [boneScene, setBoneScene] = useState<THREE.Group | null>(null);
   const [ligamentScene, setLigamentScene] = useState<THREE.Group | null>(null);
+
+  function handleMeshClick(meshName: string, point: THREE.Vector3) {
+    const slug = resolveJointSlug(meshName, point, meshNameToJointSlugs, jointMeshNamesBySlug, [
+      boneScene,
+      ligamentScene,
+    ]);
+    if (slug) onSelect(slug);
+  }
 
   return (
     <Canvas
@@ -168,24 +226,22 @@ export function JointCanvas({ boneMeshNames, ligamentMeshNames, onSelect }: Join
           url={SKELETON_MODEL_URL}
           visibleMeshNames={boneMeshNames}
           selectedMeshNames={null}
-          onSelect={onSelect}
+          onSelect={handleMeshClick}
           onLoaded={setBoneScene}
         />
       </Suspense>
-      {ligamentMeshNames && (
-        <Suspense fallback={null}>
-          <Model
-            url={JOINTS_MODEL_URL}
-            visibleMeshNames={ligamentMeshNames}
-            selectedMeshNames={ligamentMeshNames}
-            onSelect={onSelect}
-            onLoaded={setLigamentScene}
-          />
-        </Suspense>
-      )}
+      <Suspense fallback={null}>
+        <Model
+          url={JOINTS_MODEL_URL}
+          visibleMeshNames={ligamentMeshNames}
+          selectedMeshNames={ligamentMeshNames}
+          onSelect={handleMeshClick}
+          onLoaded={setLigamentScene}
+        />
+      </Suspense>
       <FrameCamera
         boneScene={boneScene}
-        ligamentScene={ligamentMeshNames ? ligamentScene : null}
+        ligamentScene={ligamentScene}
         boneFocusNames={boneMeshNames}
         ligamentFocusNames={ligamentMeshNames}
         controlsRef={controlsRef}

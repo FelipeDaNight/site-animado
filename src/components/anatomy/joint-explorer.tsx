@@ -24,6 +24,22 @@ function cx(...classes: (string | false | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+// Um osso frequentemente pertence a duas articulações vizinhas (o fêmur
+// forma tanto o quadril quanto o joelho, por exemplo), então o nome da malha
+// clicada nem sempre identifica uma única articulação — ver resolveJointSlug
+// em joint-canvas.tsx, que usa esses mapas para desambiguar pela posição 3D
+// do clique quando há mais de uma candidata.
+const meshNameToJointSlugs: Record<string, string[]> = {};
+const jointMeshNamesBySlug: Record<string, string[]> = {};
+for (const a of articulacoes) {
+  const allNames = [...a.meshNames, ...a.ligamentMeshNames];
+  jointMeshNamesBySlug[a.slug] = allNames;
+  for (const name of allNames) {
+    (meshNameToJointSlugs[name] ??= []).push(a.slug);
+  }
+}
+const ALL_LIGAMENT_MESH_NAMES = new Set(articulacoes.flatMap((a) => a.ligamentMeshNames));
+
 export function JointExplorer() {
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   const selected = articulacoes.find((a) => a.slug === selectedSlug) ?? null;
@@ -32,16 +48,16 @@ export function JointExplorer() {
     () => (selected ? new Set(selected.meshNames) : null),
     [selected]
   );
+  // Sem seleção, mostra os ligamentos/cápsulas de TODAS as articulações
+  // coloridos ao mesmo tempo — um "mapa" do corpo inteiro para navegação
+  // visual, em vez de um esqueleto liso sem nenhuma articulação destacada.
   const ligamentMeshNames = useMemo(
-    () => (selected ? new Set(selected.ligamentMeshNames) : null),
+    () => (selected ? new Set(selected.ligamentMeshNames) : ALL_LIGAMENT_MESH_NAMES),
     [selected]
   );
 
-  function handleCanvasSelect(meshName: string) {
-    const entry = articulacoes.find(
-      (a) => a.meshNames.includes(meshName) || a.ligamentMeshNames.includes(meshName)
-    );
-    if (entry) setSelectedSlug(entry.slug);
+  function handleCanvasSelect(slug: string) {
+    setSelectedSlug(slug);
   }
 
   return (
@@ -68,6 +84,8 @@ export function JointExplorer() {
         <JointCanvas
           boneMeshNames={boneMeshNames}
           ligamentMeshNames={ligamentMeshNames}
+          meshNameToJointSlugs={meshNameToJointSlugs}
+          jointMeshNamesBySlug={jointMeshNamesBySlug}
           onSelect={handleCanvasSelect}
         />
       </div>
@@ -75,7 +93,8 @@ export function JointExplorer() {
       <div className="mt-6">
         {!selected && (
           <Callout variant="info">
-            Escolha uma articulação acima ou clique diretamente num osso do modelo 3D para ver sua ficha.
+            Todas as articulações do corpo aparecem destacadas no modelo 3D. Escolha uma acima ou clique
+            diretamente numa articulação colorida para ver sua ficha.
           </Callout>
         )}
 
