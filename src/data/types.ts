@@ -206,6 +206,27 @@ export interface NervoCraniano {
   fontes: FonteTema[];
 }
 
+export const PLEXOS_NERVOSOS = ["Plexo lombar", "Plexo sacral"] as const;
+
+export type PlexoNervoso = (typeof PLEXOS_NERVOSOS)[number];
+
+export interface NervoPeriferico {
+  slug: string;
+  meshNames: string[];
+  plexo: PlexoNervoso;
+  nomeOficial: string;
+  nomeComum: string;
+  raizes: string;
+  resumo: string;
+  trajeto: string;
+  ramosMusculares: string[];
+  ramosSensitivos: string[];
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export const REGIOES_MUSCULARES = [
   "Cabeça e pescoço",
   "Tronco",
