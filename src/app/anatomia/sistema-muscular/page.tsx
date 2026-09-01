@@ -33,7 +33,7 @@ export default function SistemaMuscularPage() {
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Muscular</h1>
         <p className="mt-2 text-foreground-muted">
-          Modelo 3D interativo com 84 músculos de alto rendimento em prova, organizados por região. Escolha um
+          Modelo 3D interativo com 113 músculos de alto rendimento em prova, organizados por região. Escolha um
           músculo para ver origem, inserção, inervação, ações e correlação clínica. Este é um recorte
           selecionado — o modelo completo tem mais de 300 músculos, mas a cobertura de fichas segue crescendo.
         </p>

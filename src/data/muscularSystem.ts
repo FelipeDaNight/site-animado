@@ -2119,4 +2119,729 @@ export const musculos: Musculo[] = [
       { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
     ],
   },
+  {
+    slug: "pronador-redondo",
+    meshNames: ["Superficial_head_of_pronator_teres_L", "Superficial_head_of_pronator_teres_R", "Deep_head_of_pronator_teres_L", "Deep_head_of_pronator_teres_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus pronator teres",
+    nomeComum: "Pronador redondo",
+    resumo:
+      "Músculo mais superficial e lateral do compartimento anterior do antebraço, com duas cabeças (umeral e ulnar) entre as quais passa o nervo mediano — um ponto clássico de compressão nervosa.",
+    origem: "Cabeça umeral: epicôndilo medial (tendão comum dos flexores); cabeça ulnar: processo coronoide da ulna",
+    insercao: "Face lateral do corpo do rádio (tuberosidade para o pronador redondo, terço médio)",
+    inervacao: "Nervo mediano (C6-C7)",
+    acoes: ["Pronação do antebraço", "Flexão fraca do cotovelo (acessória)"],
+    correlacaoClinica:
+      "O nervo mediano passa entre as cabeças umeral e ulnar do pronador redondo — sua compressão nesse ponto (síndrome do pronador redondo) causa dor no antebraço proximal e parestesia na distribuição do mediano, um diagnóstico diferencial importante da síndrome do túnel do carpo, mas com dor mais proximal e sem piora noturna típica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O nervo mediano passa entre as duas cabeças (umeral e ulnar) do pronador redondo — sua compressão nesse ponto (síndrome do pronador redondo) é diagnóstico diferencial da síndrome do túnel do carpo.",
+      "É o mais lateral e superficial dos músculos do compartimento anterior do antebraço, formando a margem medial da fossa cubital.",
+    ],
+    fontes: [
+      { tema: "Síndrome do pronador redondo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus pronator teres)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-radial-do-carpo",
+    meshNames: ["Flexor_carpi_radialis_L", "Flexor_carpi_radialis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus flexor carpi radialis",
+    nomeComum: "Flexor radial do carpo",
+    resumo:
+      "Músculo superficial do antebraço cujo tendão distal atravessa um canal próprio no osso trapézio, servindo de referência anatômica próxima à artéria radial no punho.",
+    origem: "Epicôndilo medial do úmero (tendão comum dos flexores)",
+    insercao: "Base do 2º e 3º metacarpos",
+    inervacao: "Nervo mediano (C6-C7)",
+    acoes: ["Flexão do punho", "Desvio radial do punho"],
+    correlacaoClinica:
+      "Seu tendão é facilmente palpável na face anterior do punho, imediatamente medial ao pulso da artéria radial — uma referência útil para localizar o vaso na punção arterial. A tenossinovite do flexor radial do carpo causa dor localizada nesse trajeto, agravada pela flexão do punho contra resistência.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O tendão do flexor radial do carpo é palpável imediatamente medial ao pulso da artéria radial no punho — referência anatômica útil para localizar o vaso.",
+      "Atravessa um canal próprio dentro do osso trapézio (não o túnel do carpo comum), dentro de sua própria bainha sinovial.",
+    ],
+    fontes: [
+      { tema: "Anatomia do flexor radial do carpo e referência para a artéria radial", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor carpi radialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "palmar-longo",
+    meshNames: ["Palmaris_longus_muscle_L", "Palmaris_longus_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus palmaris longus",
+    nomeComum: "Palmar longo",
+    resumo:
+      "Pequeno músculo fusiforme com longo tendão fino, ausente uni ou bilateralmente em parte da população — quando presente, é a fonte preferida de enxerto tendíneo autólogo por sua irrelevância funcional.",
+    origem: "Epicôndilo medial do úmero (tendão comum dos flexores)",
+    insercao: "Aponeurose palmar",
+    inervacao: "Nervo mediano (C6-C7)",
+    acoes: ["Flexão do punho", "Tensiona a aponeurose palmar"],
+    correlacaoClinica:
+      "É ausente uni ou bilateralmente em aproximadamente 10-15% da população (variação por etnia), sem qualquer repercussão funcional detectável — por isso é a fonte preferida de enxerto tendíneo autólogo em cirurgias de reconstrução (ex.: reparo de tendões flexores, reconstrução do ligamento colateral ulnar do cotovelo). Sua presença é testada opondo o polegar ao dedo mínimo com o punho fletido (teste de Schaeffer), o que faz seu tendão saltar visivelmente sob a pele, se presente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O palmar longo está ausente uni ou bilateralmente em cerca de 10-15% da população — variação anatômica clássica, sem repercussão funcional, testada opondo o polegar ao dedo mínimo com o punho fletido.",
+      "É a fonte preferida de enxerto tendíneo autólogo em cirurgias reconstrutivas, precisamente por sua ausência não causar déficit funcional perceptível.",
+    ],
+    fontes: [
+      { tema: "Variante anatômica do palmar longo e uso como enxerto", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus palmaris longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-ulnar-do-carpo",
+    meshNames: ["Humeral_head_of_flexor_carpi_ulnaris_L", "Humeral_head_of_flexor_carpi_ulnaris_R", "Ulnar_head_of_flexor_carpi_ulnaris_L", "Ulnar_head_of_flexor_carpi_ulnaris_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus flexor carpi ulnaris",
+    nomeComum: "Flexor ulnar do carpo",
+    resumo:
+      "Único músculo do compartimento anterior do antebraço inervado pelo nervo ulnar, com duas cabeças (umeral e ulnar) entre as quais esse nervo passa ao entrar no antebraço.",
+    origem: "Cabeça umeral: epicôndilo medial (tendão comum dos flexores); cabeça ulnar: olécrano e face posterior da ulna",
+    insercao: "Ossos pisiforme, hamato (via ligamento pisohamato) e base do 5º metacarpo (via ligamento pisometacarpal)",
+    inervacao: "Nervo ulnar (C7-C8)",
+    acoes: ["Flexão do punho", "Desvio ulnar do punho"],
+    correlacaoClinica:
+      "O nervo ulnar passa entre suas duas cabeças ao entrar no antebraço, logo após contornar o epicôndilo medial do úmero (onde é superficial e vulnerável a compressão — o 'osso da graça') — um segundo ponto potencial de aprisionamento ulnar além do cotovelo, contribuindo para a síndrome do túnel cubital quando a compressão é mais distal.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É o único músculo do compartimento anterior do antebraço inervado pelo nervo ulnar — todos os demais flexores dessa camada recebem o nervo mediano.",
+      "O nervo ulnar passa entre as duas cabeças (umeral e ulnar) do flexor ulnar do carpo, um segundo ponto potencial de compressão além do sulco do epicôndilo medial.",
+    ],
+    fontes: [
+      { tema: "Inervação ulnar do flexor ulnar do carpo e pontos de compressão do nervo ulnar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor carpi ulnaris)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-superficial-dos-dedos",
+    meshNames: ["Humero-ulnar_head_of_flexor_digitorum_superficialis_L", "Humero-ulnar_head_of_flexor_digitorum_superficialis_R", "Radial_head_of_flexor_digitorum_superficialis_L", "Radial_head_of_flexor_digitorum_superficialis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus flexor digitorum superficialis",
+    nomeComum: "Flexor superficial dos dedos",
+    resumo:
+      "Maior músculo da camada intermediária do antebraço anterior, cujos quatro tendões distais se bifurcam na palma para permitir a passagem dos tendões do flexor profundo dos dedos.",
+    origem: "Cabeça úmero-ulnar: epicôndilo medial e processo coronoide da ulna; cabeça radial: face anterior do corpo do rádio",
+    insercao: "Falanges médias do 2º ao 5º dedos (cada tendão se bifurca antes de inserir)",
+    inervacao: "Nervo mediano (C7-T1)",
+    acoes: ["Flexão das articulações interfalângicas proximais do 2º ao 5º dedos", "Flexão do punho (acessória)"],
+    correlacaoClinica:
+      "Seus quatro tendões, junto aos do flexor profundo dos dedos, passam pelo túnel do carpo — sendo, portanto, diretamente relevantes na fisiopatologia da síndrome do túnel do carpo (compressão do nervo mediano nesse espaço). É o músculo testado clinicamente para avaliar a integridade da articulação interfalângica proximal, isolando um dedo de cada vez (os demais mantidos em extensão, já que o flexor profundo age em todos simultaneamente).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O teste clínico do flexor superficial dos dedos isola um dedo por vez, mantendo os demais em extensão passiva — assim elimina-se a ação do flexor profundo (que sempre flete todos simultaneamente).",
+      "Seus quatro tendões atravessam o túnel do carpo junto aos do flexor profundo dos dedos, sendo diretamente relevantes na síndrome do túnel do carpo.",
+    ],
+    fontes: [
+      { tema: "Teste clínico do flexor superficial dos dedos", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Túnel do carpo e síndrome do túnel do carpo", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-profundo-dos-dedos",
+    meshNames: ["Flexor_digitorum_profundus_L", "Flexor_digitorum_profundus_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus flexor digitorum profundus",
+    nomeComum: "Flexor profundo dos dedos",
+    resumo:
+      "Único músculo do corpo com dupla inervação segmentar por dois nervos periféricos distintos — a metade lateral pelo mediano, a medial pelo ulnar — refletindo sua origem embriológica a partir de duas massas musculares distintas.",
+    origem: "Dois terços proximais da face anterior da ulna e membrana interóssea",
+    insercao: "Falanges distais do 2º ao 5º dedos",
+    inervacao: "Nervo interósseo anterior, ramo do mediano (2º e 3º dedos) e nervo ulnar (4º e 5º dedos)",
+    acoes: ["Flexão das articulações interfalângicas distais do 2º ao 5º dedos", "Flexão do punho (acessória)"],
+    correlacaoClinica:
+      "A avulsão traumática do tendão do flexor profundo dos dedos na inserção da falange distal ('jersey finger', clássica em jogadores de rúgbi/futebol americano ao agarrar a camisa de um adversário em fuga) causa incapacidade de fletir a articulação interfalângica distal isoladamente, exigindo reparo cirúrgico precoce pela retração do tendão.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O flexor profundo dos dedos tem dupla inervação segmentar: nervo mediano (2º-3º dedos, via interósseo anterior) e nervo ulnar (4º-5º dedos) — único músculo do corpo com essa divisão por dedo.",
+      "O 'jersey finger' é a avulsão do tendão do flexor profundo na falange distal, causando perda isolada da flexão da interfalângica distal — comum ao agarrar a camisa de um adversário em fuga.",
+    ],
+    fontes: [
+      { tema: "Dupla inervação do flexor profundo dos dedos", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Jersey finger e lesões tendíneas da mão", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-longo-do-polegar",
+    meshNames: ["Flexor_pollicis_longus_L", "Flexor_pollicis_longus_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus flexor pollicis longus",
+    nomeComum: "Flexor longo do polegar",
+    resumo:
+      "Único flexor da falange distal do polegar, situado lateralmente ao flexor profundo dos dedos, inervado pelo mesmo ramo do mediano que supre a metade lateral desse músculo.",
+    origem: "Face anterior do corpo do rádio e membrana interóssea",
+    insercao: "Falange distal do polegar",
+    inervacao: "Nervo interósseo anterior, ramo do nervo mediano (C7-C8)",
+    acoes: ["Flexão da articulação interfalângica do polegar (principal)", "Flexão acessória da articulação metacarpofalângica e carpometacarpal do polegar"],
+    correlacaoClinica:
+      "É um dos músculos afetados na síndrome do nervo interósseo anterior (ramo puramente motor do mediano, sem componente sensitivo), causando o sinal característico da incapacidade de formar o círculo 'OK' entre polegar e indicador — o paciente, ao tentar, forma um sinal em pinça achatado, por fraqueza combinada do flexor longo do polegar e do flexor profundo do 2º dedo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O sinal do 'OK' impossível (incapacidade de fazer um círculo entre polegar e indicador, formando um pinça achatada) é patognomônico da síndrome do nervo interósseo anterior, por fraqueza do flexor longo do polegar e flexor profundo do indicador.",
+      "Situa-se lateralmente ao flexor profundo dos dedos e compartilha sua inervação (nervo interósseo anterior) com a porção lateral desse músculo.",
+    ],
+    fontes: [
+      { tema: "Síndrome do nervo interósseo anterior e sinal do OK", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor pollicis longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "pronador-quadrado",
+    meshNames: ["Pronator_quadratus_L", "Pronator_quadratus_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus pronator quadratus",
+    nomeComum: "Pronador quadrado",
+    resumo:
+      "Músculo mais profundo do antebraço anterior, de fibras transversais, considerado o agonista primário da pronação — o pronador redondo entra em ação apenas quando maior velocidade ou força é necessária.",
+    origem: "Terço distal da face anterior da ulna",
+    insercao: "Terço distal da face anterior do rádio",
+    inervacao: "Nervo interósseo anterior, ramo do nervo mediano (C8-T1)",
+    acoes: ["Pronação do antebraço (agonista primário)"],
+    correlacaoClinica:
+      "É um dos músculos comprometidos na síndrome do nervo interósseo anterior, junto ao flexor longo do polegar e à porção lateral do flexor profundo dos dedos — sua fraqueza isolada é sutil, mas contribui para o quadro de fraqueza de pinça observado nessa neuropatia.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O pronador quadrado é o agonista PRIMÁRIO da pronação do antebraço; o pronador redondo é recrutado apenas quando maior velocidade ou força é exigida.",
+      "Compõe, com o flexor longo do polegar e a porção lateral do flexor profundo dos dedos, o território motor do nervo interósseo anterior.",
+    ],
+    fontes: [
+      { tema: "Pronador quadrado como agonista primário da pronação", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus pronator quadratus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-radial-longo-do-carpo",
+    meshNames: ["Extensor_carpi_radialis_longus_L", "Extensor_carpi_radialis_longus_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor carpi radialis longus",
+    nomeComum: "Extensor radial longo do carpo",
+    resumo:
+      "Músculo superficial do compartimento posterior do antebraço, parcialmente coberto pelo braquiorradial, com quem frequentemente se funde parcialmente na origem.",
+    origem: "Crista supraepicondilar lateral do úmero",
+    insercao: "Base do 2º metacarpo",
+    inervacao: "Nervo radial (C6-C7)",
+    acoes: ["Extensão do punho", "Desvio radial do punho"],
+    correlacaoClinica:
+      "Ao seguir distalmente, seu tendão é cruzado superficialmente pelos músculos abdutor curto do polegar e extensor curto do polegar — relação relevante na compreensão da anatomia do dorso do punho e da tabaqueira anatômica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O extensor radial longo do carpo situa-se parcialmente sob o braquiorradial, com o qual frequentemente se funde na origem — os dois compartilham a crista supraepicondilar lateral.",
+      "Seu tendão distal é cruzado pelos tendões do abdutor curto e extensor curto do polegar, na região do punho.",
+    ],
+    fontes: [
+      { tema: "Anatomia do extensor radial longo do carpo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor carpi radialis longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-radial-curto-do-carpo",
+    meshNames: ["Extensor_carpi_radialis_brevis_L", "Extensor_carpi_radialis_brevis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor carpi radialis brevis",
+    nomeComum: "Extensor radial curto do carpo",
+    resumo:
+      "Tem origem mais distal que o extensor radial longo do carpo (daí o nome 'curto'), e é o músculo mais frequentemente envolvido na epicondilite lateral ('cotovelo de tenista').",
+    origem: "Epicôndilo lateral do úmero (tendão extensor comum)",
+    insercao: "Base do 3º metacarpo",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Extensão do punho", "Desvio radial do punho (acessório)"],
+    correlacaoClinica:
+      "É o músculo mais comumente acometido na epicondilite lateral (cotovelo de tenista) — microrrupturas e degeneração angiofibroblástica na origem tendínea, causadas por movimentos repetitivos de extensão/desvio do punho contra resistência (não exclusivo do tênis; comum em trabalhos manuais repetitivos). A dor é reproduzida à extensão do punho contra resistência com o cotovelo estendido.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O extensor radial curto do carpo é o músculo mais frequentemente acometido na epicondilite lateral (cotovelo de tenista), por microrrupturas repetitivas em sua origem no epicôndilo lateral.",
+      "Origina-se do epicôndilo lateral (tendão extensor comum), mais distalmente que o extensor radial longo do carpo (que se origina da crista supraepicondilar) — daí a nomenclatura 'curto' vs. 'longo'.",
+    ],
+    fontes: [
+      { tema: "Epicondilite lateral e extensor radial curto do carpo", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor carpi radialis brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-dos-dedos",
+    meshNames: ["Extensor_digitorum_L", "Extensor_digitorum_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor digitorum",
+    nomeComum: "Extensor dos dedos",
+    resumo:
+      "Principal extensor dos quatro dedos mediais da mão, cujos tendões distais se achatam sobre cada metacarpo/falange proximal formando as expansões extensoras (capuzes tendíneos).",
+    origem: "Epicôndilo lateral do úmero (tendão extensor comum)",
+    insercao: "Falanges distais do 2º ao 5º dedos (via expansões extensoras)",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Extensão do 2º ao 5º dedos", "Extensão do punho (acessória)"],
+    correlacaoClinica:
+      "Sua paralisia, junto aos demais extensores do compartimento posterior, compõe o quadro de 'mão caída' (wrist drop) da lesão do nervo radial (compressão no sulco do nervo radial do úmero, clássica em fraturas do corpo do úmero ou compressão prolongada — 'paralisia do sábado à noite'), com incapacidade de estender o punho e os dedos nas articulações metacarpofalângicas.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A lesão do nervo radial causa 'mão caída' (wrist drop), com incapacidade de estender o punho e as articulações metacarpofalângicas — o extensor dos dedos é um dos músculos afetados.",
+      "Cada tendão do extensor dos dedos se achata sobre o dorso do metacarpo/falange proximal formando a expansão extensora, que se divide em uma faixa mediana (falange média) e duas laterais (falange distal).",
+    ],
+    fontes: [
+      { tema: "Lesão do nervo radial e mão caída", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Expansão extensora dos dedos", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-do-dedo-minimo",
+    meshNames: ["Extensor_digiti_minimi_L", "Extensor_digiti_minimi_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor digiti minimi",
+    nomeComum: "Extensor do dedo mínimo",
+    resumo:
+      "Tendão separado do extensor dos dedos que permite a extensão isolada e independente do 5º dedo, correndo em compartimento sinovial próprio no retináculo dos extensores.",
+    origem: "Epicôndilo lateral do úmero (tendão extensor comum, frequentemente fundido à origem do extensor dos dedos)",
+    insercao: "Falange distal do dedo mínimo (via expansão extensora, unindo-se ao tendão do extensor dos dedos para esse dedo)",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Extensão do dedo mínimo (independente dos demais dedos)"],
+    correlacaoClinica:
+      "Por ter tendão e bainha sinovial próprios (compartimento separado no retináculo dos extensores), permite ao dedo mínimo ser estendido independentemente — habilidade útil clinicamente para testar seletivamente a função do nervo radial distal.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O extensor do dedo mínimo tem tendão e bainha sinovial próprios, permitindo a extensão isolada do 5º dedo, independente da ação do extensor dos dedos.",
+      "Compartilha origem no epicôndilo lateral (tendão extensor comum) com o extensor dos dedos, mas segue em compartimento separado no retináculo dos extensores.",
+    ],
+    fontes: [
+      { tema: "Compartimentos do retináculo dos extensores", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor digiti minimi)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-ulnar-do-carpo",
+    meshNames: ["Humeral_head_of_extensor_carpi_ulnaris_L", "Humeral_head_of_extensor_carpi_ulnaris_R", "Ulnar_head_of_extensor_carpi_ulnaris_L", "Ulnar_head_of_extensor_carpi_ulnaris_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor carpi ulnaris",
+    nomeComum: "Extensor ulnar do carpo",
+    resumo:
+      "Músculo do compartimento posterior do antebraço com duas cabeças (umeral e ulnar), cujo tendão corre em um sulco ósseo próprio na cabeça da ulna, estabilizado por uma bainha fibro-óssea.",
+    origem: "Cabeça umeral: epicôndilo lateral (tendão extensor comum); cabeça ulnar: face posterior da ulna",
+    insercao: "Base do 5º metacarpo",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Extensão do punho", "Desvio ulnar do punho"],
+    correlacaoClinica:
+      "A instabilidade do tendão do extensor ulnar do carpo (subluxação da sua bainha no sulco da cabeça ulnar) é uma causa reconhecida de dor e estalido na face ulnar do punho em atletas que realizam rotação repetitiva do antebraço sob carga (tênis, golfe), podendo ser confundida com lesão do complexo fibrocartilaginoso triangular.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O tendão do extensor ulnar do carpo corre em um sulco ósseo próprio na cabeça da ulna, estabilizado por bainha fibro-óssea — sua instabilidade/subluxação é causa de dor ulnar do punho em atletas de raquete.",
+      "É o único extensor do carpo com desvio ulnar (não radial) como ação de desvio, complementando o extensor radial longo/curto no eixo oposto.",
+    ],
+    fontes: [
+      { tema: "Instabilidade do extensor ulnar do carpo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor carpi ulnaris)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "supinador",
+    meshNames: ["Supinator_L", "Supinator_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus supinator",
+    nomeComum: "Supinador",
+    resumo:
+      "Músculo profundo que envolve o terço proximal do rádio, atuando como agonista principal da supinação lenta e sem resistência — o bíceps braquial assume quando a supinação precisa ser rápida ou forçada.",
+    origem: "Epicôndilo lateral do úmero, ligamento colateral radial, ligamento anular do rádio e crista do músculo supinador da ulna",
+    insercao: "Face lateral proximal do corpo do rádio",
+    inervacao: "Nervo radial (ramo profundo, C5-C7)",
+    acoes: ["Supinação do antebraço (agonista principal em movimentos lentos e sem carga)"],
+    correlacaoClinica:
+      "O ramo profundo do nervo radial atravessa o supinador através da arcada de Frohse (uma borda fibrosa espessada na margem proximal do músculo) — a compressão nesse ponto (síndrome do túnel radial / síndrome do nervo interósseo posterior) causa fraqueza dos extensores do punho e dedos sem déficit sensitivo, já que o ramo profundo é puramente motor a partir desse ponto.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O ramo profundo do nervo radial atravessa o supinador pela arcada de Frohse — ponto de compressão que causa a síndrome do nervo interósseo posterior (fraqueza extensora sem déficit sensitivo).",
+      "O supinador é o agonista principal da supinação em movimentos lentos e sem carga; o bíceps braquial assume nos movimentos rápidos ou com resistência.",
+    ],
+    fontes: [
+      { tema: "Síndrome do nervo interósseo posterior e arcada de Frohse", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus supinator)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-do-indicador",
+    meshNames: ["Extensor_indicis_L", "Extensor_indicis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor indicis",
+    nomeComum: "Extensor do indicador",
+    resumo:
+      "Músculo profundo do compartimento posterior que permite a extensão independente do dedo indicador — a base anatômica do gesto de apontar.",
+    origem: "Face posterior da ulna e membrana interóssea",
+    insercao: "Falange distal do indicador (via expansão extensora, unindo-se ao tendão do extensor dos dedos para esse dedo)",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Extensão do dedo indicador (independente dos demais dedos)"],
+    correlacaoClinica:
+      "Junto ao extensor do dedo mínimo, é um dos dois tendões extensores extras que permitem a extensão isolada e independente de um dedo específico — habilidade explorada em transferências tendíneas cirúrgicas (o tendão do extensor do indicador é frequentemente usado como doador para reconstruir a extensão do polegar em rupturas do extensor longo do polegar).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O extensor do indicador é frequentemente usado como tendão doador em transferências cirúrgicas para reconstruir a extensão do polegar, após ruptura do extensor longo do polegar.",
+      "Permite a extensão independente do dedo indicador — a base anatômica do gesto de apontar com um dedo só.",
+    ],
+    fontes: [
+      { tema: "Transferência tendínea do extensor do indicador", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor indicis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "abdutor-longo-do-polegar",
+    meshNames: ["Abductor_pollicis_longus_L", "Abductor_pollicis_longus_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus abductor pollicis longus",
+    nomeComum: "Abdutor longo do polegar",
+    resumo:
+      "Um dos três músculos profundos do compartimento posterior que atuam sobre o polegar, formando a margem anterolateral da tabaqueira anatômica.",
+    origem: "Face posterior do rádio e da ulna e membrana interóssea",
+    insercao: "Base do 1º metacarpo",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Abdução do polegar", "Abdução do punho (acessória)"],
+    correlacaoClinica:
+      "Junto ao extensor curto do polegar, forma os tendões cuja inflamação/estenose na primeira bainha sinovial dorsal do punho causa a tenossinovite de De Quervain — dor na face radial do punho, agravada pela flexão do polegar com desvio ulnar do punho (manobra de Finkelstein), comum em atividades repetitivas de pinça (ex.: cuidar de bebês, uso excessivo do celular).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O abdutor longo e o extensor curto do polegar formam a margem anterolateral da tabaqueira anatômica, e sua tenossinovite conjunta na bainha comum causa a tenossinovite de De Quervain.",
+      "A manobra de Finkelstein (flexão do polegar com desvio ulnar do punho) reproduz a dor da tenossinovite de De Quervain.",
+    ],
+    fontes: [
+      { tema: "Tenossinovite de De Quervain e manobra de Finkelstein", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Musculus abductor pollicis longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-longo-do-polegar",
+    meshNames: ["Extensor_pollicis_longus_L", "Extensor_pollicis_longus_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor pollicis longus",
+    nomeComum: "Extensor longo do polegar",
+    resumo:
+      "Forma a margem posteromedial da tabaqueira anatômica, com tendão que contorna o tubérculo dorsal do rádio (tubérculo de Lister) como uma polia antes de alcançar o polegar.",
+    origem: "Face posterior da ulna e membrana interóssea",
+    insercao: "Falange distal do polegar",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Extensão da articulação interfalângica do polegar (principal)", "Extensão acessória da metacarpofalângica e adução do polegar"],
+    correlacaoClinica:
+      "A ruptura espontânea (atraumática) desse tendão é uma complicação tardia reconhecida de fraturas do rádio distal (fratura de Colles), mesmo semanas após a consolidação — atribuída ao atrito repetitivo e à vascularização comprometida do tendão ao contornar o tubérculo de Lister, que pode ficar deformado pela fratura. Também descrita, com mecanismo semelhante por atrito repetitivo, em bateristas ('drummer's palsy').",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A ruptura espontânea do extensor longo do polegar é complicação tardia clássica de fratura de Colles (rádio distal), por atrito e isquemia do tendão ao contornar o tubérculo de Lister deformado.",
+      "Forma a margem posteromedial (ulnar) da tabaqueira anatômica, enquanto o abdutor longo e o extensor curto do polegar formam a margem anterolateral (radial).",
+    ],
+    fontes: [
+      { tema: "Ruptura tardia do extensor longo do polegar pós-fratura de Colles", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor pollicis longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "extensor-curto-do-polegar",
+    meshNames: ["Extensor_pollicis_brevis_L", "Extensor_pollicis_brevis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus extensor pollicis brevis",
+    nomeComum: "Extensor curto do polegar",
+    resumo:
+      "O mais curto e mais recentemente diferenciado (filogeneticamente) dos três músculos profundos do polegar, acompanha o abdutor longo do polegar na margem anterolateral da tabaqueira anatômica.",
+    origem: "Face posterior do rádio e membrana interóssea (distal à origem do abdutor longo do polegar)",
+    insercao: "Falange proximal do polegar",
+    inervacao: "Nervo radial (ramo profundo/interósseo posterior, C7-C8)",
+    acoes: ["Extensão da articulação metacarpofalângica do polegar (principal)", "Extensão acessória da carpometacarpal do polegar"],
+    correlacaoClinica:
+      "Junto ao abdutor longo do polegar, é acometido na tenossinovite de De Quervain — ambos compartilham a mesma bainha sinovial no primeiro compartimento dorsal do retináculo dos extensores, explicando por que a inflamação afeta os dois simultaneamente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O extensor curto do polegar compartilha a mesma bainha sinovial (primeiro compartimento dorsal) com o abdutor longo do polegar — por isso a tenossinovite de De Quervain afeta ambos simultaneamente.",
+      "Estende principalmente a articulação metacarpofalângica do polegar, complementando o extensor longo (que estende a interfalângica).",
+    ],
+    fontes: [
+      { tema: "Compartimentos do retináculo dos extensores e tenossinovite de De Quervain", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus extensor pollicis brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "anconeo",
+    meshNames: ["Anconeus_muscle_L", "Anconeus_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus anconeus",
+    nomeComum: "Ancôneo",
+    resumo:
+      "Pequeno músculo triangular na face posterior do cotovelo, considerado uma extensão funcional da cabeça medial do tríceps braquial, auxiliando a extensão do cotovelo e estabilizando a articulação durante a pronossupinação.",
+    origem: "Epicôndilo lateral do úmero",
+    insercao: "Face lateral do olécrano e quarto proximal da face posterior da ulna",
+    inervacao: "Nervo radial (C7-T1, via o mesmo ramo que inerva a cabeça medial do tríceps)",
+    acoes: ["Extensão do cotovelo (auxiliar)", "Estabilização da articulação do cotovelo durante a pronação/supinação"],
+    correlacaoClinica:
+      "Por sua posição superficial sobre a articulação do cotovelo, é um marco cirúrgico útil em abordagens posterolaterais dessa articulação; sua função é amplamente redundante com o tríceps braquial, tornando lesões isoladas clinicamente pouco significativas.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O ancôneo é considerado uma extensão funcional da cabeça medial do tríceps braquial, compartilhando parte de sua inervação pelo nervo radial.",
+      "Além de auxiliar a extensão do cotovelo, estabiliza essa articulação durante os movimentos de pronação e supinação do antebraço.",
+    ],
+    fontes: [
+      { tema: "Anatomia do ancôneo e relação com o tríceps braquial", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus anconeus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "abdutor-curto-do-polegar",
+    meshNames: ["Abductor_pollicis_brevis_L", "Abductor_pollicis_brevis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus abductor pollicis brevis",
+    nomeComum: "Abdutor curto do polegar",
+    resumo:
+      "Músculo mais superficial da eminência tenar, inervado pelo nervo mediano — sua atrofia é um sinal clássico e precoce da síndrome do túnel do carpo avançada.",
+    origem: "Retináculo dos músculos flexores, ossos escafoide e trapézio",
+    insercao: "Falange proximal do polegar (base lateral)",
+    inervacao: "Nervo mediano (ramo motor tenar, C8-T1)",
+    acoes: ["Abdução do polegar"],
+    correlacaoClinica:
+      "É o músculo classicamente testado para avaliar a função motora do nervo mediano na síndrome do túnel do carpo (pedindo abdução palmar do polegar contra resistência) — sua atrofia visível na eminência tenar é um sinal tardio e preocupante dessa neuropatia compressiva, indicando desnervação significativa e necessidade de intervenção cirúrgica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A atrofia do abdutor curto do polegar é sinal tardio e preocupante da síndrome do túnel do carpo, indicando desnervação motora significativa do nervo mediano.",
+      "É o músculo classicamente testado (abdução palmar do polegar contra resistência) para avaliar a função motora do nervo mediano no punho.",
+    ],
+    fontes: [
+      { tema: "Teste motor do nervo mediano e síndrome do túnel do carpo", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Musculus abductor pollicis brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-curto-do-polegar",
+    meshNames: ["Superficial_head_of_flexor_pollicis_brevis_L", "Superficial_head_of_flexor_pollicis_brevis_R", "Deep_head_of_flexor_pollicis_brevis_L", "Deep_head_of_flexor_pollicis_brevis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus flexor pollicis brevis",
+    nomeComum: "Flexor curto do polegar",
+    resumo:
+      "Músculo da eminência tenar com duas cabeças que, incomumente, recebem inervação de nervos diferentes — a superficial pelo mediano, a profunda pelo ulnar.",
+    origem: "Retináculo dos músculos flexores e osso trapézio",
+    insercao: "Falange proximal do polegar (base medial)",
+    inervacao: "Cabeça superficial: nervo mediano; cabeça profunda: nervo ulnar",
+    acoes: ["Flexão da articulação metacarpofalângica do polegar"],
+    correlacaoClinica:
+      "Sua dupla inervação (mediano e ulnar) significa que a flexão do polegar pode ser parcialmente preservada mesmo com lesão isolada de um desses nervos — um detalhe relevante na interpretação de exames de função motora da mão após lesões nervosas periféricas.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O flexor curto do polegar tem dupla inervação incomum: a cabeça superficial pelo nervo mediano, a profunda pelo nervo ulnar — por isso sua função pode ser parcialmente preservada mesmo com lesão isolada de um desses nervos.",
+      "Compõe, junto ao abdutor curto e ao oponente do polegar, a eminência tenar, com o adutor do polegar situado mais profundamente/medialmente.",
+    ],
+    fontes: [
+      { tema: "Dupla inervação do flexor curto do polegar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor pollicis brevis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "oponente-do-polegar",
+    meshNames: ["Opponens_pollicis_muscle_L", "Opponens_pollicis_muscle_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus opponens pollicis",
+    nomeComum: "Oponente do polegar",
+    resumo:
+      "Músculo mais profundo da eminência tenar, exclusivo responsável pela oposição do polegar — o movimento que, junto à articulação carpometacarpal selar, permite a preensão de precisão característica da mão humana.",
+    origem: "Retináculo dos músculos flexores e osso trapézio",
+    insercao: "Margem lateral e face anterior do 1º metacarpo",
+    inervacao: "Nervo mediano (ramo motor tenar, C8-T1)",
+    acoes: ["Oposição do polegar (rotação medial + flexão + abdução combinadas, aproximando a polpa do polegar às polpas dos outros dedos)"],
+    correlacaoClinica:
+      "A incapacidade de opor o polegar ao dedo mínimo (teste de oposição) é um sinal motor sensível de lesão do nervo mediano, seja proximal (no antebraço) seja distal (síndrome do túnel do carpo avançada) — um dos testes clínicos mais informativos da função do mediano na mão.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O teste de oposição do polegar ao dedo mínimo avalia especificamente o nervo mediano — sua incapacidade é sinal motor sensível de neuropatia mediana, incluindo síndrome do túnel do carpo avançada.",
+      "É o músculo mais profundo da eminência tenar, exclusivamente responsável pela oposição — movimento composto de rotação medial, flexão e abdução do polegar.",
+    ],
+    fontes: [
+      { tema: "Teste de oposição do polegar e nervo mediano", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus opponens pollicis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "adutor-do-polegar",
+    meshNames: ["Oblique_head_of_adductor_pollicis_L", "Oblique_head_of_adductor_pollicis_R", "Transverse_head_of_adductor_pollicis_L", "Transverse_head_of_adductor_pollicis_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus adductor pollicis",
+    nomeComum: "Adutor do polegar",
+    resumo:
+      "Único músculo tenar inervado pelo nervo ulnar (não pelo mediano), com duas cabeças (oblíqua e transversa) que convergem na base do polegar, essencial para a força de pinça lateral.",
+    origem: "Cabeça oblíqua: bases do 2º e 3º metacarpos; cabeça transversa: corpo do 3º metacarpo",
+    insercao: "Falange proximal do polegar (base medial, junto ao osso sesamoide medial)",
+    inervacao: "Nervo ulnar (ramo profundo, C8-T1)",
+    acoes: ["Adução do polegar"],
+    correlacaoClinica:
+      "Sua fraqueza por lesão do nervo ulnar é avaliada pelo sinal de Froment: ao pedir que o paciente segure um papel entre o polegar e o indicador, a fraqueza do adutor do polegar leva a uma flexão compensatória da articulação interfalângica do polegar (recrutando o flexor longo do polegar, inervado pelo mediano) para gerar força de pinça — um dos testes clínicos mais elegantes e específicos para neuropatia ulnar.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O sinal de Froment (flexão compensatória da interfalângica do polegar ao tentar segurar papel em pinça) indica fraqueza do adutor do polegar por lesão do nervo ulnar.",
+      "É o único músculo da eminência tenar inervado pelo nervo ulnar — todos os outros três (abdutor curto, flexor curto, oponente) são inervados pelo mediano (exceto a cabeça profunda do flexor curto).",
+    ],
+    fontes: [
+      { tema: "Sinal de Froment e neuropatia ulnar", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Musculus adductor pollicis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "abdutor-do-dedo-minimo-mao",
+    meshNames: ["Abductor_digiti_minimi_of_hand_L", "Abductor_digiti_minimi_of_hand_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus abductor digiti minimi (manus)",
+    nomeComum: "Abdutor do dedo mínimo (da mão)",
+    resumo:
+      "Músculo mais medial e superficial da eminência hipotenar, análogo funcional e topográfico do abdutor do hálux no pé, inervado pelo nervo ulnar.",
+    origem: "Osso pisiforme e tendão do flexor ulnar do carpo",
+    insercao: "Falange proximal do dedo mínimo (base medial)",
+    inervacao: "Nervo ulnar (ramo profundo, C8-T1)",
+    acoes: ["Abdução do dedo mínimo"],
+    correlacaoClinica:
+      "Compõe, junto aos demais músculos hipotenares, o território motor do nervo ulnar na mão — sua atrofia (junto à dos interósseos) contribui para o achatamento característico da eminência hipotenar observado em neuropatias ulnares crônicas (ex.: compressão no canal de Guyon ou no cotovelo).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O abdutor do dedo mínimo da mão origina-se do osso pisiforme, assim como o flexor ulnar do carpo se insere nesse mesmo osso — relação anatômica de continuidade funcional.",
+      "É análogo funcional e topográfico do abdutor do hálux no pé, ambos formando a margem medial de suas respectivas eminências musculares.",
+    ],
+    fontes: [
+      { tema: "Eminência hipotenar e neuropatia ulnar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus abductor digiti minimi manus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "flexor-curto-do-dedo-minimo-mao",
+    meshNames: ["Flexor_digiti_minimi_of_hand_L", "Flexor_digiti_minimi_of_hand_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus flexor digiti minimi brevis (manus)",
+    nomeComum: "Flexor curto do dedo mínimo (da mão)",
+    resumo:
+      "Pequeno músculo da eminência hipotenar situado ao lado do abdutor do dedo mínimo, ocasionalmente ausente como variante anatômica normal.",
+    origem: "Hâmulo do hamato e retináculo dos músculos flexores",
+    insercao: "Falange proximal do dedo mínimo (base medial, junto ao abdutor)",
+    inervacao: "Nervo ulnar (ramo profundo, C8-T1)",
+    acoes: ["Flexão da articulação metacarpofalângica do dedo mínimo"],
+    correlacaoClinica:
+      "Como todos os músculos hipotenares, é inervado pelo ramo profundo do nervo ulnar após esse ramo passar pelo canal de Guyon — sua paralisia, junto aos demais hipotenares, compõe o quadro de mão em garra ulnar quando associada à paralisia dos interósseos e lumbricais mediais.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O flexor curto do dedo mínimo é ocasionalmente ausente como variante anatômica normal, situação que não compromete significativamente a função da mão pela redundância com o abdutor do dedo mínimo.",
+      "É inervado pelo ramo profundo do nervo ulnar, após esse ramo atravessar o canal de Guyon no punho.",
+    ],
+    fontes: [
+      { tema: "Anatomia da eminência hipotenar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus flexor digiti minimi brevis manus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "oponente-do-dedo-minimo",
+    meshNames: ["Opponens_digiti_minimi_muscle_of_hand_L", "Opponens_digiti_minimi_muscle_of_hand_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculus opponens digiti minimi (manus)",
+    nomeComum: "Oponente do dedo mínimo",
+    resumo:
+      "Músculo mais profundo da eminência hipotenar, análogo funcional do oponente do polegar, que aprofunda a concavidade palmar ao trazer o 5º metacarpo em direção ao polegar durante a preensão.",
+    origem: "Hâmulo do hamato e retináculo dos músculos flexores",
+    insercao: "Margem medial do 5º metacarpo (corpo)",
+    inervacao: "Nervo ulnar (ramo profundo, C8-T1)",
+    acoes: ["Rotação e flexão do 5º metacarpo em direção ao polegar, aprofundando a concha palmar"],
+    correlacaoClinica:
+      "Sua ação, junto à do oponente do polegar, é essencial para moldar a palma em concha durante a preensão de objetos esféricos ou cilíndricos — a paralisia ulnar compromete esse componente da preensão de força, embora de forma menos evidente clinicamente do que a perda de adução do polegar (sinal de Froment).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O oponente do dedo mínimo é o análogo funcional do oponente do polegar no lado ulnar da mão, trazendo o 5º metacarpo em direção ao polegar para aprofundar a concha palmar.",
+      "É o mais profundo dos três músculos hipotenares, situado sob o abdutor e o flexor curto do dedo mínimo.",
+    ],
+    fontes: [
+      { tema: "Formação da concha palmar na preensão", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculus opponens digiti minimi manus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "lumbricais-da-mao",
+    meshNames: ["Lumbrical_muscles_of_hand_L", "Lumbrical_muscles_of_hand_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculi lumbricales manus",
+    nomeComum: "Lumbricais da mão",
+    resumo:
+      "Quatro pequenos músculos com origem tendínea exclusiva (não óssea), que permitem o movimento combinado característico de flexão metacarpofalângica com extensão interfalângica simultânea ('posição de escrita').",
+    origem: "Tendões do músculo flexor profundo dos dedos",
+    insercao: "Face lateral da expansão extensora sobre o 2º ao 5º dedos",
+    inervacao: "Nervo mediano (1º e 2º lumbricais) e nervo ulnar (3º e 4º lumbricais)",
+    acoes: ["Flexão das articulações metacarpofalângicas", "Extensão das articulações interfalângicas proximal e distal"],
+    correlacaoClinica:
+      "A paralisia dos lumbricais mediais (3º e 4º, nervo ulnar) e dos interósseos contribui para a mão em garra ulnar, com hiperextensão das MCF e flexão das interfalângicas dos dedos 4º e 5º — o padrão oposto ao movimento normal que esses músculos produzem, evidenciando sua importância no equilíbrio entre extrínsecos e intrínsecos da mão.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Os lumbricais da mão têm dupla inervação (mediano no 1º-2º, ulnar no 3º-4º), assim como ocorre no pé — mesma lógica de território dividido entre os dois principais nervos da mão/pé.",
+      "A mão em garra ulnar reflete exatamente o oposto da ação normal dos lumbricais mediais/interósseos: hiperextensão das MCF com flexão das interfalângicas, ao invés do padrão fisiológico inverso.",
+    ],
+    fontes: [
+      { tema: "Lumbricais da mão e mão em garra ulnar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi lumbricales manus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "interosseos-palmares",
+    meshNames: ["Palmar_interossei_muscles_L", "Palmar_interossei_muscles_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculi interossei palmares",
+    nomeComum: "Interósseos palmares",
+    resumo:
+      "Três músculos unipenados que aduzem os dedos em direção ao eixo do 3º dedo, complementando os interósseos dorsais no controle fino dos movimentos laterais dos dedos.",
+    origem: "Corpos do 2º, 4º e 5º metacarpos",
+    insercao: "Base das falanges proximais correspondentes (2º, 4º e 5º dedos) e expansões extensoras",
+    inervacao: "Nervo ulnar (ramo profundo, C8-T1)",
+    acoes: ["Adução dos dedos (2º, 4º e 5º) em direção ao eixo do 3º dedo", "Auxiliam a flexão das metacarpofalângicas e extensão das interfalângicas"],
+    correlacaoClinica:
+      "Sua paralisia por lesão do nervo ulnar compromete a capacidade de aduzir os dedos (fechar os dedos separados, como ao segurar uma folha de papel entre eles) — testada clinicamente pedindo ao paciente para manter os dedos unidos contra resistência ao tentar separá-los.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Mnemônico PAD (interósseos Palmares ADuzem) — na mão, o eixo de referência é o 3º dedo (diferente do pé, onde o eixo é o 2º dedo).",
+      "Todos os interósseos da mão (palmares e dorsais) são inervados pelo ramo profundo do nervo ulnar — sua lesão compromete toda a motricidade fina de abertura/fechamento dos dedos.",
+    ],
+    fontes: [
+      { tema: "Mnemônico PAD/DAB e eixo de referência da mão", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Musculi interossei palmares)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "interosseos-dorsais-da-mao",
+    meshNames: ["Dorsal_interossei_muscles_of_hand_L", "Dorsal_interossei_muscles_of_hand_R"],
+    regiao: "Membro superior",
+    nomeOficial: "Musculi interossei dorsales (manus)",
+    nomeComum: "Interósseos dorsais (da mão)",
+    resumo:
+      "Quatro músculos bipenados, mais volumosos que os interósseos palmares, que abduzem os dedos a partir do eixo do 3º dedo — sua atrofia é um dos sinais mais precoces e visíveis da neuropatia ulnar.",
+    origem: "Faces adjacentes de dois metacarpos vizinhos (bipenados)",
+    insercao: "Bases das falanges proximais (1º dorsal no 2º dedo, lado radial; 2º e 3º no 3º dedo, ambos os lados; 4º no 4º dedo, lado ulnar) e expansões extensoras",
+    inervacao: "Nervo ulnar (ramo profundo, C8-T1)",
+    acoes: ["Abdução dos dedos (2º ao 4º) a partir do eixo do 3º dedo", "Auxiliam a flexão das metacarpofalângicas e extensão das interfalângicas"],
+    correlacaoClinica:
+      "A atrofia do primeiro interósseo dorsal (entre o polegar e o indicador) é um dos sinais físicos mais precoces e visíveis de neuropatia ulnar — o afundamento nesse espaço é facilmente observado à inspeção e é um achado de exame físico clássico e de alto rendimento em prova.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A atrofia do primeiro interósseo dorsal (espaço entre polegar e indicador) é um sinal físico precoce e visível de neuropatia ulnar, facilmente observado à inspeção da mão.",
+      "Mnemônico DAB (interósseos Dorsais ABduzem) — na mão, assim como na explicação dos palmares, o eixo de referência é o 3º dedo.",
+    ],
+    fontes: [
+      { tema: "Atrofia do primeiro interósseo dorsal na neuropatia ulnar", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Musculi interossei dorsales manus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de origem/inserção/ação/inervação", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
 ];
