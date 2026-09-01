@@ -232,6 +232,36 @@ export interface Musculo {
   fontes: FonteTema[];
 }
 
+export const REGIOES_CIRCULATORIAS = [
+  "Coração",
+  "Grandes vasos",
+  "Circulação cerebral",
+  "Circulação abdominal e pélvica",
+  "Membros",
+] as const;
+
+export type RegiaoCirculatoria = (typeof REGIOES_CIRCULATORIAS)[number];
+
+export const TIPOS_ESTRUTURA_CIRCULATORIA = ["Câmara cardíaca", "Valva cardíaca", "Artéria", "Veia"] as const;
+
+export type TipoEstruturaCirculatoria = (typeof TIPOS_ESTRUTURA_CIRCULATORIA)[number];
+
+export interface EstruturaCirculatoria {
+  slug: string;
+  meshNames: string[];
+  regiao: RegiaoCirculatoria;
+  tipo: TipoEstruturaCirculatoria;
+  nomeOficial: string;
+  nomeComum: string;
+  resumo: string;
+  trajeto: string;
+  ramosOuTributarias: string[];
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;

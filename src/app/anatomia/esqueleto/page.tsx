@@ -26,6 +26,10 @@ export default function EsqueletoPage() {
           <Link href="/anatomia/sistema-muscular" className="hover:text-foreground">
             Sistema Muscular
           </Link>
+          <span>·</span>
+          <Link href="/anatomia/sistema-circulatorio" className="hover:text-foreground">
+            Sistema Circulatório
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Esquelético</h1>
         <p className="mt-2 text-foreground-muted">

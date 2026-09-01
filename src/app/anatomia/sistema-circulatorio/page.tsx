@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CranialNervesExplorer } from "@/components/anatomy/cranial-nerves-explorer";
+import { CirculatoryExplorer } from "@/components/anatomy/circulatory-explorer";
 
 export const metadata: Metadata = {
-  title: "Sistema Nervoso 3D",
+  title: "Sistema Circulatório 3D",
   description:
-    "Modelo 3D interativo dos 12 pares de nervos cranianos: origem, trajeto, funções e correlação clínica.",
+    "Modelo 3D interativo do coração, grandes vasos, círculo arterial cerebral e vasos de membros: trajeto, ramos e correlação clínica.",
 };
 
-export default function SistemaNervosoPage() {
+export default function SistemaCirculatorioPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="max-w-2xl">
@@ -21,25 +21,27 @@ export default function SistemaNervosoPage() {
             Sistema Articular
           </Link>
           <span>·</span>
-          <span className="text-foreground">Sistema Nervoso</span>
+          <Link href="/anatomia/sistema-nervoso" className="hover:text-foreground">
+            Sistema Nervoso
+          </Link>
           <span>·</span>
           <Link href="/anatomia/sistema-muscular" className="hover:text-foreground">
             Sistema Muscular
           </Link>
           <span>·</span>
-          <Link href="/anatomia/sistema-circulatorio" className="hover:text-foreground">
-            Sistema Circulatório
-          </Link>
+          <span className="text-foreground">Sistema Circulatório</span>
         </div>
-        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Nervoso</h1>
+        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Circulatório</h1>
         <p className="mt-2 text-foreground-muted">
-          Modelo 3D interativo dos 12 pares de nervos cranianos, com o tronco encefálico como referência
-          anatômica. Escolha um nervo para ver origem aparente, trajeto, funções, teste clínico e correlação
-          clínica. Próximas regiões (encéfalo, medula espinhal, nervos periféricos) em construção.
+          Modelo 3D interativo com 46 estruturas cardiovasculares de alto rendimento em prova — câmaras e valvas
+          do coração, grandes vasos, círculo arterial cerebral, circulação abdominal/pélvica e vasos de membros.
+          Escolha uma estrutura para ver trajeto, ramos e correlação clínica. Este é um recorte selecionado — o
+          modelo completo tem mais de 700 vasos nomeados individualmente, mas a cobertura de fichas segue
+          crescendo.
         </p>
       </div>
       <div className="mt-8">
-        <CranialNervesExplorer />
+        <CirculatoryExplorer />
       </div>
       <p className="mt-6 text-xs text-foreground-subtle">
         Modelo 3D: Z-Anatomy (z-anatomy.com), CC BY-SA 4.0, autoria Gauthier Kervyn e colaboradores, sobre base

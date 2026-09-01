@@ -26,6 +26,10 @@ export default function SistemaMuscularPage() {
           </Link>
           <span>·</span>
           <span className="text-foreground">Sistema Muscular</span>
+          <span>·</span>
+          <Link href="/anatomia/sistema-circulatorio" className="hover:text-foreground">
+            Sistema Circulatório
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Muscular</h1>
         <p className="mt-2 text-foreground-muted">
