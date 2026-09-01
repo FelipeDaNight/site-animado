@@ -32,6 +32,7 @@ function applyMeshVisibility(
     material.opacity = isVisible ? 1 : DIMMED_OPACITY;
     material.depthWrite = isVisible;
     material.emissive.copy(selectedMeshNames?.has(obj.name) ? HIGHLIGHT_COLOR : NO_EMISSIVE);
+    material.needsUpdate = true;
   });
 }
 

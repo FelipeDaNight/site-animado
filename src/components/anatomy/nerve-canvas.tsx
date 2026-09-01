@@ -39,6 +39,12 @@ function applyMeshVisibility(
     material.opacity = isVisible ? 1 : DIMMED_OPACITY;
     material.depthWrite = isVisible;
     material.emissive.copy(selectedMeshNames?.has(obj.name) ? HIGHLIGHT_COLOR : NO_EMISSIVE);
+    // Required for opacity/transparent changes to actually reach the GPU
+    // on a material that's already been rendered once — without it,
+    // toggling a mesh between visible and dimmed repeatedly (switching
+    // selections) can silently stop affecting the render even though the
+    // JS-side material properties are updated correctly.
+    material.needsUpdate = true;
   });
 }
 

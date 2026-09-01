@@ -66,6 +66,12 @@ function SkeletonModel({
       material.depthWrite = isVisible;
       const shouldHighlight = highlightSelection && (selectedMeshNames?.has(obj.name) ?? false);
       material.emissive.copy(shouldHighlight ? HIGHLIGHT_COLOR : new THREE.Color(0x000000));
+      // Required for opacity/transparent changes to actually reach the GPU
+      // on a material that's already been rendered once — without it,
+      // toggling a mesh between visible and dimmed repeatedly (switching
+      // regions/selections) can silently stop affecting the render even
+      // though the JS-side material properties are updated correctly.
+      material.needsUpdate = true;
     });
     invalidate();
   }, [scene, visibleMeshNames, selectedMeshNames, highlightSelection, invalidate]);

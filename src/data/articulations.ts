@@ -291,4 +291,244 @@ export const articulacoes: Articulacao[] = [
       { tema: "Nomenclatura oficial (Articulatio talocruralis)", fonte: "Terminologia Anatomica (FIPAT)" },
     ],
   },
+  {
+    slug: "temporomandibular",
+    meshNames: ["Mandible_bone", "Temporal_bone_L", "Temporal_bone_R"],
+    ligamentMeshNames: sides([
+      "Articular capsule of temporomandibular joint",
+      "Articular disc of temporomandibular joint",
+      "Lateral temporomandibular ligament",
+      "Sphenomandibular ligament",
+      "Stylomandibular ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "mandibula", nome: "Mandíbula" },
+      { slug: "osso-temporal", nome: "Osso temporal" },
+    ],
+    nomeOficial: "Articulatio temporomandibularis",
+    nomeComum: "Articulação temporomandibular (ATM)",
+    tipo: "Sinovial selar",
+    resumo: "Articulação bilateral entre o côndilo da mandíbula e a fossa mandibular do osso temporal, com um disco articular que a divide em dois compartimentos.",
+    descricaoAnatomica:
+      "O côndilo mandibular articula-se com a fossa mandibular e o tubérculo articular do osso temporal. Um disco articular fibrocartilaginoso biconcavo divide a cavidade em compartimento superior (deslizamento/translação) e inferior (rotação), permitindo o movimento combinado de dobradiça e deslizamento característico da abertura da boca. As duas ATMs (direita e esquerda) funcionam obrigatoriamente em conjunto, como uma única unidade biomecânica.",
+    movimentos: [
+      "Depressão e elevação (abertura e fechamento da boca)",
+      "Protrusão e retrusão",
+      "Movimentos laterais (excursão), essenciais na mastigação",
+    ],
+    estabilizadores: [
+      "Disco articular — absorve carga e guia o movimento combinado de rotação e translação",
+      "Ligamento lateral (temporomandibular) — principal estabilizador, resiste ao deslocamento posterior",
+      "Ligamentos esfenomandibular e estilomandibular — estabilizadores acessórios, à distância da cápsula",
+    ],
+    correlacaoClinica:
+      "A disfunção temporomandibular (DTM) é uma condição extremamente comum, com dor pré-auricular, estalidos e limitação de abertura bucal, frequentemente relacionada a bruxismo, deslocamento anterior do disco articular ou parafunção mastigatória. A luxação anterior da ATM ocorre quando o côndilo ultrapassa o tubérculo articular (tipicamente num bocejo amplo) e fica preso anteriormente, exigindo redução manual (manobra de Nélaton).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O disco articular divide a ATM em dois compartimentos funcionais: o superior permite translação (deslizamento), o inferior permite rotação — a combinação dos dois produz a abertura bucal completa.",
+      "Na luxação anterior da ATM, o côndilo mandibular fica preso à frente do tubérculo articular, geralmente após abertura bucal excessiva (bocejo), e a redução é feita com pressão para baixo e para trás sobre os molares inferiores.",
+    ],
+    fontes: [
+      { tema: "Biomecânica da ATM e disfunção temporomandibular", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Articulatio temporomandibularis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "esternoclavicular",
+    meshNames: ["Clavicle_L", "Clavicle_R", "Manubrium_of_sternum"],
+    ligamentMeshNames: sides([
+      "Anterior sternoclavicular ligament",
+      "Posterior sternoclavicular ligament",
+      "Articular capsule of sternoclavicular joint",
+      "Articular disc of sternoclavicular joint",
+      "Interclavicular ligament",
+      "Costoclavicular ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "clavicula", nome: "Clavícula" },
+      { slug: "torax", nome: "Manúbrio do esterno" },
+    ],
+    nomeOficial: "Articulatio sternoclavicularis",
+    nomeComum: "Articulação esternoclavicular",
+    tipo: "Sinovial selar",
+    resumo: "Única articulação sinovial que liga o membro superior ao esqueleto axial, entre a extremidade medial da clavícula e o manúbrio do esterno.",
+    descricaoAnatomica:
+      "Apesar da pequena área de contato ósseo direto, é uma articulação notavelmente estável e de baixa incidência de luxação, graças a um disco articular fibrocartilaginoso que melhora a congruência e a um conjunto robusto de ligamentos. É o ponto de apoio a partir do qual toda a cintura escapular se move em relação ao tronco.",
+    movimentos: [
+      "Elevação e depressão da clavícula (acompanhando o movimento do ombro)",
+      "Protração e retração",
+      "Rotação axial da clavícula (associada à elevação do braço acima da horizontal)",
+    ],
+    estabilizadores: [
+      "Ligamento costoclavicular — o estabilizador mais importante, ligando a clavícula à primeira costela",
+      "Disco articular — impede o deslocamento medial da clavícula e absorve forças transmitidas do membro superior",
+      "Ligamentos esternoclavicular anterior/posterior e interclavicular",
+    ],
+    correlacaoClinica:
+      "Por sua estabilidade ligamentar, a luxação esternoclavicular é rara e exige trauma de alta energia — a luxação posterior é incomum, porém grave, pelo risco de compressão de estruturas mediastinais (traqueia, grandes vasos) logo atrás da articulação. É mais comum a fratura da clavícula (geralmente no terço médio) do que a luxação desta articulação propriamente dita.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A articulação esternoclavicular é a única conexão sinovial entre o membro superior e o esqueleto axial — todo o resto da cintura escapular é suspenso por músculos.",
+      "Luxação esternoclavicular posterior é rara, mas é uma emergência potencial pelo risco de compressão de traqueia e grandes vasos mediastinais.",
+    ],
+    fontes: [
+      { tema: "Anatomia e estabilidade da articulação esternoclavicular", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Articulatio sternoclavicularis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "sacroiliaca",
+    meshNames: ["Hip_bone_L", "Hip_bone_R", "Sacrum"],
+    ligamentMeshNames: sides([
+      "Anterior sacro-iliac ligament",
+      "Posterior sacro-iliac ligament",
+      "Interosseous sacro-iliac ligament",
+      "Iliolumbar ligament",
+      "Sacrospinous ligament",
+      "Sacrotuberous ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "osso-quadril", nome: "Osso do quadril" },
+      { slug: "coluna-vertebral", nome: "Sacro" },
+    ],
+    nomeOficial: "Articulatio sacroiliaca",
+    nomeComum: "Articulação sacroilíaca",
+    tipo: "Sinovial plana",
+    resumo: "Articulação entre as superfícies auriculares do sacro e do ílio, transmitindo o peso do tronco para os membros inferiores.",
+    descricaoAnatomica:
+      "Tecnicamente sinovial na porção anterior, com superfícies irregulares e interdigitadas que conferem grande estabilidade mecânica à custa de mobilidade quase nula no adulto — é uma das articulações menos móveis do corpo. Um robusto complexo de ligamentos posteriores e interósseos, entre os mais fortes do corpo humano, é responsável pela maior parte dessa estabilidade, muito mais do que o formato ósseo em si.",
+    movimentos: [
+      "Movimento mínimo de nutação e contranutação (báscula do sacro entre os ílios), sem eixo de rotação voluntário",
+    ],
+    estabilizadores: [
+      "Ligamentos sacroilíacos interósseos — os mais fortes do corpo, preenchendo o espaço posterior à articulação",
+      "Ligamentos sacroilíacos anterior e posterior",
+      "Ligamentos sacrotuberal e sacroespinhal — estabilizadores acessórios, também relevantes como referência cirúrgica e para o forame isquiático",
+      "Ligamento iliolombar — conecta o processo transverso de L5 à crista ilíaca",
+    ],
+    correlacaoClinica:
+      "A sacroileíte (inflamação da articulação sacroilíaca) é um achado precoce e característico das espondiloartrites soronegativas, especialmente a espondilite anquilosante, tipicamente bilateral e visível à radiografia/ressonância antes mesmo do acometimento da coluna. Na gestação, o relaxamento hormonal (relaxina) dos ligamentos sacroilíacos e da sínfise púbica contribui para dor lombar pélvica posterior, comum no terceiro trimestre.",
+    doencasRelacionadas: [{ slug: "espondilite-anquilosante", nome: "Espondilite anquilosante" }],
+    pontosDeProva: [
+      "Sacroileíte bilateral é um achado precoce e característico da espondilite anquilosante — frequentemente visível à imagem antes do acometimento evidente da coluna vertebral.",
+      "A estabilidade da articulação sacroilíaca depende muito mais dos ligamentos (sobretudo o interósseo) do que do encaixe ósseo entre sacro e ílio.",
+    ],
+    fontes: [
+      { tema: "Anatomia da articulação sacroilíaca e sacroileíte nas espondiloartrites", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Articulatio sacroiliaca)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "sinfise-pubica",
+    meshNames: ["Hip_bone_L", "Hip_bone_R"],
+    ligamentMeshNames: sides(["Obturator membrane"]).concat([
+      "Pubic_symphysis",
+      "Interpubic_disc",
+      "Superior_pubic_ligament",
+      "Inferior_pubic_ligament",
+    ]),
+    ossosEnvolvidos: [{ slug: "osso-quadril", nome: "Osso do quadril (púbis)" }],
+    nomeOficial: "Symphysis pubica",
+    nomeComum: "Sínfise púbica",
+    tipo: "Cartilaginosa (sínfise)",
+    resumo: "Articulação cartilaginosa secundária na linha média, entre as superfícies sinfisárias dos dois ossos púbicos, com um disco interpúbico fibrocartilaginoso.",
+    descricaoAnatomica:
+      "As faces mediais dos dois ossos púbicos, revestidas de cartilagem hialina, são unidas por um disco interpúbico de fibrocartilagem — sem cavidade sinovial verdadeira. É reforçada superiormente pelo ligamento púbico superior e inferiormente pelo ligamento púbico inferior (arqueado), que forma o ângulo do arco púbico.",
+    movimentos: [
+      "Mobilidade mínima no adulto — pequeno grau de deslizamento e compressão, sem eixo de movimento voluntário",
+    ],
+    estabilizadores: [
+      "Disco interpúbico fibrocartilaginoso",
+      "Ligamento púbico superior",
+      "Ligamento púbico inferior (arqueado) — define o ângulo subpúbico, mais agudo no sexo masculino",
+    ],
+    correlacaoClinica:
+      "Durante a gestação, a hormona relaxina promove frouxidão dos ligamentos da sínfise púbica (e das sacroilíacas), aumentando fisiologicamente sua mobilidade para facilitar a passagem pelo canal do parto — quando excessiva, causa a disfunção da sínfise púbica gravídica, com dor púbica e dificuldade de marcha. A diástase (separação) traumática da sínfise púbica ocorre em fraturas de pelve de alta energia e é um marcador de instabilidade pélvica grave.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O ângulo subpúbico formado pelo ligamento púbico inferior é mais agudo (< 70°) no sexo masculino e mais obtuso (> 90°) no feminino — um dos principais critérios de dimorfismo sexual da pelve óssea.",
+      "A frouxidão fisiológica da sínfise púbica na gestação, mediada pela relaxina, pode se tornar sintomática (disfunção da sínfise púbica), mas raramente causa diástase franca fora do contexto de trauma.",
+    ],
+    fontes: [
+      { tema: "Anatomia da sínfise púbica e alterações na gestação", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Symphysis pubica)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "radioulnar",
+    meshNames: ["Radius_L", "Radius_R", "Ulna_L", "Ulna_R"],
+    ligamentMeshNames: sides([
+      "Annular ligament of radius",
+      "Interosseous membrane of forearm",
+      "Dorsal radio-ulnar ligament",
+      "Palmar radio-ulnar ligament",
+      "Articular disc of distal radio-ulnar joint",
+      "Quadrate ligament",
+      "Oblique cord",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "radio", nome: "Rádio" },
+      { slug: "ulna", nome: "Ulna" },
+    ],
+    nomeOficial: "Articulationes radioulnares (proximalis et distalis)",
+    nomeComum: "Articulações radioulnares (proximal e distal)",
+    tipo: "Sinovial trocóide (pivô)",
+    resumo: "Par de articulações em pivô, uma no cotovelo e outra no punho, que giram em conjunto para produzir a pronação e a supinação do antebraço.",
+    descricaoAnatomica:
+      "Na articulação radioulnar proximal, a cabeça do rádio gira dentro de um anel formado pela incisura radial da ulna e pelo ligamento anular. Na articulação radioulnar distal, a incisura ulnar do rádio gira ao redor da cabeça da ulna, estabilizada por um disco articular fibrocartilaginoso (o mesmo complexo fibrocartilaginoso triangular que separa a ulna do carpo). As duas articulações são obrigatoriamente conjugadas: não é possível mover uma isoladamente sem a outra, e a membrana interóssea do antebraço conecta rádio e ulna ao longo de toda sua extensão, transmitindo forças entre eles.",
+    movimentos: ["Pronação", "Supinação"],
+    estabilizadores: [
+      "Ligamento anular do rádio — mantém a cabeça do rádio junto à ulna na articulação proximal",
+      "Disco articular (complexo fibrocartilaginoso triangular) — estabiliza a articulação distal e separa a ulna do carpo",
+      "Membrana interóssea do antebraço — uniao fibrosa firme entre as diáfises, também transfere carga do rádio para a ulna",
+      "Corda oblíqua — feixe acessório próximo à articulação proximal",
+    ],
+    correlacaoClinica:
+      "A fratura de Galeazzi (fratura da diáfise do rádio com luxação da articulação radioulnar distal) e a fratura-luxação de Monteggia (fratura da ulna proximal com luxação da cabeça do rádio, comprometendo a articulação proximal) ilustram como uma lesão do eixo radioulnar em um ponto frequentemente desloca a articulação no outro extremo — por isso a regra de sempre avaliar ambas as articulações radioulnares diante de fratura isolada de um dos dois ossos do antebraço. Lesões do complexo fibrocartilaginoso triangular causam dor ulnar do punho e instabilidade da articulação radioulnar distal.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "As articulações radioulnares proximal e distal são obrigatoriamente conjugadas — pronação e supinação exigem movimento simultâneo das duas, nunca isolado.",
+      "Fratura isolada da diáfise de um dos ossos do antebraço deve levantar suspeita de luxação da articulação radioulnar no outro extremo (Galeazzi: rádio + luxação distal; Monteggia: ulna + luxação proximal).",
+    ],
+    fontes: [
+      { tema: "Biomecânica das articulações radioulnares e fraturas de Galeazzi/Monteggia", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Articulationes radioulnares)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "subtalar",
+    meshNames: ["Talus_L", "Talus_R", "Calcaneus_L", "Calcaneus_R"],
+    ligamentMeshNames: sides([
+      "Anterior talocalcaneal ligament",
+      "Posterior talocalcaneal ligament",
+      "Medial talocalcaneal ligament",
+      "Lateral talocalcaneal ligament",
+      "Talocalcaneal interosseous ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "talus-calcaneo", nome: "Tálus e calcâneo" },
+    ],
+    nomeOficial: "Articulatio subtalaris",
+    nomeComum: "Articulação subtalar (talocalcânea)",
+    tipo: "Sinovial plana",
+    resumo: "Articulação entre a face inferior do tálus e a face superior do calcâneo, principal responsável pela inversão e eversão do pé.",
+    descricaoAnatomica:
+      "Localizada logo abaixo da articulação talocrural (tornozelo), é aqui — e não no tornozelo — que ocorrem predominantemente a inversão e a eversão do pé. O ligamento talocalcâneo interósseo, robusto e localizado no seio do tarso, é o principal estabilizador e divide funcionalmente a articulação em compartimentos anterior e posterior.",
+    movimentos: ["Inversão", "Eversão"],
+    estabilizadores: [
+      "Ligamento talocalcâneo interósseo — o mais importante, situado no seio do tarso",
+      "Ligamentos talocalcâneos medial, lateral, anterior e posterior",
+    ],
+    correlacaoClinica:
+      "A confusão entre movimentos do tornozelo (dorsiflexão/flexão plantar, na articulação talocrural) e do retropé (inversão/eversão, na articulação subtalar) é um erro comum — didaticamente, entorses de tornozelo por inversão na verdade combinam movimento nas duas articulações. O pé plano flexível e o pé cavo refletem, em parte, alterações no alinhamento e na mobilidade da articulação subtalar.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Inversão e eversão do pé ocorrem na articulação subtalar, não na talocrural (tornozelo) — o tornozelo faz apenas dorsiflexão e flexão plantar.",
+      "O ligamento talocalcâneo interósseo, no seio do tarso, é o principal estabilizador da articulação subtalar e um ponto de referência cirúrgico importante.",
+    ],
+    fontes: [
+      { tema: "Anatomia da articulação subtalar e cinemática do retropé", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Articulatio subtalaris)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
 ];

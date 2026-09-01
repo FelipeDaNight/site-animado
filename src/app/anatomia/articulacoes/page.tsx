@@ -29,8 +29,8 @@ export default function ArticulacoesPage() {
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Articular</h1>
         <p className="mt-2 text-foreground-muted">
-          As seis principais articulações sinoviais do corpo, construídas sobre o mesmo modelo 3D do esqueleto —
-          cada articulação é o conjunto de ossos que a formam. Escolha uma para ver tipo, movimentos,
+          12 articulações do corpo humano, construídas sobre o mesmo modelo 3D do esqueleto — cada
+          articulação é o conjunto de ossos que a formam. Escolha uma para ver tipo, movimentos,
           estabilizadores e correlação clínica.
         </p>
       </div>
