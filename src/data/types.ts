@@ -206,7 +206,7 @@ export interface NervoCraniano {
   fontes: FonteTema[];
 }
 
-export const PLEXOS_NERVOSOS = ["Plexo lombar", "Plexo sacral"] as const;
+export const PLEXOS_NERVOSOS = ["Plexo braquial", "Plexo lombar", "Plexo sacral"] as const;
 
 export type PlexoNervoso = (typeof PLEXOS_NERVOSOS)[number];
 

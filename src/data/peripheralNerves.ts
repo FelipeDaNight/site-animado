@@ -563,4 +563,611 @@ export const nervosPeriferios: NervoPeriferico[] = [
       { tema: "Tabela de ramos do plexo lombossacral", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
     ],
   },
+  {
+    slug: "raizes-do-plexo-braquial",
+    meshNames: ["Roots_of_brachial_plexus_L", "Roots_of_brachial_plexus_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Radices plexus brachialis",
+    nomeComum: "Raízes do plexo braquial",
+    raizes: "C5, C6, C7, C8, T1",
+    resumo:
+      "Os ramos ventrais de C5-T1 que, ao emergirem entre os músculos escalenos anterior e médio, constituem o ponto de partida da sequência clássica do plexo braquial (raízes → troncos → divisões → cordões → ramos terminais).",
+    trajeto:
+      "Formadas pelos ramos ventrais dos nervos espinhais C5 a T1, emergem no espaço interescalênico (entre os músculos escalenos anterior e médio), onde se unem para formar os três troncos do plexo: C5-C6 formam o tronco superior, C7 continua isoladamente como tronco médio, e C8-T1 formam o tronco inferior, este último passando sobre a primeira costela junto à artéria subclávia.",
+    ramosMusculares: [],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "Lesões das raízes superiores (C5-C6), geralmente por tração violenta do ombro para baixo com a cabeça inclinada para o lado oposto (trauma obstétrico ou queda de motocicleta), causam a paralisia de Erb-Duchenne (\"posição de gorjeta de garçom\": braço aduzido, rodado internamente, cotovelo estendido). Lesões das raízes inferiores (C8-T1), por tração do braço abduzido acima da cabeça, causam a paralisia de Klumpke, com mão em garra e frequente síndrome de Horner associada (por lesão do ramo comunicante simpático de T1).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Paralisia de Erb-Duchenne (C5-C6): lesão das raízes superiores por tração do ombro para baixo — \"posição de gorjeta de garçom\" (waiter's tip), clássica de trauma obstétrico (distocia de ombro).",
+      "Paralisia de Klumpke (C8-T1): lesão das raízes inferiores por tração do braço abduzido — mão em garra, frequentemente associada à síndrome de Horner por comprometimento do ramo comunicante simpático de T1.",
+    ],
+    fontes: [
+      { tema: "Paralisias de Erb-Duchenne e Klumpke", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Organização das raízes do plexo braquial", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Radices plexus brachialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "tronco-superior-do-plexo-braquial",
+    meshNames: ["Superior_trunk_of_brachial_plexus_L", "Superior_trunk_of_brachial_plexus_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Truncus superior plexus brachialis",
+    nomeComum: "Tronco superior do plexo braquial",
+    raizes: "C5, C6",
+    resumo:
+      "Formado pela união das raízes C5-C6, é o tronco classicamente lesado na paralisia de Erb-Duchenne, a mais comum das lesões traumáticas do plexo braquial.",
+    trajeto:
+      "Formado pela convergência das raízes C5 e C6 no espaço interescalênico, emite o nervo supraescapular e o ramo para o músculo subclávio antes de se dividir em divisão anterior e divisão posterior, que seguem para formar, respectivamente, o cordão lateral e (junto às divisões posteriores dos demais troncos) o cordão posterior.",
+    ramosMusculares: ["Músculo subclávio (ramo direto do tronco)"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "É o tronco lesado na paralisia de Erb-Duchenne, a lesão mais comum do plexo braquial — resulta em paralisia dos músculos deltoide, bíceps braquial, braquial e supinador, com o membro em posição característica de adução, rotação interna e extensão do cotovelo (\"gorjeta de garçom\"), além de perda sensitiva na face lateral do braço e antebraço.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O tronco superior (C5-C6) é o local da lesão na paralisia de Erb-Duchenne, tipicamente por trauma obstétrico (distocia de ombro) ou queda com o ombro forçado para baixo.",
+      "Emite dois ramos diretos antes de se dividir: o nervo supraescapular e o ramo para o músculo subclávio.",
+    ],
+    fontes: [
+      { tema: "Paralisia de Erb-Duchenne", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Ramos diretos do tronco superior", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Truncus superior plexus brachialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "tronco-medio-do-plexo-braquial",
+    meshNames: ["Middle_trunk_of_brachial_plexus_L", "Middle_trunk_of_brachial_plexus_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Truncus medius plexus brachialis",
+    nomeComum: "Tronco médio do plexo braquial",
+    raizes: "C7",
+    resumo:
+      "Continuação isolada da raiz C7, sem se unir a outras raízes antes de se dividir — a divisão anterior do tronco médio contribui de forma importante para o nervo radial (via cordão posterior) e para o nervo mediano (via cordão lateral).",
+    trajeto:
+      "Formado exclusivamente pela raiz C7, sem convergência com raízes vizinhas, divide-se em divisão anterior (que se une às divisões anteriores dos troncos superior e inferior para formar, junto ao superior, o cordão lateral) e divisão posterior (que se une às divisões posteriores dos outros dois troncos para formar o cordão posterior).",
+    ramosMusculares: [],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "Por ser a única fonte da raiz C7 no plexo, sua lesão isolada é rara, mas contribuições de C7 são clinicamente relevantes na radiculopatia cervical de C7, que classicamente causa fraqueza do tríceps braquial (reflexo tricipital diminuído) e dor irradiada para o dedo médio.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É o único tronco do plexo braquial formado por uma raiz isolada (C7), sem convergência com raízes vizinhas.",
+      "A radiculopatia de C7 (hérnia discal C6-C7) classicamente reduz o reflexo tricipital e causa dor/parestesia no dedo médio — via a contribuição de C7 ao nervo radial e ao nervo mediano.",
+    ],
+    fontes: [
+      { tema: "Radiculopatia cervical de C7", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Organização dos troncos do plexo braquial", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Truncus medius plexus brachialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "tronco-inferior-do-plexo-braquial",
+    meshNames: ["Inferior_trunk_of_brachial_plexus_L", "Inferior_trunk_of_brachial_plexus_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Truncus inferior plexus brachialis",
+    nomeComum: "Tronco inferior do plexo braquial",
+    raizes: "C8, T1",
+    resumo:
+      "Formado pela união das raízes C8-T1, passa sobre a primeira costela junto à artéria subclávia — posição que o torna vulnerável tanto à síndrome do desfiladeiro torácico quanto à lesão na paralisia de Klumpke.",
+    trajeto:
+      "Formado pela convergência das raízes C8 e T1, passa posteriormente à artéria subclávia sobre a face superior da primeira costela (no desfiladeiro cervicoaxilar) antes de se dividir em divisão anterior (que continua isoladamente como cordão medial, sem se juntar às divisões anteriores dos outros troncos) e divisão posterior (que se une ao cordão posterior).",
+    ramosMusculares: [],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "É o tronco lesado na paralisia de Klumpke (tração do braço abduzido, como ao segurar um galho ao cair), causando mão em garra por perda da musculatura intrínseca da mão (nervo ulnar e ramo motor do mediano). Sua relação estreita com a artéria subclávia sobre a primeira costela explica por que a síndrome do desfiladeiro torácico (compressão neurovascular nesse espaço, por costela cervical ou hipertrofia do escaleno anterior) frequentemente causa sintomas predominantemente em território de C8-T1 (face medial do antebraço e mão).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O tronco inferior (C8-T1) é lesado na paralisia de Klumpke, com mão em garra e frequente síndrome de Horner associada.",
+      "Passa sobre a primeira costela junto à artéria subclávia — a mesma relação anatômica explorada na síndrome do desfiladeiro torácico.",
+    ],
+    fontes: [
+      { tema: "Paralisia de Klumpke e síndrome do desfiladeiro torácico", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Relação com a artéria subclávia na primeira costela", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Truncus inferior plexus brachialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nervo-dorsal-da-escapula",
+    meshNames: ["Dorsal_scapular_nerve_L", "Dorsal_scapular_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus dorsalis scapulae",
+    nomeComum: "Nervo dorsal da escápula",
+    raizes: "C5",
+    resumo:
+      "Ramo supraclavicular direto da raiz C5 que perfura o músculo escaleno médio para inervar os músculos romboides e, com frequência, o levantador da escápula.",
+    trajeto:
+      "Origina-se diretamente da raiz C5, perfura o músculo escaleno médio e desce profundamente ao músculo levantador da escápula, acompanhando a margem medial da escápula junto à artéria escapular dorsal para inervar os músculos romboide maior e menor (e, em parte da população, contribuir para o levantador da escápula).",
+    ramosMusculares: ["Músculo romboide maior", "Músculo romboide menor", "Músculo levantador da escápula (contribuição variável)"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "Sua lesão (rara, isolada) causa fraqueza da retração e rotação inferior da escápula, com discreta alteração postural da escápula, geralmente sutil e de difícil percepção clínica isolada — testado pedindo ao paciente para retrair as escápulas contra resistência.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É um dos poucos ramos do plexo braquial que se origina diretamente de uma raiz (C5), antes mesmo da formação dos troncos.",
+      "Perfura o músculo escaleno médio — característica anatômica que o distingue dos demais ramos supraclaviculares.",
+    ],
+    fontes: [
+      { tema: "Ramos diretos das raízes do plexo braquial", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus dorsalis scapulae)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-toracico-longo",
+    meshNames: ["Long_thoracic_nerve_L", "Long_thoracic_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus thoracicus longus",
+    nomeComum: "Nervo torácico longo",
+    raizes: "C5, C6, C7",
+    resumo:
+      "Nervo motor puro para o músculo serrátil anterior, com trajeto longo e superficial na face lateral do tórax que o torna o nervo periférico mais classicamente lesado em cirurgias (mastectomia, esvaziamento axilar), causando a escápula alada.",
+    trajeto:
+      "Origina-se de raízes diretas de C5, C6 e C7 (as duas primeiras perfurando o músculo escaleno médio), desce posteriormente ao plexo braquial e à artéria axilar, percorrendo a face lateral do tórax sobre o músculo serrátil anterior — trajeto superficial e longo que o expõe a lesão durante dissecção axilar cirúrgica ou trauma penetrante.",
+    ramosMusculares: ["Músculo serrátil anterior"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "É o nervo mais frequentemente lesado em cirurgias axilares (mastectomia radical, esvaziamento linfonodal axilar) devido ao seu trajeto superficial na parede torácica lateral. Sua lesão paralisa o músculo serrátil anterior, causando escápula alada (winged scapula) — a margem medial da escápula se projeta posteriormente, mais evidente ao empurrar as mãos contra uma parede, pela perda da fixação da escápula à parede torácica.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A lesão do nervo torácico longo causa escápula alada por paralisia do músculo serrátil anterior — teste clássico: empurrar as mãos contra a parede evidencia a protrusão da margem medial da escápula.",
+      "É o nervo periférico mais comumente lesado em cirurgias de mama/axila (mastectomia, esvaziamento axilar) devido ao seu trajeto longo e superficial na parede torácica lateral.",
+    ],
+    fontes: [
+      { tema: "Escápula alada e lesão do nervo torácico longo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Lesão iatrogênica em cirurgia axilar", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus thoracicus longus)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nervo-supraescapular",
+    meshNames: ["Suprascapular_nerve_L", "Suprascapular_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus suprascapularis",
+    nomeComum: "Nervo supraescapular",
+    raizes: "C5, C6",
+    resumo:
+      "Ramo do tronco superior que atravessa a incisura escapular sob o ligamento transverso superior da escápula, ponto de compressão clássico, para inervar os músculos supraespinal e infraespinal.",
+    trajeto:
+      "Origina-se do tronco superior (C5-C6), atravessa a fossa supraespinal passando sob o ligamento transverso superior da escápula (na incisura escapular, enquanto a artéria supraescapular passa sobre esse ligamento — mnemônico \"o nervo vai por baixo, a artéria por cima\"), inerva o músculo supraespinal, contorna a margem lateral da espinha da escápula pela incisura espinoglenoidal e alcança a fossa infraespinal para inervar o músculo infraespinal.",
+    ramosMusculares: ["Músculo supraespinal", "Músculo infraespinal"],
+    ramosSensitivos: ["Ramo articular para a articulação do ombro"],
+    correlacaoClinica:
+      "É comprimido na incisura escapular (por espessamento do ligamento transverso superior, gânglios sinoviais ou movimentos repetitivos de arremesso, como em atletas de vôlei/beisebol), causando dor posterior no ombro e fraqueza da abdução inicial (supraespinal) e da rotação externa (infraespinal) — quadro que mimetiza lesão do manguito rotador e exige eletroneuromiografia para diferenciação.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Mnemônico clássico: na incisura escapular, o nervo supraescapular passa por baixo do ligamento transverso superior da escápula, enquanto a artéria supraescapular passa por cima.",
+      "A síndrome de compressão do nervo supraescapular mimetiza lesão do manguito rotador (dor + fraqueza de abdução e rotação externa), mas é de origem neural, não tendínea.",
+    ],
+    fontes: [
+      { tema: "Síndrome de compressão do nervo supraescapular", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Relação com o ligamento transverso superior da escápula", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus suprascapularis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nervo-subclavio",
+    meshNames: ["Subclavian_nerve_L", "Subclavian_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus subclavius",
+    nomeComum: "Nervo subclávio",
+    raizes: "C5, C6",
+    resumo:
+      "Pequeno ramo direto do tronco superior para o músculo subclávio, com relevância anatômica maior do que clínica — frequentemente contribui com um ramo acessório para o nervo frênico.",
+    trajeto:
+      "Origina-se do tronco superior (C5-C6), desce anteriormente à artéria e veia subclávias para inervar o músculo subclávio, na face inferior da clavícula; um ramo comunicante ocasional (\"ansa subclávia\" ou raiz acessória frênica) pode se juntar ao nervo frênico.",
+    ramosMusculares: ["Músculo subclávio"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "Tem baixa relevância clínica isolada, mas sua raiz acessória frênica ocasional é clinicamente importante em cirurgia torácica: uma lesão do nervo frênico principal pode não causar paralisia diafragmática completa se essa raiz acessória estiver presente e preservada.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O nervo subclávio pode contribuir com uma raiz acessória para o nervo frênico — relevante para explicar função diafragmática parcialmente preservada após lesão do frênico principal.",
+    ],
+    fontes: [
+      { tema: "Raiz acessória frênica", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus subclavius)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-peitoral-lateral",
+    meshNames: ["Lateral_pectoral_nerve_L", "Lateral_pectoral_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus pectoralis lateralis",
+    nomeComum: "Nervo peitoral lateral",
+    raizes: "C5, C6, C7",
+    resumo:
+      "Ramo do cordão lateral que perfura a fáscia clavipeitoral para inervar predominantemente o músculo peitoral maior, com uma alça comunicante característica ao nervo peitoral medial.",
+    trajeto:
+      "Origina-se do cordão lateral (C5-C7), perfura a fáscia clavipeitoral anteriormente à artéria e veia axilares para alcançar a face profunda do músculo peitoral maior; comunica-se com o nervo peitoral medial através de uma alça (ansa pectoralis) anterior à artéria axilar, através da qual também envia fibras ao peitoral menor.",
+    ramosMusculares: ["Músculo peitoral maior (predominante)", "Contribuição ocasional ao peitoral menor via alça com o nervo peitoral medial"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "Lesão isolada é rara; em conjunto com o nervo peitoral medial, sua lesão compromete a força de adução e rotação interna do braço pelo peitoral maior, relevante em avaliação pós-cirúrgica de procedimentos na região axilar/peitoral (ex: reconstrução mamária com retalho de peitoral).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Apesar do nome \"lateral\", origina-se do cordão lateral mas inerva principalmente o músculo peitoral maior — o nome refere-se à origem do cordão, não ao músculo-alvo predominante.",
+      "Comunica-se com o nervo peitoral medial pela alça pectoral (ansa pectoralis), anterior à artéria axilar.",
+    ],
+    fontes: [
+      { tema: "Alça pectoral e inervação do peitoral maior/menor", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus pectoralis lateralis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-peitoral-medial",
+    meshNames: ["Medial_pectoral_nerve_L", "Medial_pectoral_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus pectoralis medialis",
+    nomeComum: "Nervo peitoral medial",
+    raizes: "C8, T1",
+    resumo:
+      "Ramo do cordão medial que passa entre a artéria e a veia axilares para inervar o músculo peitoral menor e, através dele (ou ao seu redor), contribuir para o peitoral maior.",
+    trajeto:
+      "Origina-se do cordão medial (C8-T1), passa entre a artéria e a veia axilares, perfura (ou contorna a margem lateral de) o músculo peitoral menor, inervando-o, e continua para contribuir com fibras ao músculo peitoral maior, principalmente sua porção inferior/esternocostal.",
+    ramosMusculares: ["Músculo peitoral menor", "Músculo peitoral maior (porção esternocostal, contribuição parcial)"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "É um marco cirúrgico importante em dissecção axilar (mastectomia, esvaziamento linfonodal): sua preservação, junto ao nervo peitoral lateral, é necessária para manter a função e o volume do músculo peitoral maior, relevante em cirurgia oncológica de mama.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Apesar do nome \"medial\", frequentemente perfura o músculo peitoral menor antes de contribuir para o peitoral maior — nome refere-se à origem do cordão medial.",
+      "É um marco de preservação nervosa relevante em cirurgia oncológica de mama e esvaziamento axilar.",
+    ],
+    fontes: [
+      { tema: "Marcos nervosos em cirurgia axilar/mamária", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nervus pectoralis medialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-musculocutaneo",
+    meshNames: ["Musculocutaneous_nerve_L", "Musculocutaneous_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus musculocutaneus",
+    nomeComum: "Nervo musculocutâneo",
+    raizes: "C5, C6, C7",
+    resumo:
+      "Ramo terminal do cordão lateral que perfura o músculo coracobraquial, inerva os três músculos do compartimento anterior do braço (flexores do cotovelo) e termina como nervo cutâneo antebraquial lateral.",
+    trajeto:
+      "Origina-se do cordão lateral (C5-C7), perfura o músculo coracobraquial (marco cirúrgico clássico), desce entre os músculos bíceps braquial e braquial, inervando os três músculos do compartimento anterior do braço, e emerge lateralmente ao tendão distal do bíceps, próximo ao cotovelo, para continuar como o nervo cutâneo antebraquial lateral, que inerva a pele da face lateral do antebraço.",
+    ramosMusculares: ["Músculo coracobraquial", "Músculo bíceps braquial", "Músculo braquial"],
+    ramosSensitivos: ["Nervo cutâneo antebraquial lateral (pele da face lateral do antebraço)"],
+    correlacaoClinica:
+      "Sua lesão (rara, isolada; mais comum em lesões do cordão lateral ou do plexo superior) causa fraqueza da flexão do cotovelo (parcialmente compensada pelo braquiorradial, inervado pelo radial) e da supinação do antebraço pelo bíceps, além de perda sensitiva na face lateral do antebraço, e abolição do reflexo bicipital.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Perfura o músculo coracobraquial — marco anatômico clássico usado para identificá-lo em dissecção e em bloqueios anestésicos do plexo braquial (via axilar).",
+      "Sua porção sensitiva terminal, o nervo cutâneo antebraquial lateral, é o responsável pela sensibilidade da face lateral do antebraço — território poupado na lesão isolada do nervo mediano ou ulnar.",
+    ],
+    fontes: [
+      { tema: "Trajeto pelo músculo coracobraquial", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Território sensitivo do nervo cutâneo antebraquial lateral", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus musculocutaneus)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nervo-cutaneo-antebraquial-medial",
+    meshNames: [
+      "Medial_antebrachial_cutaneous_nerve_L",
+      "Medial_antebrachial_cutaneous_nerve_R",
+      "Anterior_branch_of_medial_antebrachial_cutaneous_nerve_L",
+      "Anterior_branch_of_medial_antebrachial_cutaneous_nerve_R",
+      "Posterior_branch_of_medial_antebrachial_cutaneous_nerve_L",
+      "Posterior_branch_of_medial_antebrachial_cutaneous_nerve_R",
+    ],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus cutaneus antebrachii medialis",
+    nomeComum: "Nervo cutâneo antebraquial medial",
+    raizes: "C8, T1",
+    resumo:
+      "Ramo puramente sensitivo do cordão medial que inerva a pele das faces anterior e posterior da porção medial do antebraço — território clinicamente relevante por seu trajeto próximo à veia basílica.",
+    trajeto:
+      "Origina-se do cordão medial (C8-T1), acompanha a artéria e veia axilares e depois a veia basílica no braço, perfurando a fáscia braquial profunda próximo ao cotovelo para se dividir em ramo anterior (pele da face anterior/medial do antebraço) e ramo posterior (pele da face posterior/medial do antebraço).",
+    ramosMusculares: [],
+    ramosSensitivos: ["Ramo anterior (pele da face anterior-medial do antebraço)", "Ramo posterior (pele da face posterior-medial do antebraço)"],
+    correlacaoClinica:
+      "É vulnerável a lesão iatrogênica durante punção venosa ou coleta de enxerto venoso (veia basílica) para cirurgia cardíaca, pela proximidade anatômica estreita entre os dois — causando parestesia/dor neuropática na face medial do antebraço no pós-operatório.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É frequentemente lesado em punção venosa da fossa cubital ou coleta de enxerto da veia basílica, pela proximidade anatômica direta entre os dois — causa clássica de parestesia iatrogênica no antebraço medial.",
+    ],
+    fontes: [
+      { tema: "Lesão iatrogênica em punção venosa/enxerto de veia basílica", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus cutaneus antebrachii medialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-cutaneo-antebraquial-lateral",
+    meshNames: ["Lateral_antebrachial_cutaneous_nerve_L", "Lateral_antebrachial_cutaneous_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus cutaneus antebrachii lateralis",
+    nomeComum: "Nervo cutâneo antebraquial lateral",
+    raizes: "C5, C6, C7",
+    resumo:
+      "Continuação sensitiva terminal do nervo musculocutâneo, inerva a pele da face lateral do antebraço, do cotovelo ao punho.",
+    trajeto:
+      "Continuação direta do nervo musculocutâneo após este emergir lateralmente ao tendão distal do bíceps braquial próximo ao cotovelo, descendo subcutaneamente na face lateral do antebraço até próximo ao punho.",
+    ramosMusculares: [],
+    ramosSensitivos: ["Pele da face lateral do antebraço, do cotovelo ao punho"],
+    correlacaoClinica:
+      "Sua preservação (ou lesão) é usada clinicamente para diferenciar uma lesão isolada do nervo musculocutâneo (que compromete tanto motricidade da flexão do cotovelo quanto essa sensibilidade) de lesões mais distais do nervo radial ou mediano, que poupam esse território.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É a continuação sensitiva terminal do nervo musculocutâneo — sua perda sensitiva na face lateral do antebraço, associada à fraqueza de flexão do cotovelo, localiza a lesão no musculocutâneo (e não no radial ou mediano).",
+    ],
+    fontes: [
+      { tema: "Território sensitivo terminal do musculocutâneo", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nervus cutaneus antebrachii lateralis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-cutaneo-antebraquial-posterior",
+    meshNames: ["Posterior_antebrachial_cutaneous_nerve_L", "Posterior_antebrachial_cutaneous_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus cutaneus antebrachii posterior",
+    nomeComum: "Nervo cutâneo antebraquial posterior",
+    raizes: "C5, C6, C7, C8",
+    resumo:
+      "Ramo sensitivo do nervo radial que inerva a pele da face posterior do antebraço, entre os territórios dos nervos cutâneos antebraquiais lateral e medial.",
+    trajeto:
+      "Origina-se do nervo radial no braço (antes de sua divisão terminal), perfura a fáscia braquial próximo ao cotovelo e desce subcutaneamente na linha média da face posterior do antebraço até o punho.",
+    ramosMusculares: [],
+    ramosSensitivos: ["Pele da face posterior do antebraço, entre os territórios lateral e medial"],
+    correlacaoClinica:
+      "Compromido em conjunto com o restante do território sensitivo do nervo radial nas lesões proximais desse nervo (fratura do úmero, compressão axilar por muleta) — sua perda isolada tem pouca relevância clínica própria, sendo mais um marcador topográfico do território radial.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É um ramo do nervo radial (não um ramo direto do plexo) — sua perda sensitiva faz parte do quadro de lesão radial proximal, junto com a mão caída (wrist drop).",
+    ],
+    fontes: [
+      { tema: "Território sensitivo do nervo radial", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus cutaneus antebrachii posterior)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-subescapular-superior",
+    meshNames: ["Superior_subscapular_nerve_L", "Superior_subscapular_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus subscapularis superior",
+    nomeComum: "Nervo subescapular superior",
+    raizes: "C5, C6",
+    resumo:
+      "Ramo curto do cordão posterior que inerva a porção superior do músculo subescapular, componente do manguito rotador.",
+    trajeto:
+      "Origina-se do cordão posterior (C5-C6), tem trajeto curto e direto até a face profunda (anterior) da porção superior do músculo subescapular, que inerva.",
+    ramosMusculares: ["Músculo subescapular (porção superior)"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "Lesão isolada é rara; sua função (rotação interna do braço, junto ao subescapular como um todo) é testada clinicamente pelo teste de Gerber (lift-off test), no contexto de avaliação do manguito rotador.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Junto ao nervo subescapular inferior, inerva o músculo subescapular — o único dos quatro músculos do manguito rotador com rotação interna do ombro como ação principal.",
+    ],
+    fontes: [
+      { tema: "Inervação do músculo subescapular e teste de Gerber", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nervus subscapularis superior)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-subescapular-inferior",
+    meshNames: ["Inferior_subscapular_nerve_L", "Inferior_subscapular_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus subscapularis inferior",
+    nomeComum: "Nervo subescapular inferior",
+    raizes: "C5, C6",
+    resumo:
+      "Ramo do cordão posterior que inerva a porção inferior do músculo subescapular e o músculo redondo maior.",
+    trajeto:
+      "Origina-se do cordão posterior (C5-C6), desce pela face anterior do músculo subescapular, inervando sua porção inferior, e continua para inervar o músculo redondo maior em sua face anterior.",
+    ramosMusculares: ["Músculo subescapular (porção inferior)", "Músculo redondo maior"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "É um marco anatômico relevante em cirurgia do ombro (artroplastia, reparo de manguito rotador) pelo risco de lesão durante acesso à face anterior da articulação glenoumeral, o que comprometeria a rotação interna do braço.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É o único ramo nervoso do plexo braquial a inervar o músculo redondo maior — músculo que, apesar do nome semelhante ao redondo menor (inervado pelo axilar), tem ação de rotação interna, não externa.",
+    ],
+    fontes: [
+      { tema: "Inervação do redondo maior vs. redondo menor", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus subscapularis inferior)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-toracodorsal",
+    meshNames: ["Thoracodorsal_nerve_L", "Thoracodorsal_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus thoracodorsalis",
+    nomeComum: "Nervo toracodorsal",
+    raizes: "C6, C7, C8",
+    resumo:
+      "Ramo do cordão posterior, entre os dois nervos subescapulares, que inerva exclusivamente o músculo latíssimo do dorso — marco cirúrgico crítico em reconstrução mamária com retalho miocutâneo.",
+    trajeto:
+      "Origina-se do cordão posterior (C6-C8), entre o nervo subescapular superior e o inferior, desce pela parede posterior da axila junto aos vasos subescapulares e toracodorsais até a face profunda (anterior) do músculo latíssimo do dorso, que inerva.",
+    ramosMusculares: ["Músculo latíssimo do dorso"],
+    ramosSensitivos: [],
+    correlacaoClinica:
+      "É um marco cirúrgico crítico na reconstrução mamária com retalho miocutâneo do latíssimo do dorso — sua preservação é essencial para a viabilidade funcional do retalho transferido, e sua lesão inadvertida em cirurgia axilar compromete a extensão, adução e rotação interna do braço (testado pedindo ao paciente para tossir com a mão na região lombar, sentindo a contração do músculo).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "É o nervo motor do músculo latíssimo do dorso, e sua preservação é essencial na cirurgia de retalho miocutâneo do latíssimo para reconstrução mamária.",
+      "Localiza-se entre os nervos subescapulares superior e inferior no espaço axilar posterior — os \"três nervos da parede posterior da axila\".",
+    ],
+    fontes: [
+      { tema: "Retalho de latíssimo do dorso em reconstrução mamária", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nervus thoracodorsalis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Tabela de ramos do plexo braquial", fonte: "Caderno de Anatomia Humana 1, UFTM (2019)" },
+    ],
+  },
+  {
+    slug: "nervo-axilar",
+    meshNames: ["Axillary_nerve_L", "Axillary_nerve_R", "Muscular_branches_of_axillary_nerve_L", "Muscular_branches_of_axillary_nerve_R"],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus axillaris",
+    nomeComum: "Nervo axilar",
+    raizes: "C5, C6",
+    resumo:
+      "Ramo terminal do cordão posterior que atravessa o espaço quadrangular junto à artéria circunflexa posterior do úmero, inervando os músculos deltoide e redondo menor — classicamente lesado em luxação do ombro e fratura do colo cirúrgico do úmero.",
+    trajeto:
+      "Origina-se do cordão posterior (C5-C6), passa pelo espaço quadrangular (delimitado pelos músculos redondo menor, redondo maior, tríceps braquial e o colo cirúrgico do úmero) junto à artéria circunflexa posterior do úmero, contorna o colo cirúrgico do úmero posteriormente e se divide em ramo anterior (inerva a porção anterior/média do deltoide e emite ramos cutâneos para a pele sobre o deltoide) e ramo posterior (inerva a porção posterior do deltoide e o músculo redondo menor).",
+    ramosMusculares: ["Músculo deltoide", "Músculo redondo menor"],
+    ramosSensitivos: ["Nervo cutâneo lateral superior do braço (pele sobre o deltoide, \"sinal do distintivo de sargento\")"],
+    correlacaoClinica:
+      "É classicamente lesado em luxação glenoumeral anterior e em fratura do colo cirúrgico do úmero, devido ao seu trajeto justaposto a essas estruturas — causa perda da abdução do braço (deltoide) e anestesia da região sobre o deltoide (\"sinal do distintivo de sargento\", regimental badge sign), testada antes de reduzir qualquer luxação de ombro suspeita.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Sempre testar a sensibilidade sobre o deltoide (\"sinal do distintivo de sargento\") antes E depois de reduzir uma luxação de ombro — documenta lesão pré-existente do nervo axilar antes de qualquer manipulação.",
+      "É lesado no espaço quadrangular e no colo cirúrgico do úmero — as duas localizações clássicas de trauma (luxação anterior do ombro e fratura do colo cirúrgico).",
+    ],
+    fontes: [
+      { tema: "Lesão do nervo axilar em luxação de ombro e fratura do colo cirúrgico", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Sinal do distintivo de sargento", fonte: "Gray's Anatomy for Students, 4ª ed." },
+      { tema: "Nomenclatura oficial (Nervus axillaris)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nervo-radial",
+    meshNames: [
+      "Radial_nerve_L",
+      "Radial_nerve_R",
+      "Deep_branch_of_radial_nerve_L",
+      "Deep_branch_of_radial_nerve_R",
+      "Superficial_branch_of_radial_nerve_L",
+      "Superficial_branch_of_radial_nerve_R",
+      "Muscular_branches_of_radial_nerve_L",
+      "Muscular_branches_of_radial_nerve_R",
+      "Dorsal_digital_branches_of_radial_nerve_L",
+      "Dorsal_digital_branches_of_radial_nerve_R",
+    ],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus radialis",
+    nomeComum: "Nervo radial",
+    raizes: "C5, C6, C7, C8, T1",
+    resumo:
+      "Maior ramo terminal do plexo braquial, continuação direta do cordão posterior, percorre o sulco do nervo radial no úmero (vulnerável a fratura da diáfise) e inerva todo o compartimento extensor do braço e antebraço — sua lesão causa a clássica \"mão caída\" (wrist drop).",
+    trajeto:
+      "Continuação direta do cordão posterior (C5-T1), passa posteriormente à artéria axilar e depois ao úmero, percorrendo o sulco do nervo radial (sulco espiral) em contato direto com a diáfise umeral, inerva o músculo tríceps braquial nesse trajeto, perfura o septo intermuscular lateral do braço e desce entre os músculos braquial e braquiorradial até a fossa cubital, onde se divide em ramo profundo (motor, atravessa o músculo supinador para inervar todo o compartimento extensor do antebraço) e ramo superficial (sensitivo, acompanha a artéria radial até o dorso da mão).",
+    ramosMusculares: [
+      "Músculo tríceps braquial e ancôneo",
+      "Músculo braquiorradial",
+      "Músculo extensor radial longo do carpo",
+      "Todo o compartimento extensor do antebraço, via ramo profundo (extensor radial curto do carpo, supinador, extensor dos dedos, extensor do dedo mínimo, extensor ulnar do carpo, abdutor longo do polegar, extensor curto e longo do polegar, extensor do indicador)",
+    ],
+    ramosSensitivos: ["Pele do dorso da mão e dos dedos, do polegar até a metade radial do 4º dedo (ramo superficial)", "Nervo cutâneo antebraquial posterior"],
+    correlacaoClinica:
+      "É classicamente lesado na fratura da diáfise umeral (sulco do nervo radial) e por compressão prolongada do braço contra uma superfície dura (\"paralisia do sábado à noite\", saturday night palsy, por dormir com o braço sobre uma cadeira/muleta), causando a mão caída (wrist drop) por paralisia dos extensores do punho e dedos, com anestesia na tabaqueira anatômica. O ramo profundo isolado pode ser comprimido pelo músculo supinador (síndrome do túnel radial/síndrome do interósseo posterior), causando fraqueza extensora sem déficit sensitivo (por ser puramente motor).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "\"Paralisia do sábado à noite\" (saturday night palsy): compressão do nervo radial contra o úmero durante sono profundo (geralmente associado a álcool), causando mão caída transitória.",
+      "O ramo profundo do radial é puramente motor — sua compressão pelo músculo supinador (síndrome do interósseo posterior) causa fraqueza extensora SEM déficit sensitivo, diferentemente da lesão do tronco principal do nervo radial.",
+      "Fratura da diáfise umeral no terço médio/distal é a causa clássica de lesão do nervo radial, pelo seu contato direto com o osso no sulco radial.",
+    ],
+    fontes: [
+      { tema: "Mão caída e paralisia do sábado à noite", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Síndrome do interósseo posterior", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Nervus radialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nervo-mediano",
+    meshNames: [
+      "Median_nerve_L",
+      "Median_nerve_R",
+      "Muscular_branches_of_median_nerve_L",
+      "Muscular_branches_of_median_nerve_R",
+      "Palmar_branch_of_median_nerve_L",
+      "Palmar_branch_of_median_nerve_R",
+      "Common_palmar_digital_branches_of_median_nerve_L",
+      "Common_palmar_digital_branches_of_median_nerve_R",
+      "Proper_palmar_digital_branches_of_median_nerve_L",
+      "Proper_palmar_digital_branches_of_median_nerve_R",
+      "Communicating_branch_of_median_nerve_with_ulnar_nerve_L",
+      "Communicating_branch_of_median_nerve_with_ulnar_nerve_R",
+    ],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus medianus",
+    nomeComum: "Nervo mediano",
+    raizes: "C5, C6, C7, C8, T1",
+    resumo:
+      "Formado pela união dos cordões lateral e medial, não emite ramos no braço, mas inerva a maior parte da musculatura flexora do antebraço e os músculos tenares — sua compressão no túnel do carpo é a neuropatia compressiva mais comum do corpo humano.",
+    trajeto:
+      "Formado pela raiz lateral (do cordão lateral, C5-C7) e raiz medial (do cordão medial, C8-T1) que se unem anteriormente à artéria axilar, desce no braço sem emitir ramos (acompanhando a artéria braquial, cruzando-a de lateral para medial no meio do braço), entra no antebraço entre as duas cabeças do músculo pronador redondo, desce profundamente ao flexor superficial dos dedos, emite o nervo interósseo anterior (para os flexores profundos do polegar/dedos radiais e o pronador quadrado) e alcança o punho, onde passa através do túnel do carpo (profundamente ao retináculo dos flexores) para inervar os músculos tenares e os dois primeiros lumbricais, além da sensibilidade palmar dos primeiros três dedos e meio.",
+    ramosMusculares: [
+      "Pronador redondo, flexor radial do carpo, palmar longo, flexor superficial dos dedos",
+      "Via nervo interósseo anterior: flexor longo do polegar, porção radial do flexor profundo dos dedos, pronador quadrado",
+      "Músculos tenares (abdutor curto, flexor curto e oponente do polegar) e os dois lumbricais laterais, via ramo motor tenar (recorrente)",
+    ],
+    ramosSensitivos: ["Face palmar do polegar, indicador, médio e metade radial do anular", "Face dorsal das falanges distais desses mesmos dedos"],
+    correlacaoClinica:
+      "A síndrome do túnel do carpo — compressão do nervo mediano no punho pelo retináculo dos flexores, associada a movimento repetitivo, gestação, hipotireoidismo e artrite reumatoide — é a neuropatia compressiva mais comum, causando dor/parestesia noturna nos três primeiros dedos e meio, sinais de Tinel e Phalen positivos, e, em fase avançada, atrofia tenar. A \"mão de bênção\" (hand of benediction, incapacidade de flexionar o indicador e o médio ao tentar fechar o punho) ocorre na lesão proximal do nervo mediano (ao nível do cotovelo/antebraço).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Síndrome do túnel do carpo: neuropatia compressiva mais comum do corpo, sinais de Tinel e Phalen positivos, poupa a sensibilidade da eminência tenar (inervada pelo ramo palmar cutâneo, que passa superficialmente ao retináculo, não dentro do túnel).",
+      "\"Mão de bênção\": lesão proximal do nervo mediano — ao tentar fechar o punho, o polegar, indicador e médio permanecem estendidos (não conseguem flexionar), enquanto o anular e mínimo flexionam normalmente (inervados pelo ulnar).",
+      "O ramo motor tenar (recorrente) tem trajeto superficial logo distal ao retináculo dos flexores — vulnerável a lesão iatrogênica em incisões cirúrgicas mal posicionadas na liberação do túnel do carpo.",
+    ],
+    fontes: [
+      { tema: "Síndrome do túnel do carpo", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Mão de bênção e nervo interósseo anterior", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nervus medianus)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nervo-ulnar",
+    meshNames: [
+      "Ulnar_nerve_L",
+      "Ulnar_nerve_R",
+      "Deep_branch_of_ulnar_nerve_L",
+      "Deep_branch_of_ulnar_nerve_R",
+      "Superficial_branch_of_ulnar_nerve_L",
+      "Superficial_branch_of_ulnar_nerve_R",
+      "Dorsal_branch_of_ulnar_nerve_L",
+      "Dorsal_branch_of_ulnar_nerve_R",
+      "Palmar_branch_of_ulnar_nerve_L",
+      "Palmar_branch_of_ulnar_nerve_R",
+      "Muscular_branches_of_ulnar_nerve_L",
+      "Muscular_branches_of_ulnar_nerve_R",
+      "Common_palmar_digital_branches_of_ulnar_nerve_L",
+      "Common_palmar_digital_branches_of_ulnar_nerve_R",
+      "Proper_palmar_digital_branches_of_ulnar_nerve_L",
+      "Proper_palmar_digital_branches_of_ulnar_nerve_R",
+      "Dorsal_digital_branches_of_ulnar_nerve_L",
+      "Dorsal_digital_branches_of_ulnar_nerve_R",
+    ],
+    plexo: "Plexo braquial",
+    nomeOficial: "Nervus ulnaris",
+    nomeComum: "Nervo ulnar",
+    raizes: "C8, T1",
+    resumo:
+      "Ramo terminal do cordão medial, sem ramos no braço, passa pelo túnel cubital posteriormente ao epicôndilo medial do úmero (o \"nervo da risada\") antes de inervar a maior parte da musculatura intrínseca da mão — sua lesão crônica produz a clássica mão em garra ulnar.",
+    trajeto:
+      "Continuação direta do cordão medial (C8-T1), desce no braço sem emitir ramos, perfura o septo intermuscular medial na metade do braço, passa posteriormente ao epicôndilo medial do úmero através do túnel cubital (superficial e vulnerável nesse ponto — \"osso da risada\"), entra no antebraço entre as duas cabeças do flexor ulnar do carpo, desce profundamente a esse músculo inervando-o (junto à metade ulnar do flexor profundo dos dedos), e alcança o punho onde passa pelo canal de Guyon (superficial ao retináculo dos flexores, ao lado do osso pisiforme) para se dividir em ramo superficial (sensitivo) e ramo profundo (motor, para quase toda a musculatura intrínseca da mão).",
+    ramosMusculares: [
+      "Flexor ulnar do carpo, metade ulnar do flexor profundo dos dedos (no antebraço)",
+      "Músculos hipotenares (abdutor, flexor curto e oponente do dedo mínimo)",
+      "Adutor do polegar e cabeça profunda do flexor curto do polegar",
+      "Todos os interósseos palmares e dorsais, e os dois lumbricais mediais",
+    ],
+    ramosSensitivos: ["Face palmar e dorsal do 5º dedo e metade ulnar do 4º dedo", "Face dorsal e ulnar da mão"],
+    correlacaoClinica:
+      "É comprimido classicamente no túnel cubital (posterior ao epicôndilo medial, \"nervo da risada\" ao ser percutido) e no canal de Guyon (punho). Sua lesão crônica causa a mão em garra ulnar (claw hand) — hiperextensão das articulações metacarpofalângicas com flexão das interfalângicas do 4º e 5º dedos, por paralisia dos lumbricais mediais sem comprometer os flexores extrínsecos longos — paradoxalmente, quanto mais distal a lesão ulnar, mais evidente a garra (\"paradoxo ulnar\"), pois uma lesão proximal também paralisa parte do flexor profundo dos dedos, reduzindo a flexão das interfalângicas.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "\"Paradoxo ulnar\": a garra ulnar é MAIS evidente em lesões distais (punho) do que proximais (cotovelo), porque lesões proximais também paralisam o flexor profundo dos dedos, que é quem causa a flexão das interfalângicas na garra.",
+      "Sinal de Froment: ao tentar segurar um papel entre o polegar e o indicador, o paciente flexiona a articulação interfalângica do polegar (compensação pelo flexor longo do polegar, mediano) por fraqueza do adutor do polegar (ulnar) — teste clássico de lesão ulnar.",
+      "O túnel cubital (posterior ao epicôndilo medial) é o segundo local mais comum de neuropatia compressiva do membro superior, depois do túnel do carpo.",
+    ],
+    fontes: [
+      { tema: "Mão em garra ulnar e paradoxo ulnar", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Sinal de Froment e síndrome do túnel cubital", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Nervus ulnaris)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
 ];

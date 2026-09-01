@@ -8,7 +8,7 @@ function cx(...classes: (string | false | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const SECOES = ["Nervos cranianos", "Plexo lombossacral"] as const;
+const SECOES = ["Nervos cranianos", "Nervos periféricos"] as const;
 type Secao = (typeof SECOES)[number];
 
 export function NervousSystemExplorer() {

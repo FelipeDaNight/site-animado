@@ -5,7 +5,7 @@ import { NervousSystemExplorer } from "@/components/anatomy/nervous-system-explo
 export const metadata: Metadata = {
   title: "Sistema Nervoso 3D",
   description:
-    "Modelo 3D interativo dos 12 pares de nervos cranianos e do plexo lombossacral: origem, trajeto, funções e correlação clínica.",
+    "Modelo 3D interativo dos 12 pares de nervos cranianos e dos plexos braquial e lombossacral: origem, trajeto, funções e correlação clínica.",
 };
 
 export default function SistemaNervosoPage() {
@@ -33,10 +33,10 @@ export default function SistemaNervosoPage() {
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Nervoso</h1>
         <p className="mt-2 text-foreground-muted">
-          Modelo 3D interativo dos 12 pares de nervos cranianos e dos 18 nervos do plexo lombossacral (plexo
-          lombar e sacral), com o esqueleto como referência anatômica esmaecida. Escolha um nervo para ver
+          Modelo 3D interativo dos 12 pares de nervos cranianos e de 39 nervos periféricos dos plexos braquial,
+          lombar e sacral, com o esqueleto como referência anatômica esmaecida. Escolha um nervo para ver
           origem, trajeto, ramos musculares/sensitivos e correlação clínica. Próximas regiões (encéfalo, medula
-          espinhal, plexo braquial) em construção.
+          espinhal) em construção.
         </p>
       </div>
       <div className="mt-8">
