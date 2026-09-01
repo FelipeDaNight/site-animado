@@ -192,6 +192,7 @@ export const articulacoes: Articulacao[] = [
     fontes: [
       { tema: "Anatomia e estabilizadores da articulação do quadril", fonte: "Gray's Anatomy for Students, 4ª ed." },
       { tema: "Nomenclatura oficial (Articulatio coxae)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos do quadril", fonte: "Sobotta, Atlas of Human Anatomy" },
     ],
   },
   {
@@ -245,6 +246,7 @@ export const articulacoes: Articulacao[] = [
     fontes: [
       { tema: "Anatomia e estabilizadores ligamentares do joelho", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
       { tema: "Nomenclatura oficial (Articulatio genus)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos do joelho", fonte: "Sobotta, Atlas of Human Anatomy" },
     ],
   },
   {
@@ -289,6 +291,7 @@ export const articulacoes: Articulacao[] = [
     fontes: [
       { tema: "Anatomia do tornozelo e mecanismo da entorse por inversão", fonte: "Gray's Anatomy for Students, 4ª ed." },
       { tema: "Nomenclatura oficial (Articulatio talocruralis)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos do tornozelo", fonte: "Sobotta, Atlas of Human Anatomy" },
     ],
   },
   {
@@ -416,6 +419,7 @@ export const articulacoes: Articulacao[] = [
     fontes: [
       { tema: "Anatomia da articulação sacroilíaca e sacroileíte nas espondiloartrites", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
       { tema: "Nomenclatura oficial (Articulatio sacroiliaca)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos da pelve", fonte: "Sobotta, Atlas of Human Anatomy" },
     ],
   },
   {
@@ -452,6 +456,7 @@ export const articulacoes: Articulacao[] = [
     fontes: [
       { tema: "Anatomia da sínfise púbica e alterações na gestação", fonte: "Gray's Anatomy for Students, 4ª ed." },
       { tema: "Nomenclatura oficial (Symphysis pubica)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos da pelve", fonte: "Sobotta, Atlas of Human Anatomy" },
     ],
   },
   {
@@ -529,6 +534,111 @@ export const articulacoes: Articulacao[] = [
     fontes: [
       { tema: "Anatomia da articulação subtalar e cinemática do retropé", fonte: "Gray's Anatomy for Students, 4ª ed." },
       { tema: "Nomenclatura oficial (Articulatio subtalaris)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos do tornozelo e pé", fonte: "Sobotta, Atlas of Human Anatomy" },
+    ],
+  },
+  {
+    slug: "tarso-transverso",
+    meshNames: ["Talus_L", "Talus_R", "Calcaneus_L", "Calcaneus_R", "Navicular_bone_L", "Navicular_bone_R", "Cuboid_bone_L", "Cuboid_bone_R"],
+    ligamentMeshNames: sides([
+      "Talonavicular ligament",
+      "Calcaneocuboid ligament",
+      "Dorsal calcaneocuboid ligament",
+      "Plantar calcaneocuboid ligament",
+      "Calcaneonavicular ligament",
+      "Plantar calcaneonavicular ligament",
+      "Long plantar ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "talus-calcaneo", nome: "Tálus e calcâneo" },
+      { slug: "perna-pe", nome: "Navicular e cuboide" },
+    ],
+    nomeOficial: "Articulatio tarsi transversa",
+    nomeComum: "Articulação transversa do tarso (linha de Chopart)",
+    tipo: "Sinovial plana",
+    resumo: "Linha articular composta pelas articulações talonavicular e calcaneocuboide, que atravessa o mediopé de lado a lado.",
+    descricaoAnatomica:
+      "Não é uma articulação única, mas a combinação funcional de duas articulações adjacentes que formam uma linha transversal contínua através do pé: a talonavicular (parte da articulação talocalcaneonavicular, entre a cabeça do tálus e o navicular) e a calcaneocuboide (entre o calcâneo e o cuboide). Juntas, definem o plano cirúrgico clássico de amputação transtársica (nível de Chopart) e participam, junto à articulação subtalar, dos movimentos combinados de inversão e eversão do pé.",
+    movimentos: [
+      "Contribui para inversão e eversão do pé, em conjunto com a articulação subtalar",
+      "Pequeno grau de flexão/extensão do mediopé",
+    ],
+    estabilizadores: [
+      "Ligamento calcaneonavicular plantar (\"em mola\", spring ligament) — sustenta a cabeça do tálus e é essencial para o arco longitudinal medial do pé",
+      "Ligamento calcaneocuboide dorsal e plantar",
+      "Ligamento talonavicular dorsal",
+      "Ligamento plantar longo — reforço plantar que se estende até os metatarsais",
+    ],
+    correlacaoClinica:
+      "O colapso do ligamento calcaneonavicular plantar (ligamento em mola) é um fator estrutural central no pé plano adquirido do adulto, permitindo que a cabeça do tálus desça e rode medialmente. A linha de Chopart é also o plano de referência para amputações transtársicas quando é preciso preservar o máximo de comprimento do pé mantendo um coto funcional para apoio.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "A articulação transversa do tarso (Chopart) não é uma articulação anatômica única — é a soma funcional da talonavicular com a calcaneocuboide, usada como referência cirúrgica de amputação.",
+      "O ligamento calcaneonavicular plantar (\"em mola\") sustenta a cabeça do tálus e seu enfraquecimento é um mecanismo central do pé plano adquirido do adulto.",
+    ],
+    fontes: [
+      { tema: "Anatomia da linha de Chopart e do ligamento em mola", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Articulatio tarsi transversa)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos do pé", fonte: "Sobotta, Atlas of Human Anatomy" },
+    ],
+  },
+  {
+    slug: "tarsometatarsica",
+    meshNames: [
+      "Medial_cuneiform_bone_L", "Medial_cuneiform_bone_R",
+      "Intermediate_cuneiform_bone_L", "Intermediate_cuneiform_bone_R",
+      "Lateral_cuneiform_bone_L", "Lateral_cuneiform_bone_R",
+      "Cuboid_bone_L", "Cuboid_bone_R",
+      "First_metatarsal_bone_L", "First_metatarsal_bone_R",
+      "Second_metatarsal_bone_L", "Second_metatarsal_bone_R",
+      "Third_metatarsal_bone_L", "Third_metatarsal_bone_R",
+      "Fourth_metatarsal_bone_L", "Fourth_metatarsal_bone_R",
+      "Fifth_metatarsal_bone_L", "Fifth_metatarsal_bone_R",
+    ],
+    ligamentMeshNames: sides([
+      "Dorsal tarsometatarsal ligaments",
+      "Plantar tarsometatarsal ligaments",
+      "Cuneometatarsal interosseous ligaments",
+      "Dorsal cuneonavicular ligaments",
+      "Plantar cuneonavicular ligaments",
+      "Dorsal cuneocuboid ligament",
+      "Plantar cuneocuboid ligament",
+      "Cuneocuboid interosseous ligament",
+      "Dorsal intercuneiform ligaments",
+      "Plantar intercuneiform ligaments",
+      "Intercuneiform interosseous ligaments",
+      "Dorsal cuboideonavicular ligament",
+      "Plantar cuboideonavicular ligament",
+    ]),
+    ossosEnvolvidos: [
+      { slug: "perna-pe", nome: "Cuneiformes, cuboide e metatarsais" },
+    ],
+    nomeOficial: "Articulationes tarsometatarsales",
+    nomeComum: "Articulações tarsometatársicas (linha de Lisfranc)",
+    tipo: "Sinovial plana",
+    resumo: "Linha articular entre os três cuneiformes e o cuboide, proximalmente, e as bases dos cinco metatarsais, distalmente — o limite entre mediopé e antepé.",
+    descricaoAnatomica:
+      "Compreende as três articulações cuneometatársicas (dos metatarsais 1º a 3º com os respectivos cuneiformes) e a articulação entre o cuboide e o 4º/5º metatarsais, reforçadas por uma rede densa de ligamentos dorsais, plantares e interósseos entre os próprios ossos do tarso distal (intercuneiformes, cuneocuboide, cuboideonavicular). O encaixe em \"chave de abóbada\" da base do 2º metatarsal, recuada entre o cuneiforme medial e o lateral, confere estabilidade estrutural intrínseca a essa articulação em particular.",
+    movimentos: [
+      "Deslizamento e rotação mínimos entre os ossos do tarso distal e as bases dos metatarsais — contribuem para a adaptação do antepé a superfícies irregulares",
+    ],
+    estabilizadores: [
+      "Ligamento cuneometatársico interósseo medial-2º metatarsal (o \"ligamento de Lisfranc\" propriamente dito) — estrutura-chave, sem equivalente entre o 1º e o 2º metatarsais",
+      "Ligamentos tarsometatársicos dorsais e plantares",
+      "Ligamentos intercuneiformes e cuneocuboide, que solidarizam o tarso distal",
+      "Encaixe ósseo em chave de abóbada da base do 2º metatarsal",
+    ],
+    correlacaoClinica:
+      "A lesão de Lisfranc (fratura-luxação tarsometatársica) ocorre classicamente por trauma axial ou rotacional no antepé fixo (ex.: pé preso no estribo, queda de altura) e é frequentemente subdiagnosticada em radiografia simples — um pequeno alargamento entre as bases do 1º e 2º metatarsais (\"fleck sign\", um fragmento ósseo avulsionado do ligamento de Lisfranc) é um achado sutil, porém crucial, já que o não reconhecimento leva a instabilidade crônica do arco do pé e artrose precoce.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Não existe ligamento interósseo entre as bases do 1º e 2º metatarsais — a estabilidade dessa região depende do ligamento de Lisfranc (cuneiforme medial ao 2º metatarsal), o que a torna um ponto de vulnerabilidade estrutural.",
+      "O \"fleck sign\" (pequeno fragmento ósseo entre a base do 1º e 2º metatarsais na radiografia) é um achado sutil, mas específico, de lesão de Lisfranc, frequentemente subdiagnosticada na urgência.",
+    ],
+    fontes: [
+      { tema: "Anatomia da articulação tarsometatársica e lesão de Lisfranc", fonte: "Moore's Clinically Oriented Anatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Articulationes tarsometatarsales)", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Pranchas de ligamentos do pé", fonte: "Sobotta, Atlas of Human Anatomy" },
     ],
   },
 ];
