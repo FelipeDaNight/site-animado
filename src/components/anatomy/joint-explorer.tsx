@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
-import { Activity, BookMarked, Info, Link2, MoveRight } from "lucide-react";
+import { Activity, BookMarked, Info, Link2, MoveRight, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { articulacoes } from "@/data/articulations";
 import { DetailSection, BulletList } from "@/components/ui/detail-section";
@@ -80,7 +80,7 @@ export function JointExplorer() {
         ))}
       </div>
 
-      <div className="mt-5 h-[60vh] overflow-hidden rounded-2xl border border-border bg-background-raised lg:h-[68vh]">
+      <div className="relative mt-5 h-[60vh] overflow-hidden rounded-2xl border border-border bg-background-raised lg:h-[68vh]">
         <JointCanvas
           boneMeshNames={boneMeshNames}
           ligamentMeshNames={ligamentMeshNames}
@@ -88,6 +88,16 @@ export function JointExplorer() {
           jointMeshNamesBySlug={jointMeshNamesBySlug}
           onSelect={handleCanvasSelect}
         />
+        {selected && (
+          <button
+            type="button"
+            onClick={() => setSelectedSlug(null)}
+            className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full border border-border bg-background/90 px-3 py-1.5 text-sm font-medium text-foreground-muted shadow-sm backdrop-blur transition-colors hover:border-border-strong hover:text-foreground"
+          >
+            <LayoutGrid className="h-4 w-4" />
+            Ver todas as articulações
+          </button>
+        )}
       </div>
 
       <div className="mt-6">
