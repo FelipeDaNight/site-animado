@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DigestiveExplorer } from "@/components/anatomy/digestive-explorer";
+import { LymphaticExplorer } from "@/components/anatomy/lymphatic-explorer";
 
 export const metadata: Metadata = {
-  title: "Sistema Digestório 3D",
+  title: "Sistema Linfático 3D",
   description:
-    "Modelo 3D interativo da cavidade oral, faringe, esôfago, estômago, intestinos, fígado, vias biliares e pâncreas: anatomia, função e correlação clínica.",
+    "Modelo 3D interativo do baço, timo, tonsila palatina e das principais cadeias de linfonodos do corpo: drenagem, função e correlação clínica.",
 };
 
-export default function SistemaDigestorioPage() {
+export default function SistemaLinfaticoPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="max-w-2xl">
@@ -33,22 +33,21 @@ export default function SistemaDigestorioPage() {
             Sistema Circulatório
           </Link>
           <span>·</span>
-          <span className="text-foreground">Sistema Digestório</span>
-          <span>·</span>
-          <Link href="/anatomia/sistema-linfatico" className="hover:text-foreground">
-            Sistema Linfático
+          <Link href="/anatomia/sistema-digestorio" className="hover:text-foreground">
+            Sistema Digestório
           </Link>
+          <span>·</span>
+          <span className="text-foreground">Sistema Linfático</span>
         </div>
-        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Digestório</h1>
+        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Linfático</h1>
         <p className="mt-2 text-foreground-muted">
-          Modelo 3D interativo com 28 estruturas do trato digestório de alto rendimento em prova — cavidade oral
-          e dentição, faringe e esôfago, estômago, intestino delgado e grosso, fígado (com a segmentação de
-          Couinaud completa), vias biliares e pâncreas. Escolha uma estrutura para ver descrição anatômica,
-          função, relações e correlação clínica.
+          Modelo 3D interativo com 31 estruturas linfáticas — baço, timo, tonsila palatina e as principais
+          cadeias de linfonodos da cabeça e pescoço, do membro superior, do tronco e do membro inferior. Escolha
+          uma estrutura para ver descrição anatômica, função, território de drenagem e correlação clínica.
         </p>
       </div>
       <div className="mt-8">
-        <DigestiveExplorer />
+        <LymphaticExplorer />
       </div>
       <p className="mt-6 text-xs text-foreground-subtle">
         Modelo 3D: Z-Anatomy (z-anatomy.com), CC BY-SA 4.0, autoria Gauthier Kervyn e colaboradores, sobre base

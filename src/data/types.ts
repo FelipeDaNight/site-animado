@@ -311,6 +311,32 @@ export interface OrgaoDigestivo {
   fontes: FonteTema[];
 }
 
+export const REGIOES_LINFATICAS = [
+  "Órgãos linfoides",
+  "Cabeça e pescoço",
+  "Membro superior",
+  "Tronco",
+  "Membro inferior",
+] as const;
+
+export type RegiaoLinfatica = (typeof REGIOES_LINFATICAS)[number];
+
+export interface EstruturaLinfatica {
+  slug: string;
+  meshNames: string[];
+  regiao: RegiaoLinfatica;
+  nomeOficial: string;
+  nomeComum: string;
+  resumo: string;
+  descricaoAnatomica: string;
+  funcao: string[];
+  drenagem: string;
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;
