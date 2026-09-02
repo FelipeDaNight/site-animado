@@ -6,11 +6,12 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import * as THREE from "three";
 import { SKELETON_MODEL_URL } from "@/data/skeletalSystem";
-import { CNS_PART1_MODEL_URL } from "@/data/cnsSystem";
+import { CNS_PART1_MODEL_URL, CNS_PART2_MODEL_URL } from "@/data/cnsSystem";
 
 useGLTF.setDecoderPath("/draco/");
 useGLTF.preload(SKELETON_MODEL_URL);
 useGLTF.preload(CNS_PART1_MODEL_URL);
+useGLTF.preload(CNS_PART2_MODEL_URL);
 
 const HIGHLIGHT_COLOR = new THREE.Color("#2bb3a1");
 const NO_EMISSIVE = new THREE.Color(0x000000);
@@ -112,28 +113,33 @@ function expandBoxByFocus(scene: THREE.Object3D, focusNames: Set<string> | null,
 }
 
 interface FrameCameraProps {
-  cnsScene: THREE.Group | null;
+  cnsScenes: (THREE.Group | null)[];
   focusNames: Set<string> | null;
   padding: number;
   controlsRef: React.RefObject<OrbitControlsImpl | null>;
 }
 
-// Frames the camera on the CNS model alone — the skeleton is only ever
+// Frames the camera on the CNS model layers alone — the skeleton is only ever
 // a dimmed backdrop and shouldn't influence the zoom, or a selected structure
 // with a small footprint (e.g. a single geniculate body) would always be
-// framed as if it spanned the whole head. Three.js's camera is an imperative scene-graph
-// object, not React state — mutating it in place (position, near/far,
-// projection matrix) is the normal way to move it, which is what the
-// disabled rule below is objecting to.
+// framed as if it spanned the whole head. Structures now come from two glTFs
+// (Part 1 and Part 2), so every loaded scene is checked and their boxes
+// merged — a Part 2 selection must not be framed against an empty Part 1 box.
+// Three.js's camera is an imperative scene-graph object, not React state —
+// mutating it in place (position, near/far, projection matrix) is the normal
+// way to move it, which is what the disabled rule below is objecting to.
 /* eslint-disable react-hooks/immutability */
-function FrameCamera({ cnsScene, focusNames, padding, controlsRef }: FrameCameraProps) {
+function FrameCamera({ cnsScenes, focusNames, padding, controlsRef }: FrameCameraProps) {
   const camera = useThree((state) => state.camera);
   const invalidate = useThree((state) => state.invalidate);
 
   useEffect(() => {
-    if (!cnsScene) return;
     const box = new THREE.Box3();
-    const found = expandBoxByFocus(cnsScene, focusNames, box);
+    let found = false;
+    for (const scene of cnsScenes) {
+      if (!scene) continue;
+      if (expandBoxByFocus(scene, focusNames, box)) found = true;
+    }
     if (!found) return;
 
     const size = box.getSize(new THREE.Vector3());
@@ -154,7 +160,7 @@ function FrameCamera({ cnsScene, focusNames, padding, controlsRef }: FrameCamera
       controls.update();
     }
     invalidate();
-  }, [cnsScene, focusNames, padding, camera, controlsRef, invalidate]);
+  }, [cnsScenes, focusNames, padding, camera, controlsRef, invalidate]);
 
   return null;
 }
@@ -176,7 +182,8 @@ interface CnsCanvasProps {
 
 export function CnsCanvas({ visibleMeshNames, selectedMeshNames, onSelect }: CnsCanvasProps) {
   const controlsRef = useRef<OrbitControlsImpl | null>(null);
-  const [cnsScene, setCnsScene] = useState<THREE.Group | null>(null);
+  const [cnsScenePart1, setCnsScenePart1] = useState<THREE.Group | null>(null);
+  const [cnsScenePart2, setCnsScenePart2] = useState<THREE.Group | null>(null);
 
   const focusNames = selectedMeshNames ?? visibleMeshNames;
   const padding = selectedMeshNames ? 2.4 : 2.0;
@@ -208,11 +215,21 @@ export function CnsCanvas({ visibleMeshNames, selectedMeshNames, onSelect }: Cns
           selectedMeshNames={selectedMeshNames}
           clickable
           onSelect={onSelect}
-          onLoaded={setCnsScene}
+          onLoaded={setCnsScenePart1}
+        />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Model
+          url={CNS_PART2_MODEL_URL}
+          visibleMeshNames={visibleMeshNames}
+          selectedMeshNames={selectedMeshNames}
+          clickable
+          onSelect={onSelect}
+          onLoaded={setCnsScenePart2}
         />
       </Suspense>
       <FrameCamera
-        cnsScene={cnsScene}
+        cnsScenes={[cnsScenePart1, cnsScenePart2]}
         focusNames={focusNames}
         padding={padding}
         controlsRef={controlsRef}

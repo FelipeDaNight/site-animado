@@ -383,6 +383,9 @@ export const REGIOES_SNC = [
   "Sistema límbico",
   "Diencéfalo",
   "Substância branca e comissuras",
+  "Mesencéfalo",
+  "Ponte",
+  "Bulbo (medula oblonga)",
 ] as const;
 
 export type RegiaoSNC = (typeof REGIOES_SNC)[number];

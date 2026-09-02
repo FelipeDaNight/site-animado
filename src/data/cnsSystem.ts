@@ -4,10 +4,19 @@ import type { EstruturaEncefalica } from "./types";
 // baseado em BodyParts3D/DBCLS). Parte 1 do sistema nervoso central: sistema
 // ventricular, núcleos da base, sistema límbico, diencéfalo e substância
 // branca/comissuras (44 objetos). A medula espinal (substância cinzenta/branca)
-// tem geometria própria mínima nesta base e será tratada separadamente; tronco
-// encefálico, cerebelo e córtex cerebral estão planejados para partes futuras.
+// tem geometria própria mínima nesta base e será tratada separadamente; cerebelo
+// e córtex cerebral estão planejados para partes futuras.
 export const CNS_PART1_MODEL_URL =
   "https://cdn.jsdelivr.net/gh/FelipeDaNight/medic-app@main/models-cdn/cns-diencephalon.glb";
+
+// Parte 2: tronco encefálico (mesencéfalo, ponte e bulbo), 34 objetos extraídos
+// da mesma coleção. "Medulla oblongata.r", "Anterior/Posterior cochlear
+// nucleus.r" e "Posterior cochlear nucleus.l" não apareciam na varredura
+// recursiva da árvore de coleções (vivem fora da hierarquia percorrida), mas
+// foram confirmados como malhas reais por busca direta antes de serem
+// incluídos — nenhum nome foi assumido sem essa verificação.
+export const CNS_PART2_MODEL_URL =
+  "https://cdn.jsdelivr.net/gh/FelipeDaNight/medic-app@main/models-cdn/cns-brainstem.glb";
 
 export const sistemaNervosoCentral: EstruturaEncefalica[] = [
   // ===== Sistema ventricular =====
@@ -820,6 +829,504 @@ export const sistemaNervosoCentral: EstruturaEncefalica[] = [
       { tema: "Anatomia do septo pelúcido e cavum septi pellucidi", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
       { tema: "Displasia septo-óptica", fonte: "Nelson Textbook of Pediatrics, 21ª ed." },
       { tema: "Nomenclatura oficial (Septum pellucidum)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+
+  // ===== Mesencéfalo =====
+  {
+    slug: "mesencefalo",
+    meshNames: ["Midbrain_L", "Midbrain_R"],
+    regiao: "Mesencéfalo",
+    nomeOficial: "Mesencephalon",
+    nomeComum: "Mesencéfalo",
+    resumo:
+      "Menor e mais rostral segmento do tronco encefálico, conectando a ponte/cerebelo ao diencéfalo, contendo os colículos (teto), o núcleo rubro e os núcleos oculomotores, e atravessado pelo aqueduto do mesencéfalo.",
+    descricaoAnatomica:
+      "Dividido classicamente em teto (colículos superior e inferior, dorsal ao aqueduto), tegmento (núcleo rubro, substância negra, núcleos dos nervos cranianos III e IV, formação reticular) e base/pé do pedúnculo cerebral (fibras corticoespinhais, corticopontinas e corticonucleares descendentes, na face ventral). Continua-se superiormente com o diencéfalo e inferiormente com a ponte.",
+    funcao: [
+      "Via de passagem das principais vias motoras descendentes (trato corticoespinal) e sensitivas ascendentes entre o prosencéfalo e o restante do tronco encefálico/medula",
+      "Reflexos visuais e auditivos, mediados pelos colículos superior e inferior",
+      "Controle da motricidade ocular extrínseca (núcleos dos nervos cranianos III e IV) e coordenação motora extrapiramidal (núcleo rubro, substância negra)",
+    ],
+    relacoesAnatomicas:
+      "Continua-se rostralmente com o diencéfalo (através da fossa interpeduncular) e caudalmente com a ponte; atravessado centralmente pelo aqueduto do mesencéfalo, que conecta o terceiro ao quarto ventrículo.",
+    correlacaoClinica:
+      "A síndrome de Weber (infarto do território paramediano/perfurantes mesencefálicas) causa paralisia do nervo oculomotor ipsilateral (ptose, midríase, olho \"para baixo e para fora\") associada a hemiparesia contralateral (lesão do pé do pedúnculo) — síndrome alterna clássica. Na herniação uncal (transtentorial), a compressão lateral do mesencéfalo afeta primeiro o nervo oculomotor (midríase fixa ipsilateral) e pode comprimir o pedúnculo cerebral contralateral contra a borda do tentório (sinal de Kernohan, hemiparesia ipsilateral à lesão — um \"falso sinal localizatório\").",
+    doencasRelacionadas: [{ slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" }],
+    pontosDeProva: [
+      "Síndrome de Weber: paralisia do nervo oculomotor ipsilateral + hemiparesia contralateral — lesão mesencefálica clássica (pé do pedúnculo + fascículo do NC III).",
+      "Na herniação uncal, a midríase fixa unilateral (compressão do NC III) é o sinal de alerta mais precoce e mais cobrado de herniação transtentorial iminente.",
+    ],
+    fontes: [
+      { tema: "Síndromes alternas do tronco encefálico", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Herniação transtentorial e exame do paciente comatoso", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Mesencephalon)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "coliculo-superior",
+    meshNames: ["Superior_colliculus_L", "Superior_colliculus_R"],
+    regiao: "Mesencéfalo",
+    nomeOficial: "Colliculus superior",
+    nomeComum: "Colículo superior",
+    resumo:
+      "Par de eminências no teto do mesencéfalo, centro subcortical de integração visuomotora, responsável por reflexos e movimentos oculares rápidos (sacádicos) orientados a estímulos visuais.",
+    descricaoAnatomica:
+      "Situado no teto (lâmina quadrigêmea) do mesencéfalo, rostral ao colículo inferior, organizado em camadas que recebem aferência retiniana direta (via trato retinotectal) e do córtex visual, além de aferências auditivas e somatossensoriais, integrando-as para orientar a cabeça e os olhos em direção a um estímulo.",
+    funcao: [
+      "Geração de sacadas oculares reflexas e voluntárias em direção a estímulos visuais periféricos",
+      "Integração multissensorial (visual, auditiva, somatossensorial) para orientação da atenção e do olhar",
+      "Via aferente do reflexo pupilar à luz, através do braço do colículo superior até a área pré-tectal",
+    ],
+    relacoesAnatomicas:
+      "Par ao colículo inferior (caudalmente); recebe o braço do colículo superior (fibras retinianas); projeta-se ao tálamo (pulvinar) e à formação reticular do tronco encefálico via tratos tectoespinal e tectobulbar.",
+    correlacaoClinica:
+      "Lesões da região tectal (por exemplo, compressão por tumor pineal) comprometem a geração de sacadas verticais, contribuindo para a síndrome de Parinaud (paralisia do olhar vertical para cima) — o colículo superior é uma das estruturas efetivamente comprometidas nesse contexto, junto à área pré-tectal adjacente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O colículo superior gera sacadas oculares reflexas a estímulos visuais — a compressão da região tectal (por exemplo, por tumor pineal) contribui para a síndrome de Parinaud.",
+    ],
+    fontes: [
+      { tema: "Vias visuomotoras e colículo superior", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Anatomia do teto do mesencéfalo", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Colliculus superior)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "coliculo-inferior",
+    meshNames: ["Inferior_colliculus_L", "Inferior_colliculus_R"],
+    regiao: "Mesencéfalo",
+    nomeOficial: "Colliculus inferior",
+    nomeComum: "Colículo inferior",
+    resumo:
+      "Par de eminências caudais ao colículo superior, principal estação de retransmissão subcortical da via auditiva no mesencéfalo, integrando informação de múltiplos núcleos do tronco antes de retransmiti-la ao corpo geniculado medial.",
+    descricaoAnatomica:
+      "Situado no teto do mesencéfalo, caudal ao colículo superior, recebendo o lemnisco lateral (via auditiva ascendente do complexo olivar superior e núcleos cocleares) e projetando-se via braço do colículo inferior ao corpo geniculado medial do tálamo.",
+    funcao: [
+      "Estação de retransmissão e processamento obrigatório da via auditiva ascendente, incluindo localização espacial do som por integração binaural",
+      "Componente aferente do reflexo de sobressalto acústico e de reflexos auditivos de orientação",
+    ],
+    relacoesAnatomicas:
+      "Recebe o lemnisco lateral; envia o braço do colículo inferior ao corpo geniculado medial; par ao colículo superior, rostralmente.",
+    correlacaoClinica:
+      "Por ser uma via altamente bilateralizada em múltiplos níveis do tronco encefálico, lesões unilaterais do colículo inferior raramente produzem perda auditiva unilateral perceptível — relevante para diferenciar lesões centrais de lesões periféricas (nervo coclear) na avaliação de hipoacusia.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O colículo inferior é a principal estação subcortical da via auditiva no mesencéfalo — recebe o lemnisco lateral e projeta-se ao corpo geniculado medial.",
+      "Como toda a via auditiva central é bilateralizada, sua lesão unilateral raramente causa surdez unilateral perceptível — ajuda a diferenciar lesões periféricas de centrais.",
+    ],
+    fontes: [
+      { tema: "Via auditiva central", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Anatomia do teto do mesencéfalo", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Colliculus inferior)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-rubro",
+    meshNames: ["Red_nucleus_L", "Red_nucleus_R"],
+    regiao: "Mesencéfalo",
+    nomeOficial: "Nucleus ruber",
+    nomeComum: "Núcleo rubro",
+    resumo:
+      "Núcleo arredondado no tegmento do mesencéfalo, rico em ferro (daí seu nome), componente do sistema motor extrapiramidal e origem do trato rubroespinal.",
+    descricaoAnatomica:
+      "Situado no tegmento do mesencéfalo, medial à substância negra, atravessado pelas fibras do fascículo do nervo oculomotor (NC III) em seu trajeto até a fossa interpeduncular — relação anatômica clinicamente relevante.",
+    funcao: [
+      "Origem do trato rubroespinal, via motora extrapiramidal com papel relativamente modesto no ser humano (mais proeminente em outros mamíferos), envolvida na coordenação do tônus flexor dos membros superiores",
+      "Recebe aferências do cerebelo (via pedúnculo cerebelar superior) e do córtex motor",
+    ],
+    relacoesAnatomicas:
+      "Atravessado pelo fascículo do nervo oculomotor (NC III), que emerge na fossa interpeduncular logo abaixo — por isso lesões nessa região frequentemente comprometem tanto o núcleo rubro quanto o NC III.",
+    correlacaoClinica:
+      "A postura de decorticação (flexão dos membros superiores, extensão dos inferiores) em pacientes com lesão encefálica grave reflete uma lesão ACIMA do núcleo rubro (preservando sua influência flexora relativa), enquanto a postura de descerebração (extensão de todos os membros) reflete lesão ABAIXO do núcleo rubro, no tronco encefálico (geralmente na ponte) — distinção clássica na avaliação neurológica do paciente comatoso.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Postura de decorticação = lesão ACIMA do núcleo rubro (flexão de MMSS); postura de descerebração = lesão ABAIXO do núcleo rubro/no tronco (extensão de todos os membros) — permite estimar o nível lesional pelo exame da postura no paciente comatoso.",
+      "O fascículo do NC III atravessa o núcleo rubro antes de emergir na fossa interpeduncular.",
+    ],
+    fontes: [
+      { tema: "Sistema motor extrapiramidal", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Exame neurológico do paciente comatoso", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus ruber)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-do-nervo-oculomotor",
+    meshNames: ["Nucleus_of_oculomotor_nerve_L", "Nucleus_of_oculomotor_nerve_R"],
+    regiao: "Mesencéfalo",
+    nomeOficial: "Nucleus nervi oculomotorii",
+    nomeComum: "Núcleo do nervo oculomotor (núcleo do NC III)",
+    resumo:
+      "Núcleo motor somático no mesencéfalo, na altura do colículo superior, origem das fibras que inervam quatro dos seis músculos extrínsecos do olho e o levantador da pálpebra superior.",
+    descricaoAnatomica:
+      "Situado no tegmento do mesencéfalo, ventral ao aqueduto do mesencéfalo, na altura do colículo superior; suas fibras eferentes atravessam o núcleo rubro e emergem na face ventral do mesencéfalo, na fossa interpeduncular.",
+    funcao: [
+      "Inervação motora somática dos músculos reto superior, reto inferior, reto medial e oblíquo inferior, além do levantador da pálpebra superior",
+      "Em conjunto com o núcleo acessório do oculomotor (Edinger-Westphal) adjacente, participa da via eferente parassimpática do reflexo pupilar à luz e da acomodação",
+    ],
+    relacoesAnatomicas:
+      "Adjacente ao núcleo acessório do oculomotor (parassimpático); suas fibras atravessam o núcleo rubro e emergem na fossa interpeduncular, onde se relacionam estreitamente com a artéria cerebral posterior e a artéria comunicante posterior.",
+    correlacaoClinica:
+      "A paralisia do NC III (nuclear ou fascicular) causa ptose completa e olho \"para baixo e para fora\" (predomínio dos músculos reto lateral e oblíquo superior, não afetados) e, se o componente parassimpático for comprometido, midríase fixa. Aneurismas da artéria comunicante posterior classicamente comprimem o NC III externamente, causando paralisia COM midríase (fibras pupilares periféricas no nervo, mais vulneráveis à compressão), enquanto causas isquêmicas (por exemplo, diabetes) tipicamente poupam a pupila (fibras pupilares perfundidas centralmente, mais resistentes à isquemia) — diferenciação clássica e frequentemente cobrada.",
+    doencasRelacionadas: [{ slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" }],
+    pontosDeProva: [
+      "Paralisia do NC III POUPANDO a pupila sugere causa isquêmica (por exemplo, diabetes); paralisia do NC III COM midríase sugere compressão externa (por exemplo, aneurisma de comunicante posterior) — diferenciação clássica de prova.",
+      "Paralisia completa do NC III: ptose + olho \"para baixo e para fora\" (ação não contraposta do reto lateral, NC VI, e do oblíquo superior, NC IV).",
+    ],
+    fontes: [
+      { tema: "Paralisias do nervo oculomotor", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Anatomia dos núcleos oculomotores", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus nervi oculomotorii)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-acessorio-do-oculomotor",
+    meshNames: ["Accessory_nucleus_of_oculomotor_nerve_L", "Accessory_nucleus_of_oculomotor_nerve_R"],
+    regiao: "Mesencéfalo",
+    nomeOficial: "Nucleus accessorius nervi oculomotorii (nucleus Edinger-Westphal)",
+    nomeComum: "Núcleo acessório do nervo oculomotor (núcleo de Edinger-Westphal)",
+    resumo:
+      "Núcleo parassimpático pré-ganglionar associado ao núcleo motor do NC III, origem das fibras que medeiam a constrição pupilar (miose) e a acomodação do cristalino.",
+    descricaoAnatomica:
+      "Situado dorsomedialmente ao núcleo motor principal do NC III, no mesencéfalo; suas fibras pré-ganglionares parassimpáticas viajam junto ao NC III até o gânglio ciliar na órbita, de onde fibras pós-ganglionares curtas inervam o músculo esfíncter da pupila e o músculo ciliar.",
+    funcao: [
+      "Origem parassimpática pré-ganglionar do reflexo pupilar à luz (miose) e do reflexo de acomodação (contração do músculo ciliar, relaxando a tensão zonular e arredondando o cristalino para visão de perto)",
+    ],
+    relacoesAnatomicas:
+      "Imediatamente adjacente ao núcleo motor do NC III; suas fibras trafegam junto às fibras somáticas do NC III até a órbita, fazendo sinapse no gânglio ciliar.",
+    correlacaoClinica:
+      "A pupila de Argyll Robertson (classicamente associada à neurossífilis terciária) apresenta dissociação luz-perto — reflexo fotomotor ausente ou diminuído com reflexo de acomodação preservado — atribuída a uma lesão seletiva das vias pré-tectais que chegam ao núcleo de Edinger-Westphal, poupando a via da acomodação. Já a pupila tônica de Adie (lesão do gânglio ciliar) causa dissociação luz-perto por um mecanismo periférico diferente.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Pupila de Argyll Robertson (\"acomoda mas não reage\"): dissociação luz-perto por lesão pré-tectal seletiva que poupa a via de acomodação — associação clássica com neurossífilis terciária.",
+      "O núcleo de Edinger-Westphal é a origem parassimpática pré-ganglionar de toda a via eferente do reflexo pupilar à luz e da acomodação.",
+    ],
+    fontes: [
+      { tema: "Neurossífilis e pupila de Argyll Robertson", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Via parassimpática do reflexo pupilar", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus accessorius nervi oculomotorii)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "fossa-interpeduncular",
+    meshNames: ["Interpeduncular_fossa_L", "Interpeduncular_fossa_R"],
+    regiao: "Mesencéfalo",
+    nomeOficial: "Fossa interpeduncularis",
+    nomeComum: "Fossa interpeduncular",
+    resumo:
+      "Depressão na face ventral do mesencéfalo, entre os dois pedúnculos cerebrais, por onde o nervo oculomotor (NC III) emerge do tronco encefálico — um marco anatômico central na semiologia de herniação e de aneurismas.",
+    descricaoAnatomica:
+      "Delimitada lateralmente pelos dois pedúnculos cerebrais (pé do pedúnculo); seu assoalho é perfurado por pequenos vasos (substância perfurada posterior) que suprem estruturas profundas do diencéfalo/mesencéfalo; o NC III emerge diretamente desta fossa.",
+    funcao: [
+      "Ponto de emergência do nervo oculomotor (NC III) a partir do tronco encefálico",
+      "Via de entrada de pequenas artérias perfurantes (ramos da artéria cerebral posterior e da comunicante posterior) que suprem o mesencéfalo e o diencéfalo",
+    ],
+    relacoesAnatomicas:
+      "Circundada pelo círculo arterial do cérebro (polígono de Willis) — relação anatômica direta com a artéria comunicante posterior, relevante na fisiopatologia de aneurismas que comprimem o NC III nesse ponto.",
+    correlacaoClinica:
+      "A proximidade entre o NC III (ao emergir na fossa interpeduncular) e a artéria comunicante posterior explica por que aneurismas dessa artéria são causa clássica de paralisia do NC III com midríase (compressão externa das fibras pupilares periféricas) — uma cefaleia súbita associada a paralisia do NC III é uma emergência neurológica que exige investigação imediata para hemorragia subaracnóidea/aneurisma.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "Cefaleia súbita + paralisia do NC III com midríase deve levantar suspeita de aneurisma roto/em expansão da artéria comunicante posterior comprimindo o nervo na fossa interpeduncular — emergência neurológica.",
+      "A fossa interpeduncular é atravessada por ramos perfurantes do polígono de Willis que irrigam o mesencéfalo e o diencéfalo.",
+    ],
+    fontes: [
+      { tema: "Hemorragia subaracnóidea e aneurismas do polígono de Willis", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Anatomia da base do mesencéfalo", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Fossa interpeduncularis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+
+  // ===== Ponte =====
+  {
+    slug: "ponte",
+    meshNames: ["Pons_L", "Pons_R"],
+    regiao: "Ponte",
+    nomeOficial: "Pons",
+    nomeComum: "Ponte",
+    resumo:
+      "Segmento médio do tronco encefálico, ponte estrutural e funcional entre os hemisférios cerebrais/cerebelo e o bulbo, contendo núcleos de múltiplos nervos cranianos (V a VIII) e a maior parte das fibras corticopontocerebelares.",
+    descricaoAnatomica:
+      "Dividida em uma porção basilar (ventral, com núcleos pontinos e fibras corticopontinas, corticoespinhais e pontocerebelares que cruzam para formar o pedúnculo cerebelar médio) e um tegmento (dorsal, com núcleos de nervos cranianos, lemniscos ascendentes e formação reticular). Seu teto dorsal forma o assoalho rostral do quarto ventrículo.",
+    funcao: [
+      "Retransmissão da informação do córtex cerebral para o cerebelo contralateral, via núcleos pontinos e pedúnculo cerebelar médio — a maior via de entrada do cerebelo",
+      "Contém os núcleos motores e sensitivos dos nervos cranianos V (trigêmeo), VI (abducente), VII (facial) e parte do VIII (vestibulococlear)",
+      "Via de passagem das principais vias motoras e sensitivas longas entre o mesencéfalo e o bulbo",
+    ],
+    relacoesAnatomicas:
+      "Contínua rostralmente com o mesencéfalo e caudalmente com o bulbo; forma o assoalho rostral do quarto ventrículo; conecta-se ao cerebelo pelos pedúnculos cerebelares médio e superior.",
+    correlacaoClinica:
+      "A síndrome do encarceramento (\"locked-in syndrome\"), por infarto isquêmico da base da ponte (geralmente por oclusão da artéria basilar), interrompe bilateralmente as vias corticoespinhal e corticonuclear, causando quadriplegia e paralisia da maioria dos nervos cranianos inferiores com CONSCIÊNCIA PRESERVADA (o tegmento, incluindo a formação reticular ativadora e os núcleos oculomotores verticais, é poupado) — o paciente só consegue se comunicar por movimentos verticais dos olhos e piscar.",
+    doencasRelacionadas: [{ slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" }],
+    pontosDeProva: [
+      "Síndrome do encarceramento (locked-in): infarto da base da ponte (oclusão da basilar) causa quadriplegia e paralisia de nervos cranianos inferiores com CONSCIÊNCIA TOTALMENTE PRESERVADA — o paciente comunica-se apenas com movimentos oculares verticais.",
+      "A ponte contém os núcleos dos nervos cranianos V, VI, VII e parte do VIII — lesões pontinas frequentemente produzem síndromes alternas envolvendo esses nervos.",
+    ],
+    fontes: [
+      { tema: "Síndrome do encarceramento e oclusão da artéria basilar", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Anatomia da ponte", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Pons)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-do-nervo-abducente",
+    meshNames: ["Nucleus_of_abducens_nerve_L", "Nucleus_of_abducens_nerve_R"],
+    regiao: "Ponte",
+    nomeOficial: "Nucleus nervi abducentis",
+    nomeComum: "Núcleo do nervo abducente (núcleo do NC VI)",
+    resumo:
+      "Núcleo motor somático no tegmento da ponte dorsal, origem do nervo abducente (inerva o músculo reto lateral) e sede de interneurônios essenciais para o olhar horizontal conjugado.",
+    descricaoAnatomica:
+      "Situado no tegmento pontino dorsal, imediatamente sob o colículo facial — elevação no assoalho do quarto ventrículo formada pelo joelho interno do nervo facial (NC VII), que contorna o núcleo do NC VI — relação anatômica classicamente cobrada.",
+    funcao: [
+      "Inervação motora somática do músculo reto lateral (abdução do olho)",
+      "Contém interneurônios que se projetam pelo fascículo longitudinal medial contralateral até o núcleo do NC III (subnúcleo do reto medial), coordenando o olhar horizontal conjugado binocular",
+    ],
+    relacoesAnatomicas:
+      "Circundado pelas fibras do joelho interno do nervo facial (NC VII), formando o colículo facial no assoalho do quarto ventrículo — uma lesão nesta região tipicamente afeta ambos os nervos.",
+    correlacaoClinica:
+      "A síndrome de Millard-Gubler (infarto da base/tegmento pontino ventral, geralmente por oclusão de ramos paramedianos da artéria basilar) causa paralisia do NC VI e/ou VII ipsilateral associada a hemiparesia contralateral (síndrome alterna pontina). A oftalmoplegia internuclear (lesão do fascículo longitudinal medial, comum na esclerose múltipla) causa falha de adução do olho ipsilateral à lesão durante o olhar horizontal conjugado, com nistagmo do olho abduzido contralateral.",
+    doencasRelacionadas: [
+      { slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" },
+      { slug: "esclerose-multipla", nome: "Esclerose múltipla" },
+    ],
+    pontosDeProva: [
+      "Síndrome de Millard-Gubler: paralisia do NC VI e/ou VII ipsilateral + hemiparesia contralateral — infarto pontino ventral.",
+      "Oftalmoplegia internuclear (lesão do fascículo longitudinal medial, clássica na esclerose múltipla em jovens): falha de adução ipsilateral + nistagmo do olho abduzido contralateral no olhar horizontal.",
+      "O colículo facial (assoalho do quarto ventrículo) é formado pelas fibras do NC VII contornando o núcleo do NC VI — os dois nervos são vizinhos anatômicos.",
+    ],
+    fontes: [
+      { tema: "Síndromes alternas pontinas", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Oftalmoplegia internuclear na esclerose múltipla", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus nervi abducentis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-motor-do-nervo-facial",
+    meshNames: ["Motor_nucleus_of_facial_nerve_L", "Motor_nucleus_of_facial_nerve_R"],
+    regiao: "Ponte",
+    nomeOficial: "Nucleus motorius nervi facialis",
+    nomeComum: "Núcleo motor do nervo facial (núcleo do NC VII)",
+    resumo:
+      "Núcleo motor somático no tegmento pontino ventrolateral, origem das fibras que inervam os músculos da mímica facial — sua dupla topografia de controle cortical é a base da distinção clínica entre paralisia facial central e periférica.",
+    descricaoAnatomica:
+      "Situado no tegmento pontino ventrolateral; suas fibras eferentes fazem um trajeto incomum, contornando dorsalmente o núcleo do NC VI (formando o joelho interno, ou colículo facial) antes de emergir ventralmente no sulco bulbopontino.",
+    funcao: [
+      "Inervação motora somática de todos os músculos da mímica facial (incluindo o orbicular do olho e da boca), o músculo estapédio, o ventre posterior do digástrico e o estilo-hióideo",
+    ],
+    relacoesAnatomicas:
+      "Suas fibras contornam o núcleo do NC VI, formando o colículo facial no assoalho do quarto ventrículo; a porção do núcleo que controla a musculatura da face SUPERIOR recebe inervação corticonuclear BILATERAL, enquanto a porção que controla a face INFERIOR recebe apenas inervação CONTRALATERAL.",
+    correlacaoClinica:
+      "Essa dupla representação cortical é a base da distinção clínica fundamental entre paralisia facial central (lesão da via corticonuclear acima do núcleo, por exemplo AVC — poupa a testa, pois esta ainda recebe inervação bilateral do lado saudável) e paralisia facial periférica (lesão do próprio núcleo ou do nervo, por exemplo paralisia de Bell — compromete toda a hemiface, incluindo a testa, pois a única via de saída para aquele lado foi destruída).",
+    doencasRelacionadas: [{ slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" }],
+    pontosDeProva: [
+      "Paralisia facial CENTRAL poupa a testa (inervação cortical bilateral da porção superior do núcleo); paralisia facial PERIFÉRICA (por exemplo, Bell) compromete toda a hemiface, incluindo a testa — a diferenciação clínica mais cobrada de toda a neuroanatomia do NC VII.",
+      "As fibras do NC VII contornam o núcleo do NC VI antes de emergir — por isso lesões pontinas frequentemente afetam os dois nervos juntos.",
+    ],
+    fontes: [
+      { tema: "Paralisia facial central vs. periférica", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Trajeto intrapontino do nervo facial", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus motorius nervi facialis)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-salivatorio-superior",
+    meshNames: ["Superior_salivatory_nucleus_L", "Superior_salivatory_nucleus_R"],
+    regiao: "Ponte",
+    nomeOficial: "Nucleus salivatorius superior",
+    nomeComum: "Núcleo salivatório superior",
+    resumo:
+      "Núcleo parassimpático pré-ganglionar no tegmento pontino, associado ao nervo facial (NC VII), origem das fibras secretomotoras para as glândulas lacrimal, submandibular e sublingual, além das glândulas nasais e palatinas.",
+    descricaoAnatomica:
+      "Situado no tegmento pontino, próximo ao núcleo motor do NC VII; suas fibras pré-ganglionares seguem pelo nervo intermédio (componente sensitivo/parassimpático do NC VII) e se distribuem por dois trajetos — via nervo petroso maior até o gânglio pterigopalatino (lacrimal, nasal, palatina) e via corda do tímpano até o gânglio submandibular (submandibular, sublingual).",
+    funcao: [
+      "Origem parassimpática pré-ganglionar da secreção das glândulas lacrimal, submandibular, sublingual, nasais e palatinas",
+    ],
+    relacoesAnatomicas:
+      "Intimamente associado ao núcleo motor do NC VII, viajando com suas fibras através do nervo intermédio.",
+    correlacaoClinica:
+      "Na paralisia de Bell (paralisia facial periférica idiopática), o comprometimento das fibras parassimpáticas que acompanham o NC VII pode causar diminuição da lacrimação (olho seco, com risco de ceratite de exposição) e alteração do paladar (via corda do tímpano, que também trafega com o NC VII) — achados que ajudam a localizar a lesão ao longo do trajeto do nervo.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O núcleo salivatório superior origina a secreção lacrimal, submandibular e sublingual via NC VII — sua disfunção na paralisia de Bell contribui para olho seco e xerostomia parcial.",
+      "A localização da lesão do NC VII pelo padrão de sintomas associados (lacrimação, paladar, secreção salivar) é um raciocínio clássico de prova.",
+    ],
+    fontes: [
+      { tema: "Trajeto e ramos do nervo facial", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Paralisia de Bell", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus salivatorius superior)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleos-vestibulares",
+    meshNames: ["Vestibular_nuclei_L", "Vestibular_nuclei_R"],
+    regiao: "Ponte",
+    nomeOficial: "Nuclei vestibulares",
+    nomeComum: "Núcleos vestibulares",
+    resumo:
+      "Complexo de núcleos na transição pontobulbar, que recebe aferência do labirinto vestibular (via NC VIII) e integra informação de equilíbrio, postura e coordenação do olhar durante o movimento da cabeça.",
+    descricaoAnatomica:
+      "Situado na região dorsolateral da transição pontobulbar, no assoalho do quarto ventrículo, recebendo fibras vestibulares primárias do gânglio vestibular (via NC VIII) e projetando-se extensamente ao cerebelo, à medula espinal (trato vestibuloespinal) e aos núcleos oculomotores via fascículo longitudinal medial.",
+    funcao: [
+      "Integração da informação vestibular (labirinto) com informação visual e proprioceptiva para manutenção do equilíbrio e da postura",
+      "Geração do reflexo vestíbulo-ocular (estabilização do olhar durante movimentos da cabeça), via conexões com os núcleos dos NC III, IV e VI através do fascículo longitudinal medial",
+      "Controle do tônus muscular antigravitacional via trato vestibuloespinal",
+    ],
+    relacoesAnatomicas:
+      "Recebe fibras vestibulares primárias do NC VIII; conecta-se aos núcleos oculomotores via fascículo longitudinal medial e à medula via trato vestibuloespinal; projeta-se ao cerebelo (lobo flóculo-nodular).",
+    correlacaoClinica:
+      "Lesões dos núcleos vestibulares (ou de suas conexões) causam vertigem, nistagmo e desequilíbrio — achados centrais na síndrome de Wallenberg (infarto bulbar lateral, território da artéria cerebelar posteroinferior), que também compromete estruturas adjacentes, causando síndrome de Horner ipsilateral, perda dissociada de dor/temperatura (ipsilateral na face, contralateral no corpo) e disfagia/rouquidão.",
+    doencasRelacionadas: [{ slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" }],
+    pontosDeProva: [
+      "Os núcleos vestibulares situam-se na transição pontobulbar e são componentes centrais da síndrome de Wallenberg (infarto da artéria cerebelar posteroinferior) — vertigem, nistagmo e ataxia entre seus achados.",
+      "O reflexo vestíbulo-ocular depende da conexão núcleos vestibulares → fascículo longitudinal medial → núcleos oculomotores.",
+    ],
+    fontes: [
+      { tema: "Sistema vestibular e reflexo vestíbulo-ocular", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Síndrome de Wallenberg", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Nuclei vestibulares)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+
+  // ===== Bulbo (medula oblonga) =====
+  {
+    slug: "bulbo",
+    meshNames: ["Medulla_oblongata_L", "Medulla_oblongata_R"],
+    regiao: "Bulbo (medula oblonga)",
+    nomeOficial: "Medulla oblongata",
+    nomeComum: "Bulbo (medula oblonga)",
+    resumo:
+      "Segmento mais caudal do tronco encefálico, transição entre a ponte e a medula espinal, contendo centros vitais para o controle cardiovascular e respiratório, núcleos de nervos cranianos inferiores (IX a XII) e a decussação das pirâmides.",
+    descricaoAnatomica:
+      "Dividido em uma porção aberta (rostral, onde o canal central se abre para formar o assoalho do quarto ventrículo) e uma porção fechada (caudal, onde o canal central retoma seu formato tubular, próxima à decussação das pirâmides); contém as pirâmides (ventrais, feixes corticoespinhais) e as olivas (elevações laterais contendo o complexo olivar inferior).",
+    funcao: [
+      "Sede dos centros vitais da formação reticular bulbar: centro respiratório (grupos respiratórios dorsal e ventral) e centros cardiovasculares (vasomotor e cardioinibitório)",
+      "Decussação das pirâmides — cruzamento da maior parte das fibras corticoespinhais laterais, base anatômica da lateralização motora do corpo",
+      "Contém núcleos dos nervos cranianos IX, X, XI e XII, e núcleos de retransmissão sensitiva (grácil e cuneiforme, para a via do lemnisco medial)",
+    ],
+    relacoesAnatomicas:
+      "Contínuo rostralmente com a ponte e caudalmente (no forame magno) com a medula espinal; forma a porção caudal do assoalho do quarto ventrículo.",
+    correlacaoClinica:
+      "A síndrome bulbar medial (infarto do território paramediano, ramos da artéria espinal anterior/vertebral) compromete a pirâmide (hemiparesia contralateral), o lemnisco medial (perda de propriocepção/tato discriminativo contralateral) e o núcleo/fibras do NC XII (paralisia da língua ipsilateral) — síndrome alterna clássica. Já a síndrome bulbar lateral (de Wallenberg, território da artéria cerebelar posteroinferior) poupa a pirâmide e o NC XII, mas compromete os núcleos vestibulares, o trato espinotalâmico, o núcleo espinal do trigêmeo, o núcleo ambíguo (IX/X) e fibras simpáticas descendentes.",
+    doencasRelacionadas: [{ slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" }],
+    pontosDeProva: [
+      "Síndrome bulbar medial: hemiparesia contralateral + perda proprioceptiva contralateral + paralisia da língua IPSILATERAL (NC XII) — poupa dor/temperatura.",
+      "Síndrome de Wallenberg (bulbar lateral): disfagia/rouquidão (núcleo ambíguo), vertigem/nistagmo (vestibular), Horner ipsilateral, perda dissociada de dor/temperatura (face ipsilateral, corpo contralateral) — poupa a força motora.",
+      "O bulbo abriga os centros vitais respiratório e cardiovascular — sua lesão extensa é incompatível com a vida.",
+    ],
+    fontes: [
+      { tema: "Síndromes bulbares medial e lateral", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Síndrome de Wallenberg e centros vitais bulbares", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Medulla oblongata)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "piramide-do-bulbo",
+    meshNames: ["Pyramid_of_medulla_oblongata_L", "Pyramid_of_medulla_oblongata_R"],
+    regiao: "Bulbo (medula oblonga)",
+    nomeOficial: "Pyramis medullae oblongatae",
+    nomeComum: "Pirâmide do bulbo",
+    resumo:
+      "Par de eminências longitudinais na face ventral do bulbo, formadas pelas fibras do trato corticoespinal em seu trajeto descendente, marcando o local onde a maioria dessas fibras cruza a linha média.",
+    descricaoAnatomica:
+      "Situada na face ventral do bulbo, de cada lado da fissura mediana anterior; na transição bulbomedular, cerca de 85-90% das fibras corticoespinhais cruzam para o lado oposto (decussação das pirâmides), formando o trato corticoespinal lateral, enquanto o restante continua ipsilateral como trato corticoespinal anterior (que cruzará mais caudalmente, segmento a segmento).",
+    funcao: [
+      "Condução das fibras motoras corticoespinhais (via piramidal) do córtex motor até os neurônios motores da medula espinal",
+    ],
+    relacoesAnatomicas:
+      "A decussação das pirâmides, na transição bulbomedular, é o marco anatômico que define o limite entre o bulbo e a medula espinal.",
+    correlacaoClinica:
+      "Lesões acima da decussação das pirâmides causam déficit motor CONTRALATERAL; lesões abaixo dela (já na medula espinal) causam déficit IPSILATERAL — princípio fundamental para localizar lesões do sistema nervoso central ao longo do neuroeixo.",
+    doencasRelacionadas: [{ slug: "avc-isquemico-infarto-cerebral", nome: "Infarto cerebral (AVC isquêmico)" }],
+    pontosDeProva: [
+      "A decussação das pirâmides é o ponto de referência anatômico que separa \"lesão contralateral\" (acima) de \"lesão ipsilateral\" (abaixo, na medula) na localização de déficits motores.",
+      "Cerca de 85-90% das fibras corticoespinhais decussam nas pirâmides, formando o trato lateral — a via motora voluntária dominante.",
+    ],
+    fontes: [
+      { tema: "Trato corticoespinal e sua decussação", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Localização de lesões pelo padrão de lateralidade", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
+      { tema: "Nomenclatura oficial (Pyramis medullae oblongatae)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "oliva-bulbar",
+    meshNames: ["Olive_L", "Olive_R"],
+    regiao: "Bulbo (medula oblonga)",
+    nomeOficial: "Oliva",
+    nomeComum: "Oliva (bulbar)",
+    resumo:
+      "Eminência oval na face ventrolateral do bulbo, contendo o complexo olivar inferior, principal fonte de fibras trepadeiras que se projetam ao córtex cerebelar contralateral, essencial ao aprendizado motor e à coordenação fina do movimento.",
+    descricaoAnatomica:
+      "Situada lateralmente à pirâmide bulbar, formada internamente pelo núcleo olivar inferior (com formato de saco pregueado característico), cujas fibras eferentes cruzam a linha média e entram no cerebelo pelo pedúnculo cerebelar inferior.",
+    funcao: [
+      "Origem das fibras trepadeiras olivocerebelares, que se projetam ao córtex cerebelar contralateral e desempenham papel central no aprendizado motor e na correção de erros de movimento (plasticidade cerebelar)",
+    ],
+    relacoesAnatomicas:
+      "Lateral à pirâmide bulbar; suas eferências cruzam a linha média e entram no cerebelo pelo pedúnculo cerebelar inferior.",
+    correlacaoClinica:
+      "O tremor palatino essencial e algumas formas de nistagmo têm sido associados à degeneração olivar hipertrófica, uma condição rara secundária a lesões do chamado triângulo de Guillain-Mollaret (conexões entre núcleo rubro, oliva bulbar e núcleo denteado do cerebelo).",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "As fibras trepadeiras olivocerebelares, originadas na oliva bulbar, são centrais no aprendizado motor cerebelar — cada fibra trepadeira inerva uma única célula de Purkinje, ao contrário das fibras musgosas.",
+    ],
+    fontes: [
+      { tema: "Fibras trepadeiras e aprendizado motor cerebelar", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Anatomia do bulbo", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Oliva)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-coclear-anterior",
+    meshNames: ["Anterior_cochlear_nucleus_L", "Anterior_cochlear_nucleus_R"],
+    regiao: "Bulbo (medula oblonga)",
+    nomeOficial: "Nucleus cochlearis anterior (ventralis)",
+    nomeComum: "Núcleo coclear anterior (ventral)",
+    resumo:
+      "Primeiro núcleo de retransmissão central da via auditiva, situado na transição pontobulbar, recebendo diretamente as fibras do componente coclear do nervo vestibulococlear (NC VIII).",
+    descricaoAnatomica:
+      "Situado na superfície dorsolateral do bulbo/ponte, na entrada do NC VIII no tronco encefálico; recebe fibras cocleares primárias diretamente do gânglio espiral, e suas eferências cruzam predominantemente a linha média (formando o corpo trapezoide) rumo ao complexo olivar superior contralateral, com uma via ipsilateral menor.",
+    funcao: [
+      "Primeira estação de retransmissão central da via auditiva, iniciando o processamento de frequência e intensidade sonora antes da bilateralização da via",
+    ],
+    relacoesAnatomicas:
+      "Recebe fibras diretamente do NC VIII; suas eferências formam parte do corpo trapezoide, cruzando para o complexo olivar superior contralateral.",
+    correlacaoClinica:
+      "Por ser o primeiro núcleo da via auditiva a receber informação exclusivamente IPSILATERAL antes da bilateralização, uma lesão isolada e completa do núcleo coclear (ou do próprio NC VIII) é uma das poucas lesões centrais capazes de causar surdez unilateral verdadeira — diferentemente de qualquer lesão mais central na via.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O núcleo coclear é um dos únicos pontos da via auditiva central (além do próprio nervo) cuja lesão isolada pode causar surdez unilateral verdadeira, por ser o último ponto puramente ipsilateral antes da bilateralização.",
+    ],
+    fontes: [
+      { tema: "Vias auditivas centrais", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Anatomia dos núcleos cocleares", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus cochlearis anterior)", fonte: "Terminologia Anatomica (FIPAT)" },
+    ],
+  },
+  {
+    slug: "nucleo-coclear-posterior",
+    meshNames: ["Posterior_cochlear_nucleus_L", "Posterior_cochlear_nucleus_R"],
+    regiao: "Bulbo (medula oblonga)",
+    nomeOficial: "Nucleus cochlearis posterior (dorsalis)",
+    nomeComum: "Núcleo coclear posterior (dorsal)",
+    resumo:
+      "Segundo componente do complexo dos núcleos cocleares, situado dorsalmente ao núcleo coclear anterior, com papel especializado no processamento de pistas espectrais complexas do som, incluindo a localização vertical da fonte sonora.",
+    descricaoAnatomica:
+      "Situado na superfície dorsal do pedúnculo cerebelar inferior, na transição pontobulbar, dorsal ao núcleo coclear anterior; recebe fibras cocleares primárias e projeta seus axônios predominantemente de forma cruzada, formando a estria acústica dorsal, que contorna o pedúnculo cerebelar inferior antes de se juntar ao lemnisco lateral contralateral.",
+    funcao: [
+      "Processamento de pistas espectrais complexas do som, incluindo localização vertical da fonte sonora, com envio dessa informação processada, via estria acústica dorsal, ao colículo inferior contralateral",
+    ],
+    relacoesAnatomicas:
+      "Dorsal ao núcleo coclear anterior; sua via eferente (estria acústica dorsal) contorna o pedúnculo cerebelar inferior.",
+    correlacaoClinica:
+      "Assim como o núcleo coclear anterior, integra o primeiro nível de processamento central da via auditiva antes de sua ampla bilateralização — relevante para compreender por que a maioria das lesões auditivas centrais (acima deste nível) não causa surdez unilateral completa.",
+    doencasRelacionadas: [],
+    pontosDeProva: [
+      "O núcleo coclear posterior processa pistas espectrais para localização vertical do som e envia sua saída, via estria acústica dorsal, ao colículo inferior contralateral.",
+    ],
+    fontes: [
+      { tema: "Processamento espectral na via auditiva", fonte: "Kandel Principles of Neural Science, 6ª ed." },
+      { tema: "Anatomia dos núcleos cocleares", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
+      { tema: "Nomenclatura oficial (Nucleus cochlearis posterior)", fonte: "Terminologia Anatomica (FIPAT)" },
     ],
   },
 ];

@@ -5,7 +5,7 @@ import { CnsExplorer } from "@/components/anatomy/cns-explorer";
 export const metadata: Metadata = {
   title: "Sistema Nervoso Central 3D",
   description:
-    "Modelo 3D interativo dos núcleos da base, sistema límbico, diencéfalo, sistema ventricular e comissuras do encéfalo, com correlação clínica.",
+    "Modelo 3D interativo dos núcleos da base, sistema límbico, diencéfalo, sistema ventricular, comissuras e tronco encefálico, com correlação clínica.",
 };
 
 export default function SistemaNervosoCentralPage() {
@@ -53,11 +53,11 @@ export default function SistemaNervosoCentralPage() {
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Nervoso Central</h1>
         <p className="mt-2 text-foreground-muted">
-          Modelo 3D interativo com 28 estruturas do encéfalo — sistema ventricular, núcleos da base, sistema
-          límbico, diencéfalo e substância branca/comissuras. Escolha uma estrutura para ver função, relações
-          anatômicas e correlação clínica. Este é o primeiro de vários lotes planejados para o SNC; tronco
-          encefálico, cerebelo e córtex cerebral estão previstos para etapas futuras. A substância cinzenta e
-          branca da medula espinal não possui malha própria nesta base de dados.
+          Modelo 3D interativo com 45 estruturas do encéfalo — sistema ventricular, núcleos da base, sistema
+          límbico, diencéfalo, substância branca/comissuras e tronco encefálico (mesencéfalo, ponte e bulbo).
+          Escolha uma estrutura para ver função, relações anatômicas e correlação clínica. Cerebelo e córtex
+          cerebral estão previstos para etapas futuras. A substância cinzenta e branca da medula espinal não
+          possui malha própria nesta base de dados.
         </p>
       </div>
       <div className="mt-8">
