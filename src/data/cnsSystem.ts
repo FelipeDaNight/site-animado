@@ -782,7 +782,7 @@ export const sistemaNervosoCentral: EstruturaEncefalica[] = [
     resumo:
       "Massa central de axônios mielinizados de cada hemisfério cerebral, contendo as fibras de associação (intra-hemisféricas), comissurais (interhemisféricas) e de projeção (para/do tronco encefálico e medula) que conectam todo o córtex cerebral entre si e com o restante do sistema nervoso.",
     descricaoAnatomica:
-      "Preenche o núcleo central de cada hemisfério, profundamente ao córtex e superficialmente aos núcleos da base e tálamo, atravessada pela cápsula interna (principal via de fibras de projeção) e contendo os principais fascículos de associação (longitudinal superior/arqueado, longitudinal inferior, uncinado, fronto-occipital).",
+      "Preenche o núcleo central de cada hemisfério, profundamente ao córtex e superficialmente aos núcleos da base e tálamo, atravessada pela cápsula interna (principal via de fibras de projeção) e contendo os principais fascículos de associação (longitudinal superior/arqueado, longitudinal inferior, uncinado, fronto-occipital). Nota sobre o modelo 3D: nem o atlas Z-Anatomy nem sua base BodyParts3D possuem uma malha que isole de fato o núcleo de substância branca (sem o córtex sobreposto) — o objeto correspondente nessas bases reproduz o contorno giriforme do hemisfério inteiro. Por isso, esta ficha usa uma malha esquemática de forma suavizada (sem o detalhamento de giros/sulcos), cedida sob licença CC BY 4.0, apenas para dar volume e posição de referência ao hemisfério — não é uma segmentação real de imagem.",
     funcao: [
       "Fibras de associação: conectam áreas corticais dentro do mesmo hemisfério (por exemplo, fascículo arqueado, ligando áreas de linguagem frontais e temporais)",
       "Fibras comissurais: conectam os dois hemisférios (corpo caloso, comissura anterior)",
@@ -801,6 +801,7 @@ export const sistemaNervosoCentral: EstruturaEncefalica[] = [
       { tema: "Fibras de associação, comissurais e de projeção", fonte: "Snell's Clinical Neuroanatomy, 8ª ed." },
       { tema: "AVC lacunar e síndromes da cápsula interna", fonte: "Harrison's Principles of Internal Medicine, 21ª ed." },
       { tema: "Nomenclatura anatômica geral", fonte: "Terminologia Anatomica (FIPAT)" },
+      { tema: "Malha 3D esquemática (volume de referência, não segmentação de imagem)", fonte: "\"Cerebro\" por olai, Sketchfab, CC BY 4.0" },
     ],
   },
   {
