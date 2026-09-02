@@ -337,6 +337,46 @@ export interface EstruturaLinfatica {
   fontes: FonteTema[];
 }
 
+export const REGIOES_URINARIAS = ["Trato urinário superior", "Trato urinário inferior"] as const;
+
+export type RegiaoUrinaria = (typeof REGIOES_URINARIAS)[number];
+
+export interface OrgaoUrinario {
+  slug: string;
+  meshNames: string[];
+  regiao: RegiaoUrinaria;
+  nomeOficial: string;
+  nomeComum: string;
+  resumo: string;
+  descricaoAnatomica: string;
+  funcao: string[];
+  relacoesAnatomicas: string;
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
+export const REGIOES_ENDOCRINAS = ["Cabeça e pescoço", "Retroperitônio"] as const;
+
+export type RegiaoEndocrina = (typeof REGIOES_ENDOCRINAS)[number];
+
+export interface GlandulaEndocrina {
+  slug: string;
+  meshNames: string[];
+  regiao: RegiaoEndocrina;
+  nomeOficial: string;
+  nomeComum: string;
+  resumo: string;
+  descricaoAnatomica: string;
+  hormoniosSecretados: string[];
+  relacoesAnatomicas: string;
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;

@@ -38,6 +38,14 @@ export default function SistemaLinfaticoPage() {
           </Link>
           <span>·</span>
           <span className="text-foreground">Sistema Linfático</span>
+          <span>·</span>
+          <Link href="/anatomia/sistema-urinario" className="hover:text-foreground">
+            Sistema Urinário
+          </Link>
+          <span>·</span>
+          <Link href="/anatomia/sistema-endocrino" className="hover:text-foreground">
+            Sistema Endócrino
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Linfático</h1>
         <p className="mt-2 text-foreground-muted">

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { JointExplorer } from "@/components/anatomy/joint-explorer";
+import { EndocrineExplorer } from "@/components/anatomy/endocrine-explorer";
 
 export const metadata: Metadata = {
-  title: "Sistema Articular 3D",
+  title: "Sistema Endócrino 3D",
   description:
-    "Modelo 3D interativo das principais articulações do corpo humano: tipo, movimentos, estabilizadores e correlação clínica.",
+    "Modelo 3D interativo da hipófise, glândula pineal, tireoide e suprarrenais: hormônios secretados e correlação clínica.",
 };
 
-export default function ArticulacoesPage() {
+export default function SistemaEndocrinoPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="max-w-2xl">
@@ -17,7 +17,9 @@ export default function ArticulacoesPage() {
             Sistema Esquelético
           </Link>
           <span>·</span>
-          <span className="text-foreground">Sistema Articular</span>
+          <Link href="/anatomia/articulacoes" className="hover:text-foreground">
+            Sistema Articular
+          </Link>
           <span>·</span>
           <Link href="/anatomia/sistema-nervoso" className="hover:text-foreground">
             Sistema Nervoso
@@ -43,26 +45,23 @@ export default function ArticulacoesPage() {
             Sistema Urinário
           </Link>
           <span>·</span>
-          <Link href="/anatomia/sistema-endocrino" className="hover:text-foreground">
-            Sistema Endócrino
-          </Link>
+          <span className="text-foreground">Sistema Endócrino</span>
         </div>
-        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Articular</h1>
+        <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Endócrino</h1>
         <p className="mt-2 text-foreground-muted">
-          23 articulações do corpo humano, construídas sobre o mesmo modelo 3D do esqueleto — cada
-          articulação é o conjunto de ossos que a formam. Escolha uma para ver tipo, movimentos,
-          estabilizadores e correlação clínica.
+          Modelo 3D interativo com 4 estruturas endócrinas — hipófise (adeno- e neuro-hipófise), glândula
+          pineal, tireoide e suprarrenais. Escolha uma estrutura para ver hormônios secretados, relações
+          anatômicas e correlação clínica. As paratireoides não têm malha própria nesta base de dados e não
+          estão incluídas.
         </p>
       </div>
       <div className="mt-8">
-        <JointExplorer />
+        <EndocrineExplorer />
       </div>
       <p className="mt-6 text-xs text-foreground-subtle">
-        Ossos: Open3Dmodel — Skeleton (anatomytool.org), CC BY-SA. Autoria original: George J.R. Maat, Eungyeol Lee
-        (LUMC) et al., consórcio Open3Dmodel, sobre base BodyParts3D (DBCLS, Japão). Ligamentos, cápsulas
-        articulares e meniscos: Z-Anatomy (z-anatomy.com), CC BY-SA 4.0, autoria Gauthier Kervyn e colaboradores,
-        também sobre base BodyParts3D. Ambos adaptados (extração por estrutura, simplificação de materiais e
-        compressão) para este site.
+        Modelo 3D: Z-Anatomy (z-anatomy.com), CC BY-SA 4.0, autoria Gauthier Kervyn e colaboradores, sobre base
+        BodyParts3D (DBCLS, Japão). Adaptado (extração por estrutura, simplificação de malha e compressão) para
+        este site.
       </p>
     </div>
   );
