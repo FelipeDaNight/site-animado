@@ -46,13 +46,21 @@ export default function SistemaNervosoPage() {
           <Link href="/anatomia/sistema-endocrino" className="hover:text-foreground">
             Sistema Endócrino
           </Link>
+          <span>·</span>
+          <Link href="/anatomia/sistema-nervoso-central" className="hover:text-foreground">
+            Sistema Nervoso Central
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Nervoso</h1>
         <p className="mt-2 text-foreground-muted">
           Modelo 3D interativo dos 12 pares de nervos cranianos e de 39 nervos periféricos dos plexos braquial,
           lombar e sacral, com o esqueleto como referência anatômica esmaecida. Escolha um nervo para ver
-          origem, trajeto, ramos musculares/sensitivos e correlação clínica. Próximas regiões (encéfalo, medula
-          espinhal) em construção.
+          origem, trajeto, ramos musculares/sensitivos e correlação clínica. O encéfalo (núcleos da base,
+          sistema límbico, diencéfalo e sistema ventricular) já está disponível no{" "}
+          <Link href="/anatomia/sistema-nervoso-central" className="text-brand-strong hover:underline">
+            Sistema Nervoso Central
+          </Link>
+          ; tronco encefálico, cerebelo, córtex cerebral e a medula espinhal seguem em construção.
         </p>
       </div>
       <div className="mt-8">

@@ -46,6 +46,10 @@ export default function SistemaDigestorioPage() {
           <Link href="/anatomia/sistema-endocrino" className="hover:text-foreground">
             Sistema Endócrino
           </Link>
+          <span>·</span>
+          <Link href="/anatomia/sistema-nervoso-central" className="hover:text-foreground">
+            Sistema Nervoso Central
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Digestório</h1>
         <p className="mt-2 text-foreground-muted">

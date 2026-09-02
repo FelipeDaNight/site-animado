@@ -377,6 +377,32 @@ export interface GlandulaEndocrina {
   fontes: FonteTema[];
 }
 
+export const REGIOES_SNC = [
+  "Sistema ventricular",
+  "Núcleos da base",
+  "Sistema límbico",
+  "Diencéfalo",
+  "Substância branca e comissuras",
+] as const;
+
+export type RegiaoSNC = (typeof REGIOES_SNC)[number];
+
+export interface EstruturaEncefalica {
+  slug: string;
+  meshNames: string[];
+  regiao: RegiaoSNC;
+  nomeOficial: string;
+  nomeComum: string;
+  resumo: string;
+  descricaoAnatomica: string;
+  funcao: string[];
+  relacoesAnatomicas: string;
+  correlacaoClinica: string;
+  doencasRelacionadas: RelatedLink[];
+  pontosDeProva: string[];
+  fontes: FonteTema[];
+}
+
 export interface ClinicalUpdate {
   slug: string;
   titulo: string;

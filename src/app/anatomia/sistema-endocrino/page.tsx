@@ -46,6 +46,10 @@ export default function SistemaEndocrinoPage() {
           </Link>
           <span>·</span>
           <span className="text-foreground">Sistema Endócrino</span>
+          <span>·</span>
+          <Link href="/anatomia/sistema-nervoso-central" className="hover:text-foreground">
+            Sistema Nervoso Central
+          </Link>
         </div>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-foreground">Sistema Endócrino</h1>
         <p className="mt-2 text-foreground-muted">
