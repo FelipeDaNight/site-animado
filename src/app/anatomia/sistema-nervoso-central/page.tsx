@@ -66,8 +66,7 @@ export default function SistemaNervosoCentralPage() {
       <p className="mt-6 text-xs text-foreground-subtle">
         Modelo 3D: Z-Anatomy (z-anatomy.com), CC BY-SA 4.0, autoria Gauthier Kervyn e colaboradores, sobre base
         BodyParts3D (DBCLS, Japão). Adaptado (extração por estrutura, simplificação de malha e compressão) para
-        este site. A malha da substância branca do telencéfalo é uma forma esquemática de referência (não uma
-        segmentação real de imagem, ver nota na própria ficha): &quot;Cerebro&quot; por olai (Sketchfab), CC BY 4.0.
+        este site.
       </p>
     </div>
   );
