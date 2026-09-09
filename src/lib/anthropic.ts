@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { REPERTORIO } from "@/data/repertorio";
 import type { BuscaRepertorioResponse, RepertorioSugestao } from "@/types/repertorio";
 
-const MODEL = process.env.ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";
+const MODEL = process.env.ANTHROPIC_MODEL || "claude-haiku-4-5";
 
 let client: Anthropic | null = null;
 
