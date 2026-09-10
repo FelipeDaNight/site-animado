@@ -15,7 +15,9 @@ export interface RepertorioItem {
   ano?: string;
   /** Temas amplos aos quais este item costuma se aplicar. */
   categorias: string[];
-  /** Frase curta explicando do que se trata, para ajudar a IA a avaliar pertinência. */
+  /** Termos e sinônimos que a busca usa para casar este item com o tema digitado. */
+  palavrasChave: string[];
+  /** Frase curta explicando do que se trata e por que é pertinente. */
   contexto: string;
 }
 
@@ -27,17 +29,15 @@ export const TIPO_LABEL: Record<RepertorioTipo, string> = {
   obra: "Obra (livro, filme, documentário)",
 };
 
+export type ParagrafoSugerido = "introducao" | "desenvolvimento" | "conclusao";
+
 export interface RepertorioSugestao {
-  id: string;
+  item: RepertorioItem;
   comoUsar: string;
-  paragrafoSugerido: "introducao" | "desenvolvimento" | "conclusao";
+  paragrafoSugerido: ParagrafoSugerido;
 }
 
 export interface BuscaRepertorioResponse {
   tema: string;
-  sugestoes: Array<RepertorioSugestao & { item: RepertorioItem }>;
-}
-
-export interface BuscaRepertorioErro {
-  erro: string;
+  sugestoes: RepertorioSugestao[];
 }

@@ -1,5 +1,5 @@
 import { TIPO_LABEL } from "@/types/repertorio";
-import type { RepertorioItem, RepertorioSugestao } from "@/types/repertorio";
+import type { RepertorioSugestao } from "@/types/repertorio";
 
 const PARAGRAFO_LABEL: Record<RepertorioSugestao["paragrafoSugerido"], string> = {
   introducao: "Introdução",
@@ -7,11 +7,7 @@ const PARAGRAFO_LABEL: Record<RepertorioSugestao["paragrafoSugerido"], string> =
   conclusao: "Conclusão",
 };
 
-export function RepertorioCard({
-  sugestao,
-}: {
-  sugestao: RepertorioSugestao & { item: RepertorioItem };
-}) {
+export function RepertorioCard({ sugestao }: { sugestao: RepertorioSugestao }) {
   const { item, comoUsar, paragrafoSugerido } = sugestao;
 
   return (

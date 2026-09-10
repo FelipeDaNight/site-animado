@@ -7,7 +7,10 @@ import type { RepertorioItem } from "@/types/repertorio";
  * documentados. Ainda assim, revise datas e números antes de usar em uma prova
  * real — e sempre prefira a fonte primária quando for citar diretamente.
  *
- * A IA nunca inventa itens novos: ela só seleciona e explica itens desta lista.
+ * A busca (src/lib/matching.ts) é 100% local: ela só compara o tema digitado
+ * com `categorias`/`palavrasChave`/`contexto` de cada item abaixo. Não há IA
+ * nem chamada externa — para ampliar a cobertura de temas, basta adicionar
+ * mais palavras-chave ou mais itens aqui.
  */
 export const REPERTORIO: RepertorioItem[] = [
   // ---------------------------------------------------------------- educação
@@ -19,6 +22,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Paulo Freire, em \"Pedagogia do Oprimido\"",
     ano: "1968",
     categorias: ["educação"],
+    palavrasChave: [
+      "educação", "ensino", "aprendizagem", "professor", "aluno", "pedagogia",
+      "método de ensino", "relação professor aluno", "sala de aula",
+    ],
     contexto:
       "Defende a educação como processo coletivo e dialógico, útil contra visões de ensino puramente vertical.",
   },
@@ -30,6 +37,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 9.394/1996",
     ano: "1996",
     categorias: ["educação"],
+    palavrasChave: [
+      "educação", "ensino", "escola pública", "acesso à educação",
+      "educação básica", "obrigatoriedade escolar", "gratuidade do ensino", "ldb",
+    ],
     contexto: "Base legal para argumentar sobre acesso e obrigatoriedade da educação no Brasil.",
   },
   {
@@ -40,6 +51,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Constituição Federal de 1988, Art. 205",
     ano: "1988",
     categorias: ["educação", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "educação", "direito à educação", "cidadania", "qualificação profissional",
+      "educação como direito", "constituição",
+    ],
     contexto: "Embasamento constitucional amplo, aplicável a quase qualquer argumento sobre educação.",
   },
   {
@@ -50,6 +65,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "\"Pro Dia Nascer Feliz\", filme de João Jardim",
     ano: "2006",
     categorias: ["educação"],
+    palavrasChave: [
+      "educação", "desigualdade educacional", "escola pública", "escola particular",
+      "qualidade de ensino", "ensino médio", "desigualdade social",
+    ],
     contexto: "Repertório audiovisual sobre desigualdade educacional entre classes sociais e regiões.",
   },
   {
@@ -59,6 +78,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "A PNAD Contínua do IBGE mostra que o analfabetismo no Brasil ainda é mais concentrado entre pessoas idosas e na região Nordeste, revelando uma desigualdade educacional histórica e regional.",
     fonte: "PNAD Contínua, IBGE",
     categorias: ["educação"],
+    palavrasChave: [
+      "educação", "analfabetismo", "alfabetização", "desigualdade regional",
+      "nordeste", "idosos", "educação de adultos", "ibge",
+    ],
     contexto: "Dado estrutural (sem número pontual, que muda a cada edição) sobre desigualdade educacional.",
   },
 
@@ -71,6 +94,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Ailton Krenak, em \"Ideias para Adiar o Fim do Mundo\"",
     ano: "2019",
     categorias: ["meio ambiente"],
+    palavrasChave: [
+      "meio ambiente", "sustentabilidade", "povos indígenas", "crise climática",
+      "consumo", "progresso", "natureza", "desenvolvimento sustentável",
+    ],
     contexto: "Recoloca a crise ambiental como crise de modelo civilizatório, não só técnica.",
   },
   {
@@ -81,6 +108,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "ONU, Conferência do Clima (COP21)",
     ano: "2015",
     categorias: ["meio ambiente", "política e democracia"],
+    palavrasChave: [
+      "meio ambiente", "aquecimento global", "mudança climática", "clima",
+      "acordo internacional", "emissão de carbono", "sustentabilidade",
+    ],
     contexto: "Referência factual sobre governança climática global.",
   },
   {
@@ -91,6 +122,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 12.305/2010",
     ano: "2010",
     categorias: ["meio ambiente"],
+    palavrasChave: [
+      "meio ambiente", "lixo", "reciclagem", "resíduos sólidos", "consumo",
+      "descarte", "sustentabilidade",
+    ],
     contexto: "Base legal para temas sobre consumo, lixo e reciclagem.",
   },
   {
@@ -100,6 +135,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "O INPE monitora o desmatamento da Amazônia por satélite desde a década de 1980, e as variações nas taxas historicamente acompanham mudanças na fiscalização ambiental.",
     fonte: "INPE (Instituto Nacional de Pesquisas Espaciais)",
     categorias: ["meio ambiente"],
+    palavrasChave: [
+      "meio ambiente", "amazônia", "desmatamento", "floresta",
+      "fiscalização ambiental", "sustentabilidade",
+    ],
     contexto: "Dado estrutural sobre desmatamento, sem número pontual sujeito a mudar.",
   },
   {
@@ -110,6 +149,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "\"Ilha das Flores\", filme de Jorge Furtado",
     ano: "1989",
     categorias: ["meio ambiente", "trabalho e desigualdade social"],
+    palavrasChave: [
+      "meio ambiente", "consumo", "desigualdade social", "lixo", "fome",
+      "consumismo", "descarte",
+    ],
     contexto: "Repertório audiovisual curto e muito citado sobre consumismo e desigualdade.",
   },
 
@@ -122,6 +165,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Zygmunt Bauman, em \"Modernidade Líquida\"",
     ano: "2000",
     categorias: ["tecnologia e redes sociais"],
+    palavrasChave: [
+      "tecnologia", "redes sociais", "internet", "relacionamentos",
+      "individualismo", "superficialidade", "vínculos sociais", "modernidade líquida",
+    ],
     contexto: "Conceito forte para discutir superficialidade de vínculos e volatilidade nas redes.",
   },
   {
@@ -132,6 +179,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "\"O Dilema das Redes\" (\"The Social Dilemma\"), documentário Netflix",
     ano: "2020",
     categorias: ["tecnologia e redes sociais", "saúde mental"],
+    palavrasChave: [
+      "tecnologia", "redes sociais", "algoritmo", "vício em tela",
+      "uso excessivo de celular", "saúde mental", "big techs", "atenção", "influenciador",
+    ],
     contexto: "Repertório específico sobre design viciante de plataformas e seus efeitos.",
   },
   {
@@ -142,6 +193,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 12.965/2014",
     ano: "2014",
     categorias: ["tecnologia e redes sociais"],
+    palavrasChave: [
+      "internet", "tecnologia", "regulação da internet", "liberdade de expressão",
+      "neutralidade de rede", "redes sociais", "marco civil",
+    ],
     contexto: "Base legal para temas sobre regulação da internet e liberdade de expressão online.",
   },
   {
@@ -152,6 +207,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 13.709/2018",
     ano: "2018",
     categorias: ["tecnologia e redes sociais"],
+    palavrasChave: [
+      "dados pessoais", "privacidade", "tecnologia", "internet",
+      "proteção de dados", "vigilância digital", "lgpd",
+    ],
     contexto: "Base legal para temas sobre privacidade digital e uso de dados por plataformas.",
   },
   {
@@ -162,6 +221,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Michel Foucault, em \"Vigiar e Punir\"",
     ano: "1975",
     categorias: ["tecnologia e redes sociais", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "tecnologia", "vigilância", "controle social", "dados pessoais",
+      "privacidade", "internet", "algoritmo", "vigilância digital",
+    ],
     contexto: "Conceito filosófico clássico, útil para temas sobre vigilância e controle via tecnologia.",
   },
 
@@ -174,6 +237,7 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Constituição da OMS",
     ano: "1946",
     categorias: ["saúde mental", "saúde pública"],
+    palavrasChave: ["saúde mental", "saúde", "bem-estar", "qualidade de vida", "oms"],
     contexto: "Base conceitual para qualquer argumento sobre saúde mental como parte da saúde integral.",
   },
   {
@@ -184,6 +248,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Byung-Chul Han, em \"Sociedade do Cansaço\"",
     ano: "2010",
     categorias: ["saúde mental", "trabalho e desigualdade social"],
+    palavrasChave: [
+      "saúde mental", "produtividade", "esgotamento", "burnout", "ansiedade",
+      "cobrança", "trabalho", "depressão", "sociedade do cansaço",
+    ],
     contexto: "Conceito filosófico contemporâneo, ótimo para ligar saúde mental a cobrança por produtividade.",
   },
   {
@@ -194,6 +262,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 10.216/2001",
     ano: "2001",
     categorias: ["saúde mental", "saúde pública"],
+    palavrasChave: [
+      "saúde mental", "psiquiatria", "manicômio", "tratamento psiquiátrico",
+      "reforma psiquiátrica", "doença mental",
+    ],
     contexto: "Base legal e histórica para temas sobre tratamento e direitos de pessoas com transtornos mentais.",
   },
   {
@@ -204,6 +276,9 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "\"Nise: O Coração da Loucura\", filme de Roberto Berliner",
     ano: "2016",
     categorias: ["saúde mental"],
+    palavrasChave: [
+      "saúde mental", "psiquiatria", "humanização", "tratamento psiquiátrico", "doença mental",
+    ],
     contexto: "Repertório audiovisual sobre humanização do tratamento psiquiátrico no Brasil.",
   },
   {
@@ -213,6 +288,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "Levantamentos da Organização Mundial da Saúde apontam a depressão como uma das principais causas de afastamento do trabalho e de perda de produtividade no mundo.",
     fonte: "OMS (Organização Mundial da Saúde)",
     categorias: ["saúde mental", "trabalho e desigualdade social"],
+    palavrasChave: [
+      "saúde mental", "depressão", "trabalho", "produtividade",
+      "afastamento do trabalho", "ansiedade",
+    ],
     contexto: "Dado estrutural para ligar saúde mental a produtividade e mercado de trabalho.",
   },
 
@@ -225,6 +304,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 8.069/1990 (ECA)",
     ano: "1990",
     categorias: ["violência e segurança pública", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "violência infantil", "criança", "adolescente", "proteção infantil",
+      "trabalho infantil", "abuso infantil", "menores", "eca",
+    ],
     contexto: "Base legal para temas sobre violência infantil, trabalho infantil e proteção de menores.",
   },
   {
@@ -235,6 +318,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 11.340/2006",
     ano: "2006",
     categorias: ["violência e segurança pública", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "violência contra a mulher", "violência doméstica", "violência de gênero",
+      "feminicídio", "machismo", "maria da penha",
+    ],
     contexto: "Base legal central para qualquer tema sobre violência de gênero.",
   },
   {
@@ -245,6 +332,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Hannah Arendt, em \"Eichmann em Jerusalém\"",
     ano: "1963",
     categorias: ["violência e segurança pública", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "violência", "genocídio", "holocausto", "obediência", "burocracia",
+      "indiferença social", "violência institucional", "banalidade do mal",
+    ],
     contexto: "Conceito filosófico útil para violência institucional, indiferença social e obediência a sistemas.",
   },
   {
@@ -254,6 +345,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "O Atlas da Violência, principal levantamento nacional sobre homicídios, mostra historicamente que jovens negros de periferia são o grupo mais vitimado pela violência letal no Brasil.",
     fonte: "IPEA e Fórum Brasileiro de Segurança Pública",
     categorias: ["violência e segurança pública"],
+    palavrasChave: [
+      "violência", "homicídio", "segurança pública", "juventude negra",
+      "periferia", "racismo", "violência urbana",
+    ],
     contexto: "Dado estrutural (padrão histórico, sem número de uma edição específica) sobre desigualdade racial na violência.",
   },
   {
@@ -264,6 +359,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "ONU",
     ano: "1948",
     categorias: ["direitos humanos e cidadania", "violência e segurança pública"],
+    palavrasChave: [
+      "direitos humanos", "dignidade humana", "guerra", "holocausto",
+      "direitos fundamentais",
+    ],
     contexto: "Base histórica e legal para qualquer tema envolvendo dignidade humana.",
   },
 
@@ -276,6 +375,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Karl Marx, em \"Manuscritos Econômico-Filosóficos\"",
     ano: "1844",
     categorias: ["trabalho e desigualdade social"],
+    palavrasChave: [
+      "trabalho", "capitalismo", "precarização do trabalho", "uberização",
+      "exploração do trabalho", "mercado de trabalho", "alienação",
+    ],
     contexto: "Conceito clássico para discutir precarização e sentido do trabalho, inclusive na uberização.",
   },
   {
@@ -285,6 +388,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "A Revolução Industrial, iniciada na Inglaterra do século XVIII, transformou radicalmente as relações de trabalho e deu origem às primeiras lutas trabalhistas organizadas.",
     fonte: "Contexto histórico geral",
     categorias: ["trabalho e desigualdade social"],
+    palavrasChave: [
+      "trabalho", "tecnologia", "revolução industrial", "direitos trabalhistas",
+      "automação", "emprego",
+    ],
     contexto: "Base histórica ampla para temas que relacionam tecnologia, trabalho e direitos trabalhistas.",
   },
   {
@@ -295,6 +402,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Decreto-Lei nº 5.452/1943 (CLT)",
     ano: "1943",
     categorias: ["trabalho e desigualdade social"],
+    palavrasChave: [
+      "trabalho", "direitos trabalhistas", "clt", "informalidade",
+      "carteira assinada", "mercado de trabalho",
+    ],
     contexto: "Base legal para temas sobre direitos trabalhistas, informalidade e reforma trabalhista.",
   },
   {
@@ -304,6 +415,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "A PNAD Contínua do IBGE mostra que a informalidade no mercado de trabalho brasileiro atinge historicamente mais mulheres negras do que os demais grupos.",
     fonte: "PNAD Contínua, IBGE",
     categorias: ["trabalho e desigualdade social"],
+    palavrasChave: [
+      "trabalho", "informalidade", "mercado de trabalho", "desigualdade de gênero",
+      "desigualdade racial", "mulher negra",
+    ],
     contexto: "Dado estrutural sobre interseção de gênero, raça e informalidade no trabalho.",
   },
   {
@@ -314,6 +429,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "\"Que Horas Ela Volta?\", filme de Anna Muylaert",
     ano: "2015",
     categorias: ["trabalho e desigualdade social"],
+    palavrasChave: [
+      "trabalho doméstico", "desigualdade social", "empregada doméstica",
+      "classe social", "hierarquia social",
+    ],
     contexto: "Repertório cultural sobre desigualdade social e trabalho doméstico no Brasil.",
   },
 
@@ -326,6 +445,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei Áurea",
     ano: "1888",
     categorias: ["direitos humanos e cidadania"],
+    palavrasChave: [
+      "racismo", "escravidão", "abolição", "racismo estrutural",
+      "desigualdade racial", "população negra",
+    ],
     contexto: "Base histórica central para temas sobre racismo estrutural e desigualdade racial no Brasil.",
   },
   {
@@ -336,6 +459,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Constituição Federal de 1988",
     ano: "1988",
     categorias: ["direitos humanos e cidadania", "política e democracia"],
+    palavrasChave: [
+      "cidadania", "direitos sociais", "constituição", "democracia",
+      "ditadura militar", "direitos individuais",
+    ],
     contexto: "Embasamento histórico-legal amplo, aplicável a quase qualquer tema de direitos e cidadania.",
   },
   {
@@ -346,6 +473,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 12.288/2010",
     ano: "2010",
     categorias: ["direitos humanos e cidadania"],
+    palavrasChave: [
+      "racismo", "igualdade racial", "discriminação racial", "desigualdade racial",
+      "população negra",
+    ],
     contexto: "Base legal para temas sobre racismo e políticas de igualdade racial.",
   },
   {
@@ -356,6 +487,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 12.711/2012",
     ano: "2012",
     categorias: ["direitos humanos e cidadania", "educação"],
+    palavrasChave: [
+      "cotas", "ações afirmativas", "acesso ao ensino superior", "universidade",
+      "desigualdade racial", "desigualdade social", "vestibular",
+    ],
     contexto: "Base legal para temas sobre acesso ao ensino superior e ações afirmativas.",
   },
   {
@@ -365,6 +500,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "O IBGE inclui quesitos de cor/raça em seus levantamentos, o que permite mapear e comprovar desigualdades entre grupos étnico-raciais no Brasil.",
     fonte: "IBGE",
     categorias: ["direitos humanos e cidadania", "cultura e identidade"],
+    palavrasChave: [
+      "racismo", "desigualdade racial", "estatística racial", "dados sobre raça",
+      "população negra",
+    ],
     contexto: "Dado metodológico útil para embasar argumentos sobre desigualdade racial com estatística oficial.",
   },
 
@@ -377,6 +516,7 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Constituição Federal de 1988 e Lei nº 8.080/1990",
     ano: "1990",
     categorias: ["saúde pública"],
+    palavrasChave: ["saúde pública", "sus", "acesso à saúde", "sistema de saúde", "saúde como direito"],
     contexto: "Base para praticamente qualquer tema de saúde pública no Brasil.",
   },
   {
@@ -386,6 +526,7 @@ export const REPERTORIO: RepertorioItem[] = [
       "A Fiocruz é uma das principais instituições públicas de pesquisa e resposta a emergências sanitárias do Brasil, com papel central durante a pandemia de Covid-19.",
     fonte: "Fiocruz (Fundação Oswaldo Cruz)",
     categorias: ["saúde pública"],
+    palavrasChave: ["saúde pública", "pandemia", "ciência", "pesquisa científica", "vacina", "fiocruz"],
     contexto: "Repertório institucional para temas de saúde pública, ciência e pandemias.",
   },
   {
@@ -395,6 +536,7 @@ export const REPERTORIO: RepertorioItem[] = [
       "A pandemia de Covid-19 evidenciou desigualdades no acesso a leitos hospitalares, vacinas e informação entre diferentes regiões e classes sociais no Brasil.",
     fonte: "Contexto histórico recente (2020-2023)",
     categorias: ["saúde pública", "trabalho e desigualdade social"],
+    palavrasChave: ["pandemia", "covid", "saúde pública", "desigualdade social", "acesso à saúde", "vacina"],
     contexto: "Exemplo recente e amplamente documentado sobre desigualdade em saúde.",
   },
   {
@@ -404,6 +546,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "Para a OMS, determinantes sociais como renda, moradia e educação afetam diretamente as condições de saúde de uma população — a saúde não depende só do sistema médico.",
     fonte: "OMS (Organização Mundial da Saúde)",
     categorias: ["saúde pública"],
+    palavrasChave: [
+      "saúde pública", "determinantes sociais", "desigualdade social",
+      "saneamento básico", "moradia", "renda",
+    ],
     contexto: "Conceito de determinantes sociais da saúde, útil para ligar saúde a desigualdade.",
   },
   {
@@ -414,6 +560,9 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Lei nº 8.080/1990",
     ano: "1990",
     categorias: ["saúde pública"],
+    palavrasChave: [
+      "saúde pública", "sus", "vigilância sanitária", "vigilância epidemiológica", "prevenção",
+    ],
     contexto: "Base legal complementar ao SUS, útil para temas sobre prevenção e vigilância em saúde.",
   },
 
@@ -426,6 +575,7 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Stuart Hall, em \"A Identidade Cultural na Pós-Modernidade\"",
     ano: "1992",
     categorias: ["cultura e identidade"],
+    palavrasChave: ["identidade cultural", "multiculturalismo", "globalização", "identidade", "diversidade cultural"],
     contexto: "Conceito forte para temas sobre identidade, multiculturalismo e globalização cultural.",
   },
   {
@@ -436,6 +586,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "\"Bacurau\", filme de Kleber Mendonça Filho e Juliano Dornelles",
     ano: "2019",
     categorias: ["cultura e identidade", "política e democracia"],
+    palavrasChave: [
+      "cultura", "identidade", "sertão", "nordeste", "abandono do interior",
+      "resistência cultural", "invisibilidade",
+    ],
     contexto: "Repertório cultural sobre invisibilidade de comunidades e resistência cultural.",
   },
   {
@@ -446,6 +600,7 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Semana de Arte Moderna de 1922",
     ano: "1922",
     categorias: ["cultura e identidade"],
+    palavrasChave: ["cultura brasileira", "identidade nacional", "arte", "modernismo", "valorização cultural"],
     contexto: "Marco histórico para temas sobre identidade nacional e valorização da cultura brasileira.",
   },
   {
@@ -455,6 +610,7 @@ export const REPERTORIO: RepertorioItem[] = [
       "Em sua obra, o escritor moçambicano explora a pluralidade de identidades, línguas e tradições orais nos países de língua portuguesa na África.",
     fonte: "Mia Couto, escritor moçambicano",
     categorias: ["cultura e identidade"],
+    palavrasChave: ["cultura", "identidade", "língua portuguesa", "áfrica", "lusofonia", "diversidade cultural"],
     contexto: "Referência para temas sobre diversidade cultural e países lusófonos.",
   },
   {
@@ -464,6 +620,10 @@ export const REPERTORIO: RepertorioItem[] = [
       "O IPHAN reconhece manifestações como samba, capoeira e o ofício das baianas de acarajé como Patrimônio Cultural Imaterial do Brasil.",
     fonte: "IPHAN (Instituto do Patrimônio Histórico e Artístico Nacional)",
     categorias: ["cultura e identidade"],
+    palavrasChave: [
+      "cultura popular", "patrimônio cultural", "manifestação cultural", "samba",
+      "capoeira", "tradição",
+    ],
     contexto: "Referência institucional para temas sobre valorização e preservação de manifestações culturais.",
   },
 
@@ -476,6 +636,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Movimento Diretas Já",
     ano: "1984",
     categorias: ["política e democracia"],
+    palavrasChave: [
+      "democracia", "ditadura militar", "participação popular", "eleições diretas",
+      "mobilização social",
+    ],
     contexto: "Exemplo histórico forte de participação popular e mobilização por democracia.",
   },
   {
@@ -486,6 +650,7 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Norberto Bobbio, em \"O Futuro da Democracia\"",
     ano: "1984",
     categorias: ["política e democracia"],
+    palavrasChave: ["democracia", "participação política", "direitos políticos", "cidadania"],
     contexto: "Conceito filosófico útil para temas sobre fragilidade ou fortalecimento da democracia.",
   },
   {
@@ -496,6 +661,7 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Constituição Federal de 1988",
     ano: "1988",
     categorias: ["política e democracia"],
+    palavrasChave: ["democracia", "redemocratização", "ditadura militar", "direitos políticos", "constituição"],
     contexto: "Marco histórico central para qualquer tema sobre democracia e direitos políticos no Brasil.",
   },
   {
@@ -506,6 +672,10 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "TSE (Tribunal Superior Eleitoral)",
     ano: "1996",
     categorias: ["política e democracia"],
+    palavrasChave: [
+      "eleições", "democracia", "voto", "urna eletrônica", "processo eleitoral",
+      "confiança nas instituições",
+    ],
     contexto: "Referência institucional para temas sobre processo eleitoral e confiança nas instituições.",
   },
   {
@@ -516,6 +686,7 @@ export const REPERTORIO: RepertorioItem[] = [
     fonte: "Hannah Arendt, em \"A Condição Humana\"",
     ano: "1958",
     categorias: ["política e democracia", "direitos humanos e cidadania"],
+    palavrasChave: ["democracia", "participação política", "espaço público", "ação coletiva", "cidadania"],
     contexto: "Conceito filosófico para temas sobre participação cidadã e esfera pública.",
   },
 ];
