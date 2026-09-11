@@ -1,8 +1,5 @@
-// TODO: troque pelo número real de WhatsApp que vai receber as sugestões de
-// tema, no formato DDI+DDD+número, só dígitos (ex: 5511999999999 para um
-// celular de São Paulo). Sem esse número real, o botão abre o WhatsApp sem
-// um contato de destino definido.
-const NUMERO_WHATSAPP = "5500000000000";
+// Número de WhatsApp que recebe as sugestões de tema (DDI 55 + DDD 64 + número).
+const NUMERO_WHATSAPP = "5564992997324";
 
 export function linkSugerirTema(tema: string): string {
   const mensagem =
