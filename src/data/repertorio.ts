@@ -195,7 +195,7 @@ export const REPERTORIO: RepertorioItem[] = [
     categorias: ["tecnologia e redes sociais"],
     palavrasChave: [
       "internet", "tecnologia", "regulação da internet", "liberdade de expressão",
-      "neutralidade de rede", "redes sociais", "marco civil",
+      "neutralidade de rede", "redes sociais", "marco civil", "desinformação", "fake news",
     ],
     contexto: "Base legal para temas sobre regulação da internet e liberdade de expressão online.",
   },
@@ -688,6 +688,372 @@ export const REPERTORIO: RepertorioItem[] = [
     categorias: ["política e democracia", "direitos humanos e cidadania"],
     palavrasChave: ["democracia", "participação política", "espaço público", "ação coletiva", "cidadania"],
     contexto: "Conceito filosófico para temas sobre participação cidadã e esfera pública.",
+  },
+
+  // ------------------------------------------------------- colonialismo e história
+  {
+    id: "col-fanon",
+    tipo: "citacao",
+    texto:
+      "Fanon analisa o colonialismo como uma violência estrutural que desumaniza o colonizado, defendendo que a superação desse sistema exige libertação política e psicológica, não só o fim formal da dominação territorial.",
+    fonte: "Frantz Fanon, em \"Os Condenados da Terra\"",
+    ano: "1961",
+    categorias: ["colonialismo e história"],
+    palavrasChave: [
+      "colonialismo", "colonização", "descolonização", "violência colonial", "imperialismo",
+    ],
+    contexto: "Referência clássica do pensamento decolonial, útil para discutir as heranças do colonialismo.",
+  },
+  {
+    id: "col-quijano",
+    tipo: "citacao",
+    texto:
+      "Quijano descreve a \"colonialidade do poder\": hierarquias raciais criadas durante a colonização europeia da América continuam estruturando desigualdades globais mesmo depois do fim político do colonialismo.",
+    fonte: "Aníbal Quijano, sociólogo peruano",
+    categorias: ["colonialismo e história", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "colonialismo", "colonialidade", "eurocentrismo", "racismo estrutural", "desigualdade global",
+    ],
+    contexto: "Conceito que liga o colonialismo histórico a desigualdades raciais e globais atuais.",
+  },
+  {
+    id: "col-genocidio-indigena",
+    tipo: "fato_historico",
+    texto:
+      "A colonização portuguesa do Brasil, a partir de 1500, provocou um extermínio massivo de populações indígenas por violência direta, escravização e doenças trazidas pelos europeus.",
+    fonte: "Contexto histórico da colonização do Brasil",
+    ano: "1500",
+    categorias: ["colonialismo e história", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "colonialismo", "colonização", "povos indígenas", "genocídio indígena", "extermínio",
+    ],
+    contexto: "Base histórica para discutir violência colonial e a situação atual dos povos indígenas.",
+  },
+  {
+    id: "col-descolonizacao-africa",
+    tipo: "fato_historico",
+    texto:
+      "Entre as décadas de 1950 e 1970, a maioria dos países africanos conquistou independência política de suas metrópoles coloniais europeias, embora consequências econômicas e culturais do colonialismo persistam até hoje.",
+    fonte: "Processo de descolonização da África",
+    categorias: ["colonialismo e história"],
+    palavrasChave: [
+      "colonialismo", "descolonização", "áfrica", "independência", "imperialismo",
+    ],
+    contexto: "Mostra que o fim formal do colonialismo não elimina suas consequências estruturais.",
+  },
+  {
+    id: "col-ciclo-exploracao",
+    tipo: "fato_historico",
+    texto:
+      "O Brasil colonial foi organizado em ciclos de exploração de recursos (pau-brasil, açúcar, ouro) voltados a enriquecer a metrópole portuguesa, com pouco investimento em infraestrutura ou autonomia da colônia.",
+    fonte: "Economia do Brasil colônia",
+    categorias: ["colonialismo e história", "trabalho e desigualdade social"],
+    palavrasChave: [
+      "colonialismo", "colônia", "exploração colonial", "metrópole", "economia colonial",
+    ],
+    contexto: "Explica raízes históricas de desigualdades econômicas regionais no Brasil.",
+  },
+
+  // ------------------------------------------------------------ migração e refúgio
+  {
+    id: "mig-convencao-refugiados",
+    tipo: "lei",
+    texto:
+      "A Convenção de 1951 da ONU relativa ao Estatuto dos Refugiados define quem pode ser reconhecido como refugiado e estabelece que nenhum país pode devolvê-lo a um local onde sua vida ou liberdade estejam em risco.",
+    fonte: "ONU, Convenção de 1951",
+    ano: "1951",
+    categorias: ["migração e refúgio", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "migração", "refugiados", "refúgio", "imigração", "deslocamento forçado",
+    ],
+    contexto: "Base legal internacional para qualquer tema sobre refugiados e direito de asilo.",
+  },
+  {
+    id: "mig-lei-refugio-brasil",
+    tipo: "lei",
+    texto:
+      "A Lei do Refúgio regula o reconhecimento do status de refugiado no Brasil e criou o CONARE (Comitê Nacional para Refugiados), responsável por analisar os pedidos.",
+    fonte: "Lei nº 9.474/1997",
+    ano: "1997",
+    categorias: ["migração e refúgio"],
+    palavrasChave: [
+      "migração", "refugiados", "refúgio", "imigração no brasil", "conare",
+    ],
+    contexto: "Base legal brasileira específica para temas sobre acolhimento de refugiados.",
+  },
+  {
+    id: "mig-bauman-estranhos",
+    tipo: "citacao",
+    texto:
+      "Bauman analisa o medo do estrangeiro nas sociedades contemporâneas, mostrando como discursos políticos exploram crises migratórias para alimentar a xenofobia.",
+    fonte: "Zygmunt Bauman, em \"Estranhos à Nossa Porta\"",
+    ano: "2016",
+    categorias: ["migração e refúgio"],
+    palavrasChave: [
+      "migração", "imigração", "xenofobia", "crise migratória", "refugiados",
+    ],
+    contexto: "Conceito forte para ligar migração a discurso político e xenofobia.",
+  },
+  {
+    id: "mig-acnur",
+    tipo: "dado",
+    texto:
+      "O ACNUR (Alto Comissariado das Nações Unidas para Refugiados) monitora deslocamentos forçados no mundo todo, sendo a principal referência internacional sobre refugiados e apátridas.",
+    fonte: "ACNUR (Agência da ONU para Refugiados)",
+    categorias: ["migração e refúgio"],
+    palavrasChave: [
+      "migração", "refugiados", "deslocamento forçado", "apátrida", "acnur",
+    ],
+    contexto: "Repertório institucional para embasar dados sobre migração forçada global.",
+  },
+  {
+    id: "mig-venezuelanos-roraima",
+    tipo: "fato_historico",
+    texto:
+      "A partir de 2015, uma grave crise econômica e política na Venezuela levou centenas de milhares de venezuelanos a migrarem para o Brasil pela fronteira com Roraima, um dos maiores fluxos migratórios recentes da América do Sul.",
+    fonte: "Crise migratória venezuelana",
+    ano: "2015",
+    categorias: ["migração e refúgio"],
+    palavrasChave: [
+      "migração", "imigração", "venezuelanos", "roraima", "fronteira", "crise migratória",
+    ],
+    contexto: "Exemplo recente e concreto de migração forçada na América do Sul.",
+  },
+
+  // -------------------------------------------------- desinformação e fake news
+  {
+    id: "des-pos-verdade",
+    tipo: "fato_historico",
+    texto:
+      "Em 2016, o Dicionário Oxford elegeu \"pós-verdade\" (post-truth) a palavra do ano, definindo um cenário em que fatos objetivos têm menos influência sobre a opinião pública do que apelos emocionais e crenças pessoais.",
+    fonte: "Dicionário Oxford",
+    ano: "2016",
+    categorias: ["desinformação e fake news"],
+    palavrasChave: [
+      "desinformação", "fake news", "pós-verdade", "notícias falsas", "opinião pública",
+    ],
+    contexto: "Conceito-chave para introduzir qualquer discussão sobre desinformação contemporânea.",
+  },
+  {
+    id: "des-mit-fake-news",
+    tipo: "dado",
+    texto:
+      "Um estudo do MIT publicado na revista Science (2018) mostrou que notícias falsas se espalham significativamente mais rápido do que notícias verdadeiras nas redes sociais, especialmente por despertarem emoções mais fortes.",
+    fonte: "MIT, publicado na revista Science",
+    ano: "2018",
+    categorias: ["desinformação e fake news", "tecnologia e redes sociais"],
+    palavrasChave: [
+      "desinformação", "fake news", "notícias falsas", "redes sociais", "viralização",
+    ],
+    contexto: "Dado científico forte para provar como a desinformação se espalha nas redes.",
+  },
+  {
+    id: "des-arendt-mentira",
+    tipo: "citacao",
+    texto:
+      "Arendt discute como regimes totalitários usam a repetição sistemática de mentiras para corroer a capacidade da população de distinguir fato de ficção — tema revisitado hoje nos debates sobre desinformação digital.",
+    fonte: "Hannah Arendt, em \"Origens do Totalitarismo\"",
+    ano: "1951",
+    categorias: ["desinformação e fake news", "política e democracia"],
+    palavrasChave: [
+      "desinformação", "propaganda", "mentira", "totalitarismo", "manipulação política",
+    ],
+    contexto: "Conceito filosófico para ligar desinformação a manipulação política e histórica.",
+  },
+
+  // ------------------------------------------------------------- mobilidade urbana
+  {
+    id: "mob-estatuto-cidade",
+    tipo: "lei",
+    texto:
+      "O Estatuto da Cidade estabelece diretrizes para o planejamento urbano no Brasil, incluindo transporte e mobilidade, buscando garantir a função social da cidade e da propriedade urbana.",
+    fonte: "Lei nº 10.257/2001",
+    ano: "2001",
+    categorias: ["mobilidade urbana"],
+    palavrasChave: [
+      "mobilidade urbana", "planejamento urbano", "cidades", "transporte", "função social da cidade",
+    ],
+    contexto: "Base legal para temas sobre planejamento urbano e mobilidade.",
+  },
+  {
+    id: "mob-pnmu",
+    tipo: "lei",
+    texto:
+      "A Política Nacional de Mobilidade Urbana prioriza modos de transporte coletivo e não motorizados sobre o transporte individual motorizado no planejamento das cidades brasileiras.",
+    fonte: "Lei nº 12.587/2012",
+    ano: "2012",
+    categorias: ["mobilidade urbana"],
+    palavrasChave: [
+      "mobilidade urbana", "transporte público", "transporte coletivo", "trânsito", "ônibus",
+    ],
+    contexto: "Base legal específica sobre prioridades de transporte nas cidades.",
+  },
+  {
+    id: "mob-tempo-deslocamento",
+    tipo: "dado",
+    texto:
+      "Pesquisas de institutos de mobilidade e do IBGE mostram que trabalhadores das grandes regiões metropolitanas brasileiras estão entre os que mais gastam tempo em deslocamentos casa-trabalho no mundo.",
+    fonte: "IBGE e institutos de pesquisa em mobilidade",
+    categorias: ["mobilidade urbana"],
+    palavrasChave: [
+      "mobilidade urbana", "trânsito", "deslocamento", "transporte público", "metrópoles",
+    ],
+    contexto: "Dado estrutural sobre o impacto da mobilidade urbana precária na vida das pessoas.",
+  },
+  {
+    id: "mob-transporte-publico-precario",
+    tipo: "fato_historico",
+    texto:
+      "O investimento histórico em transporte individual (automóveis) em detrimento do transporte público de qualidade é apontado por urbanistas como uma das causas estruturais do caos na mobilidade das metrópoles brasileiras.",
+    fonte: "Crítica urbanística sobre mobilidade no Brasil",
+    categorias: ["mobilidade urbana"],
+    palavrasChave: [
+      "mobilidade urbana", "transporte público", "trânsito", "carros", "planejamento urbano",
+    ],
+    contexto: "Contextualiza historicamente por que a mobilidade urbana é um problema estrutural.",
+  },
+
+  // ------------------------------------------- diversidade de gênero e lgbtqia+
+  {
+    id: "lgbt-butler",
+    tipo: "citacao",
+    texto:
+      "Butler argumenta que o gênero é uma construção social e performática, não uma decorrência automática do sexo biológico — base teórica central dos debates contemporâneos sobre identidade de gênero.",
+    fonte: "Judith Butler, em \"Problemas de Gênero\"",
+    ano: "1990",
+    categorias: ["diversidade de gênero e lgbtqia+"],
+    palavrasChave: [
+      "gênero", "identidade de gênero", "lgbtqia+", "diversidade sexual", "construção social",
+    ],
+    contexto: "Referência teórica central para qualquer tema sobre identidade de gênero.",
+  },
+  {
+    id: "lgbt-stf-homofobia-crime",
+    tipo: "fato_historico",
+    texto:
+      "Em 2019, o Supremo Tribunal Federal decidiu que a homofobia e a transfobia devem ser enquadradas como crime de racismo até que o Congresso Nacional aprove legislação específica sobre o tema.",
+    fonte: "Supremo Tribunal Federal (STF)",
+    ano: "2019",
+    categorias: ["diversidade de gênero e lgbtqia+", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "lgbtqia+", "homofobia", "transfobia", "direitos lgbt", "discriminação",
+    ],
+    contexto: "Marco jurídico importante para temas sobre direitos e proteção de pessoas LGBTQIA+.",
+  },
+  {
+    id: "lgbt-violencia-dados",
+    tipo: "dado",
+    texto:
+      "Organizações como o Grupo Gay da Bahia produzem, há décadas, os principais levantamentos sobre violência contra pessoas LGBTQIA+ no Brasil, suprindo a ausência de estatísticas oficiais abrangentes do Estado.",
+    fonte: "Grupo Gay da Bahia e observatórios de direitos humanos",
+    categorias: ["diversidade de gênero e lgbtqia+", "violência e segurança pública"],
+    palavrasChave: [
+      "lgbtqia+", "violência lgbtfóbica", "homofobia", "transfobia", "discriminação",
+    ],
+    contexto: "Dado estrutural sobre violência contra a população LGBTQIA+ no Brasil.",
+  },
+  {
+    id: "lgbt-nome-social",
+    tipo: "lei",
+    texto:
+      "Decisões do STF e resoluções do CNJ garantiram o direito à retificação do nome e gênero no registro civil de pessoas trans, sem exigir cirurgia ou autorização judicial prévia.",
+    fonte: "STF e CNJ",
+    ano: "2018",
+    categorias: ["diversidade de gênero e lgbtqia+"],
+    palavrasChave: [
+      "lgbtqia+", "pessoas trans", "nome social", "identidade de gênero", "registro civil",
+    ],
+    contexto: "Base legal para temas sobre direitos de pessoas trans.",
+  },
+
+  // ---------------------------------------------------------- segurança alimentar
+  {
+    id: "fome-josue-castro",
+    tipo: "obra",
+    texto:
+      "Josué de Castro foi pioneiro ao demonstrar que a fome não é um fenômeno natural, mas resultado de escolhas políticas e econômicas, tornando-se referência mundial nos estudos sobre segurança alimentar.",
+    fonte: "\"Geografia da Fome\", de Josué de Castro",
+    ano: "1946",
+    categorias: ["segurança alimentar"],
+    palavrasChave: [
+      "fome", "segurança alimentar", "insegurança alimentar", "desnutrição",
+    ],
+    contexto: "Obra clássica brasileira, fundamental para qualquer tema sobre fome.",
+  },
+  {
+    id: "fome-mapa-da-fome-onu",
+    tipo: "fato_historico",
+    texto:
+      "Em 2022, um relatório da ONU confirmou o retorno do Brasil ao Mapa da Fome, do qual havia saído havia quase duas décadas, evidenciando um retrocesso na segurança alimentar do país.",
+    fonte: "Relatório da ONU (FAO)",
+    ano: "2022",
+    categorias: ["segurança alimentar"],
+    palavrasChave: [
+      "fome", "mapa da fome", "segurança alimentar", "insegurança alimentar",
+    ],
+    contexto: "Fato recente e concreto sobre a piora da fome no Brasil.",
+  },
+  {
+    id: "fome-pnae",
+    tipo: "lei",
+    texto:
+      "O Programa Nacional de Alimentação Escolar (PNAE) garante alimentação a estudantes da rede pública, com parte dos recursos destinada à compra de alimentos da agricultura familiar.",
+    fonte: "PNAE",
+    categorias: ["segurança alimentar", "educação"],
+    palavrasChave: [
+      "fome", "segurança alimentar", "merenda escolar", "alimentação escolar", "agricultura familiar",
+    ],
+    contexto: "Política pública que liga segurança alimentar e educação.",
+  },
+  {
+    id: "fome-fao",
+    tipo: "dado",
+    texto:
+      "A FAO (Organização das Nações Unidas para Agricultura e Alimentação) é a principal referência internacional para dados sobre fome e insegurança alimentar no mundo.",
+    fonte: "FAO (ONU)",
+    categorias: ["segurança alimentar"],
+    palavrasChave: ["fome", "segurança alimentar", "insegurança alimentar", "fao"],
+    contexto: "Repertório institucional para embasar dados globais sobre fome.",
+  },
+
+  // ------------------------------------------------------ envelhecimento populacional
+  {
+    id: "env-estatuto-idoso",
+    tipo: "lei",
+    texto:
+      "O Estatuto do Idoso garante direitos e prioridades a pessoas com 60 anos ou mais, incluindo atendimento preferencial e proteção contra negligência e violência.",
+    fonte: "Lei nº 10.741/2003",
+    ano: "2003",
+    categorias: ["envelhecimento populacional"],
+    palavrasChave: [
+      "envelhecimento", "população idosa", "idosos", "terceira idade", "estatuto do idoso",
+    ],
+    contexto: "Base legal central para qualquer tema sobre direitos da pessoa idosa.",
+  },
+  {
+    id: "env-ibge-projecao",
+    tipo: "dado",
+    texto:
+      "Projeções do IBGE indicam que a população idosa brasileira crescerá de forma acelerada nas próximas décadas, exigindo adaptações em saúde pública, previdência e mercado de trabalho.",
+    fonte: "IBGE",
+    categorias: ["envelhecimento populacional", "saúde pública"],
+    palavrasChave: [
+      "envelhecimento", "população idosa", "idosos", "previdência", "terceira idade",
+    ],
+    contexto: "Dado demográfico estrutural para embasar temas sobre envelhecimento populacional.",
+  },
+  {
+    id: "env-beauvoir-velhice",
+    tipo: "obra",
+    texto:
+      "Beauvoir critica como sociedades modernas tendem a marginalizar pessoas idosas, tratando a velhice como um problema a ser escondido em vez de uma etapa da vida a ser integrada socialmente.",
+    fonte: "Simone de Beauvoir, em \"A Velhice\"",
+    ano: "1970",
+    categorias: ["envelhecimento populacional"],
+    palavrasChave: [
+      "envelhecimento", "idosos", "velhice", "terceira idade", "exclusão social",
+    ],
+    contexto: "Reflexão filosófica sobre como a sociedade trata o envelhecimento.",
   },
 ];
 

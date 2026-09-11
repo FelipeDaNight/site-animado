@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { RepertorioCard } from "@/components/RepertorioCard";
 import { buscarRepertorio } from "@/lib/matching";
+import { CATEGORIAS } from "@/data/repertorio";
 import type { BuscaRepertorioResponse } from "@/types/repertorio";
 
 const TEMAS_EXEMPLO = [
@@ -11,6 +12,9 @@ const TEMAS_EXEMPLO = [
   "Inclusão de pessoas com deficiência no mercado de trabalho",
   "Preservação da Amazônia e desenvolvimento sustentável",
   "Desafios para a democracia no Brasil contemporâneo",
+  "Desafios da mobilidade urbana nas grandes cidades",
+  "Desinformação e fake news nas eleições",
+  "Crise migratória e acolhimento de refugiados no Brasil",
 ];
 
 export default function Home() {
@@ -77,10 +81,22 @@ export default function Home() {
 
       <section className="mt-10 space-y-4">
         {resultado && resultado.sugestoes.length === 0 && (
-          <p className="rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-800">
-            Ainda não temos, no nosso banco, um repertório que realmente combine com esse tema.
-            Tente reformular ou buscar algo mais específico.
-          </p>
+          <div className="rounded-xl bg-amber-50 px-4 py-4 text-sm text-amber-800">
+            <p>
+              Ainda não temos, no nosso banco, um repertório que realmente combine com esse tema.
+              Tente reformular ou usar palavras mais próximas de algum destes assuntos:
+            </p>
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {CATEGORIAS.map((categoria) => (
+                <span
+                  key={categoria}
+                  className="rounded-full border border-amber-200 bg-white px-2.5 py-1 text-xs text-amber-800"
+                >
+                  {categoria}
+                </span>
+              ))}
+            </div>
+          </div>
         )}
 
         {resultado?.sugestoes.map((sugestao) => (
