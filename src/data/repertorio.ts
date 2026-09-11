@@ -435,6 +435,19 @@ export const REPERTORIO: RepertorioItem[] = [
     ],
     contexto: "Repertório cultural sobre desigualdade social e trabalho doméstico no Brasil.",
   },
+  {
+    id: "trab-cuidado-nao-remunerado",
+    tipo: "dado",
+    texto:
+      "Pesquisas do IBGE mostram que mulheres dedicam, em média, muito mais horas semanais a afazeres domésticos e cuidado de pessoas do que homens, o que impacta sua inserção e progressão no mercado de trabalho formal.",
+    fonte: "IBGE, Estatísticas de Gênero",
+    categorias: ["trabalho e desigualdade social"],
+    palavrasChave: [
+      "trabalho de cuidado", "cuidado não remunerado", "trabalho doméstico",
+      "sobrecarga feminina", "dupla jornada", "desigualdade de gênero",
+    ],
+    contexto: "Dado estrutural sobre a desigual divisão do trabalho de cuidado entre homens e mulheres.",
+  },
 
   // ------------------------------------------- direitos humanos e cidadania
   {
@@ -860,6 +873,18 @@ export const REPERTORIO: RepertorioItem[] = [
     ],
     contexto: "Conceito filosófico para ligar desinformação a manipulação política e histórica.",
   },
+  {
+    id: "des-negacionismo-cientifico",
+    tipo: "fato_historico",
+    texto:
+      "Durante a pandemia de Covid-19, o negacionismo científico e a desinformação sobre vacinas contribuíram para menor adesão à vacinação em diversos países, fenômeno estudado por organizações de saúde global.",
+    fonte: "Contexto da pandemia de Covid-19",
+    categorias: ["desinformação e fake news", "saúde pública"],
+    palavrasChave: [
+      "negacionismo científico", "negacionismo", "antivacina", "desinformação em saúde", "ciência",
+    ],
+    contexto: "Liga desinformação a um caso concreto e recente de impacto na saúde pública.",
+  },
 
   // ------------------------------------------------------------- mobilidade urbana
   {
@@ -1054,6 +1079,121 @@ export const REPERTORIO: RepertorioItem[] = [
       "envelhecimento", "idosos", "velhice", "terceira idade", "exclusão social",
     ],
     contexto: "Reflexão filosófica sobre como a sociedade trata o envelhecimento.",
+  },
+  {
+    id: "env-etarismo-trabalho",
+    tipo: "dado",
+    texto:
+      "Pessoas mais velhas costumam enfrentar dificuldade extra para se recolocar no mercado de trabalho formal, fenômeno conhecido como etarismo — uma forma de discriminação baseada na idade.",
+    fonte: "Estudos sobre mercado de trabalho e discriminação etária",
+    categorias: ["envelhecimento populacional", "trabalho e desigualdade social"],
+    palavrasChave: [
+      "etarismo", "discriminação por idade", "preconceito de idade", "mercado de trabalho", "idosos",
+    ],
+    contexto: "Enquadra o envelhecimento como questão de discriminação, não só demografia.",
+  },
+
+  // -------------------------------------------- religião e intolerância religiosa
+  {
+    id: "rel-cf-liberdade-religiosa",
+    tipo: "lei",
+    texto:
+      "A Constituição Federal garante a liberdade de consciência e de crença, assegurando o livre exercício de cultos religiosos e a proteção aos locais de culto e suas liturgias.",
+    fonte: "Constituição Federal de 1988, Art. 5º, VI",
+    ano: "1988",
+    categorias: ["religião e intolerância religiosa", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "religião", "liberdade religiosa", "liberdade de crença", "intolerância religiosa",
+    ],
+    contexto: "Base constitucional para qualquer tema sobre liberdade religiosa no Brasil.",
+  },
+  {
+    id: "rel-lei-discriminacao",
+    tipo: "lei",
+    texto:
+      "A Lei nº 7.716/1989, com alterações posteriores, tipifica como crime a discriminação por motivo de religião, raça, cor, etnia ou procedência nacional.",
+    fonte: "Lei nº 7.716/1989",
+    ano: "1989",
+    categorias: ["religião e intolerância religiosa", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "religião", "intolerância religiosa", "discriminação religiosa", "racismo religioso",
+    ],
+    contexto: "Base legal para criminalizar atos de intolerância religiosa.",
+  },
+  {
+    id: "rel-intolerancia-religioes-afro",
+    tipo: "fato_historico",
+    texto:
+      "Religiões de matriz africana, como candomblé e umbanda, são historicamente as mais atingidas por casos de intolerância religiosa no Brasil, incluindo ataques a terreiros e agressões a seus praticantes.",
+    fonte: "Contexto histórico e social brasileiro",
+    categorias: ["religião e intolerância religiosa", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "intolerância religiosa", "religiões de matriz africana", "candomblé", "umbanda", "racismo religioso",
+    ],
+    contexto: "Mostra a dimensão racial da intolerância religiosa no Brasil.",
+  },
+  {
+    id: "rel-disque-100",
+    tipo: "dado",
+    texto:
+      "O Disque 100, canal federal de denúncias de violações de direitos humanos, registra denúncias de intolerância religiosa, majoritariamente contra religiões de matriz africana.",
+    fonte: "Disque Direitos Humanos (Disque 100)",
+    categorias: ["religião e intolerância religiosa"],
+    palavrasChave: ["intolerância religiosa", "denúncia", "religião", "direitos humanos"],
+    contexto: "Repertório institucional para embasar dados sobre intolerância religiosa.",
+  },
+
+  // ---------------------------------------- pessoas com deficiência e acessibilidade
+  {
+    id: "pcd-lbi",
+    tipo: "lei",
+    texto:
+      "A Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência) assegura direitos e busca remover barreiras para a inclusão social e no mercado de trabalho de pessoas com deficiência.",
+    fonte: "Lei nº 13.146/2015",
+    ano: "2015",
+    categorias: ["pessoas com deficiência e acessibilidade", "direitos humanos e cidadania"],
+    palavrasChave: [
+      "pessoas com deficiência", "inclusão", "acessibilidade", "deficiência", "lbi",
+    ],
+    contexto: "Base legal central para qualquer tema sobre direitos de pessoas com deficiência.",
+  },
+  {
+    id: "pcd-lei-cotas-trabalho",
+    tipo: "lei",
+    texto:
+      "A chamada Lei de Cotas para PCD obriga empresas com 100 ou mais funcionários a reservar entre 2% e 5% das vagas para pessoas com deficiência, conforme o tamanho do quadro de funcionários.",
+    fonte: "Lei nº 8.213/1991",
+    ano: "1991",
+    categorias: ["pessoas com deficiência e acessibilidade", "trabalho e desigualdade social"],
+    palavrasChave: [
+      "pessoas com deficiência", "cotas", "inclusão no mercado de trabalho", "deficiência",
+    ],
+    contexto: "Base legal para temas sobre inclusão de pessoas com deficiência no trabalho.",
+  },
+  {
+    id: "pcd-acessibilidade-urbana",
+    tipo: "dado",
+    texto:
+      "Levantamentos de institutos de mobilidade e acessibilidade apontam que a maior parte do transporte público e dos espaços urbanos brasileiros ainda não é plenamente acessível para pessoas com deficiência física, visual ou auditiva.",
+    fonte: "Institutos de mobilidade e acessibilidade urbana",
+    categorias: ["pessoas com deficiência e acessibilidade", "mobilidade urbana"],
+    palavrasChave: [
+      "pessoas com deficiência", "acessibilidade", "transporte público", "deficiência física",
+    ],
+    contexto: "Dado estrutural sobre a falta de acessibilidade nas cidades brasileiras.",
+  },
+  {
+    id: "pcd-libras",
+    tipo: "lei",
+    texto:
+      "A Lei de Libras reconhece a Língua Brasileira de Sinais como meio legal de comunicação, um marco importante para a inclusão educacional e social de pessoas surdas.",
+    fonte: "Lei nº 10.436/2002",
+    ano: "2002",
+    categorias: ["pessoas com deficiência e acessibilidade", "educação"],
+    palavrasChave: [
+      "pessoas com deficiência", "libras", "surdez", "pessoas surdas", "inclusão educacional",
+    ],
+    contexto: "Base legal para temas sobre inclusão educacional de pessoas surdas.",
   },
 ];
 
